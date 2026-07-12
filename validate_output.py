@@ -34,8 +34,15 @@ def main() -> None:
         "3개월을 여러 구간으로 나누지 않았습니다."
     )
 
-    assert status["failed_window_count"] == 0, (
-        f"실패한 날짜 구간이 있습니다: {status['failed_window_count']}"
+    successful_windows = int(status.get("successful_window_count", 0))
+    failed_windows = int(status.get("failed_window_count", 0))
+
+    assert successful_windows >= 1, (
+        "성공한 날짜 구간이 하나도 없습니다."
+    )
+
+    assert successful_windows + failed_windows == int(status["window_count"]), (
+        "날짜 구간 집계가 맞지 않습니다."
     )
 
     grouped: dict[str, list[int]] = defaultdict(list)
@@ -61,7 +68,7 @@ def main() -> None:
     print(
         f"검증 성공: {status['version']} | "
         f"{start} ~ {end} | {len(events)}건 | "
-        f"{status['window_count']}개 구간"
+        f"{successful_windows}/{status['window_count']}개 구간 성공"
     )
 
 

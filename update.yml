@@ -33,10 +33,10 @@ jobs:
           python -m pip install --upgrade pip
           pip install -r requirements.txt
 
-      - name: 서울 오늘부터 미래 3개월 전체 구간 수집
+      - name: 서울 오늘부터 미래 3개월 실적 갱신
         run: python update_calendar.py
 
-      - name: 범위·버전·시가총액순 검증
+      - name: 범위·시가총액순 검증
         run: python validate_output.py
 
       - name: 결과 GitHub에 저장
@@ -60,5 +60,5 @@ jobs:
             exit 0
           fi
 
-          git commit -m "자동 갱신: 검증된 미래 3개월 한국 실적"
+          git commit -m "자동 갱신: 미래 3개월 한국 실적"
           git push
