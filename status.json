@@ -1,7 +1,7 @@
 {
   "ok": false,
-  "updated_at": null,
-  "message": "GitHub Actions를 한 번 실행해 주세요.",
-  "errors": [],
+  "message": "GitHub Actions를 실행해 주세요.",
+  "timezone": "Asia/Seoul",
+  "range": null,
   "event_count": 0
 }

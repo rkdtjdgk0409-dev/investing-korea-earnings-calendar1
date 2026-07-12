@@ -8,34 +8,148 @@
   <script src="https://cdn.jsdelivr.net/npm/fullcalendar@6.1.17/index.global.min.js"></script>
   <style>
     :root {
-      --bg: #10151b;
-      --panel: #171e26;
-      --line: #2a3440;
-      --text: #f3f6f8;
-      --muted: #96a0aa;
-      --event: #273543;
+      --bg: #0f151b;
+      --panel: #171f28;
+      --line: #2c3743;
+      --text: #f5f7fa;
+      --muted: #97a3af;
+      --event: #315f9f;
+      --event-hover: #3d73bc;
+      --warning-bg: #342c1f;
+      --warning-line: #705c34;
     }
+
     * { box-sizing: border-box; }
-    html, body { margin: 0; background: var(--bg); color: var(--text); font-family: Pretendard, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif; }
-    .wrap { max-width: 1180px; margin: 0 auto; padding: 18px; }
-    .top { display: flex; justify-content: space-between; align-items: end; gap: 14px; margin-bottom: 14px; }
-    h1 { font-size: 22px; margin: 0 0 4px; }
-    #status { font-size: 12px; color: var(--muted); }
-    .ics { color: var(--text); font-size: 13px; text-decoration: none; border: 1px solid var(--line); border-radius: 8px; padding: 8px 10px; }
-    #calendar { background: var(--panel); border: 1px solid var(--line); border-radius: 12px; padding: 12px; min-height: 680px; }
-    .fc { --fc-border-color: var(--line); --fc-page-bg-color: var(--panel); --fc-neutral-bg-color: #1d2630; --fc-list-event-hover-bg-color: #25313d; }
-    .fc .fc-toolbar-title { font-size: 18px; }
-    .fc .fc-button-primary { background: #28333f; border-color: #394653; }
+
+    html, body {
+      margin: 0;
+      background: var(--bg);
+      color: var(--text);
+      font-family: Pretendard, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+    }
+
+    .wrap {
+      max-width: 1180px;
+      margin: 0 auto;
+      padding: 18px;
+    }
+
+    .top {
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-end;
+      gap: 14px;
+      margin-bottom: 14px;
+    }
+
+    h1 {
+      margin: 0 0 5px;
+      font-size: 22px;
+    }
+
+    #status {
+      color: var(--muted);
+      font-size: 12px;
+      line-height: 1.5;
+    }
+
+    .ics {
+      flex: 0 0 auto;
+      padding: 8px 10px;
+      border: 1px solid var(--line);
+      border-radius: 8px;
+      color: var(--text);
+      text-decoration: none;
+      font-size: 13px;
+    }
+
+    #notice {
+      display: none;
+      margin-bottom: 12px;
+      padding: 12px 14px;
+      border: 1px solid var(--warning-line);
+      border-radius: 10px;
+      background: var(--warning-bg);
+      line-height: 1.5;
+      font-size: 13px;
+    }
+
+    #calendar {
+      min-height: 680px;
+      padding: 12px;
+      border: 1px solid var(--line);
+      border-radius: 12px;
+      background: var(--panel);
+    }
+
+    .fc {
+      --fc-border-color: var(--line);
+      --fc-page-bg-color: var(--panel);
+      --fc-neutral-bg-color: #1d2731;
+      --fc-list-event-hover-bg-color: #263442;
+      --fc-today-bg-color: rgba(170, 145, 55, 0.18);
+    }
+
+    .fc .fc-toolbar-title {
+      font-size: 18px;
+    }
+
+    .fc .fc-button-primary {
+      border-color: #3a4856;
+      background: #293642;
+    }
+
     .fc .fc-button-primary:not(:disabled).fc-button-active,
-    .fc .fc-button-primary:not(:disabled):active { background: #3a4856; border-color: #4b5966; }
-    .fc .fc-daygrid-day-number, .fc .fc-col-header-cell-cushion { color: var(--text); text-decoration: none; }
-    .fc .fc-event { background: var(--event); border: 0; padding: 2px 4px; cursor: pointer; }
-    .fc .fc-event-title { font-weight: 650; }
+    .fc .fc-button-primary:not(:disabled):active {
+      border-color: #526171;
+      background: #3a4a59;
+    }
+
+    .fc .fc-daygrid-day-number,
+    .fc .fc-col-header-cell-cushion,
+    .fc .fc-list-day-text,
+    .fc .fc-list-day-side-text {
+      color: var(--text);
+      text-decoration: none;
+    }
+
+    .fc .fc-daygrid-event,
+    .fc .fc-list-event {
+      border: 0;
+      cursor: pointer;
+    }
+
+    .fc .fc-daygrid-event {
+      padding: 3px 5px;
+      border-radius: 5px;
+      background: var(--event);
+    }
+
+    .fc .fc-daygrid-event:hover {
+      background: var(--event-hover);
+    }
+
+    .event-label {
+      overflow: hidden;
+      color: #fff;
+      font-size: 12px;
+      font-weight: 700;
+      line-height: 1.35;
+      text-overflow: ellipsis;
+      white-space: nowrap;
+    }
+
+    .fc-list-event-title a {
+      color: var(--text) !important;
+      font-weight: 700;
+      text-decoration: none;
+    }
+
     @media (max-width: 680px) {
       .wrap { padding: 8px; }
-      .top { align-items: start; }
+      .top { align-items: flex-start; }
       h1 { font-size: 18px; }
-      #calendar { padding: 4px; min-height: 620px; }
+      #calendar { min-height: 620px; padding: 4px; }
       .fc .fc-toolbar { gap: 4px; }
       .fc .fc-toolbar-title { font-size: 15px; }
       .fc .fc-button { padding: .35em .5em; font-size: .85em; }
@@ -47,51 +161,140 @@
     <div class="top">
       <div>
         <h1>한국 기업 실적 캘린더</h1>
-        <div id="status">Investing.com · 한국 · 중요도 높음</div>
+        <div id="status">데이터를 불러오는 중입니다.</div>
       </div>
       <a class="ics" href="./earnings.ics">ICS</a>
     </div>
+
+    <div id="notice"></div>
     <div id="calendar"></div>
   </main>
-  <script>
-    async function load() {
-      const [eventsResponse, statusResponse] = await Promise.all([
-        fetch("./data/events.json?ts=" + Date.now()),
-        fetch("./data/status.json?ts=" + Date.now()).catch(() => null)
-      ]);
-      const events = await eventsResponse.json();
 
-      if (statusResponse && statusResponse.ok) {
-        const status = await statusResponse.json();
-        const when = status.updated_at ? new Date(status.updated_at).toLocaleString("ko-KR") : "";
-        document.getElementById("status").textContent =
-          `Investing.com · 한국 · 중요도 높음 · ${events.length}건 · ${when} 갱신`;
+  <script>
+    function addOneDay(isoDate) {
+      const date = new Date(isoDate + "T00:00:00+09:00");
+      date.setDate(date.getDate() + 1);
+      return date.toISOString().slice(0, 10);
+    }
+
+    function eventNode(title) {
+      const node = document.createElement("div");
+      node.className = "event-label";
+      node.textContent = title;
+      return node;
+    }
+
+    async function loadCalendar() {
+      const cacheKey = Date.now();
+
+      const [eventsResponse, statusResponse] = await Promise.all([
+        fetch("./data/events.json?v=" + cacheKey),
+        fetch("./data/status.json?v=" + cacheKey)
+      ]);
+
+      if (!eventsResponse.ok) {
+        throw new Error("events.json을 불러오지 못했습니다.");
       }
 
-      const calendar = new FullCalendar.Calendar(document.getElementById("calendar"), {
+      const events = await eventsResponse.json();
+      const status = statusResponse.ok ? await statusResponse.json() : {};
+
+      // 이전 파일에서 title이 빠졌더라도 화면에서 '기업명 실적'으로 복구합니다.
+      const normalizedEvents = events.map((event) => ({
+        ...event,
+        title: event.title || ((event.company || event.ticker || "기업") + " 실적"),
+        allDay: true
+      }));
+
+      const rangeFrom = status.range?.from;
+      const rangeTo = status.range?.to;
+      const updatedAt = status.updated_at
+        ? new Date(status.updated_at).toLocaleString("ko-KR")
+        : "";
+
+      const rangeText = rangeFrom && rangeTo
+        ? `${rangeFrom} ~ ${rangeTo}`
+        : "서울 현재 날짜부터 미래 3개월";
+
+      document.getElementById("status").textContent =
+        `Investing.com · 한국 · 중요도 높음 · ${rangeText} · ` +
+        `${normalizedEvents.length}건` +
+        (updatedAt ? ` · ${updatedAt} 갱신` : "");
+
+      const notice = document.getElementById("notice");
+      if (normalizedEvents.length === 0) {
+        notice.style.display = "block";
+        notice.textContent =
+          status.message ||
+          "표시할 실적 일정이 없습니다. Actions 실행 결과와 status.json을 확인해 주세요.";
+      } else if (status.ok === false && status.used_cache) {
+        notice.style.display = "block";
+        notice.textContent = status.message;
+      }
+
+      const isMobile = window.innerWidth < 680;
+
+      const options = {
         locale: "ko",
-        initialView: window.innerWidth < 680 ? "listMonth" : "dayGridMonth",
+        initialDate: rangeFrom || undefined,
+        initialView: isMobile ? "listMonth" : "dayGridMonth",
         height: "auto",
         headerToolbar: {
           left: "prev,next today",
           center: "title",
-          right: window.innerWidth < 680 ? "listMonth" : "dayGridMonth,listMonth"
+          right: isMobile ? "listMonth" : "dayGridMonth,listMonth"
         },
-        buttonText: { today: "오늘", month: "월", list: "목록" },
-        events,
-        eventDisplay: "block",
+        buttonText: {
+          today: "오늘",
+          month: "월",
+          list: "목록"
+        },
         displayEventTime: false,
+        eventDisplay: "block",
+        dayMaxEvents: true,
+        events: normalizedEvents,
+
+        // FullCalendar 기본 렌더러 대신 제목을 직접 넣어
+        // '기업명 실적' 문구가 반드시 보이게 합니다.
+        eventContent(info) {
+          return {
+            domNodes: [eventNode(info.event.title)]
+          };
+        },
+
+        eventDidMount(info) {
+          info.el.title = info.event.title;
+        },
+
         eventClick(info) {
           info.jsEvent.preventDefault();
-          if (info.event.url) window.open(info.event.url, "_blank", "noopener");
+          if (info.event.url) {
+            window.open(info.event.url, "_blank", "noopener");
+          }
         }
-      });
+      };
+
+      if (rangeFrom && rangeTo) {
+        options.validRange = {
+          start: rangeFrom,
+          end: addOneDay(rangeTo)
+        };
+      }
+
+      const calendar = new FullCalendar.Calendar(
+        document.getElementById("calendar"),
+        options
+      );
       calendar.render();
     }
 
-    load().catch(error => {
-      document.getElementById("status").textContent = "캘린더 데이터를 불러오지 못했습니다.";
+    loadCalendar().catch((error) => {
       console.error(error);
+      const notice = document.getElementById("notice");
+      notice.style.display = "block";
+      notice.textContent =
+        "캘린더 데이터를 불러오지 못했습니다: " + error.message;
+      document.getElementById("status").textContent = "데이터 로드 실패";
     });
   </script>
 </body>
