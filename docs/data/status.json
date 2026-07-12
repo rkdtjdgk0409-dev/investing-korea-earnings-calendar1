@@ -1,7 +1,35 @@
 {
-  "ok": false,
-  "updated_at": "2026-07-12T06:59:28.107215+00:00",
-  "message": "데이터를 찾지 못했습니다.",
+  "ok": true,
+  "used_cache": false,
+  "updated_at": "2026-07-12T17:03:59+09:00",
+  "timezone": "Asia/Seoul",
+  "range": {
+    "from": "2026-07-12",
+    "to": "2026-10-12"
+  },
+  "event_count": 339,
+  "source_mode": "https://kr.investing.com:server_both",
+  "elapsed_seconds": 6.2,
+  "message": "한국·중요도 높음 실적 캘린더 갱신 완료",
   "errors": [],
-  "event_count": 0
+  "attempts": [
+    {
+      "host": "https://kr.investing.com",
+      "mode": "server_both",
+      "page": 0,
+      "status_code": 200,
+      "response_bytes": 424859,
+      "table_rows": 360,
+      "parsed_events": 339,
+      "new_events": 339
+    },
+    {
+      "host": "https://kr.investing.com",
+      "mode": "server_both",
+      "page": 1,
+      "status_code": 200,
+      "response_bytes": 424859,
+      "duplicate_page": true
+    }
+  ]
 }
