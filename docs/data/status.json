@@ -1,79 +1,102 @@
 {
-  "ok": false,
-  "used_cache": true,
-  "updated_at": "2026-07-12T17:25:49+09:00",
+  "ok": true,
+  "used_cache": false,
+  "updated_at": "2026-07-12T17:30:05+09:00",
   "timezone": "Asia/Seoul",
   "range": {
     "from": "2026-07-12",
     "to": "2026-10-12"
   },
-  "event_count": 23,
+  "event_count": 344,
   "date_window_count": 7,
   "first_event_date": "2026-07-16",
-  "last_event_date": "2026-07-23",
-  "source_mode": null,
+  "last_event_date": "2026-10-09",
+  "source_mode": "https://kr.investing.com:server_both:7windows",
   "market_cap_source": "KRX-MARCAP",
-  "market_cap_matched": 23,
+  "market_cap_matched": 344,
   "market_cap_unmatched": 0,
   "market_cap_error": null,
-  "elapsed_seconds": 1.4,
-  "message": "새 데이터를 얻지 못해 현재 3개월 범위에 해당하는 기존 데이터를 유지했습니다.",
-  "errors": [
-    "https://kr.investing.com / server_both / 2026-07-12~2026-07-25: RuntimeError: https://kr.investing.com HTTP 403",
-    "https://kr.investing.com / server_country / 2026-07-12~2026-07-25: RuntimeError: https://kr.investing.com HTTP 403",
-    "https://kr.investing.com / server_high / 2026-07-12~2026-07-25: RuntimeError: https://kr.investing.com HTTP 403",
-    "https://www.investing.com / server_both / 2026-07-12~2026-07-25: RuntimeError: https://www.investing.com HTTP 403",
-    "https://www.investing.com / server_country / 2026-07-12~2026-07-25: RuntimeError: https://www.investing.com HTTP 403",
-    "https://www.investing.com / server_high / 2026-07-12~2026-07-25: RuntimeError: https://www.investing.com HTTP 403"
-  ],
+  "elapsed_seconds": 9.32,
+  "message": "한국·중요도 높음 실적 캘린더 갱신 완료",
+  "errors": [],
   "attempts": [
     {
       "host": "https://kr.investing.com",
       "mode": "server_both",
       "page": 0,
-      "status_code": 403,
-      "response_bytes": 6428,
-      "error": "HTTP 403"
+      "status_code": 200,
+      "response_bytes": 43309,
+      "table_rows": 39,
+      "parsed_events": 34,
+      "new_events": 34
     },
     {
       "host": "https://kr.investing.com",
-      "mode": "server_country",
-      "page": 0,
-      "status_code": 403,
-      "response_bytes": 6407,
-      "error": "HTTP 403"
-    },
-    {
-      "host": "https://kr.investing.com",
-      "mode": "server_high",
-      "page": 0,
-      "status_code": 403,
-      "response_bytes": 6407,
-      "error": "HTTP 403"
-    },
-    {
-      "host": "https://www.investing.com",
       "mode": "server_both",
       "page": 0,
-      "status_code": 403,
-      "response_bytes": 6408,
-      "error": "HTTP 403"
+      "status_code": 200,
+      "response_bytes": 120214,
+      "table_rows": 105,
+      "parsed_events": 95,
+      "new_events": 95
     },
     {
-      "host": "https://www.investing.com",
-      "mode": "server_country",
+      "host": "https://kr.investing.com",
+      "mode": "server_both",
       "page": 0,
-      "status_code": 403,
-      "response_bytes": 6408,
-      "error": "HTTP 403"
+      "status_code": 200,
+      "response_bytes": 261716,
+      "table_rows": 216,
+      "parsed_events": 210,
+      "new_events": 210
     },
     {
-      "host": "https://www.investing.com",
-      "mode": "server_high",
+      "host": "https://kr.investing.com",
+      "mode": "server_both",
+      "page": 1,
+      "status_code": 200,
+      "response_bytes": 261716,
+      "duplicate_page": true
+    },
+    {
+      "host": "https://kr.investing.com",
+      "mode": "server_both",
       "page": 0,
-      "status_code": 403,
-      "response_bytes": 6408,
-      "error": "HTTP 403"
+      "status_code": 200,
+      "response_bytes": 4379,
+      "table_rows": 5,
+      "parsed_events": 3,
+      "new_events": 3
+    },
+    {
+      "host": "https://kr.investing.com",
+      "mode": "server_both",
+      "page": 0,
+      "status_code": 200,
+      "response_bytes": 1565,
+      "table_rows": 2,
+      "parsed_events": 1,
+      "new_events": 1
+    },
+    {
+      "host": "https://kr.investing.com",
+      "mode": "server_both",
+      "page": 0,
+      "status_code": 200,
+      "response_bytes": 343,
+      "table_rows": 1,
+      "parsed_events": 0,
+      "new_events": 0
+    },
+    {
+      "host": "https://kr.investing.com",
+      "mode": "server_both",
+      "page": 0,
+      "status_code": 200,
+      "response_bytes": 1606,
+      "table_rows": 2,
+      "parsed_events": 1,
+      "new_events": 1
     }
   ]
 }
