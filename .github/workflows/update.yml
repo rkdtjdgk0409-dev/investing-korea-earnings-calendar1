@@ -1,25 +1,24 @@
 name: 한국 기업 실적 캘린더 갱신
 
 on:
-  # Actions 화면에서 수동 실행
   workflow_dispatch:
 
-  # 한국시간 기준 매일 01:17, 07:17, 13:17, 19:17 실행
   schedule:
-    - cron: "17 1,7,13,19 * * *"
-      timezone: "Asia/Seoul"
+    # UTC 22:17 = 한국시간 다음 날 오전 7:17
+    # 매일 서울 현재 날짜부터 미래 3개월 데이터를 갱신
+    - cron: "17 22 * * *"
 
 permissions:
   contents: write
 
 concurrency:
-  group: earnings-calendar-update
+  group: korea-earnings-calendar-update
   cancel-in-progress: true
 
 jobs:
   update:
     runs-on: ubuntu-latest
-    timeout-minutes: 20
+    timeout-minutes: 10
 
     steps:
       - name: 저장소 파일 불러오기
@@ -31,61 +30,27 @@ jobs:
           python-version: "3.12"
           cache: pip
 
-      - name: 필요한 폴더 및 파일 배치
-        shell: bash
-        run: |
-          mkdir -p scripts
-          mkdir -p docs/data
-
-          # 현재 최상단에 올라간 파일을 올바른 위치로 복사
-          cp update_calendar.py scripts/update_calendar.py
-          cp index.html docs/index.html
-
-          # 최초 실행에 사용할 빈 데이터 파일
-          if [ ! -f docs/data/events.json ]; then
-            cp events.json docs/data/events.json
-          fi
-
-          if [ ! -f docs/data/status.json ]; then
-            cp status.json docs/data/status.json
-          fi
-
-          # GitHub Pages용
-          touch docs/.nojekyll
-
       - name: Python 패키지 설치
         run: |
           python -m pip install --upgrade pip
           pip install -r requirements.txt
-          playwright install --with-deps chromium
 
       - name: 한국 기업 실적 데이터 갱신
         run: |
-          python scripts/update_calendar.py
+          python update_calendar.py
 
       - name: 갱신 결과 GitHub에 저장
-        shell: bash
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
 
-          git add scripts/update_calendar.py
-          git add docs/index.html
-          git add docs/.nojekyll
           git add docs/data/events.json
           git add docs/data/status.json
-
-          if [ -f docs/earnings.ics ]; then
-            git add docs/earnings.ics
-          fi
-
-          if compgen -G "docs/data/*.png" > /dev/null; then
-            git add docs/data/*.png
-          fi
+          git add docs/earnings.ics
 
           if git diff --cached --quiet; then
-            echo "새로운 변경 사항이 없습니다."
+            echo "변경 사항이 없습니다."
           else
-            git commit -m "자동 갱신: 한국 주요 기업 실적 캘린더"
+            git commit -m "자동 갱신: 한국 기업 실적 캘린더"
             git push
           fi
