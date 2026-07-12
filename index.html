@@ -200,11 +200,22 @@
       const status = statusResponse.ok ? await statusResponse.json() : {};
 
       // 이전 파일에서 title이 빠졌더라도 화면에서 '기업명 실적'으로 복구합니다.
-      const normalizedEvents = events.map((event) => ({
-        ...event,
-        title: event.title || ((event.company || event.ticker || "기업") + " 실적"),
-        allDay: true
-      }));
+      const normalizedEvents = events
+        .map((event) => ({
+          ...event,
+          title: event.title || ((event.company || event.ticker || "기업") + " 실적"),
+          marketCap: Number(event.marketCap || 0),
+          allDay: true
+        }))
+        .sort((a, b) => {
+          const dateCompare = String(a.start).localeCompare(String(b.start));
+          if (dateCompare !== 0) return dateCompare;
+
+          const marketCapCompare = b.marketCap - a.marketCap;
+          if (marketCapCompare !== 0) return marketCapCompare;
+
+          return a.title.localeCompare(b.title, "ko");
+        });
 
       const rangeFrom = status.range?.from;
       const rangeTo = status.range?.to;
@@ -252,6 +263,20 @@
         displayEventTime: false,
         eventDisplay: "block",
         dayMaxEvents: true,
+
+        // 같은 날짜의 일정은 시가총액 내림차순으로 고정합니다.
+        eventOrderStrict: true,
+        eventOrder(a, b) {
+          const marketCapA = Number(a.extendedProps?.marketCap || 0);
+          const marketCapB = Number(b.extendedProps?.marketCap || 0);
+
+          if (marketCapA !== marketCapB) {
+            return marketCapB - marketCapA;
+          }
+
+          return a.title.localeCompare(b.title, "ko");
+        },
+
         events: normalizedEvents,
 
         // FullCalendar 기본 렌더러 대신 제목을 직접 넣어

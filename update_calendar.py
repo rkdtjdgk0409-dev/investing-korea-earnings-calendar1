@@ -14,6 +14,7 @@ from bs4 import BeautifulSoup, Tag
 from curl_cffi import requests
 from dateutil import parser as date_parser
 from dateutil.relativedelta import relativedelta
+import FinanceDataReader as fdr
 
 
 # 서울 현재 날짜부터 정확히 미래 3개월까지 조회합니다.
@@ -590,6 +591,183 @@ def read_previous_events(start: date, end: date) -> list[dict[str, Any]]:
     return retained
 
 
+
+def normalize_company_key(value: str | None) -> str:
+    """기업명 비교용 키를 만듭니다."""
+    text = clean(value).upper()
+    for token in (
+        "주식회사",
+        "(주)",
+        "㈜",
+        "CO.,LTD.",
+        "CO., LTD.",
+        "CO LTD",
+        "CORPORATION",
+        "CORP.",
+        "INC.",
+    ):
+        text = text.replace(token, "")
+    return re.sub(r"[^0-9A-Z가-힣]", "", text)
+
+
+def safe_int(value: Any) -> int:
+    if value is None:
+        return 0
+    try:
+        if value != value:  # NaN
+            return 0
+    except Exception:
+        pass
+
+    text = clean(str(value)).replace(",", "")
+    if not text:
+        return 0
+
+    try:
+        return int(float(text))
+    except (TypeError, ValueError, OverflowError):
+        return 0
+
+
+def find_dataframe_column(columns: list[str], candidates: tuple[str, ...]) -> str | None:
+    direct = {str(column): str(column) for column in columns}
+    for candidate in candidates:
+        if candidate in direct:
+            return candidate
+
+    normalized = {
+        re.sub(r"[^A-Z0-9가-힣]", "", str(column).upper()): str(column)
+        for column in columns
+    }
+    for candidate in candidates:
+        key = re.sub(r"[^A-Z0-9가-힣]", "", candidate.upper())
+        if key in normalized:
+            return normalized[key]
+
+    return None
+
+
+def load_market_cap_maps() -> tuple[dict[str, int], dict[str, int], str]:
+    """
+    KRX 전체 종목 시가총액을 한 번에 받아옵니다.
+    종목별 개별 요청을 하지 않기 때문에 실행 시간이 크게 늘어나지 않습니다.
+    """
+    errors: list[str] = []
+
+    for listing_name in ("KRX-MARCAP", "KRX"):
+        try:
+            dataframe = fdr.StockListing(listing_name)
+            columns = [str(column) for column in dataframe.columns]
+
+            symbol_column = find_dataframe_column(
+                columns,
+                ("Code", "Symbol", "Ticker", "종목코드", "단축코드"),
+            )
+            name_column = find_dataframe_column(
+                columns,
+                ("Name", "종목명", "한글종목명"),
+            )
+            market_cap_column = find_dataframe_column(
+                columns,
+                ("Marcap", "MarketCap", "MarCap", "시가총액"),
+            )
+            close_column = find_dataframe_column(
+                columns,
+                ("Close", "종가", "현재가"),
+            )
+            stocks_column = find_dataframe_column(
+                columns,
+                ("Stocks", "Shares", "상장주식수"),
+            )
+
+            if not name_column:
+                raise RuntimeError(f"종목명 컬럼을 찾지 못했습니다: {columns}")
+
+            by_ticker: dict[str, int] = {}
+            by_name: dict[str, int] = {}
+
+            for _, row in dataframe.iterrows():
+                company_name = clean(str(row.get(name_column, "")))
+                if not company_name:
+                    continue
+
+                market_cap = (
+                    safe_int(row.get(market_cap_column))
+                    if market_cap_column
+                    else 0
+                )
+
+                if market_cap <= 0 and close_column and stocks_column:
+                    market_cap = (
+                        safe_int(row.get(close_column))
+                        * safe_int(row.get(stocks_column))
+                    )
+
+                if market_cap <= 0:
+                    continue
+
+                if symbol_column:
+                    ticker_raw = clean(str(row.get(symbol_column, "")))
+                    ticker_raw = re.sub(r"\.0$", "", ticker_raw)
+                    ticker_digits = re.sub(r"\D", "", ticker_raw)
+                    if ticker_digits:
+                        by_ticker[ticker_digits.zfill(6)] = market_cap
+
+                name_key = normalize_company_key(company_name)
+                if name_key:
+                    previous = by_name.get(name_key, 0)
+                    by_name[name_key] = max(previous, market_cap)
+
+            if by_ticker or by_name:
+                return by_ticker, by_name, listing_name
+
+            raise RuntimeError("유효한 시가총액 데이터가 없습니다.")
+        except Exception as exc:
+            errors.append(f"{listing_name}: {type(exc).__name__}: {exc}")
+
+    raise RuntimeError(" / ".join(errors))
+
+
+def attach_market_caps(
+    events: list[dict[str, Any]],
+) -> tuple[int, str | None, str | None]:
+    """
+    일정에 marketCap 값을 붙입니다.
+    종목코드 매칭을 우선하고, 코드가 없으면 기업명으로 다시 매칭합니다.
+    """
+    try:
+        by_ticker, by_name, source = load_market_cap_maps()
+    except Exception as exc:
+        # KRX 조회가 일시적으로 실패하면 기존 저장값으로 정렬합니다.
+        matched = sum(1 for event in events if safe_int(event.get("marketCap")) > 0)
+        for event in events:
+            event["marketCap"] = safe_int(event.get("marketCap"))
+        return matched, None, f"{type(exc).__name__}: {exc}"
+
+    matched = 0
+
+    for event in events:
+        ticker_raw = clean(str(event.get("ticker") or ""))
+        ticker_digits = re.sub(r"\D", "", ticker_raw)
+        ticker = ticker_digits.zfill(6) if ticker_digits else ""
+
+        market_cap = by_ticker.get(ticker, 0) if ticker else 0
+
+        if market_cap <= 0:
+            company_key = normalize_company_key(event.get("company"))
+            market_cap = by_name.get(company_key, 0)
+
+        # 매칭 실패 시 이전 실행에서 저장한 시가총액을 보조값으로 유지합니다.
+        if market_cap <= 0:
+            market_cap = safe_int(event.get("marketCap"))
+
+        event["marketCap"] = market_cap
+
+        if market_cap > 0:
+            matched += 1
+
+    return matched, source, None
+
 def escape_ics(value: str) -> str:
     return (
         value.replace("\\", "\\\\")
@@ -661,9 +839,17 @@ def main() -> None:
         if company:
             event["title"] = f"{company} 실적"
 
+    market_cap_matched, market_cap_source, market_cap_error = attach_market_caps(events)
+
+    # 같은 날짜 안에서는 시가총액이 큰 기업부터 정렬합니다.
+    # 시가총액을 확인하지 못한 기업은 해당 날짜의 맨 아래로 갑니다.
     events = sorted(
         events,
-        key=lambda item: (str(item.get("start", "")), str(item.get("company", ""))),
+        key=lambda item: (
+            str(item.get("start", "")),
+            -safe_int(item.get("marketCap")),
+            str(item.get("company", "")),
+        ),
     )
 
     EVENTS_PATH.write_text(
@@ -683,6 +869,10 @@ def main() -> None:
         },
         "event_count": len(events),
         "source_mode": source_mode,
+        "market_cap_source": market_cap_source,
+        "market_cap_matched": market_cap_matched,
+        "market_cap_unmatched": max(0, len(events) - market_cap_matched),
+        "market_cap_error": market_cap_error,
         "elapsed_seconds": round(time.monotonic() - started, 2),
         "message": message,
         "errors": errors[-10:],
