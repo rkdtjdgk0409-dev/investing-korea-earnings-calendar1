@@ -521,44 +521,95 @@ def fetch_mode(
     return collected
 
 
+def date_windows(
+    start: date,
+    end: date,
+    window_days: int = 14,
+) -> list[tuple[date, date]]:
+    """
+    Investing.com이 긴 사용자 지정 기간을 현재/다음 주 범위로 축소해
+    반환하는 경우를 막기 위해 14일 단위로 나눕니다.
+
+    서울 오늘부터 정확히 3개월 뒤까지의 전체 구간은 그대로 유지됩니다.
+    """
+    windows: list[tuple[date, date]] = []
+    cursor = start
+
+    while cursor <= end:
+        window_end = min(cursor + timedelta(days=window_days - 1), end)
+        windows.append((cursor, window_end))
+        cursor = window_end + timedelta(days=1)
+
+    return windows
+
+
 def fetch_events(
     start: date,
     end: date,
 ) -> tuple[list[dict[str, Any]], list[dict[str, Any]], list[str], str | None]:
     attempts: list[dict[str, Any]] = []
     errors: list[str] = []
+    windows = date_windows(start, end)
 
-    # 정상 경로는 첫 번째 모드 하나로 끝납니다.
-    # 필터 필드가 변경됐을 때만 두 개의 보조 모드를 시도합니다.
+    # 정상적으로는 server_both 한 번의 모드만 사용합니다.
+    # Investing.com 필터 이름이 바뀐 경우에만 보조 모드를 시도합니다.
     modes = ("server_both", "server_country", "server_high")
 
     for host in HOSTS:
         session = requests.Session()
         try:
             for mode in modes:
-                try:
-                    events = fetch_mode(
-                        session,
-                        host,
-                        start,
-                        end,
-                        mode=mode,
-                        attempts=attempts,
-                    )
-                    if events:
-                        unique = {
-                            (event["start"], event["company"]): event
-                            for event in events
-                        }
-                        ordered = sorted(
-                            unique.values(),
-                            key=lambda item: (item["start"], item["company"]),
+                mode_events: list[dict[str, Any]] = []
+                mode_failed = False
+
+                for window_index, (window_start, window_end) in enumerate(
+                    windows,
+                    start=1,
+                ):
+                    try:
+                        window_events = fetch_mode(
+                            session,
+                            host,
+                            window_start,
+                            window_end,
+                            mode=mode,
+                            attempts=attempts,
                         )
-                        return ordered, attempts, errors, f"{host}:{mode}"
-                except Exception as exc:
-                    errors.append(
-                        f"{host} / {mode}: {type(exc).__name__}: {exc}"
+
+                        for event in window_events:
+                            event["window"] = (
+                                f"{window_start.isoformat()}"
+                                f"~{window_end.isoformat()}"
+                            )
+                            mode_events.append(event)
+
+                    except Exception as exc:
+                        mode_failed = True
+                        errors.append(
+                            f"{host} / {mode} / "
+                            f"{window_start}~{window_end}: "
+                            f"{type(exc).__name__}: {exc}"
+                        )
+                        break
+
+                # 모든 14일 구간을 정상 요청한 모드만 채택합니다.
+                if not mode_failed and mode_events:
+                    unique = {
+                        (event["start"], event["company"]): event
+                        for event in mode_events
+                    }
+                    ordered = sorted(
+                        unique.values(),
+                        key=lambda item: (
+                            item["start"],
+                            item["company"],
+                        ),
                     )
+                    source_mode = (
+                        f"{host}:{mode}:"
+                        f"{len(windows)}windows"
+                    )
+                    return ordered, attempts, errors, source_mode
         finally:
             session.close()
 
@@ -868,6 +919,9 @@ def main() -> None:
             "to": end.isoformat(),
         },
         "event_count": len(events),
+        "date_window_count": len(date_windows(start, end)),
+        "first_event_date": events[0]["start"] if events else None,
+        "last_event_date": events[-1]["start"] if events else None,
         "source_mode": source_mode,
         "market_cap_source": market_cap_source,
         "market_cap_matched": market_cap_matched,

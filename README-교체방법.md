@@ -1,49 +1,36 @@
-# 한국 기업 실적 캘린더 v3 교체 방법
+# 미래 3개월 전체 조회 수정본
 
-이번 버전은 Playwright/Chromium을 설치하지 않고 Investing.com의 캘린더 요청을 직접 사용하므로 이전 버전보다 훨씬 가볍게 실행됩니다.
+이 수정본은 긴 3개월 기간을 Investing.com에 한 번에 요청하지 않습니다.
 
-## 교체할 파일
+서울 현재 날짜부터 정확히 3개월 뒤까지를 14일 단위로 나눠 요청한 후,
+모든 구간의 결과를 합칩니다. 따라서 현재 주와 다음 주 데이터만 남는
+문제를 방지합니다.
 
-ZIP의 파일을 아래 위치에 덮어씁니다.
+## 반드시 교체할 파일 4개
 
-1. `update_calendar.py` → 저장소 최상단의 `update_calendar.py`
-2. `requirements.txt` → 저장소 최상단의 `requirements.txt`
-3. `.github/workflows/update.yml` → 같은 경로의 기존 파일
-4. `docs/index.html` → 같은 경로의 기존 파일
+1. 저장소 최상단 `update_calendar.py`
+2. 저장소 최상단 `requirements.txt`
+3. `.github/workflows/update.yml`
+4. `docs/index.html`
 
-## 실행
+`docs/data/events.json`과 `docs/data/status.json`은 직접 교체하지 마세요.
 
-GitHub에서:
+## 교체 후
 
-`Actions → 한국 기업 실적 캘린더 갱신 → Run workflow`
+Actions → 한국 기업 실적 캘린더 갱신 → Run workflow
 
-## 동작 범위
+이전 실행의 Re-run jobs가 아니라 새 Run workflow를 실행하세요.
 
-실행할 때마다 `Asia/Seoul`의 현재 날짜를 구합니다.
+## 정상 확인
 
-- 시작: 서울의 오늘 날짜
-- 종료: 시작 날짜에서 정확히 3개월 뒤
-- 필터: 국가 한국, 중요도 높음
-- 화면 제목: `기업명 실적`
+`docs/data/status.json`에서 다음을 확인합니다.
 
-예: 서울 날짜가 2026-07-12이면 2026-07-12부터 2026-10-12까지 조회합니다.
+- `range.from`: 서울 현재 날짜
+- `range.to`: 현재 날짜에서 정확히 3개월 뒤
+- `date_window_count`: 약 7개
+- `first_event_date`
+- `last_event_date`
+- `event_count`
 
-## 자동 실행
-
-매일 한국시간 약 오전 7시 17분에 실행됩니다. 예약 실행은 GitHub 사정에 따라 조금 늦게 시작될 수 있습니다.
-
-## 확인할 파일
-
-- `docs/data/events.json`: 캘린더 일정
-- `docs/data/status.json`: 범위, 일정 개수, 실행 시간과 진단 정보
-- `docs/earnings.ics`: ICS 캘린더
-
-`events.json`의 각 일정에는 다음 형태의 제목이 있어야 합니다.
-
-```json
-{
-  "title": "삼성전자 실적",
-  "company": "삼성전자",
-  "start": "2026-07-30"
-}
-```
+캘린더는 월 단위 화면이므로 8월과 9월은 상단 오른쪽 화살표로 이동해
+확인합니다. 데이터 조회 범위 자체는 상단 상태 문구에 표시됩니다.
