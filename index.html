@@ -8,15 +8,12 @@
   <script src="https://cdn.jsdelivr.net/npm/fullcalendar@6.1.17/index.global.min.js"></script>
   <style>
     :root {
-      --bg: #0f151b;
-      --panel: #171f28;
-      --line: #2c3743;
-      --text: #f5f7fa;
-      --muted: #97a3af;
-      --event: #315f9f;
-      --event-hover: #3d73bc;
-      --warning-bg: #342c1f;
-      --warning-line: #705c34;
+      --bg: #10151b;
+      --panel: #171e26;
+      --line: #2a3440;
+      --text: #f3f6f8;
+      --muted: #96a0aa;
+      --event: #273543;
     }
 
     * { box-sizing: border-box; }
@@ -43,7 +40,7 @@
     }
 
     h1 {
-      margin: 0 0 5px;
+      margin: 0 0 4px;
       font-size: 22px;
     }
 
@@ -54,24 +51,12 @@
     }
 
     .ics {
-      flex: 0 0 auto;
       padding: 8px 10px;
       border: 1px solid var(--line);
       border-radius: 8px;
       color: var(--text);
+      font-size: 13px;
       text-decoration: none;
-      font-size: 13px;
-    }
-
-    #notice {
-      display: none;
-      margin-bottom: 12px;
-      padding: 12px 14px;
-      border: 1px solid var(--warning-line);
-      border-radius: 10px;
-      background: var(--warning-bg);
-      line-height: 1.5;
-      font-size: 13px;
     }
 
     #calendar {
@@ -85,9 +70,8 @@
     .fc {
       --fc-border-color: var(--line);
       --fc-page-bg-color: var(--panel);
-      --fc-neutral-bg-color: #1d2731;
-      --fc-list-event-hover-bg-color: #263442;
-      --fc-today-bg-color: rgba(170, 145, 55, 0.18);
+      --fc-neutral-bg-color: #1d2630;
+      --fc-list-event-hover-bg-color: #25313d;
     }
 
     .fc .fc-toolbar-title {
@@ -95,54 +79,31 @@
     }
 
     .fc .fc-button-primary {
-      border-color: #3a4856;
-      background: #293642;
+      border-color: #394653;
+      background: #28333f;
     }
 
     .fc .fc-button-primary:not(:disabled).fc-button-active,
     .fc .fc-button-primary:not(:disabled):active {
-      border-color: #526171;
-      background: #3a4a59;
+      border-color: #4b5966;
+      background: #3a4856;
     }
 
     .fc .fc-daygrid-day-number,
-    .fc .fc-col-header-cell-cushion,
-    .fc .fc-list-day-text,
-    .fc .fc-list-day-side-text {
+    .fc .fc-col-header-cell-cushion {
       color: var(--text);
       text-decoration: none;
     }
 
-    .fc .fc-daygrid-event,
-    .fc .fc-list-event {
+    .fc .fc-event {
+      padding: 2px 4px;
       border: 0;
+      background: var(--event);
       cursor: pointer;
     }
 
-    .fc .fc-daygrid-event {
-      padding: 3px 5px;
-      border-radius: 5px;
-      background: var(--event);
-    }
-
-    .fc .fc-daygrid-event:hover {
-      background: var(--event-hover);
-    }
-
-    .event-label {
-      overflow: hidden;
-      color: #fff;
-      font-size: 12px;
-      font-weight: 700;
-      line-height: 1.35;
-      text-overflow: ellipsis;
-      white-space: nowrap;
-    }
-
-    .fc-list-event-title a {
-      color: var(--text) !important;
-      font-weight: 700;
-      text-decoration: none;
+    .fc .fc-event-title {
+      font-weight: 650;
     }
 
     @media (max-width: 680px) {
@@ -161,165 +122,132 @@
     <div class="top">
       <div>
         <h1>한국 기업 실적 캘린더</h1>
-        <div id="status">데이터를 불러오는 중입니다.</div>
+        <div id="status">Investing.com · 한국 · 중요도 높음</div>
       </div>
       <a class="ics" href="./earnings.ics">ICS</a>
     </div>
 
-    <div id="notice"></div>
     <div id="calendar"></div>
   </main>
 
   <script>
-    function addOneDay(isoDate) {
-      const date = new Date(isoDate + "T00:00:00+09:00");
-      date.setDate(date.getDate() + 1);
-      return date.toISOString().slice(0, 10);
-    }
-
-    function eventNode(title) {
-      const node = document.createElement("div");
-      node.className = "event-label";
-      node.textContent = title;
-      return node;
-    }
-
-    async function loadCalendar() {
+    async function load() {
       const cacheKey = Date.now();
 
       const [eventsResponse, statusResponse] = await Promise.all([
-        fetch("./data/events.json?v=" + cacheKey),
-        fetch("./data/status.json?v=" + cacheKey)
+        fetch("./data/events.json?ts=" + cacheKey),
+        fetch("./data/status.json?ts=" + cacheKey).catch(() => null)
       ]);
 
       if (!eventsResponse.ok) {
         throw new Error("events.json을 불러오지 못했습니다.");
       }
 
-      const events = await eventsResponse.json();
-      const status = statusResponse.ok ? await statusResponse.json() : {};
+      const rawEvents = await eventsResponse.json();
+      const status =
+        statusResponse && statusResponse.ok
+          ? await statusResponse.json()
+          : {};
 
-      // 이전 파일에서 title이 빠졌더라도 화면에서 '기업명 실적'으로 복구합니다.
-      const normalizedEvents = events
+      /*
+       * marketCap을 숫자로 고정하고 배열 자체도 미리 정렬합니다.
+       * FullCalendar에도 eventOrder를 별도로 지정해 두 번 보장합니다.
+       */
+      const events = rawEvents
         .map((event) => ({
           ...event,
-          title: event.title || ((event.company || event.ticker || "기업") + " 실적"),
           marketCap: Number(event.marketCap || 0),
-          allDay: true
+          title:
+            event.title ||
+            ((event.company || event.ticker || "기업") + " 실적")
         }))
         .sort((a, b) => {
-          const dateCompare = String(a.start).localeCompare(String(b.start));
-          if (dateCompare !== 0) return dateCompare;
+          const dateResult = String(a.start).localeCompare(String(b.start));
+          if (dateResult !== 0) return dateResult;
 
-          const marketCapCompare = b.marketCap - a.marketCap;
-          if (marketCapCompare !== 0) return marketCapCompare;
+          const marketCapResult = b.marketCap - a.marketCap;
+          if (marketCapResult !== 0) return marketCapResult;
 
           return a.title.localeCompare(b.title, "ko");
         });
 
-      const rangeFrom = status.range?.from;
-      const rangeTo = status.range?.to;
-      const updatedAt = status.updated_at
+      const when = status.updated_at
         ? new Date(status.updated_at).toLocaleString("ko-KR")
         : "";
 
-      const rangeText = rangeFrom && rangeTo
-        ? `${rangeFrom} ~ ${rangeTo}`
-        : "서울 현재 날짜부터 미래 3개월";
+      const rangeText =
+        status.range?.from && status.range?.to
+          ? ` · ${status.range.from} ~ ${status.range.to}`
+          : "";
 
       document.getElementById("status").textContent =
-        `Investing.com · 한국 · 중요도 높음 · ${rangeText} · ` +
-        `${normalizedEvents.length}건` +
-        (updatedAt ? ` · ${updatedAt} 갱신` : "");
-
-      const notice = document.getElementById("notice");
-      if (normalizedEvents.length === 0) {
-        notice.style.display = "block";
-        notice.textContent =
-          status.message ||
-          "표시할 실적 일정이 없습니다. Actions 실행 결과와 status.json을 확인해 주세요.";
-      } else if (status.ok === false && status.used_cache) {
-        notice.style.display = "block";
-        notice.textContent = status.message;
-      }
-
-      const isMobile = window.innerWidth < 680;
-
-      const options = {
-        locale: "ko",
-        initialDate: rangeFrom || undefined,
-        initialView: isMobile ? "listMonth" : "dayGridMonth",
-        height: "auto",
-        headerToolbar: {
-          left: "prev,next today",
-          center: "title",
-          right: isMobile ? "listMonth" : "dayGridMonth,listMonth"
-        },
-        buttonText: {
-          today: "오늘",
-          month: "월",
-          list: "목록"
-        },
-        displayEventTime: false,
-        eventDisplay: "block",
-        dayMaxEvents: true,
-
-        // 같은 날짜의 일정은 시가총액 내림차순으로 고정합니다.
-        eventOrderStrict: true,
-        eventOrder(a, b) {
-          const marketCapA = Number(a.extendedProps?.marketCap || 0);
-          const marketCapB = Number(b.extendedProps?.marketCap || 0);
-
-          if (marketCapA !== marketCapB) {
-            return marketCapB - marketCapA;
-          }
-
-          return a.title.localeCompare(b.title, "ko");
-        },
-
-        events: normalizedEvents,
-
-        // FullCalendar 기본 렌더러 대신 제목을 직접 넣어
-        // '기업명 실적' 문구가 반드시 보이게 합니다.
-        eventContent(info) {
-          return {
-            domNodes: [eventNode(info.event.title)]
-          };
-        },
-
-        eventDidMount(info) {
-          info.el.title = info.event.title;
-        },
-
-        eventClick(info) {
-          info.jsEvent.preventDefault();
-          if (info.event.url) {
-            window.open(info.event.url, "_blank", "noopener");
-          }
-        }
-      };
-
-      if (rangeFrom && rangeTo) {
-        options.validRange = {
-          start: rangeFrom,
-          end: addOneDay(rangeTo)
-        };
-      }
+        `Investing.com · 한국 · 중요도 높음 · 시가총액순${rangeText}` +
+        ` · ${events.length}건` +
+        (when ? ` · ${when} 갱신` : "");
 
       const calendar = new FullCalendar.Calendar(
         document.getElementById("calendar"),
-        options
+        {
+          locale: "ko",
+          initialDate: status.range?.from || undefined,
+          initialView:
+            window.innerWidth < 680 ? "listMonth" : "dayGridMonth",
+          height: "auto",
+
+          headerToolbar: {
+            left: "prev,next today",
+            center: "title",
+            right:
+              window.innerWidth < 680
+                ? "listMonth"
+                : "dayGridMonth,listMonth"
+          },
+
+          buttonText: {
+            today: "오늘",
+            month: "월",
+            list: "목록"
+          },
+
+          events,
+          eventDisplay: "block",
+          displayEventTime: false,
+          dayMaxEvents: true,
+
+          /*
+           * 같은 날짜에서는 marketCap이 큰 순서로 표시합니다.
+           * marketCap은 비표준 필드이지만 FullCalendar eventOrder에서
+           * 사용할 수 있습니다. 앞의 '-'는 내림차순이라는 뜻입니다.
+           */
+          eventOrder: "-marketCap,title",
+          eventOrderStrict: true,
+
+          eventDidMount(info) {
+            const marketCap = Number(
+              info.event.extendedProps.marketCap || 0
+            );
+            info.el.title =
+              marketCap > 0
+                ? `${info.event.title} · 시가총액 ${marketCap.toLocaleString("ko-KR")}원`
+                : info.event.title;
+          },
+
+          eventClick(info) {
+            info.jsEvent.preventDefault();
+            if (info.event.url) {
+              window.open(info.event.url, "_blank", "noopener");
+            }
+          }
+        }
       );
+
       calendar.render();
     }
 
-    loadCalendar().catch((error) => {
+    load().catch((error) => {
+      document.getElementById("status").textContent =
+        "캘린더 데이터를 불러오지 못했습니다.";
       console.error(error);
-      const notice = document.getElementById("notice");
-      notice.style.display = "block";
-      notice.textContent =
-        "캘린더 데이터를 불러오지 못했습니다: " + error.message;
-      document.getElementById("status").textContent = "데이터 로드 실패";
     });
   </script>
 </body>
