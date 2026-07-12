@@ -4,41 +4,55 @@ import hashlib
 import json
 import re
 import time
+from collections import Counter
 from datetime import date, datetime, timedelta, timezone
 from pathlib import Path
 from typing import Any
 from urllib.parse import urljoin
 from zoneinfo import ZoneInfo
 
+import FinanceDataReader as fdr
 from bs4 import BeautifulSoup, Tag
 from curl_cffi import requests
 from dateutil import parser as date_parser
 from dateutil.relativedelta import relativedelta
-import FinanceDataReader as fdr
 
 
-# 서울 현재 날짜부터 정확히 미래 3개월까지 조회합니다.
+VERSION = "v5.1-strict-rolling-3month"
 SEOUL = ZoneInfo("Asia/Seoul")
+
+# Investing.com 필터 값
 KOREA_COUNTRY_ID = "11"
 HIGH_IMPORTANCE_ID = "3"
-MAX_PAGES = 20
+
+# 긴 기간 요청이 현재/다음 주 데이터로 되돌아오는 현상을 막기 위해
+# 14일 단위로 나누고, 응답 날짜가 요청 구간과 실제로 겹치는지 검증합니다.
+WINDOW_DAYS = 14
+MAX_PAGES_PER_WINDOW = 10
 
 HOSTS = (
     "https://kr.investing.com",
     "https://www.investing.com",
 )
 
+DATE_FORMATS = (
+    "iso",       # 2026-07-12
+    "us",        # 07/12/2026
+    "day_first", # 12/07/2026
+)
+
 SCRIPT_PATH = Path(__file__).resolve()
-ROOT = SCRIPT_PATH.parents[1] if SCRIPT_PATH.parent.name == "scripts" else SCRIPT_PATH.parent
+ROOT = SCRIPT_PATH.parent
 DOCS_DIR = ROOT / "docs"
 DATA_DIR = DOCS_DIR / "data"
 EVENTS_PATH = DATA_DIR / "events.json"
 STATUS_PATH = DATA_DIR / "status.json"
 ICS_PATH = DOCS_DIR / "earnings.ics"
+MARKET_CAP_CACHE_PATH = DATA_DIR / "market_caps.json"
 
 
-def clean(value: str | None) -> str:
-    return re.sub(r"\s+", " ", value or "").strip()
+def clean(value: Any) -> str:
+    return re.sub(r"\s+", " ", "" if value is None else str(value)).strip()
 
 
 def rolling_range() -> tuple[date, date]:
@@ -47,12 +61,34 @@ def rolling_range() -> tuple[date, date]:
     return start, end
 
 
-def parse_date_value(value: str | None, default_year: int) -> date | None:
+def make_windows(start: date, end: date) -> list[tuple[date, date]]:
+    windows: list[tuple[date, date]] = []
+    cursor = start
+
+    while cursor <= end:
+        window_end = min(cursor + timedelta(days=WINDOW_DAYS - 1), end)
+        windows.append((cursor, window_end))
+        cursor = window_end + timedelta(days=1)
+
+    return windows
+
+
+def format_request_date(value: date, mode: str) -> str:
+    if mode == "iso":
+        return value.isoformat()
+    if mode == "us":
+        return value.strftime("%m/%d/%Y")
+    if mode == "day_first":
+        return value.strftime("%d/%m/%Y")
+    raise ValueError(f"지원하지 않는 날짜 형식: {mode}")
+
+
+def parse_date_value(value: Any, default_year: int) -> date | None:
     text = clean(value)
     if not text:
         return None
 
-    # theDay169... 형태의 유닉스 타임스탬프
+    # Investing.com의 날짜 구분행 ID: theDay169...
     timestamp_match = re.search(r"(?:theDay)?(\d{10,13})", text)
     if timestamp_match:
         try:
@@ -62,7 +98,7 @@ def parse_date_value(value: str | None, default_year: int) -> date | None:
             parsed = datetime.fromtimestamp(timestamp, timezone.utc).date()
             if 2000 <= parsed.year <= 2100:
                 return parsed
-        except (OverflowError, OSError, ValueError):
+        except (ValueError, OSError, OverflowError):
             pass
 
     iso_match = re.search(r"(20\d{2})[-/.](\d{1,2})[-/.](\d{1,2})", text)
@@ -104,7 +140,7 @@ def parse_date_value(value: str | None, default_year: int) -> date | None:
     return None
 
 
-def find_date_header(row: Tag, default_year: int) -> date | None:
+def row_date(row: Tag, default_year: int) -> date | None:
     selectors = (
         'td[id^="theDay"]',
         '[id^="theDay"]',
@@ -120,12 +156,13 @@ def find_date_header(row: Tag, default_year: int) -> date | None:
         if not node:
             continue
 
-        for candidate in (
+        candidates = (
             node.get("id"),
             node.get("data-date"),
             node.get("datetime"),
             node.get_text(" ", strip=True),
-        ):
+        )
+        for candidate in candidates:
             parsed = parse_date_value(candidate, default_year)
             if parsed:
                 return parsed
@@ -146,6 +183,7 @@ def find_company_cell(row: Tag) -> Tag | None:
         '[data-column="company"]',
         'td[class*="company"]',
     )
+
     for selector in selectors:
         node = row.select_one(selector)
         if node:
@@ -163,20 +201,25 @@ def find_company_cell(row: Tag) -> Tag | None:
 
 
 def looks_like_ticker(value: str) -> bool:
-    compact = clean(value)
+    value = clean(value)
     return bool(
-        re.fullmatch(r"[A-Z0-9.\-]{1,12}", compact)
-        or re.fullmatch(r"\d{5,6}", compact)
+        re.fullmatch(r"[A-Z0-9.\-]{1,12}", value)
+        or re.fullmatch(r"\d{5,6}", value)
     )
 
 
-def extract_company(row: Tag, base_url: str) -> tuple[str | None, str | None, str]:
+def extract_company(
+    row: Tag,
+    base_url: str,
+) -> tuple[str | None, str | None, str]:
     cell = find_company_cell(row)
     if not cell:
         return None, None, base_url
 
     link = cell.select_one("a[href]") or row.select_one(
-        'a[href*="/equities/"], a[href*="-earnings"], a[href*="/stocks/"]'
+        'a[href*="/equities/"], '
+        'a[href*="-earnings"], '
+        'a[href*="/stocks/"]'
     )
 
     ticker = ""
@@ -185,51 +228,47 @@ def extract_company(row: Tag, base_url: str) -> tuple[str | None, str | None, st
 
     if link:
         link_text = clean(link.get_text(" ", strip=True))
+        href = urljoin(base_url, link.get("href") or "")
         if looks_like_ticker(link_text):
             ticker = link_text
-        href = urljoin(base_url, link.get("href") or "")
 
-    # data 속성에 기업명이 있는 경우 우선 사용합니다.
-    data_name = clean(
+    company = clean(
         cell.get("data-name")
         or cell.get("data-company-name")
         or row.get("data-name")
         or row.get("data-company-name")
+        or cell.get_text(" ", strip=True)
     )
 
-    company = data_name or clean(cell.get_text(" ", strip=True))
+    # 셀 끝의 종목코드를 제거합니다.
+    ticker_in_parentheses = re.search(
+        r"\(\s*([A-Z0-9.\-]{1,12}|\d{5,6})\s*\)\s*$",
+        company,
+        re.IGNORECASE,
+    )
+    if ticker_in_parentheses and not ticker:
+        ticker = ticker_in_parentheses.group(1)
 
-    # "삼성전자 (005930)" 또는 "Samsung Electronics (005930)"에서 종목코드를 제거합니다.
+    company = re.sub(
+        r"\(\s*([A-Z0-9.\-]{1,12}|\d{5,6})\s*\)\s*$",
+        "",
+        company,
+        flags=re.IGNORECASE,
+    )
+
     if ticker:
         company = re.sub(
-            rf"\(\s*{re.escape(ticker)}\s*\)",
-            " ",
-            company,
-            flags=re.IGNORECASE,
-        )
-        company = re.sub(
             rf"\b{re.escape(ticker)}\b\s*$",
-            " ",
+            "",
             company,
             flags=re.IGNORECASE,
         )
 
-    company = re.sub(r"\(\s*[A-Z0-9.\-]{1,12}\s*\)\s*$", " ", company)
-    company = re.sub(r"\(\s*\d{5,6}\s*\)\s*$", " ", company)
     company = clean(company).strip("-–|")
 
-    # 링크 자체가 기업명이고 별도 셀 텍스트가 없는 신규 레이아웃 대응
     if not company or looks_like_ticker(company):
         if link_text and not looks_like_ticker(link_text):
             company = link_text
-
-    # 셀 안의 span에 실제 기업명이 들어 있는 경우
-    if not company or looks_like_ticker(company):
-        for span in cell.select("span"):
-            candidate = clean(span.get_text(" ", strip=True))
-            if candidate and not looks_like_ticker(candidate):
-                company = candidate
-                break
 
     if not company or company.lower() in {"company", "기업", "symbol", "종목"}:
         return None, ticker or None, href
@@ -237,108 +276,54 @@ def extract_company(row: Tag, base_url: str) -> tuple[str | None, str | None, st
     return company, ticker or None, href
 
 
-def local_importance(row: Tag) -> int:
-    for node in (row, *row.find_all(True)):
-        for attribute in (
-            "data-importance",
-            "data-importance-level",
-            "data-impact",
-            "data-img_key",
-            "title",
-            "aria-label",
-        ):
-            value = clean(node.get(attribute)).lower()
-            if not value:
-                continue
-            if value in {"3", "high", "높음"} or "bull3" in value:
-                return 3
-            if value in {"2", "medium", "보통"} or "bull2" in value:
-                return max(2, 0)
-            if value in {"1", "low", "낮음"} or "bull1" in value:
-                return max(1, 0)
-
-    active_bulls = 0
-    for node in row.select('[class*="Bull"], [class*="bull"]'):
-        classes = " ".join(node.get("class", [])).lower()
-        style = clean(node.get("style")).lower()
-        if (
-            "gray" not in classes
-            and "muted" not in classes
-            and "display:none" not in style.replace(" ", "")
-            and "visibility:hidden" not in style.replace(" ", "")
-        ):
-            active_bulls += 1
-
-    return min(active_bulls, 3)
-
-
-def local_is_korea(row: Tag) -> bool:
-    parts: list[str] = [clean(row.get_text(" ", strip=True))]
-    for node in (row, *row.find_all(True)):
-        for key, value in node.attrs.items():
-            if isinstance(value, list):
-                parts.extend(str(item) for item in value)
-            else:
-                parts.append(str(value))
-
-    blob = " ".join(parts).lower()
-    markers = (
-        "south korea",
-        "south_korea",
-        "south-korea",
-        "대한민국",
-        "한국",
-        "country_11",
-        "country-11",
-        'data-country="11"',
-        "ceflags south_korea",
-    )
-    return any(marker in blob for marker in markers)
-
-
 def parse_calendar_html(
     html: str,
     base_url: str,
-    start: date,
-    end: date,
-    *,
-    require_local_high: bool,
-    require_local_korea: bool,
-) -> tuple[list[dict[str, Any]], int]:
+    requested_start: date,
+    requested_end: date,
+) -> dict[str, Any]:
     soup = BeautifulSoup(html, "html.parser")
     rows = soup.select("tr")
+
     current_date: date | None = None
+    all_header_dates: list[date] = []
     events: list[dict[str, Any]] = []
+    company_rows = 0
 
     for row in rows:
-        header_date = find_date_header(row, start.year)
+        detected_date = row_date(row, requested_start.year)
         company_cell = find_company_cell(row)
 
-        if header_date and not company_cell:
-            current_date = header_date
+        if detected_date:
+            current_date = detected_date
+            all_header_dates.append(detected_date)
+
+        if not company_cell:
             continue
 
+        company_rows += 1
         company, ticker, href = extract_company(row, base_url)
-        if not company:
+        if not company or not current_date:
             continue
 
-        event_date = header_date or current_date
-        if not event_date or event_date < start or event_date > end:
+        # 응답이 요청 구간을 무시하고 현재/다음 주를 돌려준 경우,
+        # 범위 밖 이벤트는 저장하지 않습니다.
+        if not (requested_start <= current_date <= requested_end):
             continue
 
-        if require_local_high and local_importance(row) < 3:
-            continue
-        if require_local_korea and not local_is_korea(row):
-            continue
+        event_key = ticker or re.sub(
+            r"[^0-9A-Za-z가-힣]+",
+            "-",
+            company,
+        ).strip("-")
 
-        event_key = ticker or re.sub(r"[^0-9A-Za-z가-힣]+", "-", company).strip("-")
         events.append(
             {
-                "id": f"{event_date.isoformat()}-{event_key}",
+                "id": f"{current_date.isoformat()}-{event_key}",
                 "title": f"{company} 실적",
                 "company": company,
                 "ticker": ticker,
-                "start": event_date.isoformat(),
+                "start": current_date.isoformat(),
                 "allDay": True,
                 "url": href,
                 "country": "한국",
@@ -347,7 +332,26 @@ def parse_calendar_html(
             }
         )
 
-    return events, len(rows)
+    unique_dates = sorted(set(all_header_dates))
+    overlapping_dates = [
+        item
+        for item in unique_dates
+        if requested_start <= item <= requested_end
+    ]
+
+    # 날짜 구분행이 존재하지만 요청 기간과 하나도 겹치지 않으면
+    # 서버가 사용자 지정 기간을 무시한 응답입니다.
+    ignored_range = bool(unique_dates) and not overlapping_dates
+
+    return {
+        "events": events,
+        "row_count": len(rows),
+        "company_rows": company_rows,
+        "header_dates": [item.isoformat() for item in unique_dates],
+        "overlapping_dates": [item.isoformat() for item in overlapping_dates],
+        "ignored_range": ignored_range,
+        "no_results": company_rows == 0,
+    }
 
 
 def response_html(response: Any) -> tuple[str, dict[str, Any]]:
@@ -367,31 +371,25 @@ def response_html(response: Any) -> tuple[str, dict[str, Any]]:
     if "<tr" in text.lower() or "<table" in text.lower():
         return text, metadata
 
-    preview = clean(text[:300])
     raise RuntimeError(
-        f"Investing.com 응답에서 캘린더 HTML을 찾지 못했습니다: {preview}"
+        "캘린더 HTML을 찾지 못했습니다: "
+        + clean(text[:250])
     )
 
 
-def fetch_mode(
+def open_landing_page(
     session: requests.Session,
     host: str,
-    start: date,
-    end: date,
-    *,
-    mode: str,
-    attempts: list[dict[str, Any]],
-) -> list[dict[str, Any]]:
-    landing_urls = (
-        f"{host}/earningscalendar/",
+) -> str:
+    candidates = (
         f"{host}/earnings-calendar/",
+        f"{host}/earningscalendar/",
     )
-    endpoint = f"{host}/earnings-calendar/Service/getCalendarFilteredData"
 
-    landing_url = landing_urls[0]
-    for candidate in landing_urls:
+    last_url = candidates[0]
+    for candidate in candidates:
         try:
-            landing_response = session.get(
+            response = session.get(
                 candidate,
                 impersonate="chrome",
                 timeout=30,
@@ -405,34 +403,25 @@ def fetch_mode(
                     ),
                 },
             )
-            landing_url = str(landing_response.url)
-            if landing_response.status_code < 400:
-                break
+            last_url = str(response.url)
+            if response.status_code < 400:
+                return last_url
         except Exception:
             continue
 
-    payload: dict[str, Any] = {
-        "dateFrom": start.isoformat(),
-        "dateTo": end.isoformat(),
-        "currentTab": "custom",
-        "submitFilters": "1",
-        "limit_from": "0",
-    }
+    return last_url
 
-    require_local_high = False
-    require_local_korea = False
 
-    if mode == "server_both":
-        payload["country[]"] = KOREA_COUNTRY_ID
-        payload["importance[]"] = HIGH_IMPORTANCE_ID
-    elif mode == "server_country":
-        payload["country[]"] = KOREA_COUNTRY_ID
-        require_local_high = True
-    elif mode == "server_high":
-        payload["importance[]"] = HIGH_IMPORTANCE_ID
-        require_local_korea = True
-    else:
-        raise ValueError(f"지원하지 않는 모드: {mode}")
+def request_window_once(
+    session: requests.Session,
+    host: str,
+    landing_url: str,
+    window_start: date,
+    window_end: date,
+    date_format: str,
+    diagnostics: list[dict[str, Any]],
+) -> tuple[list[dict[str, Any]], bool]:
+    endpoint = f"{host}/earnings-calendar/Service/getCalendarFilteredData"
 
     headers = {
         "Accept": "application/json, text/javascript, */*; q=0.01",
@@ -449,174 +438,160 @@ def fetch_mode(
     }
 
     collected: list[dict[str, Any]] = []
-    seen_html: set[str] = set()
     seen_ids: set[str] = set()
+    seen_pages: set[str] = set()
+    accepted_response = False
 
-    for page_number in range(MAX_PAGES):
-        payload["limit_from"] = str(page_number)
+    for page_number in range(MAX_PAGES_PER_WINDOW):
+        # list로 전달해야 country[]와 importance[]가 정확히 폼 필드로 전송됩니다.
+        form_data = [
+            ("dateFrom", format_request_date(window_start, date_format)),
+            ("dateTo", format_request_date(window_end, date_format)),
+            ("currentTab", "custom"),
+            ("submitFilters", "1"),
+            ("limit_from", str(page_number)),
+            ("country[]", KOREA_COUNTRY_ID),
+            ("importance[]", HIGH_IMPORTANCE_ID),
+        ]
 
         response = session.post(
             endpoint,
-            data=payload,
+            data=form_data,
             headers=headers,
             impersonate="chrome",
             timeout=45,
             allow_redirects=True,
         )
 
-        attempt: dict[str, Any] = {
+        record: dict[str, Any] = {
             "host": host,
-            "mode": mode,
+            "window": [
+                window_start.isoformat(),
+                window_end.isoformat(),
+            ],
+            "date_format": date_format,
             "page": page_number,
             "status_code": response.status_code,
             "response_bytes": len(response.content or b""),
         }
 
         if response.status_code >= 400:
-            attempt["error"] = f"HTTP {response.status_code}"
-            attempts.append(attempt)
-            raise RuntimeError(f"{host} HTTP {response.status_code}")
+            record["accepted"] = False
+            record["reason"] = f"HTTP {response.status_code}"
+            diagnostics.append(record)
+            raise RuntimeError(record["reason"])
 
         html, metadata = response_html(response)
-        fingerprint = hashlib.sha1(html.encode("utf-8", errors="ignore")).hexdigest()
+        fingerprint = hashlib.sha1(
+            html.encode("utf-8", errors="ignore")
+        ).hexdigest()
 
-        if fingerprint in seen_html:
-            attempt["duplicate_page"] = True
-            attempts.append(attempt)
+        if fingerprint in seen_pages:
+            record["accepted"] = accepted_response
+            record["reason"] = "duplicate_page"
+            diagnostics.append(record)
             break
-        seen_html.add(fingerprint)
+        seen_pages.add(fingerprint)
 
-        page_events, row_count = parse_calendar_html(
+        parsed = parse_calendar_html(
             html,
             host,
-            start,
-            end,
-            require_local_high=require_local_high,
-            require_local_korea=require_local_korea,
+            window_start,
+            window_end,
         )
 
-        new_count = 0
-        for event in page_events:
-            event_id = event["id"]
-            if event_id not in seen_ids:
-                seen_ids.add(event_id)
-                collected.append(event)
-                new_count += 1
-
-        attempt.update(
+        record.update(
             {
-                "table_rows": row_count,
-                "parsed_events": len(page_events),
-                "new_events": new_count,
+                "row_count": parsed["row_count"],
+                "company_rows": parsed["company_rows"],
+                "header_dates": parsed["header_dates"][:8],
+                "overlapping_dates": parsed["overlapping_dates"][:8],
+                "parsed_events": len(parsed["events"]),
             }
         )
-        attempts.append(attempt)
+
+        if parsed["ignored_range"]:
+            record["accepted"] = False
+            record["reason"] = "server_ignored_requested_range"
+            diagnostics.append(record)
+            return [], False
+
+        # 날짜가 겹치는 정상 응답 또는 명시적인 빈 결과만 허용합니다.
+        response_is_valid = bool(parsed["overlapping_dates"]) or parsed["no_results"]
+
+        if not response_is_valid:
+            record["accepted"] = False
+            record["reason"] = "unverifiable_response_range"
+            diagnostics.append(record)
+            return [], False
+
+        accepted_response = True
+        record["accepted"] = True
+        record["reason"] = "ok"
+        diagnostics.append(record)
+
+        for event in parsed["events"]:
+            if event["id"] not in seen_ids:
+                seen_ids.add(event["id"])
+                collected.append(event)
 
         bind_scroll = metadata.get("bind_scroll_handler")
-        no_more_pages = bind_scroll is False or str(bind_scroll).lower() == "false"
+        no_more_pages = (
+            bind_scroll is False
+            or str(bind_scroll).lower() == "false"
+        )
 
-        if no_more_pages or row_count == 0 or (page_number > 0 and new_count == 0):
+        if no_more_pages or parsed["no_results"]:
             break
 
-    return collected
+        # 다음 페이지가 실제로 없는데 같은 HTML이 돌아오는 경우는
+        # 다음 반복에서 fingerprint로 중단됩니다.
+
+    return collected, accepted_response
 
 
-def date_windows(
-    start: date,
-    end: date,
-    window_days: int = 14,
-) -> list[tuple[date, date]]:
-    """
-    Investing.com이 긴 사용자 지정 기간을 현재/다음 주 범위로 축소해
-    반환하는 경우를 막기 위해 14일 단위로 나눕니다.
-
-    서울 오늘부터 정확히 3개월 뒤까지의 전체 구간은 그대로 유지됩니다.
-    """
-    windows: list[tuple[date, date]] = []
-    cursor = start
-
-    while cursor <= end:
-        window_end = min(cursor + timedelta(days=window_days - 1), end)
-        windows.append((cursor, window_end))
-        cursor = window_end + timedelta(days=1)
-
-    return windows
-
-
-def fetch_events(
-    start: date,
-    end: date,
-) -> tuple[list[dict[str, Any]], list[dict[str, Any]], list[str], str | None]:
-    attempts: list[dict[str, Any]] = []
+def fetch_window(
+    window_start: date,
+    window_end: date,
+    diagnostics: list[dict[str, Any]],
+) -> tuple[list[dict[str, Any]], str]:
     errors: list[str] = []
-    windows = date_windows(start, end)
 
-    # 정상적으로는 server_both 한 번의 모드만 사용합니다.
-    # Investing.com 필터 이름이 바뀐 경우에만 보조 모드를 시도합니다.
-    modes = ("server_both", "server_country", "server_high")
-
+    # 호스트와 날짜 형식을 바꿔가며 시도하되,
+    # 요청 구간과 응답 날짜가 겹친 경우만 성공으로 인정합니다.
     for host in HOSTS:
         session = requests.Session()
         try:
-            for mode in modes:
-                mode_events: list[dict[str, Any]] = []
-                mode_failed = False
+            landing_url = open_landing_page(session, host)
 
-                for window_index, (window_start, window_end) in enumerate(
-                    windows,
-                    start=1,
-                ):
-                    try:
-                        window_events = fetch_mode(
-                            session,
-                            host,
-                            window_start,
-                            window_end,
-                            mode=mode,
-                            attempts=attempts,
-                        )
-
-                        for event in window_events:
-                            event["window"] = (
-                                f"{window_start.isoformat()}"
-                                f"~{window_end.isoformat()}"
-                            )
-                            mode_events.append(event)
-
-                    except Exception as exc:
-                        mode_failed = True
-                        errors.append(
-                            f"{host} / {mode} / "
-                            f"{window_start}~{window_end}: "
-                            f"{type(exc).__name__}: {exc}"
-                        )
-                        break
-
-                # 모든 14일 구간을 정상 요청한 모드만 채택합니다.
-                if not mode_failed and mode_events:
-                    unique = {
-                        (event["start"], event["company"]): event
-                        for event in mode_events
-                    }
-                    ordered = sorted(
-                        unique.values(),
-                        key=lambda item: (
-                            item["start"],
-                            item["company"],
-                        ),
+            for date_format in DATE_FORMATS:
+                try:
+                    events, accepted = request_window_once(
+                        session,
+                        host,
+                        landing_url,
+                        window_start,
+                        window_end,
+                        date_format,
+                        diagnostics,
                     )
-                    source_mode = (
-                        f"{host}:{mode}:"
-                        f"{len(windows)}windows"
+                    if accepted:
+                        return events, f"{host}:{date_format}"
+                except Exception as exc:
+                    errors.append(
+                        f"{host}/{date_format}: "
+                        f"{type(exc).__name__}: {exc}"
                     )
-                    return ordered, attempts, errors, source_mode
         finally:
             session.close()
 
-    return [], attempts, errors, None
+    raise RuntimeError(" | ".join(errors[-6:]) or "검증 가능한 응답 없음")
 
 
-def read_previous_events(start: date, end: date) -> list[dict[str, Any]]:
+def read_previous_events(
+    start: date,
+    end: date,
+) -> list[dict[str, Any]]:
     if not EVENTS_PATH.exists():
         return []
 
@@ -633,18 +608,12 @@ def read_previous_events(start: date, end: date) -> list[dict[str, Any]]:
             continue
 
         if start <= event_date <= end:
-            title = clean(event.get("title"))
-            company = clean(event.get("company"))
-            if not title and company:
-                event["title"] = f"{company} 실적"
             retained.append(event)
 
     return retained
 
 
-
-def normalize_company_key(value: str | None) -> str:
-    """기업명 비교용 키를 만듭니다."""
+def normalize_company_key(value: Any) -> str:
     text = clean(value).upper()
     for token in (
         "주식회사",
@@ -664,13 +633,14 @@ def normalize_company_key(value: str | None) -> str:
 def safe_int(value: Any) -> int:
     if value is None:
         return 0
+
     try:
-        if value != value:  # NaN
+        if value != value:
             return 0
     except Exception:
         pass
 
-    text = clean(str(value)).replace(",", "")
+    text = clean(value).replace(",", "")
     if not text:
         return 0
 
@@ -680,16 +650,15 @@ def safe_int(value: Any) -> int:
         return 0
 
 
-def find_dataframe_column(columns: list[str], candidates: tuple[str, ...]) -> str | None:
-    direct = {str(column): str(column) for column in columns}
-    for candidate in candidates:
-        if candidate in direct:
-            return candidate
-
+def find_column(
+    columns: list[str],
+    candidates: tuple[str, ...],
+) -> str | None:
     normalized = {
-        re.sub(r"[^A-Z0-9가-힣]", "", str(column).upper()): str(column)
+        re.sub(r"[^A-Z0-9가-힣]", "", column.upper()): column
         for column in columns
     }
+
     for candidate in candidates:
         key = re.sub(r"[^A-Z0-9가-힣]", "", candidate.upper())
         if key in normalized:
@@ -698,47 +667,70 @@ def find_dataframe_column(columns: list[str], candidates: tuple[str, ...]) -> st
     return None
 
 
-def load_market_cap_maps() -> tuple[dict[str, int], dict[str, int], str]:
-    """
-    KRX 전체 종목 시가총액을 한 번에 받아옵니다.
-    종목별 개별 요청을 하지 않기 때문에 실행 시간이 크게 늘어나지 않습니다.
-    """
+def read_market_cap_cache() -> tuple[dict[str, int], dict[str, int]] | None:
+    if not MARKET_CAP_CACHE_PATH.exists():
+        return None
+
+    try:
+        cache = json.loads(
+            MARKET_CAP_CACHE_PATH.read_text(encoding="utf-8")
+        )
+        updated_at = datetime.fromisoformat(cache["updated_at"])
+        if updated_at.tzinfo is None:
+            updated_at = updated_at.replace(tzinfo=SEOUL)
+
+        if datetime.now(SEOUL) - updated_at > timedelta(hours=24):
+            return None
+
+        return (
+            {key: safe_int(value) for key, value in cache["by_ticker"].items()},
+            {key: safe_int(value) for key, value in cache["by_name"].items()},
+        )
+    except Exception:
+        return None
+
+
+def load_market_caps() -> tuple[dict[str, int], dict[str, int], str]:
+    cached = read_market_cap_cache()
+    if cached:
+        return cached[0], cached[1], "KRX-MARCAP cache"
+
     errors: list[str] = []
 
     for listing_name in ("KRX-MARCAP", "KRX"):
         try:
-            dataframe = fdr.StockListing(listing_name)
-            columns = [str(column) for column in dataframe.columns]
+            frame = fdr.StockListing(listing_name)
+            columns = [str(column) for column in frame.columns]
 
-            symbol_column = find_dataframe_column(
+            symbol_column = find_column(
                 columns,
                 ("Code", "Symbol", "Ticker", "종목코드", "단축코드"),
             )
-            name_column = find_dataframe_column(
+            name_column = find_column(
                 columns,
                 ("Name", "종목명", "한글종목명"),
             )
-            market_cap_column = find_dataframe_column(
+            market_cap_column = find_column(
                 columns,
                 ("Marcap", "MarketCap", "MarCap", "시가총액"),
             )
-            close_column = find_dataframe_column(
+            close_column = find_column(
                 columns,
                 ("Close", "종가", "현재가"),
             )
-            stocks_column = find_dataframe_column(
+            stocks_column = find_column(
                 columns,
                 ("Stocks", "Shares", "상장주식수"),
             )
 
             if not name_column:
-                raise RuntimeError(f"종목명 컬럼을 찾지 못했습니다: {columns}")
+                raise RuntimeError(f"종목명 컬럼 없음: {columns}")
 
             by_ticker: dict[str, int] = {}
             by_name: dict[str, int] = {}
 
-            for _, row in dataframe.iterrows():
-                company_name = clean(str(row.get(name_column, "")))
+            for _, row in frame.iterrows():
+                company_name = clean(row.get(name_column))
                 if not company_name:
                     continue
 
@@ -758,70 +750,90 @@ def load_market_cap_maps() -> tuple[dict[str, int], dict[str, int], str]:
                     continue
 
                 if symbol_column:
-                    ticker_raw = clean(str(row.get(symbol_column, "")))
-                    ticker_raw = re.sub(r"\.0$", "", ticker_raw)
-                    ticker_digits = re.sub(r"\D", "", ticker_raw)
+                    ticker_digits = re.sub(
+                        r"\D",
+                        "",
+                        clean(row.get(symbol_column)),
+                    )
                     if ticker_digits:
                         by_ticker[ticker_digits.zfill(6)] = market_cap
 
                 name_key = normalize_company_key(company_name)
                 if name_key:
-                    previous = by_name.get(name_key, 0)
-                    by_name[name_key] = max(previous, market_cap)
+                    by_name[name_key] = max(
+                        by_name.get(name_key, 0),
+                        market_cap,
+                    )
 
-            if by_ticker or by_name:
-                return by_ticker, by_name, listing_name
+            if not by_ticker and not by_name:
+                raise RuntimeError("유효한 시가총액 데이터 없음")
 
-            raise RuntimeError("유효한 시가총액 데이터가 없습니다.")
+            MARKET_CAP_CACHE_PATH.write_text(
+                json.dumps(
+                    {
+                        "updated_at": datetime.now(SEOUL).isoformat(),
+                        "by_ticker": by_ticker,
+                        "by_name": by_name,
+                    },
+                    ensure_ascii=False,
+                ),
+                encoding="utf-8",
+            )
+
+            return by_ticker, by_name, listing_name
         except Exception as exc:
-            errors.append(f"{listing_name}: {type(exc).__name__}: {exc}")
+            errors.append(
+                f"{listing_name}: {type(exc).__name__}: {exc}"
+            )
 
-    raise RuntimeError(" / ".join(errors))
+    raise RuntimeError(" | ".join(errors))
 
 
 def attach_market_caps(
     events: list[dict[str, Any]],
 ) -> tuple[int, str | None, str | None]:
-    """
-    일정에 marketCap 값을 붙입니다.
-    종목코드 매칭을 우선하고, 코드가 없으면 기업명으로 다시 매칭합니다.
-    """
     try:
-        by_ticker, by_name, source = load_market_cap_maps()
+        by_ticker, by_name, source = load_market_caps()
     except Exception as exc:
-        # KRX 조회가 일시적으로 실패하면 기존 저장값으로 정렬합니다.
-        matched = sum(1 for event in events if safe_int(event.get("marketCap")) > 0)
         for event in events:
             event["marketCap"] = safe_int(event.get("marketCap"))
+        matched = sum(
+            1 for event in events if event["marketCap"] > 0
+        )
         return matched, None, f"{type(exc).__name__}: {exc}"
 
     matched = 0
 
     for event in events:
-        ticker_raw = clean(str(event.get("ticker") or ""))
-        ticker_digits = re.sub(r"\D", "", ticker_raw)
+        ticker_digits = re.sub(
+            r"\D",
+            "",
+            clean(event.get("ticker")),
+        )
         ticker = ticker_digits.zfill(6) if ticker_digits else ""
 
         market_cap = by_ticker.get(ticker, 0) if ticker else 0
 
         if market_cap <= 0:
-            company_key = normalize_company_key(event.get("company"))
-            market_cap = by_name.get(company_key, 0)
+            market_cap = by_name.get(
+                normalize_company_key(event.get("company")),
+                0,
+            )
 
-        # 매칭 실패 시 이전 실행에서 저장한 시가총액을 보조값으로 유지합니다.
         if market_cap <= 0:
             market_cap = safe_int(event.get("marketCap"))
 
         event["marketCap"] = market_cap
-
         if market_cap > 0:
             matched += 1
 
     return matched, source, None
 
-def escape_ics(value: str) -> str:
+
+def escape_ics(value: Any) -> str:
     return (
-        value.replace("\\", "\\\\")
+        clean(value)
+        .replace("\\", "\\\\")
         .replace(";", r"\;")
         .replace(",", r"\,")
         .replace("\n", r"\n")
@@ -830,6 +842,7 @@ def escape_ics(value: str) -> str:
 
 def write_ics(events: list[dict[str, Any]]) -> None:
     now_utc = datetime.now(timezone.utc).strftime("%Y%m%dT%H%M%SZ")
+
     lines = [
         "BEGIN:VCALENDAR",
         "VERSION:2.0",
@@ -843,6 +856,7 @@ def write_ics(events: list[dict[str, Any]]) -> None:
     for event in events:
         event_day = date.fromisoformat(event["start"])
         next_day = event_day + timedelta(days=1)
+
         lines.extend(
             [
                 "BEGIN:VEVENT",
@@ -858,49 +872,105 @@ def write_ics(events: list[dict[str, Any]]) -> None:
         )
 
     lines.append("END:VCALENDAR")
-    ICS_PATH.write_text("\r\n".join(lines) + "\r\n", encoding="utf-8")
+    ICS_PATH.write_text(
+        "\r\n".join(lines) + "\r\n",
+        encoding="utf-8",
+    )
 
 
 def main() -> None:
-    started = time.monotonic()
-    DATA_DIR.mkdir(parents=True, exist_ok=True)
+    started_at = time.monotonic()
+
     DOCS_DIR.mkdir(parents=True, exist_ok=True)
+    DATA_DIR.mkdir(parents=True, exist_ok=True)
 
     start, end = rolling_range()
-    fresh_events, attempts, errors, source_mode = fetch_events(start, end)
+    windows = make_windows(start, end)
 
-    used_cache = False
-    if fresh_events:
-        events = fresh_events
-        ok = True
-        message = "한국·중요도 높음 실적 캘린더 갱신 완료"
-    else:
-        events = read_previous_events(start, end)
-        used_cache = bool(events)
-        ok = False
-        message = (
-            "새 데이터를 얻지 못해 현재 3개월 범위에 해당하는 기존 데이터를 유지했습니다."
-            if used_cache
-            else "한국·중요도 높음 실적 데이터를 찾지 못했습니다."
+    diagnostics: list[dict[str, Any]] = []
+    window_results: list[dict[str, Any]] = []
+    collected: list[dict[str, Any]] = []
+    failed_windows: list[dict[str, Any]] = []
+
+    for window_start, window_end in windows:
+        try:
+            window_events, source = fetch_window(
+                window_start,
+                window_end,
+                diagnostics,
+            )
+
+            collected.extend(window_events)
+            window_results.append(
+                {
+                    "from": window_start.isoformat(),
+                    "to": window_end.isoformat(),
+                    "ok": True,
+                    "event_count": len(window_events),
+                    "source": source,
+                }
+            )
+        except Exception as exc:
+            failure = {
+                "from": window_start.isoformat(),
+                "to": window_end.isoformat(),
+                "ok": False,
+                "event_count": 0,
+                "error": f"{type(exc).__name__}: {exc}",
+            }
+            window_results.append(failure)
+            failed_windows.append(failure)
+
+    unique = {
+        (event["start"], event["company"]): event
+        for event in collected
+    }
+    fresh_events = list(unique.values())
+
+    previous_events = read_previous_events(start, end)
+    previous_by_key = {
+        (event.get("start"), event.get("company")): event
+        for event in previous_events
+    }
+
+    # 실패한 구간은 기존 정상 데이터로만 보완합니다.
+    failed_ranges = [
+        (
+            date.fromisoformat(item["from"]),
+            date.fromisoformat(item["to"]),
         )
+        for item in failed_windows
+    ]
 
-    # 제목이 비어 있으면 화면에서 반드시 '기업명 실적'으로 복구합니다.
+    for key, event in previous_by_key.items():
+        try:
+            event_date = date.fromisoformat(str(event["start"])[:10])
+        except (KeyError, TypeError, ValueError):
+            continue
+
+        if any(
+            range_start <= event_date <= range_end
+            for range_start, range_end in failed_ranges
+        ):
+            unique.setdefault(key, event)
+
+    events = list(unique.values())
+
     for event in events:
         company = clean(event.get("company"))
         if company:
             event["title"] = f"{company} 실적"
 
-    market_cap_matched, market_cap_source, market_cap_error = attach_market_caps(events)
+    market_cap_matched, market_cap_source, market_cap_error = (
+        attach_market_caps(events)
+    )
 
-    # 같은 날짜 안에서는 시가총액이 큰 기업부터 정렬합니다.
-    # 시가총액을 확인하지 못한 기업은 해당 날짜의 맨 아래로 갑니다.
-    events = sorted(
-        events,
+    events.sort(
         key=lambda item: (
             str(item.get("start", "")),
             -safe_int(item.get("marketCap")),
             str(item.get("company", "")),
-        ),
+        )
     )
 
     EVENTS_PATH.write_text(
@@ -909,28 +979,47 @@ def main() -> None:
     )
     write_ics(events)
 
+    events_by_month = dict(
+        sorted(
+            Counter(
+                str(event["start"])[:7]
+                for event in events
+            ).items()
+        )
+    )
+
+    all_windows_ok = not failed_windows
     status = {
-        "ok": ok,
-        "used_cache": used_cache,
+        "version": VERSION,
+        "ok": all_windows_ok,
+        "used_cache_for_failed_windows": bool(failed_windows),
         "updated_at": datetime.now(SEOUL).isoformat(timespec="seconds"),
         "timezone": "Asia/Seoul",
         "range": {
             "from": start.isoformat(),
             "to": end.isoformat(),
         },
+        "window_days": WINDOW_DAYS,
+        "window_count": len(windows),
+        "successful_window_count": len(windows) - len(failed_windows),
+        "failed_window_count": len(failed_windows),
         "event_count": len(events),
-        "date_window_count": len(date_windows(start, end)),
+        "fresh_event_count": len(fresh_events),
         "first_event_date": events[0]["start"] if events else None,
         "last_event_date": events[-1]["start"] if events else None,
-        "source_mode": source_mode,
+        "events_by_month": events_by_month,
         "market_cap_source": market_cap_source,
         "market_cap_matched": market_cap_matched,
         "market_cap_unmatched": max(0, len(events) - market_cap_matched),
         "market_cap_error": market_cap_error,
-        "elapsed_seconds": round(time.monotonic() - started, 2),
-        "message": message,
-        "errors": errors[-10:],
-        "attempts": attempts[-30:],
+        "elapsed_seconds": round(time.monotonic() - started_at, 2),
+        "message": (
+            "미래 3개월 전체 구간 갱신 완료"
+            if all_windows_ok
+            else "일부 구간 수집 실패: 해당 구간의 기존 데이터만 유지"
+        ),
+        "windows": window_results,
+        "diagnostics": diagnostics[-80:],
     }
 
     STATUS_PATH.write_text(
@@ -939,9 +1028,18 @@ def main() -> None:
     )
 
     print(
-        f"{message} | {start} ~ {end} | "
-        f"{len(events)}건 | {status['elapsed_seconds']}초"
+        f"{VERSION} | {start} ~ {end} | "
+        f"{len(events)}건 | "
+        f"구간 {len(windows) - len(failed_windows)}/{len(windows)} 성공 | "
+        f"{status['elapsed_seconds']}초"
     )
+
+    # 서버가 모든 미래 구간을 무시했는데도 성공으로 커밋되는 일을 막습니다.
+    if not all_windows_ok:
+        raise SystemExit(
+            f"검증 실패: {len(failed_windows)}개 날짜 구간을 수집하지 못했습니다. "
+            "status.json의 windows/diagnostics를 확인하세요."
+        )
 
 
 if __name__ == "__main__":
