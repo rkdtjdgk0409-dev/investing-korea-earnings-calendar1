@@ -1,0 +1,98 @@
+<!doctype html>
+<html lang="ko">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="color-scheme" content="dark" />
+  <title>한국 기업 실적 캘린더</title>
+  <script src="https://cdn.jsdelivr.net/npm/fullcalendar@6.1.17/index.global.min.js"></script>
+  <style>
+    :root {
+      --bg: #10151b;
+      --panel: #171e26;
+      --line: #2a3440;
+      --text: #f3f6f8;
+      --muted: #96a0aa;
+      --event: #273543;
+    }
+    * { box-sizing: border-box; }
+    html, body { margin: 0; background: var(--bg); color: var(--text); font-family: Pretendard, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif; }
+    .wrap { max-width: 1180px; margin: 0 auto; padding: 18px; }
+    .top { display: flex; justify-content: space-between; align-items: end; gap: 14px; margin-bottom: 14px; }
+    h1 { font-size: 22px; margin: 0 0 4px; }
+    #status { font-size: 12px; color: var(--muted); }
+    .ics { color: var(--text); font-size: 13px; text-decoration: none; border: 1px solid var(--line); border-radius: 8px; padding: 8px 10px; }
+    #calendar { background: var(--panel); border: 1px solid var(--line); border-radius: 12px; padding: 12px; min-height: 680px; }
+    .fc { --fc-border-color: var(--line); --fc-page-bg-color: var(--panel); --fc-neutral-bg-color: #1d2630; --fc-list-event-hover-bg-color: #25313d; }
+    .fc .fc-toolbar-title { font-size: 18px; }
+    .fc .fc-button-primary { background: #28333f; border-color: #394653; }
+    .fc .fc-button-primary:not(:disabled).fc-button-active,
+    .fc .fc-button-primary:not(:disabled):active { background: #3a4856; border-color: #4b5966; }
+    .fc .fc-daygrid-day-number, .fc .fc-col-header-cell-cushion { color: var(--text); text-decoration: none; }
+    .fc .fc-event { background: var(--event); border: 0; padding: 2px 4px; cursor: pointer; }
+    .fc .fc-event-title { font-weight: 650; }
+    @media (max-width: 680px) {
+      .wrap { padding: 8px; }
+      .top { align-items: start; }
+      h1 { font-size: 18px; }
+      #calendar { padding: 4px; min-height: 620px; }
+      .fc .fc-toolbar { gap: 4px; }
+      .fc .fc-toolbar-title { font-size: 15px; }
+      .fc .fc-button { padding: .35em .5em; font-size: .85em; }
+    }
+  </style>
+</head>
+<body>
+  <main class="wrap">
+    <div class="top">
+      <div>
+        <h1>한국 기업 실적 캘린더</h1>
+        <div id="status">Investing.com · 한국 · 중요도 높음</div>
+      </div>
+      <a class="ics" href="./earnings.ics">ICS</a>
+    </div>
+    <div id="calendar"></div>
+  </main>
+  <script>
+    async function load() {
+      const [eventsResponse, statusResponse] = await Promise.all([
+        fetch("./data/events.json?ts=" + Date.now()),
+        fetch("./data/status.json?ts=" + Date.now()).catch(() => null)
+      ]);
+      const events = await eventsResponse.json();
+
+      if (statusResponse && statusResponse.ok) {
+        const status = await statusResponse.json();
+        const when = status.updated_at ? new Date(status.updated_at).toLocaleString("ko-KR") : "";
+        document.getElementById("status").textContent =
+          `Investing.com · 한국 · 중요도 높음 · ${events.length}건 · ${when} 갱신`;
+      }
+
+      const calendar = new FullCalendar.Calendar(document.getElementById("calendar"), {
+        locale: "ko",
+        initialView: window.innerWidth < 680 ? "listMonth" : "dayGridMonth",
+        height: "auto",
+        headerToolbar: {
+          left: "prev,next today",
+          center: "title",
+          right: window.innerWidth < 680 ? "listMonth" : "dayGridMonth,listMonth"
+        },
+        buttonText: { today: "오늘", month: "월", list: "목록" },
+        events,
+        eventDisplay: "block",
+        displayEventTime: false,
+        eventClick(info) {
+          info.jsEvent.preventDefault();
+          if (info.event.url) window.open(info.event.url, "_blank", "noopener");
+        }
+      });
+      calendar.render();
+    }
+
+    load().catch(error => {
+      document.getElementById("status").textContent = "캘린더 데이터를 불러오지 못했습니다.";
+      console.error(error);
+    });
+  </script>
+</body>
+</html>
