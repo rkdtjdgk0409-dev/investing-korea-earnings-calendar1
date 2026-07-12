@@ -1,278 +1,356 @@
 from __future__ import annotations
 
 import asyncio
+import calendar
 import json
 import re
-from datetime import datetime, timedelta
+from datetime import date, datetime, timedelta, timezone
 from pathlib import Path
 from typing import Any
+from urllib.parse import urlencode, urljoin
 
 from bs4 import BeautifulSoup
 from dateutil import parser as date_parser
-from playwright.async_api import async_playwright, Page, TimeoutError as PlaywrightTimeoutError
+from playwright.async_api import Page, async_playwright
 
-ROOT = Path(__file__).resolve().parents[1]
+ROOT = Path(__file__).resolve().parents[1] if Path(__file__).resolve().parent.name == "scripts" else Path(__file__).resolve().parent
 OUT_DIR = ROOT / "docs" / "data"
 OUT_DIR.mkdir(parents=True, exist_ok=True)
 
-URLS = [
-    "https://www.investing.com/earnings-calendar/",
-    "https://kr.investing.com/earnings-calendar/",
-]
+BASE_URLS = (
+    "https://www.investing.com/earningscalendar/",
+    "https://kr.investing.com/earningscalendar/",
+)
 
-KOREA_WORDS = ("south korea", "korea", "대한민국", "한국")
-HIGH_IMPORTANCE_WORDS = ("high", "높음", "3")
-DATE_PATTERNS = (
-    "%Y-%m-%d", "%b %d, %Y", "%B %d, %Y", "%d/%m/%Y", "%m/%d/%Y",
-    "%Y년 %m월 %d일", "%m월 %d일",
+MONTHS_AHEAD = 3
+WINDOW_DAYS = 7
+
+KOREA_MARKERS = (
+    "south korea",
+    "south_korea",
+    "south-korea",
+    "대한민국",
+    "한국",
+    "country_11",
+    "country-11",
 )
 
 
-def clean(text: str | None) -> str:
-    return re.sub(r"\s+", " ", text or "").strip()
+def clean(value: str | None) -> str:
+    return re.sub(r"\s+", " ", value or "").strip()
 
 
-def parse_date(text: str, base_year: int | None = None) -> str | None:
-    text = clean(text)
+def parse_date_text(value: str | None) -> str | None:
+    text = clean(value)
     if not text:
         return None
 
-    # ISO-like date inside attributes/text
-    m = re.search(r"(20\d{2})[-/.](\d{1,2})[-/.](\d{1,2})", text)
-    if m:
+    iso = re.search(r"(20\d{2})[-/.](\d{1,2})[-/.](\d{1,2})", text)
+    if iso:
         try:
-            return datetime(int(m.group(1)), int(m.group(2)), int(m.group(3))).date().isoformat()
+            return date(int(iso.group(1)), int(iso.group(2)), int(iso.group(3))).isoformat()
         except ValueError:
             pass
 
-    # Korean date without year
-    m = re.search(r"(?:(20\d{2})년\s*)?(\d{1,2})월\s*(\d{1,2})일", text)
-    if m:
-        year = int(m.group(1)) if m.group(1) else (base_year or datetime.now().year)
+    ko = re.search(r"(?:(20\d{2})년\s*)?(\d{1,2})월\s*(\d{1,2})일", text)
+    if ko:
+        year = int(ko.group(1) or datetime.now().year)
         try:
-            dt = datetime(year, int(m.group(2)), int(m.group(3))).date()
-            # Around year-end, a January date shown in December is usually next year.
-            today = datetime.now().date()
-            if not m.group(1) and dt < today - timedelta(days=180):
-                dt = dt.replace(year=year + 1)
-            return dt.isoformat()
+            return date(year, int(ko.group(2)), int(ko.group(3))).isoformat()
         except ValueError:
             pass
 
     try:
-        dt = date_parser.parse(text, fuzzy=True, default=datetime(base_year or datetime.now().year, 1, 1))
-        return dt.date().isoformat()
+        parsed = date_parser.parse(text, fuzzy=True)
+        if 2000 <= parsed.year <= 2100:
+            return parsed.date().isoformat()
     except Exception:
         return None
+    return None
 
 
-def is_korea(row) -> bool:
-    blob = " ".join([
-        clean(row.get_text(" ", strip=True)),
-        " ".join(clean(v) for v in row.attrs.values() if isinstance(v, str)),
-        " ".join(
-            clean(str(v))
-            for tag in row.find_all(True)
-            for v in tag.attrs.values()
-            if isinstance(v, str)
-        ),
-    ]).lower()
+def month_range(months_ahead: int = MONTHS_AHEAD) -> tuple[date, date]:
+    today = datetime.now(timezone(timedelta(hours=9))).date()
+    start = today.replace(day=1)
 
-    if any(word in blob for word in KOREA_WORDS):
+    year = start.year
+    month = start.month + months_ahead - 1
+    year += (month - 1) // 12
+    month = (month - 1) % 12 + 1
+    last_day = calendar.monthrange(year, month)[1]
+    end = date(year, month, last_day)
+    return start, end
+
+
+def weekly_windows(start: date, end: date):
+    cursor = start
+    while cursor <= end:
+        window_end = min(cursor + timedelta(days=WINDOW_DAYS - 1), end)
+        yield cursor, window_end
+        cursor = window_end + timedelta(days=1)
+
+
+def element_blob(element) -> str:
+    parts = [clean(element.get_text(" ", strip=True))]
+    for tag in [element, *element.find_all(True)]:
+        for key, value in tag.attrs.items():
+            if isinstance(value, list):
+                parts.extend(str(item) for item in value)
+            else:
+                parts.append(str(value))
+        if tag.name in {"img", "span", "i"}:
+            parts.append(str(tag.get("title", "")))
+            parts.append(str(tag.get("aria-label", "")))
+    return " ".join(parts).lower()
+
+
+def is_korean_row(row) -> bool:
+    blob = element_blob(row)
+    if any(marker in blob for marker in KOREA_MARKERS):
         return True
 
-    # Investing commonly uses country flag keys/codes.
-    return bool(re.search(r"(flag|country)[^ ]*(kr|kor|11)\b", blob))
+    # Investing.com has historically used KR/KOR and numeric country IDs.
+    if re.search(r"(?:flag|country|ceflags)[^\"'> ]{0,20}(?:kr|kor)\b", blob):
+        return True
+    if re.search(r"(?:data-country|country-id)[=\"']?(?:11|304)\b", blob):
+        return True
+    return False
 
 
 def importance_score(row) -> int:
-    blob = str(row).lower()
+    blob = element_blob(row)
 
-    # Common Investing layouts use bull icons. Count visible/active bull icons.
-    active_bulls = len(re.findall(r"(?:grayFullBullishIcon|fullBullishIcon|bull\d*.*active)", blob, flags=re.I))
-    if active_bulls:
-        return min(active_bulls, 3)
+    if re.search(r"\b(high|높음|importance[_ -]?3|importance[=\"']?3)\b", blob):
+        return 3
 
-    # aria-label/title/data attributes.
-    for attr in ("data-importance", "data-importance-level", "aria-label", "title"):
-        for tag in [row, *row.find_all(True)]:
-            value = clean(tag.get(attr)).lower()
-            if value:
-                if any(word in value for word in ("high", "높음")):
-                    return 3
-                m = re.search(r"\b([1-3])\b", value)
-                if m:
-                    return int(m.group(1))
+    # Legacy Investing calendar rows contain one, two or three bull icons.
+    bull_icons = row.select(
+        '[class*="BullishIcon"], [class*="bullishIcon"], '
+        '[class*="bullish-icon"], [class*="importance"] i'
+    )
+    if bull_icons:
+        visible = []
+        for icon in bull_icons:
+            style = clean(icon.get("style")).lower()
+            classes = " ".join(icon.get("class", [])).lower()
+            hidden = (
+                "display:none" in style
+                or "display: none" in style
+                or "visibility:hidden" in style
+                or "visibility: hidden" in style
+                or icon.get("aria-hidden") == "true"
+                and "gray" in classes
+            )
+            if not hidden:
+                visible.append(icon)
+        return min(len(visible), 3)
 
-    # Some pages render three bull icons, with gray icons for inactive levels.
-    bull_tags = row.select('[class*="bull"], [class*="Bull"]')
-    non_gray = [
-        x for x in bull_tags
-        if "gray" not in " ".join(x.get("class", [])).lower()
-        and "muted" not in " ".join(x.get("class", [])).lower()
-    ]
-    return min(len(non_gray), 3)
+    # Some versions store the level as a numeric attribute.
+    for tag in [row, *row.find_all(True)]:
+        for attr in ("data-importance", "data-importance-level", "data-impact", "importance"):
+            value = clean(tag.get(attr))
+            match = re.search(r"\b([1-3])\b", value)
+            if match:
+                return int(match.group(1))
+    return 0
 
 
 def extract_company(row) -> tuple[str | None, str | None]:
-    selectors = [
+    selectors = (
+        ".earnCalCompanyName a",
+        '[data-test="event-name"] a',
+        '[data-test="event-name"]',
         'a[href*="/equities/"]',
         'a[href*="-earnings"]',
-        '[data-test="event-name"]',
-        ".earnCalCompanyName",
         "td:nth-of-type(2) a",
-    ]
+    )
     for selector in selectors:
         tag = row.select_one(selector)
-        if tag and clean(tag.get_text(" ", strip=True)):
-            return clean(tag.get_text(" ", strip=True)), tag.get("href")
+        if tag:
+            name = clean(tag.get_text(" ", strip=True))
+            if name:
+                return name, tag.get("href")
 
-    cells = [clean(td.get_text(" ", strip=True)) for td in row.find_all(["td", "div"], recursive=False)]
-    candidates = [x for x in cells if x and not re.fullmatch(r"[-+/%\d.,BTMK\s]+", x)]
-    return (candidates[0], None) if candidates else (None, None)
+    # Fallback for table layouts where the company link is plain text.
+    cells = row.find_all("td", recursive=False)
+    if len(cells) >= 2:
+        name = clean(cells[1].get_text(" ", strip=True))
+        name = re.sub(r"\s*\([^)]{1,15}\)\s*$", "", name)
+        if name:
+            return name, None
+    return None, None
 
 
-def extract_events_from_html(html: str, source_url: str) -> list[dict[str, Any]]:
+def extract_events(html: str, source_url: str) -> tuple[list[dict[str, Any]], dict[str, int]]:
     soup = BeautifulSoup(html, "html.parser")
     events: list[dict[str, Any]] = []
     current_date: str | None = None
 
-    # Earnings calendar has changed markup several times; scan both rows and row-like divs.
+    stats = {
+        "rows": 0,
+        "dated_rows": 0,
+        "company_rows": 0,
+        "korea_rows": 0,
+        "high_rows": 0,
+    }
+
     nodes = soup.select(
+        "#earningsCalendarData tr, "
+        "table.earningsCalendarTbl tr, "
         "table tr, "
-        '[data-test*="earnings"] [role="row"], '
         '[data-test="calendar-row"], '
-        '[class*="earnings"] [class*="row"]'
+        '[data-test*="earnings"] [role="row"], '
+        '[class*="earnings"] [role="row"]'
     )
 
-    for node in nodes:
-        text = clean(node.get_text(" ", strip=True))
+    seen_node_ids: set[int] = set()
+    for row in nodes:
+        # The broad selectors can return the same node more than once.
+        if id(row) in seen_node_ids:
+            continue
+        seen_node_ids.add(id(row))
+        stats["rows"] += 1
+
+        text = clean(row.get_text(" ", strip=True))
         if not text:
             continue
 
-        # Date header or date-bearing row.
-        date_candidates = [
-            node.get("data-date"),
-            node.get("datetime"),
-            node.get("title"),
-            text,
-        ]
-        detected_date = next((parse_date(x) for x in date_candidates if x and parse_date(x)), None)
+        date_cell = row.select_one(
+            "td.theDay, .theDay, [data-test='date-header'], "
+            "[class*='dateHeader'], time[datetime]"
+        )
+        row_date = (
+            parse_date_text(row.get("data-date"))
+            or parse_date_text(row.get("datetime"))
+            or parse_date_text(date_cell.get("datetime") if date_cell else None)
+            or parse_date_text(date_cell.get_text(" ", strip=True) if date_cell else None)
+        )
 
-        has_company_link = bool(node.select_one('a[href*="/equities/"], a[href*="-earnings"]'))
-        if detected_date and not has_company_link and len(text) < 80:
-            current_date = detected_date
-            continue
+        if row_date:
+            current_date = row_date
+            stats["dated_rows"] += 1
+            # A date heading is not an earnings event.
+            if not row.select_one(
+                ".earnCalCompanyName, [data-test='event-name'], "
+                'a[href*="/equities/"], a[href*="-earnings"]'
+            ):
+                continue
 
-        company, href = extract_company(node)
+        company, href = extract_company(row)
         if not company:
             continue
-        if not is_korea(node):
-            continue
-        if importance_score(node) < 3:
-            continue
+        stats["company_rows"] += 1
 
-        event_date = (
-            parse_date(node.get("data-date") or "")
-            or parse_date(node.get("datetime") or "")
-            or detected_date
-            or current_date
-        )
+        if not is_korean_row(row):
+            continue
+        stats["korea_rows"] += 1
+
+        score = importance_score(row)
+        if score < 3:
+            continue
+        stats["high_rows"] += 1
+
+        event_date = row_date or current_date
         if not event_date:
             continue
 
-        # Avoid accidental header words.
+        company = re.sub(r"\s+", " ", company).strip()
         if company.lower() in {"company", "기업", "name", "symbol"}:
             continue
 
-        link = href or source_url
-        if link.startswith("/"):
-            link = "https://www.investing.com" + link
+        link = urljoin(source_url, href) if href else source_url
+        events.append(
+            {
+                "title": f"{company} 실적",
+                "company": company,
+                "start": event_date,
+                "allDay": True,
+                "url": link,
+                "country": "한국",
+                "importance": "높음",
+                "source": "Investing.com",
+            }
+        )
 
-        events.append({
-            "title": f"{company} 실적",
-            "company": company,
-            "start": event_date,
-            "allDay": True,
-            "url": link,
-            "country": "한국",
-            "importance": "높음",
-            "source": "Investing.com",
-        })
-
-    return events
+    return events, stats
 
 
 async def dismiss_popups(page: Page) -> None:
-    labels = [
-        "Accept All", "I Accept", "Accept", "동의", "모두 동의",
-        "No thanks", "닫기", "Close",
-    ]
-    for label in labels:
+    for label in (
+        "Accept All",
+        "I Accept",
+        "Accept",
+        "동의",
+        "모두 동의",
+        "No thanks",
+        "닫기",
+        "Close",
+    ):
         try:
             button = page.get_by_role("button", name=re.compile(f"^{re.escape(label)}$", re.I))
             if await button.count():
-                await button.first.click(timeout=1500)
+                await button.first.click(timeout=1200)
         except Exception:
             pass
 
 
-async def set_filters(page: Page) -> None:
-    """Best-effort UI filtering. Final HTML parser filters again, so UI changes are not trusted."""
-    await dismiss_popups(page)
+async def fetch_html(page: Page, base_url: str, start: date, end: date) -> tuple[str, str]:
+    # Legacy calendar accepts custom ranges through dateFrom/dateTo.
+    query_formats = (
+        {
+            "dateFrom": start.isoformat(),
+            "dateTo": end.isoformat(),
+        },
+        {
+            "dateFrom": start.strftime("%m/%d/%Y"),
+            "dateTo": end.strftime("%m/%d/%Y"),
+        },
+    )
 
-    # Open Filters.
-    for name in ("Filters", "필터", "Filter"):
+    best_html = ""
+    best_url = ""
+    for query in query_formats:
+        url = f"{base_url}?{urlencode(query)}"
+        await page.goto(url, wait_until="domcontentloaded", timeout=90000)
+        await dismiss_popups(page)
+
         try:
-            target = page.get_by_text(name, exact=True)
-            if await target.count():
-                await target.first.click(timeout=2500)
-                await page.wait_for_timeout(700)
-                break
+            await page.wait_for_selector(
+                "#earningsCalendarData, table.earningsCalendarTbl, "
+                '[data-test*="earnings"], table',
+                timeout=15000,
+            )
         except Exception:
             pass
 
-    # Country: South Korea / 한국.
-    for label in ("South Korea", "Korea", "한국", "대한민국"):
-        try:
-            item = page.get_by_text(label, exact=True)
-            if await item.count():
-                await item.first.click(timeout=2000)
-                break
-        except Exception:
-            pass
+        await page.wait_for_timeout(2500)
+        html = await page.content()
+        if len(html) > len(best_html):
+            best_html = html
+            best_url = page.url
 
-    # Importance: High / 높음.
-    for label in ("High", "높음"):
-        try:
-            item = page.get_by_text(label, exact=True)
-            if await item.count():
-                await item.first.click(timeout=2000)
-                break
-        except Exception:
-            pass
+        # Stop when the page visibly includes at least one requested date heading.
+        body_text = clean(await page.locator("body").inner_text())
+        if (
+            start.strftime("%B %-d, %Y") in body_text
+            or start.strftime("%Y-%m-%d") in body_text
+            or start.strftime("%Y년 %-m월 %-d일") in body_text
+        ):
+            break
 
-    # Apply if present.
-    for label in ("Apply", "적용", "Done", "완료"):
-        try:
-            button = page.get_by_role("button", name=re.compile(label, re.I))
-            if await button.count():
-                await button.first.click(timeout=2000)
-                break
-        except Exception:
-            pass
-
-    await page.wait_for_timeout(2500)
+    return best_html, best_url
 
 
 async def scrape() -> list[dict[str, Any]]:
+    start, end = month_range()
     collected: list[dict[str, Any]] = []
+    debug: list[dict[str, Any]] = []
     errors: list[str] = []
 
-    async with async_playwright() as p:
-        browser = await p.chromium.launch(headless=True)
+    async with async_playwright() as playwright:
+        browser = await playwright.chromium.launch(headless=True)
         context = await browser.new_context(
-            locale="ko-KR",
+            locale="en-US",
             timezone_id="Asia/Seoul",
             user_agent=(
                 "Mozilla/5.0 (Windows NT 10.0; Win64; x64) "
@@ -282,76 +360,89 @@ async def scrape() -> list[dict[str, Any]]:
             viewport={"width": 1440, "height": 1100},
         )
 
-        for url in URLS:
+        for base_url in BASE_URLS:
             page = await context.new_page()
             try:
-                await page.goto(url, wait_until="domcontentloaded", timeout=90000)
-                await page.wait_for_timeout(4000)
-                await set_filters(page)
-
-                # Collect the default period and the "next week" view when available.
-                html = await page.content()
-                collected.extend(extract_events_from_html(html, page.url))
-
-                for label in ("Next Week", "다음 주"):
+                for window_start, window_end in weekly_windows(start, end):
                     try:
-                        next_week = page.get_by_text(label, exact=True)
-                        if await next_week.count():
-                            await next_week.first.click(timeout=3000)
-                            await page.wait_for_timeout(3000)
-                            html = await page.content()
-                            collected.extend(extract_events_from_html(html, page.url))
-                            break
-                    except Exception:
-                        pass
+                        html, final_url = await fetch_html(page, base_url, window_start, window_end)
+                        events, stats = extract_events(html, final_url or base_url)
+                        collected.extend(events)
+                        debug.append(
+                            {
+                                "url": final_url,
+                                "window": [window_start.isoformat(), window_end.isoformat()],
+                                **stats,
+                                "events": len(events),
+                            }
+                        )
+
+                        if not events and stats["rows"] > 0:
+                            debug_html = OUT_DIR / (
+                                f"debug-{window_start.isoformat()}-{window_end.isoformat()}.html"
+                            )
+                            debug_html.write_text(html, encoding="utf-8")
+                    except Exception as exc:
+                        errors.append(
+                            f"{base_url} {window_start}~{window_end}: "
+                            f"{type(exc).__name__}: {exc}"
+                        )
 
                 if collected:
-                    await page.screenshot(path=str(OUT_DIR / "last_success.png"), full_page=True)
+                    await page.screenshot(
+                        path=str(OUT_DIR / "last_success.png"),
+                        full_page=True,
+                    )
                     break
-            except Exception as exc:
-                errors.append(f"{url}: {type(exc).__name__}: {exc}")
-                try:
-                    await page.screenshot(path=str(OUT_DIR / "last_error.png"), full_page=True)
-                except Exception:
-                    pass
             finally:
                 await page.close()
 
         await browser.close()
 
-    # De-duplicate.
     unique: dict[tuple[str, str], dict[str, Any]] = {}
     for event in collected:
         unique[(event["start"], event["company"])] = event
+    events = sorted(unique.values(), key=lambda item: (item["start"], item["company"]))
 
-    events = sorted(unique.values(), key=lambda x: (x["start"], x["company"]))
+    status = {
+        "ok": bool(events),
+        "updated_at": datetime.now(timezone(timedelta(hours=9))).isoformat(),
+        "message": "갱신 완료" if events else "한국·중요도 높음 실적을 찾지 못했습니다.",
+        "range": {"from": start.isoformat(), "to": end.isoformat()},
+        "event_count": len(events),
+        "errors": errors,
+        "debug": debug,
+    }
 
-    # Do not erase good data just because Investing blocked one scheduled run.
     events_path = OUT_DIR / "events.json"
     if not events and events_path.exists():
-        old = json.loads(events_path.read_text(encoding="utf-8"))
-        if old:
-            (OUT_DIR / "status.json").write_text(json.dumps({
-                "ok": False,
-                "updated_at": datetime.now().astimezone().isoformat(),
-                "message": "이번 실행에서 새 데이터를 얻지 못해 기존 데이터를 유지했습니다.",
-                "errors": errors,
-                "event_count": len(old),
-            }, ensure_ascii=False, indent=2), encoding="utf-8")
-            return old
+        try:
+            previous = json.loads(events_path.read_text(encoding="utf-8"))
+        except Exception:
+            previous = []
+        if previous:
+            status["message"] = "이번 실행은 0건이라 기존 정상 데이터를 유지했습니다."
+            status["event_count"] = len(previous)
+            (OUT_DIR / "status.json").write_text(
+                json.dumps(status, ensure_ascii=False, indent=2),
+                encoding="utf-8",
+            )
+            return previous
 
-    (OUT_DIR / "status.json").write_text(json.dumps({
-        "ok": bool(events),
-        "updated_at": datetime.now().astimezone().isoformat(),
-        "message": "갱신 완료" if events else "데이터를 찾지 못했습니다.",
-        "errors": errors,
-        "event_count": len(events),
-    }, ensure_ascii=False, indent=2), encoding="utf-8")
+    (OUT_DIR / "status.json").write_text(
+        json.dumps(status, ensure_ascii=False, indent=2),
+        encoding="utf-8",
+    )
     return events
 
 
 def escape_ics(value: str) -> str:
-    return value.replace("\\", "\\\\").replace(";", r"\;").replace(",", r"\,").replace("\n", r"\n")
+    return (
+        value.replace("\\", "\\\\")
+        .replace(";", r"\;")
+        .replace(",", r"\,")
+        .replace("\n", r"\n")
+    )
 
 
 def write_outputs(events: list[dict[str, Any]]) -> None:
@@ -360,7 +451,7 @@ def write_outputs(events: list[dict[str, Any]]) -> None:
         encoding="utf-8",
     )
 
-    now = datetime.utcnow().strftime("%Y%m%dT%H%M%SZ")
+    now = datetime.now(timezone.utc).strftime("%Y%m%dT%H%M%SZ")
     lines = [
         "BEGIN:VCALENDAR",
         "VERSION:2.0",
@@ -370,23 +461,30 @@ def write_outputs(events: list[dict[str, Any]]) -> None:
         "X-WR-CALNAME:한국 주요 기업 실적",
         "X-WR-TIMEZONE:Asia/Seoul",
     ]
+
     for event in events:
-        day = event["start"].replace("-", "")
-        next_day = (datetime.fromisoformat(event["start"]).date() + timedelta(days=1)).strftime("%Y%m%d")
-        uid = re.sub(r"[^a-zA-Z0-9]", "", f'{day}-{event["company"]}') + "@github"
-        lines += [
-            "BEGIN:VEVENT",
-            f"UID:{uid}",
-            f"DTSTAMP:{now}",
-            f"DTSTART;VALUE=DATE:{day}",
-            f"DTEND;VALUE=DATE:{next_day}",
-            f"SUMMARY:{escape_ics(event['title'])}",
-            f"URL:{event.get('url', '')}",
-            "DESCRIPTION:Investing.com / 국가: 한국 / 중요도: 높음",
-            "END:VEVENT",
-        ]
+        event_day = date.fromisoformat(event["start"])
+        next_day = event_day + timedelta(days=1)
+        uid_key = re.sub(r"[^a-zA-Z0-9]", "", f"{event_day}-{event['company']}")
+        lines.extend(
+            [
+                "BEGIN:VEVENT",
+                f"UID:{uid_key}@github",
+                f"DTSTAMP:{now}",
+                f"DTSTART;VALUE=DATE:{event_day.strftime('%Y%m%d')}",
+                f"DTEND;VALUE=DATE:{next_day.strftime('%Y%m%d')}",
+                f"SUMMARY:{escape_ics(event['title'])}",
+                f"URL:{event.get('url', '')}",
+                "DESCRIPTION:Investing.com / 국가: 한국 / 중요도: 높음",
+                "END:VEVENT",
+            ]
+        )
+
     lines.append("END:VCALENDAR")
-    (ROOT / "docs" / "earnings.ics").write_text("\r\n".join(lines) + "\r\n", encoding="utf-8")
+    (ROOT / "docs" / "earnings.ics").write_text(
+        "\r\n".join(lines) + "\r\n",
+        encoding="utf-8",
+    )
 
 
 async def main() -> None:
