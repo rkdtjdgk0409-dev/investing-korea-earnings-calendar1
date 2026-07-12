@@ -1,22 +1,21 @@
-name: 한국 기업 실적 캘린더 갱신
+name: 한국 기업 실적 캘린더 갱신 v5.1
 
 on:
   workflow_dispatch:
   schedule:
-    # UTC 22:17 = 한국시간 다음 날 오전 7:17
     - cron: "17 22 * * *"
 
 permissions:
   contents: write
 
 concurrency:
-  group: korea-earnings-calendar-update
+  group: korea-earnings-calendar-v5
   cancel-in-progress: true
 
 jobs:
   update:
     runs-on: ubuntu-latest
-    timeout-minutes: 10
+    timeout-minutes: 15
 
     steps:
       - name: 저장소 파일 불러오기
@@ -36,8 +35,14 @@ jobs:
       - name: 서울 오늘부터 미래 3개월 실적 갱신
         run: python update_calendar.py
 
+      - name: 범위·시가총액순 검증
+        run: python validate_output.py
+
       - name: 결과 GitHub에 저장
+        shell: bash
         run: |
+          set -e
+
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
 
@@ -45,13 +50,14 @@ jobs:
           git add docs/data/status.json
           git add docs/earnings.ics
 
+          if [ -f docs/data/market_caps.json ]; then
+            git add docs/data/market_caps.json
+          fi
+
           if git diff --cached --quiet; then
             echo "변경 사항이 없습니다."
-          else
-            git commit -m "자동 갱신: 미래 3개월 한국 실적"
-            git push
+            exit 0
           fi
-          else
-            git commit -m "자동 갱신: 한국 기업 실적 캘린더"
-            git push
-          fi
+
+          git commit -m "자동 갱신: 미래 3개월 한국 실적"
+          git push
