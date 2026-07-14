@@ -2,78 +2,78 @@
   "version": "v5.1-strict-rolling-3month",
   "ok": true,
   "used_cache_for_failed_windows": false,
-  "updated_at": "2026-07-13T19:39:42+09:00",
+  "updated_at": "2026-07-14T15:30:37+09:00",
   "timezone": "Asia/Seoul",
   "range": {
-    "from": "2026-07-13",
-    "to": "2026-10-13"
+    "from": "2026-07-14",
+    "to": "2026-10-14"
   },
   "window_days": 14,
   "window_count": 7,
   "successful_window_count": 7,
   "failed_window_count": 0,
-  "event_count": 344,
-  "fresh_event_count": 344,
+  "event_count": 345,
+  "fresh_event_count": 345,
   "first_event_date": "2026-07-16",
   "last_event_date": "2026-10-13",
   "events_by_month": {
     "2026-07": 60,
     "2026-08": 280,
-    "2026-09": 2,
+    "2026-09": 3,
     "2026-10": 2
   },
-  "market_cap_source": "KRX-MARCAP",
-  "market_cap_matched": 344,
+  "market_cap_source": "KRX-MARCAP cache",
+  "market_cap_matched": 345,
   "market_cap_unmatched": 0,
   "market_cap_error": null,
-  "elapsed_seconds": 43.22,
+  "elapsed_seconds": 7.55,
   "message": "미래 3개월 전체 구간 갱신 완료",
   "windows": [
     {
-      "from": "2026-07-13",
-      "to": "2026-07-26",
+      "from": "2026-07-14",
+      "to": "2026-07-27",
       "ok": true,
-      "event_count": 34,
+      "event_count": 35,
       "source": "https://kr.investing.com:iso"
     },
     {
-      "from": "2026-07-27",
-      "to": "2026-08-09",
+      "from": "2026-07-28",
+      "to": "2026-08-10",
       "ok": true,
-      "event_count": 95,
+      "event_count": 97,
       "source": "https://kr.investing.com:iso"
     },
     {
-      "from": "2026-08-10",
-      "to": "2026-08-23",
+      "from": "2026-08-11",
+      "to": "2026-08-24",
       "ok": true,
-      "event_count": 210,
-      "source": "https://www.investing.com:iso"
+      "event_count": 207,
+      "source": "https://kr.investing.com:iso"
     },
     {
-      "from": "2026-08-24",
-      "to": "2026-09-06",
+      "from": "2026-08-25",
+      "to": "2026-09-07",
       "ok": true,
       "event_count": 3,
       "source": "https://kr.investing.com:iso"
     },
     {
-      "from": "2026-09-07",
-      "to": "2026-09-20",
+      "from": "2026-09-08",
+      "to": "2026-09-21",
       "ok": true,
-      "event_count": 0,
-      "source": "https://kr.investing.com:us"
+      "event_count": 1,
+      "source": "https://kr.investing.com:iso"
     },
     {
-      "from": "2026-09-21",
-      "to": "2026-10-04",
+      "from": "2026-09-22",
+      "to": "2026-10-05",
       "ok": true,
       "event_count": 0,
       "source": "https://kr.investing.com:iso"
     },
     {
-      "from": "2026-10-05",
-      "to": "2026-10-13",
+      "from": "2026-10-06",
+      "to": "2026-10-14",
       "ok": true,
       "event_count": 2,
       "source": "https://kr.investing.com:iso"
@@ -83,122 +83,84 @@
     {
       "host": "https://kr.investing.com",
       "window": [
-        "2026-07-13",
-        "2026-07-26"
+        "2026-07-14",
+        "2026-07-27"
       ],
       "date_format": "iso",
       "page": 0,
       "status_code": 200,
-      "response_bytes": 43287,
-      "row_count": 39,
-      "company_rows": 34,
+      "response_bytes": 44681,
+      "row_count": 41,
+      "company_rows": 35,
       "header_dates": [
         "2026-07-16",
         "2026-07-17",
         "2026-07-22",
         "2026-07-23",
-        "2026-07-24"
+        "2026-07-24",
+        "2026-07-27"
       ],
       "overlapping_dates": [
         "2026-07-16",
         "2026-07-17",
         "2026-07-22",
         "2026-07-23",
-        "2026-07-24"
+        "2026-07-24",
+        "2026-07-27"
       ],
-      "parsed_events": 34,
+      "parsed_events": 35,
       "accepted": true,
       "reason": "ok"
     },
     {
       "host": "https://kr.investing.com",
       "window": [
-        "2026-07-27",
-        "2026-08-09"
+        "2026-07-28",
+        "2026-08-10"
       ],
       "date_format": "iso",
       "page": 0,
       "status_code": 200,
-      "response_bytes": 120214,
-      "row_count": 105,
-      "company_rows": 95,
+      "response_bytes": 122612,
+      "row_count": 107,
+      "company_rows": 97,
       "header_dates": [
-        "2026-07-27",
         "2026-07-28",
         "2026-07-29",
         "2026-07-30",
         "2026-07-31",
         "2026-08-03",
         "2026-08-04",
-        "2026-08-05"
+        "2026-08-05",
+        "2026-08-06"
       ],
       "overlapping_dates": [
-        "2026-07-27",
         "2026-07-28",
         "2026-07-29",
         "2026-07-30",
         "2026-07-31",
         "2026-08-03",
         "2026-08-04",
-        "2026-08-05"
+        "2026-08-05",
+        "2026-08-06"
       ],
-      "parsed_events": 95,
+      "parsed_events": 97,
       "accepted": true,
       "reason": "ok"
     },
     {
       "host": "https://kr.investing.com",
       "window": [
-        "2026-08-10",
-        "2026-08-23"
-      ],
-      "date_format": "iso",
-      "page": 0,
-      "status_code": 403,
-      "response_bytes": 6407,
-      "accepted": false,
-      "reason": "HTTP 403"
-    },
-    {
-      "host": "https://kr.investing.com",
-      "window": [
-        "2026-08-10",
-        "2026-08-23"
-      ],
-      "date_format": "us",
-      "page": 0,
-      "status_code": 403,
-      "response_bytes": 6428,
-      "accepted": false,
-      "reason": "HTTP 403"
-    },
-    {
-      "host": "https://kr.investing.com",
-      "window": [
-        "2026-08-10",
-        "2026-08-23"
-      ],
-      "date_format": "day_first",
-      "page": 0,
-      "status_code": 403,
-      "response_bytes": 6428,
-      "accepted": false,
-      "reason": "HTTP 403"
-    },
-    {
-      "host": "https://www.investing.com",
-      "window": [
-        "2026-08-10",
-        "2026-08-23"
+        "2026-08-11",
+        "2026-08-24"
       ],
       "date_format": "iso",
       "page": 0,
       "status_code": 200,
-      "response_bytes": 256736,
-      "row_count": 216,
-      "company_rows": 210,
+      "response_bytes": 257916,
+      "row_count": 212,
+      "company_rows": 207,
       "header_dates": [
-        "2026-08-10",
         "2026-08-11",
         "2026-08-12",
         "2026-08-13",
@@ -206,35 +168,34 @@
         "2026-08-18"
       ],
       "overlapping_dates": [
-        "2026-08-10",
         "2026-08-11",
         "2026-08-12",
         "2026-08-13",
         "2026-08-17",
         "2026-08-18"
       ],
-      "parsed_events": 210,
+      "parsed_events": 207,
       "accepted": true,
       "reason": "ok"
     },
     {
-      "host": "https://www.investing.com",
+      "host": "https://kr.investing.com",
       "window": [
-        "2026-08-10",
-        "2026-08-23"
+        "2026-08-11",
+        "2026-08-24"
       ],
       "date_format": "iso",
       "page": 1,
       "status_code": 200,
-      "response_bytes": 256736,
+      "response_bytes": 257916,
       "accepted": true,
       "reason": "duplicate_page"
     },
     {
       "host": "https://kr.investing.com",
       "window": [
-        "2026-08-24",
-        "2026-09-06"
+        "2026-08-25",
+        "2026-09-07"
       ],
       "date_format": "iso",
       "page": 0,
@@ -257,39 +218,30 @@
     {
       "host": "https://kr.investing.com",
       "window": [
-        "2026-09-07",
-        "2026-09-20"
+        "2026-09-08",
+        "2026-09-21"
       ],
       "date_format": "iso",
       "page": 0,
-      "status_code": 403,
-      "response_bytes": 6407,
-      "accepted": false,
-      "reason": "HTTP 403"
-    },
-    {
-      "host": "https://kr.investing.com",
-      "window": [
-        "2026-09-07",
-        "2026-09-20"
-      ],
-      "date_format": "us",
-      "page": 0,
       "status_code": 200,
-      "response_bytes": 347,
-      "row_count": 1,
-      "company_rows": 0,
-      "header_dates": [],
-      "overlapping_dates": [],
-      "parsed_events": 0,
+      "response_bytes": 1565,
+      "row_count": 2,
+      "company_rows": 1,
+      "header_dates": [
+        "2026-09-09"
+      ],
+      "overlapping_dates": [
+        "2026-09-09"
+      ],
+      "parsed_events": 1,
       "accepted": true,
       "reason": "ok"
     },
     {
       "host": "https://kr.investing.com",
       "window": [
-        "2026-09-21",
-        "2026-10-04"
+        "2026-09-22",
+        "2026-10-05"
       ],
       "date_format": "iso",
       "page": 0,
@@ -306,13 +258,13 @@
     {
       "host": "https://kr.investing.com",
       "window": [
-        "2026-10-05",
-        "2026-10-13"
+        "2026-10-06",
+        "2026-10-14"
       ],
       "date_format": "iso",
       "page": 0,
       "status_code": 200,
-      "response_bytes": 2978,
+      "response_bytes": 2979,
       "row_count": 4,
       "company_rows": 2,
       "header_dates": [
