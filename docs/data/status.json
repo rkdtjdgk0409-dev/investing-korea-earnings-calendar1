@@ -2,104 +2,90 @@
   "version": "v5.1-strict-rolling-3month",
   "ok": false,
   "used_cache_for_failed_windows": true,
-  "updated_at": "2026-07-15T15:33:42+09:00",
+  "updated_at": "2026-07-16T16:11:24+09:00",
   "timezone": "Asia/Seoul",
   "range": {
-    "from": "2026-07-15",
-    "to": "2026-10-15"
+    "from": "2026-07-16",
+    "to": "2026-10-16"
   },
   "window_days": 14,
   "window_count": 7,
-  "successful_window_count": 2,
-  "failed_window_count": 5,
-  "event_count": 406,
-  "fresh_event_count": 267,
-  "first_event_date": "2026-07-16",
-  "last_event_date": "2026-10-13",
+  "successful_window_count": 3,
+  "failed_window_count": 4,
+  "event_count": 98,
+  "fresh_event_count": 0,
+  "first_event_date": "2026-07-30",
+  "last_event_date": "2026-09-09",
   "events_by_month": {
-    "2026-07": 60,
-    "2026-08": 342,
-    "2026-09": 2,
-    "2026-10": 2
+    "2026-07": 15,
+    "2026-08": 81,
+    "2026-09": 2
   },
   "market_cap_source": "KRX-MARCAP",
-  "market_cap_matched": 405,
-  "market_cap_unmatched": 1,
+  "market_cap_matched": 98,
+  "market_cap_unmatched": 0,
   "market_cap_error": null,
-  "elapsed_seconds": 7.18,
+  "elapsed_seconds": 3.24,
   "message": "일부 구간 수집 실패: 해당 구간의 기존 데이터만 유지",
   "windows": [
     {
-      "from": "2026-07-15",
-      "to": "2026-07-28",
-      "ok": false,
-      "event_count": 0,
-      "error": "RuntimeError: https://kr.investing.com/iso: RuntimeError: HTTP 403 | https://kr.investing.com/us: RuntimeError: HTTP 403 | https://kr.investing.com/day_first: RuntimeError: HTTP 403 | https://www.investing.com/iso: RuntimeError: HTTP 403 | https://www.investing.com/us: RuntimeError: HTTP 403 | https://www.investing.com/day_first: RuntimeError: HTTP 403"
-    },
-    {
-      "from": "2026-07-29",
-      "to": "2026-08-11",
-      "ok": false,
-      "event_count": 0,
-      "error": "RuntimeError: https://kr.investing.com/iso: RuntimeError: HTTP 403 | https://kr.investing.com/us: RuntimeError: HTTP 403 | https://kr.investing.com/day_first: RuntimeError: HTTP 403 | https://www.investing.com/iso: RuntimeError: HTTP 403 | https://www.investing.com/us: RuntimeError: HTTP 403 | https://www.investing.com/day_first: RuntimeError: HTTP 403"
-    },
-    {
-      "from": "2026-08-12",
-      "to": "2026-08-25",
+      "from": "2026-07-16",
+      "to": "2026-07-29",
       "ok": true,
-      "event_count": 265,
-      "source": "https://kr.investing.com:iso"
+      "event_count": 0,
+      "source": "https://kr.investing.com:us"
     },
     {
-      "from": "2026-08-26",
-      "to": "2026-09-08",
+      "from": "2026-07-30",
+      "to": "2026-08-12",
+      "ok": false,
+      "event_count": 0,
+      "error": "RuntimeError: https://kr.investing.com/iso: RuntimeError: HTTP 403 | https://kr.investing.com/us: RuntimeError: HTTP 403 | https://kr.investing.com/day_first: RuntimeError: HTTP 403 | https://www.investing.com/iso: RuntimeError: HTTP 403 | https://www.investing.com/us: RuntimeError: HTTP 403 | https://www.investing.com/day_first: RuntimeError: HTTP 403"
+    },
+    {
+      "from": "2026-08-13",
+      "to": "2026-08-26",
       "ok": true,
-      "event_count": 2,
-      "source": "https://kr.investing.com:iso"
+      "event_count": 0,
+      "source": "https://kr.investing.com:us"
     },
     {
-      "from": "2026-09-09",
-      "to": "2026-09-22",
+      "from": "2026-08-27",
+      "to": "2026-09-09",
       "ok": false,
       "event_count": 0,
       "error": "RuntimeError: https://kr.investing.com/iso: RuntimeError: HTTP 403 | https://kr.investing.com/us: RuntimeError: HTTP 403 | https://kr.investing.com/day_first: RuntimeError: HTTP 403 | https://www.investing.com/iso: RuntimeError: HTTP 403 | https://www.investing.com/us: RuntimeError: HTTP 403 | https://www.investing.com/day_first: RuntimeError: HTTP 403"
     },
     {
-      "from": "2026-09-23",
-      "to": "2026-10-06",
+      "from": "2026-09-10",
+      "to": "2026-09-23",
       "ok": false,
       "event_count": 0,
       "error": "RuntimeError: https://kr.investing.com/iso: RuntimeError: HTTP 403 | https://kr.investing.com/us: RuntimeError: HTTP 403 | https://kr.investing.com/day_first: RuntimeError: HTTP 403 | https://www.investing.com/iso: RuntimeError: HTTP 403 | https://www.investing.com/us: RuntimeError: HTTP 403 | https://www.investing.com/day_first: RuntimeError: HTTP 403"
     },
     {
-      "from": "2026-10-07",
-      "to": "2026-10-15",
+      "from": "2026-09-24",
+      "to": "2026-10-07",
       "ok": false,
       "event_count": 0,
       "error": "RuntimeError: https://kr.investing.com/iso: RuntimeError: HTTP 403 | https://kr.investing.com/us: RuntimeError: HTTP 403 | https://kr.investing.com/day_first: RuntimeError: HTTP 403 | https://www.investing.com/iso: RuntimeError: HTTP 403 | https://www.investing.com/us: RuntimeError: HTTP 403 | https://www.investing.com/day_first: RuntimeError: HTTP 403"
+    },
+    {
+      "from": "2026-10-08",
+      "to": "2026-10-16",
+      "ok": true,
+      "event_count": 0,
+      "source": "https://www.investing.com:us"
     }
   ],
   "diagnostics": [
     {
       "host": "https://kr.investing.com",
       "window": [
-        "2026-07-15",
-        "2026-07-28"
+        "2026-07-16",
+        "2026-07-29"
       ],
       "date_format": "iso",
-      "page": 0,
-      "status_code": 403,
-      "response_bytes": 6407,
-      "accepted": false,
-      "reason": "HTTP 403"
-    },
-    {
-      "host": "https://kr.investing.com",
-      "window": [
-        "2026-07-15",
-        "2026-07-28"
-      ],
-      "date_format": "us",
       "page": 0,
       "status_code": 403,
       "response_bytes": 6428,
@@ -109,218 +95,39 @@
     {
       "host": "https://kr.investing.com",
       "window": [
-        "2026-07-15",
-        "2026-07-28"
-      ],
-      "date_format": "day_first",
-      "page": 0,
-      "status_code": 403,
-      "response_bytes": 6428,
-      "accepted": false,
-      "reason": "HTTP 403"
-    },
-    {
-      "host": "https://www.investing.com",
-      "window": [
-        "2026-07-15",
-        "2026-07-28"
-      ],
-      "date_format": "iso",
-      "page": 0,
-      "status_code": 403,
-      "response_bytes": 6408,
-      "accepted": false,
-      "reason": "HTTP 403"
-    },
-    {
-      "host": "https://www.investing.com",
-      "window": [
-        "2026-07-15",
-        "2026-07-28"
+        "2026-07-16",
+        "2026-07-29"
       ],
       "date_format": "us",
-      "page": 0,
-      "status_code": 403,
-      "response_bytes": 6408,
-      "accepted": false,
-      "reason": "HTTP 403"
-    },
-    {
-      "host": "https://www.investing.com",
-      "window": [
-        "2026-07-15",
-        "2026-07-28"
-      ],
-      "date_format": "day_first",
-      "page": 0,
-      "status_code": 403,
-      "response_bytes": 6429,
-      "accepted": false,
-      "reason": "HTTP 403"
-    },
-    {
-      "host": "https://kr.investing.com",
-      "window": [
-        "2026-07-29",
-        "2026-08-11"
-      ],
-      "date_format": "iso",
-      "page": 0,
-      "status_code": 403,
-      "response_bytes": 6407,
-      "accepted": false,
-      "reason": "HTTP 403"
-    },
-    {
-      "host": "https://kr.investing.com",
-      "window": [
-        "2026-07-29",
-        "2026-08-11"
-      ],
-      "date_format": "us",
-      "page": 0,
-      "status_code": 403,
-      "response_bytes": 6428,
-      "accepted": false,
-      "reason": "HTTP 403"
-    },
-    {
-      "host": "https://kr.investing.com",
-      "window": [
-        "2026-07-29",
-        "2026-08-11"
-      ],
-      "date_format": "day_first",
-      "page": 0,
-      "status_code": 403,
-      "response_bytes": 6428,
-      "accepted": false,
-      "reason": "HTTP 403"
-    },
-    {
-      "host": "https://www.investing.com",
-      "window": [
-        "2026-07-29",
-        "2026-08-11"
-      ],
-      "date_format": "iso",
-      "page": 0,
-      "status_code": 403,
-      "response_bytes": 6429,
-      "accepted": false,
-      "reason": "HTTP 403"
-    },
-    {
-      "host": "https://www.investing.com",
-      "window": [
-        "2026-07-29",
-        "2026-08-11"
-      ],
-      "date_format": "us",
-      "page": 0,
-      "status_code": 403,
-      "response_bytes": 6429,
-      "accepted": false,
-      "reason": "HTTP 403"
-    },
-    {
-      "host": "https://www.investing.com",
-      "window": [
-        "2026-07-29",
-        "2026-08-11"
-      ],
-      "date_format": "day_first",
-      "page": 0,
-      "status_code": 403,
-      "response_bytes": 6429,
-      "accepted": false,
-      "reason": "HTTP 403"
-    },
-    {
-      "host": "https://kr.investing.com",
-      "window": [
-        "2026-08-12",
-        "2026-08-25"
-      ],
-      "date_format": "iso",
       "page": 0,
       "status_code": 200,
-      "response_bytes": 329909,
-      "row_count": 270,
-      "company_rows": 265,
-      "header_dates": [
-        "2026-08-12",
-        "2026-08-13",
-        "2026-08-17",
-        "2026-08-18",
-        "2026-08-19"
-      ],
-      "overlapping_dates": [
-        "2026-08-12",
-        "2026-08-13",
-        "2026-08-17",
-        "2026-08-18",
-        "2026-08-19"
-      ],
-      "parsed_events": 265,
+      "response_bytes": 347,
+      "row_count": 1,
+      "company_rows": 0,
+      "header_dates": [],
+      "overlapping_dates": [],
+      "parsed_events": 0,
       "accepted": true,
       "reason": "ok"
     },
     {
       "host": "https://kr.investing.com",
       "window": [
-        "2026-08-12",
-        "2026-08-25"
-      ],
-      "date_format": "iso",
-      "page": 1,
-      "status_code": 200,
-      "response_bytes": 329909,
-      "accepted": true,
-      "reason": "duplicate_page"
-    },
-    {
-      "host": "https://kr.investing.com",
-      "window": [
-        "2026-08-26",
-        "2026-09-08"
-      ],
-      "date_format": "iso",
-      "page": 0,
-      "status_code": 200,
-      "response_bytes": 3079,
-      "row_count": 4,
-      "company_rows": 2,
-      "header_dates": [
-        "2026-08-26",
-        "2026-09-02"
-      ],
-      "overlapping_dates": [
-        "2026-08-26",
-        "2026-09-02"
-      ],
-      "parsed_events": 2,
-      "accepted": true,
-      "reason": "ok"
-    },
-    {
-      "host": "https://kr.investing.com",
-      "window": [
-        "2026-09-09",
-        "2026-09-22"
+        "2026-07-30",
+        "2026-08-12"
       ],
       "date_format": "iso",
       "page": 0,
       "status_code": 403,
-      "response_bytes": 6407,
+      "response_bytes": 6428,
       "accepted": false,
       "reason": "HTTP 403"
     },
     {
       "host": "https://kr.investing.com",
       "window": [
-        "2026-09-09",
-        "2026-09-22"
+        "2026-07-30",
+        "2026-08-12"
       ],
       "date_format": "us",
       "page": 0,
@@ -332,8 +139,8 @@
     {
       "host": "https://kr.investing.com",
       "window": [
-        "2026-09-09",
-        "2026-09-22"
+        "2026-07-30",
+        "2026-08-12"
       ],
       "date_format": "day_first",
       "page": 0,
@@ -345,164 +152,8 @@
     {
       "host": "https://www.investing.com",
       "window": [
-        "2026-09-09",
-        "2026-09-22"
-      ],
-      "date_format": "iso",
-      "page": 0,
-      "status_code": 403,
-      "response_bytes": 6429,
-      "accepted": false,
-      "reason": "HTTP 403"
-    },
-    {
-      "host": "https://www.investing.com",
-      "window": [
-        "2026-09-09",
-        "2026-09-22"
-      ],
-      "date_format": "us",
-      "page": 0,
-      "status_code": 403,
-      "response_bytes": 6429,
-      "accepted": false,
-      "reason": "HTTP 403"
-    },
-    {
-      "host": "https://www.investing.com",
-      "window": [
-        "2026-09-09",
-        "2026-09-22"
-      ],
-      "date_format": "day_first",
-      "page": 0,
-      "status_code": 403,
-      "response_bytes": 6429,
-      "accepted": false,
-      "reason": "HTTP 403"
-    },
-    {
-      "host": "https://kr.investing.com",
-      "window": [
-        "2026-09-23",
-        "2026-10-06"
-      ],
-      "date_format": "iso",
-      "page": 0,
-      "status_code": 403,
-      "response_bytes": 6407,
-      "accepted": false,
-      "reason": "HTTP 403"
-    },
-    {
-      "host": "https://kr.investing.com",
-      "window": [
-        "2026-09-23",
-        "2026-10-06"
-      ],
-      "date_format": "us",
-      "page": 0,
-      "status_code": 403,
-      "response_bytes": 6428,
-      "accepted": false,
-      "reason": "HTTP 403"
-    },
-    {
-      "host": "https://kr.investing.com",
-      "window": [
-        "2026-09-23",
-        "2026-10-06"
-      ],
-      "date_format": "day_first",
-      "page": 0,
-      "status_code": 403,
-      "response_bytes": 6428,
-      "accepted": false,
-      "reason": "HTTP 403"
-    },
-    {
-      "host": "https://www.investing.com",
-      "window": [
-        "2026-09-23",
-        "2026-10-06"
-      ],
-      "date_format": "iso",
-      "page": 0,
-      "status_code": 403,
-      "response_bytes": 6429,
-      "accepted": false,
-      "reason": "HTTP 403"
-    },
-    {
-      "host": "https://www.investing.com",
-      "window": [
-        "2026-09-23",
-        "2026-10-06"
-      ],
-      "date_format": "us",
-      "page": 0,
-      "status_code": 403,
-      "response_bytes": 6429,
-      "accepted": false,
-      "reason": "HTTP 403"
-    },
-    {
-      "host": "https://www.investing.com",
-      "window": [
-        "2026-09-23",
-        "2026-10-06"
-      ],
-      "date_format": "day_first",
-      "page": 0,
-      "status_code": 403,
-      "response_bytes": 6429,
-      "accepted": false,
-      "reason": "HTTP 403"
-    },
-    {
-      "host": "https://kr.investing.com",
-      "window": [
-        "2026-10-07",
-        "2026-10-15"
-      ],
-      "date_format": "iso",
-      "page": 0,
-      "status_code": 403,
-      "response_bytes": 6407,
-      "accepted": false,
-      "reason": "HTTP 403"
-    },
-    {
-      "host": "https://kr.investing.com",
-      "window": [
-        "2026-10-07",
-        "2026-10-15"
-      ],
-      "date_format": "us",
-      "page": 0,
-      "status_code": 403,
-      "response_bytes": 6428,
-      "accepted": false,
-      "reason": "HTTP 403"
-    },
-    {
-      "host": "https://kr.investing.com",
-      "window": [
-        "2026-10-07",
-        "2026-10-15"
-      ],
-      "date_format": "day_first",
-      "page": 0,
-      "status_code": 403,
-      "response_bytes": 6428,
-      "accepted": false,
-      "reason": "HTTP 403"
-    },
-    {
-      "host": "https://www.investing.com",
-      "window": [
-        "2026-10-07",
-        "2026-10-15"
+        "2026-07-30",
+        "2026-08-12"
       ],
       "date_format": "iso",
       "page": 0,
@@ -514,8 +165,8 @@
     {
       "host": "https://www.investing.com",
       "window": [
-        "2026-10-07",
-        "2026-10-15"
+        "2026-07-30",
+        "2026-08-12"
       ],
       "date_format": "us",
       "page": 0,
@@ -527,8 +178,8 @@
     {
       "host": "https://www.investing.com",
       "window": [
-        "2026-10-07",
-        "2026-10-15"
+        "2026-07-30",
+        "2026-08-12"
       ],
       "date_format": "day_first",
       "page": 0,
@@ -536,6 +187,341 @@
       "response_bytes": 6429,
       "accepted": false,
       "reason": "HTTP 403"
+    },
+    {
+      "host": "https://kr.investing.com",
+      "window": [
+        "2026-08-13",
+        "2026-08-26"
+      ],
+      "date_format": "iso",
+      "page": 0,
+      "status_code": 403,
+      "response_bytes": 6407,
+      "accepted": false,
+      "reason": "HTTP 403"
+    },
+    {
+      "host": "https://kr.investing.com",
+      "window": [
+        "2026-08-13",
+        "2026-08-26"
+      ],
+      "date_format": "us",
+      "page": 0,
+      "status_code": 200,
+      "response_bytes": 347,
+      "row_count": 1,
+      "company_rows": 0,
+      "header_dates": [],
+      "overlapping_dates": [],
+      "parsed_events": 0,
+      "accepted": true,
+      "reason": "ok"
+    },
+    {
+      "host": "https://kr.investing.com",
+      "window": [
+        "2026-08-27",
+        "2026-09-09"
+      ],
+      "date_format": "iso",
+      "page": 0,
+      "status_code": 403,
+      "response_bytes": 6407,
+      "accepted": false,
+      "reason": "HTTP 403"
+    },
+    {
+      "host": "https://kr.investing.com",
+      "window": [
+        "2026-08-27",
+        "2026-09-09"
+      ],
+      "date_format": "us",
+      "page": 0,
+      "status_code": 403,
+      "response_bytes": 6428,
+      "accepted": false,
+      "reason": "HTTP 403"
+    },
+    {
+      "host": "https://kr.investing.com",
+      "window": [
+        "2026-08-27",
+        "2026-09-09"
+      ],
+      "date_format": "day_first",
+      "page": 0,
+      "status_code": 403,
+      "response_bytes": 6428,
+      "accepted": false,
+      "reason": "HTTP 403"
+    },
+    {
+      "host": "https://www.investing.com",
+      "window": [
+        "2026-08-27",
+        "2026-09-09"
+      ],
+      "date_format": "iso",
+      "page": 0,
+      "status_code": 403,
+      "response_bytes": 6408,
+      "accepted": false,
+      "reason": "HTTP 403"
+    },
+    {
+      "host": "https://www.investing.com",
+      "window": [
+        "2026-08-27",
+        "2026-09-09"
+      ],
+      "date_format": "us",
+      "page": 0,
+      "status_code": 403,
+      "response_bytes": 6429,
+      "accepted": false,
+      "reason": "HTTP 403"
+    },
+    {
+      "host": "https://www.investing.com",
+      "window": [
+        "2026-08-27",
+        "2026-09-09"
+      ],
+      "date_format": "day_first",
+      "page": 0,
+      "status_code": 403,
+      "response_bytes": 6429,
+      "accepted": false,
+      "reason": "HTTP 403"
+    },
+    {
+      "host": "https://kr.investing.com",
+      "window": [
+        "2026-09-10",
+        "2026-09-23"
+      ],
+      "date_format": "iso",
+      "page": 0,
+      "status_code": 403,
+      "response_bytes": 6407,
+      "accepted": false,
+      "reason": "HTTP 403"
+    },
+    {
+      "host": "https://kr.investing.com",
+      "window": [
+        "2026-09-10",
+        "2026-09-23"
+      ],
+      "date_format": "us",
+      "page": 0,
+      "status_code": 403,
+      "response_bytes": 6428,
+      "accepted": false,
+      "reason": "HTTP 403"
+    },
+    {
+      "host": "https://kr.investing.com",
+      "window": [
+        "2026-09-10",
+        "2026-09-23"
+      ],
+      "date_format": "day_first",
+      "page": 0,
+      "status_code": 403,
+      "response_bytes": 6428,
+      "accepted": false,
+      "reason": "HTTP 403"
+    },
+    {
+      "host": "https://www.investing.com",
+      "window": [
+        "2026-09-10",
+        "2026-09-23"
+      ],
+      "date_format": "iso",
+      "page": 0,
+      "status_code": 403,
+      "response_bytes": 6429,
+      "accepted": false,
+      "reason": "HTTP 403"
+    },
+    {
+      "host": "https://www.investing.com",
+      "window": [
+        "2026-09-10",
+        "2026-09-23"
+      ],
+      "date_format": "us",
+      "page": 0,
+      "status_code": 403,
+      "response_bytes": 6429,
+      "accepted": false,
+      "reason": "HTTP 403"
+    },
+    {
+      "host": "https://www.investing.com",
+      "window": [
+        "2026-09-10",
+        "2026-09-23"
+      ],
+      "date_format": "day_first",
+      "page": 0,
+      "status_code": 403,
+      "response_bytes": 6429,
+      "accepted": false,
+      "reason": "HTTP 403"
+    },
+    {
+      "host": "https://kr.investing.com",
+      "window": [
+        "2026-09-24",
+        "2026-10-07"
+      ],
+      "date_format": "iso",
+      "page": 0,
+      "status_code": 403,
+      "response_bytes": 6428,
+      "accepted": false,
+      "reason": "HTTP 403"
+    },
+    {
+      "host": "https://kr.investing.com",
+      "window": [
+        "2026-09-24",
+        "2026-10-07"
+      ],
+      "date_format": "us",
+      "page": 0,
+      "status_code": 403,
+      "response_bytes": 6428,
+      "accepted": false,
+      "reason": "HTTP 403"
+    },
+    {
+      "host": "https://kr.investing.com",
+      "window": [
+        "2026-09-24",
+        "2026-10-07"
+      ],
+      "date_format": "day_first",
+      "page": 0,
+      "status_code": 403,
+      "response_bytes": 6428,
+      "accepted": false,
+      "reason": "HTTP 403"
+    },
+    {
+      "host": "https://www.investing.com",
+      "window": [
+        "2026-09-24",
+        "2026-10-07"
+      ],
+      "date_format": "iso",
+      "page": 0,
+      "status_code": 403,
+      "response_bytes": 6429,
+      "accepted": false,
+      "reason": "HTTP 403"
+    },
+    {
+      "host": "https://www.investing.com",
+      "window": [
+        "2026-09-24",
+        "2026-10-07"
+      ],
+      "date_format": "us",
+      "page": 0,
+      "status_code": 403,
+      "response_bytes": 6429,
+      "accepted": false,
+      "reason": "HTTP 403"
+    },
+    {
+      "host": "https://www.investing.com",
+      "window": [
+        "2026-09-24",
+        "2026-10-07"
+      ],
+      "date_format": "day_first",
+      "page": 0,
+      "status_code": 403,
+      "response_bytes": 6429,
+      "accepted": false,
+      "reason": "HTTP 403"
+    },
+    {
+      "host": "https://kr.investing.com",
+      "window": [
+        "2026-10-08",
+        "2026-10-16"
+      ],
+      "date_format": "iso",
+      "page": 0,
+      "status_code": 403,
+      "response_bytes": 6428,
+      "accepted": false,
+      "reason": "HTTP 403"
+    },
+    {
+      "host": "https://kr.investing.com",
+      "window": [
+        "2026-10-08",
+        "2026-10-16"
+      ],
+      "date_format": "us",
+      "page": 0,
+      "status_code": 403,
+      "response_bytes": 6428,
+      "accepted": false,
+      "reason": "HTTP 403"
+    },
+    {
+      "host": "https://kr.investing.com",
+      "window": [
+        "2026-10-08",
+        "2026-10-16"
+      ],
+      "date_format": "day_first",
+      "page": 0,
+      "status_code": 403,
+      "response_bytes": 6428,
+      "accepted": false,
+      "reason": "HTTP 403"
+    },
+    {
+      "host": "https://www.investing.com",
+      "window": [
+        "2026-10-08",
+        "2026-10-16"
+      ],
+      "date_format": "iso",
+      "page": 0,
+      "status_code": 403,
+      "response_bytes": 6429,
+      "accepted": false,
+      "reason": "HTTP 403"
+    },
+    {
+      "host": "https://www.investing.com",
+      "window": [
+        "2026-10-08",
+        "2026-10-16"
+      ],
+      "date_format": "us",
+      "page": 0,
+      "status_code": 200,
+      "response_bytes": 308,
+      "row_count": 1,
+      "company_rows": 0,
+      "header_dates": [],
+      "overlapping_dates": [],
+      "parsed_events": 0,
+      "accepted": true,
+      "reason": "ok"
     }
   ]
 }

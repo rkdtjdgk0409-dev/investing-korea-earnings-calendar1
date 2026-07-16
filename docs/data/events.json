@@ -1,590 +1,5 @@
 [
   {
-    "id": "2026-07-16-005490",
-    "title": "POSCO홀딩스 실적",
-    "company": "POSCO홀딩스",
-    "ticker": "005490",
-    "start": "2026-07-16",
-    "allDay": true,
-    "url": "https://kr.investing.com/equities/posco-inc-earnings",
-    "country": "한국",
-    "importance": "높음",
-    "source": "Investing.com",
-    "marketCap": 25000701768500
-  },
-  {
-    "id": "2026-07-17-000270",
-    "title": "기아 실적",
-    "company": "기아",
-    "ticker": "000270",
-    "start": "2026-07-17",
-    "allDay": true,
-    "url": "https://kr.investing.com/equities/kia-motors-earnings",
-    "country": "한국",
-    "importance": "높음",
-    "source": "Investing.com",
-    "marketCap": 56570843410200
-  },
-  {
-    "id": "2026-07-17-086790",
-    "title": "하나금융지주 실적",
-    "company": "하나금융지주",
-    "ticker": "086790",
-    "start": "2026-07-17",
-    "allDay": true,
-    "url": "https://kr.investing.com/equities/hana-financial-earnings",
-    "country": "한국",
-    "importance": "높음",
-    "source": "Investing.com",
-    "marketCap": 38027369872800
-  },
-  {
-    "id": "2026-07-17-003670",
-    "title": "포스코퓨처엠 실적",
-    "company": "포스코퓨처엠",
-    "ticker": "003670",
-    "start": "2026-07-17",
-    "allDay": true,
-    "url": "https://kr.investing.com/equities/posco-chemtech-co-ltd-earnings",
-    "country": "한국",
-    "importance": "높음",
-    "source": "Investing.com",
-    "marketCap": 13484246952000
-  },
-  {
-    "id": "2026-07-17-007690",
-    "title": "국도화학 실적",
-    "company": "국도화학",
-    "ticker": "007690",
-    "start": "2026-07-17",
-    "allDay": true,
-    "url": "https://kr.investing.com/equities/kukdo-chemical-earnings",
-    "country": "한국",
-    "importance": "높음",
-    "source": "Investing.com",
-    "marketCap": 337094284800
-  },
-  {
-    "id": "2026-07-22-000660",
-    "title": "SK Hynix 실적",
-    "company": "SK Hynix",
-    "ticker": "000660",
-    "start": "2026-07-22",
-    "allDay": true,
-    "url": "https://kr.investing.com/equities/sk-hynix-inc-earnings",
-    "country": "한국",
-    "importance": "높음",
-    "source": "Investing.com",
-    "marketCap": 1543000620225000
-  },
-  {
-    "id": "2026-07-22-034220",
-    "title": "LG디스플레이 실적",
-    "company": "LG디스플레이",
-    "ticker": "034220",
-    "start": "2026-07-22",
-    "allDay": true,
-    "url": "https://kr.investing.com/equities/lg-display-earnings",
-    "country": "한국",
-    "importance": "높음",
-    "source": "Investing.com",
-    "marketCap": 5385000000000
-  },
-  {
-    "id": "2026-07-22-014830",
-    "title": "유니드 실적",
-    "company": "유니드",
-    "ticker": "014830",
-    "start": "2026-07-22",
-    "allDay": true,
-    "url": "https://kr.investing.com/equities/unid-earnings",
-    "country": "한국",
-    "importance": "높음",
-    "source": "Investing.com",
-    "marketCap": 425005280000
-  },
-  {
-    "id": "2026-07-23-005380",
-    "title": "현대차 실적",
-    "company": "현대차",
-    "ticker": "005380",
-    "start": "2026-07-23",
-    "allDay": true,
-    "url": "https://kr.investing.com/equities/hyundai-motor-earnings",
-    "country": "한국",
-    "importance": "높음",
-    "source": "Investing.com",
-    "marketCap": 89479143742000
-  },
-  {
-    "id": "2026-07-23-207940",
-    "title": "삼성바이오로직스 실적",
-    "company": "삼성바이오로직스",
-    "ticker": "207940",
-    "start": "2026-07-23",
-    "allDay": true,
-    "url": "https://kr.investing.com/equities/samsung-biologics-co-ltd-earnings",
-    "country": "한국",
-    "importance": "높음",
-    "source": "Investing.com",
-    "marketCap": 64946204253000
-  },
-  {
-    "id": "2026-07-23-329180",
-    "title": "HD현대중공업 실적",
-    "company": "HD현대중공업",
-    "ticker": "329180",
-    "start": "2026-07-23",
-    "allDay": true,
-    "url": "https://kr.investing.com/equities/hyundai-heavy-industries-co-earnings",
-    "country": "한국",
-    "importance": "높음",
-    "source": "Investing.com",
-    "marketCap": 49384256362500
-  },
-  {
-    "id": "2026-07-23-006400",
-    "title": "삼성SDI 실적",
-    "company": "삼성SDI",
-    "ticker": "006400",
-    "start": "2026-07-23",
-    "allDay": true,
-    "url": "https://kr.investing.com/equities/samsung-sdi-earnings",
-    "country": "한국",
-    "importance": "높음",
-    "source": "Investing.com",
-    "marketCap": 37149929330000
-  },
-  {
-    "id": "2026-07-23-316140",
-    "title": "우리금융지주 실적",
-    "company": "우리금융지주",
-    "ticker": "316140",
-    "start": "2026-07-23",
-    "allDay": true,
-    "url": "https://kr.investing.com/equities/woori-financial-earnings",
-    "country": "한국",
-    "importance": "높음",
-    "source": "Investing.com",
-    "marketCap": 22898420498900
-  },
-  {
-    "id": "2026-07-23-138930",
-    "title": "BNK금융지주 실적",
-    "company": "BNK금융지주",
-    "ticker": "138930",
-    "start": "2026-07-23",
-    "allDay": true,
-    "url": "https://kr.investing.com/equities/bs-financial-group-earnings",
-    "country": "한국",
-    "importance": "높음",
-    "source": "Investing.com",
-    "marketCap": 5651055270930
-  },
-  {
-    "id": "2026-07-23-009830",
-    "title": "한화솔루션 실적",
-    "company": "한화솔루션",
-    "ticker": "009830",
-    "start": "2026-07-23",
-    "allDay": true,
-    "url": "https://kr.investing.com/equities/hanwhachem-earnings",
-    "country": "한국",
-    "importance": "높음",
-    "source": "Investing.com",
-    "marketCap": 5302884735600
-  },
-  {
-    "id": "2026-07-23-175330",
-    "title": "JB금융지주 실적",
-    "company": "JB금융지주",
-    "ticker": "175330",
-    "start": "2026-07-23",
-    "allDay": true,
-    "url": "https://kr.investing.com/equities/jb-financial-earnings",
-    "country": "한국",
-    "importance": "높음",
-    "source": "Investing.com",
-    "marketCap": 5271100352000
-  },
-  {
-    "id": "2026-07-23-010060",
-    "title": "OCI홀딩스 실적",
-    "company": "OCI홀딩스",
-    "ticker": "010060",
-    "start": "2026-07-23",
-    "allDay": true,
-    "url": "https://kr.investing.com/equities/oci-co-ltd-earnings",
-    "country": "한국",
-    "importance": "높음",
-    "source": "Investing.com",
-    "marketCap": 3790057096000
-  },
-  {
-    "id": "2026-07-23-051900",
-    "title": "LG생활건강 실적",
-    "company": "LG생활건강",
-    "ticker": "051900",
-    "start": "2026-07-23",
-    "allDay": true,
-    "url": "https://kr.investing.com/equities/lg-household---healthcare-earnings",
-    "country": "한국",
-    "importance": "높음",
-    "source": "Investing.com",
-    "marketCap": 3586637758500
-  },
-  {
-    "id": "2026-07-23-009420",
-    "title": "한올바이오파마 실적",
-    "company": "한올바이오파마",
-    "ticker": "009420",
-    "start": "2026-07-23",
-    "allDay": true,
-    "url": "https://kr.investing.com/equities/hanall-biopharma-earnings",
-    "country": "한국",
-    "importance": "높음",
-    "source": "Investing.com",
-    "marketCap": 2868011026200
-  },
-  {
-    "id": "2026-07-23-012750",
-    "title": "에스원 실적",
-    "company": "에스원",
-    "ticker": "012750",
-    "start": "2026-07-23",
-    "allDay": true,
-    "url": "https://kr.investing.com/equities/s-1-corp-earnings",
-    "country": "한국",
-    "importance": "높음",
-    "source": "Investing.com",
-    "marketCap": 2758740322800
-  },
-  {
-    "id": "2026-07-23-003570",
-    "title": "SNT다이내믹스 실적",
-    "company": "SNT다이내믹스",
-    "ticker": "003570",
-    "start": "2026-07-23",
-    "allDay": true,
-    "url": "https://kr.investing.com/equities/s-t-dynamics-earnings",
-    "country": "한국",
-    "importance": "높음",
-    "source": "Investing.com",
-    "marketCap": 1142230141950
-  },
-  {
-    "id": "2026-07-23-036530",
-    "title": "SNT홀딩스 실적",
-    "company": "SNT홀딩스",
-    "ticker": "036530",
-    "start": "2026-07-23",
-    "allDay": true,
-    "url": "https://kr.investing.com/equities/s-t-holdings-earnings",
-    "country": "한국",
-    "importance": "높음",
-    "source": "Investing.com",
-    "marketCap": 811933522800
-  },
-  {
-    "id": "2026-07-23-064960",
-    "title": "SNT모티브 실적",
-    "company": "SNT모티브",
-    "ticker": "064960",
-    "start": "2026-07-23",
-    "allDay": true,
-    "url": "https://kr.investing.com/equities/s-t-motiv-co-ltd-earnings",
-    "country": "한국",
-    "importance": "높음",
-    "source": "Investing.com",
-    "marketCap": 701990194400
-  },
-  {
-    "id": "2026-07-24-055550",
-    "title": "신한지주 실적",
-    "company": "신한지주",
-    "ticker": "055550",
-    "start": "2026-07-24",
-    "allDay": true,
-    "url": "https://kr.investing.com/equities/shinhan-financial-group-earnings",
-    "country": "한국",
-    "importance": "높음",
-    "source": "Investing.com",
-    "marketCap": 51357601860200
-  },
-  {
-    "id": "2026-07-24-012330",
-    "title": "현대모비스 실적",
-    "company": "현대모비스",
-    "ticker": "012330",
-    "start": "2026-07-24",
-    "allDay": true,
-    "url": "https://kr.investing.com/equities/hyundai-mobis-earnings",
-    "country": "한국",
-    "importance": "높음",
-    "source": "Investing.com",
-    "marketCap": 44368233087000
-  },
-  {
-    "id": "2026-07-24-298040",
-    "title": "효성중공업 실적",
-    "company": "효성중공업",
-    "ticker": "298040",
-    "start": "2026-07-24",
-    "allDay": true,
-    "url": "https://kr.investing.com/equities/hyosung-heavy-industries-earnings",
-    "country": "한국",
-    "importance": "높음",
-    "source": "Investing.com",
-    "marketCap": 26537663608000
-  },
-  {
-    "id": "2026-07-24-096770",
-    "title": "SK이노베이션 실적",
-    "company": "SK이노베이션",
-    "ticker": "096770",
-    "start": "2026-07-24",
-    "allDay": true,
-    "url": "https://kr.investing.com/equities/sk-innovation-earnings",
-    "country": "한국",
-    "importance": "높음",
-    "source": "Investing.com",
-    "marketCap": 19677744523200
-  },
-  {
-    "id": "2026-07-24-010950",
-    "title": "S-oil 실적",
-    "company": "S-oil",
-    "ticker": "010950",
-    "start": "2026-07-24",
-    "allDay": true,
-    "url": "https://kr.investing.com/equities/s-oil-corp-earnings",
-    "country": "한국",
-    "importance": "높음",
-    "source": "Investing.com",
-    "marketCap": 15806623996800
-  },
-  {
-    "id": "2026-07-24-383220",
-    "title": "F&F 실적",
-    "company": "F&F",
-    "ticker": "383220",
-    "start": "2026-07-24",
-    "allDay": true,
-    "url": "https://kr.investing.com/equities/ff-co-earnings",
-    "country": "한국",
-    "importance": "높음",
-    "source": "Investing.com",
-    "marketCap": 3014766802500
-  },
-  {
-    "id": "2026-07-24-302440",
-    "title": "SK바사 실적",
-    "company": "SK바사",
-    "ticker": "302440",
-    "start": "2026-07-24",
-    "allDay": true,
-    "url": "https://kr.investing.com/equities/sk-bioscience-co-earnings",
-    "country": "한국",
-    "importance": "높음",
-    "source": "Investing.com",
-    "marketCap": 2785207631500
-  },
-  {
-    "id": "2026-07-24-298020",
-    "title": "효성티앤씨 실적",
-    "company": "효성티앤씨",
-    "ticker": "298020",
-    "start": "2026-07-24",
-    "allDay": true,
-    "url": "https://kr.investing.com/equities/hyosung-tnc-earnings",
-    "country": "한국",
-    "importance": "높음",
-    "source": "Investing.com",
-    "marketCap": 1229061688000
-  },
-  {
-    "id": "2026-07-24-003850",
-    "title": "보령 실적",
-    "company": "보령",
-    "ticker": "003850",
-    "start": "2026-07-24",
-    "allDay": true,
-    "url": "https://kr.investing.com/equities/boryung-pharm-earnings",
-    "country": "한국",
-    "importance": "높음",
-    "source": "Investing.com",
-    "marketCap": 710318073960
-  },
-  {
-    "id": "2026-07-24-004430",
-    "title": "송원산업 실적",
-    "company": "송원산업",
-    "ticker": "004430",
-    "start": "2026-07-24",
-    "allDay": true,
-    "url": "https://kr.investing.com/equities/songwon-industrial-earnings",
-    "country": "한국",
-    "importance": "높음",
-    "source": "Investing.com",
-    "marketCap": 283440000000
-  },
-  {
-    "id": "2026-07-24-000150",
-    "title": "두산 실적",
-    "company": "두산",
-    "ticker": "000150",
-    "start": "2026-07-24",
-    "allDay": true,
-    "url": "https://kr.investing.com/equities/doosan-earnings",
-    "country": "한국",
-    "importance": "높음",
-    "source": "Investing.com",
-    "marketCap": 65651532840
-  },
-  {
-    "id": "2026-07-27-011070",
-    "title": "LG이노텍 실적",
-    "company": "LG이노텍",
-    "ticker": "011070",
-    "start": "2026-07-27",
-    "allDay": true,
-    "url": "https://kr.investing.com/equities/lg-innotek-co-ltd-earnings",
-    "country": "한국",
-    "importance": "높음",
-    "source": "Investing.com",
-    "marketCap": 16259302509000
-  },
-  {
-    "id": "2026-07-28-105560",
-    "title": "KB금융 실적",
-    "company": "KB금융",
-    "ticker": "105560",
-    "start": "2026-07-28",
-    "allDay": true,
-    "url": "https://kr.investing.com/equities/kb-financial-group-earnings",
-    "country": "한국",
-    "importance": "높음",
-    "source": "Investing.com",
-    "marketCap": 65085199189000
-  },
-  {
-    "id": "2026-07-28-029780",
-    "title": "삼성카드 실적",
-    "company": "삼성카드",
-    "ticker": "029780",
-    "start": "2026-07-28",
-    "allDay": true,
-    "url": "https://kr.investing.com/equities/samsung-card-earnings",
-    "country": "한국",
-    "importance": "높음",
-    "source": "Investing.com",
-    "marketCap": 5578605601650
-  },
-  {
-    "id": "2026-07-28-005090",
-    "title": "SGC에너지 실적",
-    "company": "SGC에너지",
-    "ticker": "005090",
-    "start": "2026-07-28",
-    "allDay": true,
-    "url": "https://kr.investing.com/equities/samkwang-glass-earnings",
-    "country": "한국",
-    "importance": "높음",
-    "source": "Investing.com",
-    "marketCap": 551877453900
-  },
-  {
-    "id": "2026-07-29-009150",
-    "title": "삼성전기 실적",
-    "company": "삼성전기",
-    "ticker": "009150",
-    "start": "2026-07-29",
-    "allDay": true,
-    "url": "https://kr.investing.com/equities/samsung-electro-mechanics-earnings",
-    "country": "한국",
-    "importance": "높음",
-    "source": "Investing.com",
-    "marketCap": 106438516800000
-  },
-  {
-    "id": "2026-07-29-259960",
-    "title": "크래프톤 실적",
-    "company": "크래프톤",
-    "ticker": "259960",
-    "start": "2026-07-29",
-    "allDay": true,
-    "url": "https://kr.investing.com/equities/krafton-earnings",
-    "country": "한국",
-    "importance": "높음",
-    "source": "Investing.com",
-    "marketCap": 10750115089000
-  },
-  {
-    "id": "2026-07-29-241560",
-    "title": "두산밥캣 실적",
-    "company": "두산밥캣",
-    "ticker": "241560",
-    "start": "2026-07-29",
-    "allDay": true,
-    "url": "https://kr.investing.com/equities/doosan-bobcat-inc-earnings",
-    "country": "한국",
-    "importance": "높음",
-    "source": "Investing.com",
-    "marketCap": 6067688914500
-  },
-  {
-    "id": "2026-07-29-336260",
-    "title": "두산퓨얼셀 실적",
-    "company": "두산퓨얼셀",
-    "ticker": "336260",
-    "start": "2026-07-29",
-    "allDay": true,
-    "url": "https://kr.investing.com/equities/doosan-fuel-cell-co-ltd-earnings",
-    "country": "한국",
-    "importance": "높음",
-    "source": "Investing.com",
-    "marketCap": 3045458259000
-  },
-  {
-    "id": "2026-07-29-002790",
-    "title": "아모레G 실적",
-    "company": "아모레G",
-    "ticker": "002790",
-    "start": "2026-07-29",
-    "allDay": true,
-    "url": "https://kr.investing.com/equities/amore-group-earnings",
-    "country": "한국",
-    "importance": "높음",
-    "source": "Investing.com",
-    "marketCap": 1834996320000
-  },
-  {
-    "id": "2026-07-29-322000",
-    "title": "HD현대에너지솔루션 실적",
-    "company": "HD현대에너지솔루션",
-    "ticker": "322000",
-    "start": "2026-07-29",
-    "allDay": true,
-    "url": "https://kr.investing.com/equities/hyundai-energy-solutions-co-ltd-earnings",
-    "country": "한국",
-    "importance": "높음",
-    "source": "Investing.com",
-    "marketCap": 1360800000000
-  },
-  {
-    "id": "2026-07-29-361610",
-    "title": "SKIET 실적",
-    "company": "SKIET",
-    "ticker": "361610",
-    "start": "2026-07-29",
-    "allDay": true,
-    "url": "https://kr.investing.com/equities/sk-ie-technology-co-earnings",
-    "country": "한국",
-    "importance": "높음",
-    "source": "Investing.com",
-    "marketCap": 1201452499000
-  },
-  {
     "id": "2026-07-30-005930",
     "title": "삼성전자 실적",
     "company": "삼성전자",
@@ -595,7 +10,7 @@
     "country": "한국",
     "importance": "높음",
     "source": "Investing.com",
-    "marketCap": 1658881555020000
+    "marketCap": 1496647323648000
   },
   {
     "id": "2026-07-30-066570",
@@ -608,7 +23,7 @@
     "country": "한국",
     "importance": "높음",
     "source": "Investing.com",
-    "marketCap": 31990542903200
+    "marketCap": 29205215593400
   },
   {
     "id": "2026-07-30-035720",
@@ -621,7 +36,7 @@
     "country": "한국",
     "importance": "높음",
     "source": "Investing.com",
-    "marketCap": 15615082717500
+    "marketCap": 15637231771000
   },
   {
     "id": "2026-07-30-018260",
@@ -634,7 +49,7 @@
     "country": "한국",
     "importance": "높음",
     "source": "Investing.com",
-    "marketCap": 15382706640000
+    "marketCap": 15258902160000
   },
   {
     "id": "2026-07-30-003490",
@@ -647,7 +62,7 @@
     "country": "한국",
     "importance": "높음",
     "source": "Investing.com",
-    "marketCap": 9941957847000
+    "marketCap": 9711819933875
   },
   {
     "id": "2026-07-30-353200",
@@ -660,7 +75,7 @@
     "country": "한국",
     "importance": "높음",
     "source": "Investing.com",
-    "marketCap": 7056736890000
+    "marketCap": 7096270430000
   },
   {
     "id": "2026-07-30-489790",
@@ -673,7 +88,7 @@
     "country": "한국",
     "importance": "높음",
     "source": "Investing.com",
-    "marketCap": 2453735754000
+    "marketCap": 2314892681500
   },
   {
     "id": "2026-07-30-453340",
@@ -686,7 +101,7 @@
     "country": "한국",
     "importance": "높음",
     "source": "Investing.com",
-    "marketCap": 586761577090
+    "marketCap": 603971518200
   },
   {
     "id": "2026-07-30-027410",
@@ -699,7 +114,7 @@
     "country": "한국",
     "importance": "높음",
     "source": "Investing.com",
-    "marketCap": 372816900945
+    "marketCap": 379038492360
   },
   {
     "id": "2026-07-30-213500",
@@ -725,7 +140,7 @@
     "country": "한국",
     "importance": "높음",
     "source": "Investing.com",
-    "marketCap": 29897878101000
+    "marketCap": 29458434223400
   },
   {
     "id": "2026-07-31-051910",
@@ -738,7 +153,7 @@
     "country": "한국",
     "importance": "높음",
     "source": "Investing.com",
-    "marketCap": 18742267066500
+    "marketCap": 18424601523000
   },
   {
     "id": "2026-07-31-088980",
@@ -751,7 +166,7 @@
     "country": "한국",
     "importance": "높음",
     "source": "Investing.com",
-    "marketCap": 4851479789090
+    "marketCap": 4875425888740
   },
   {
     "id": "2026-07-31-011780",
@@ -764,7 +179,7 @@
     "country": "한국",
     "importance": "높음",
     "source": "Investing.com",
-    "marketCap": 2961017152500
+    "marketCap": 3127055497500
   },
   {
     "id": "2026-07-31-011170",
@@ -777,7 +192,7 @@
     "country": "한국",
     "importance": "높음",
     "source": "Investing.com",
-    "marketCap": 2592190391400
+    "marketCap": 2553692514300
   },
   {
     "id": "2026-08-03-004000",
@@ -790,7 +205,7 @@
     "country": "한국",
     "importance": "높음",
     "source": "Investing.com",
-    "marketCap": 1163580000000
+    "marketCap": 1177770000000
   },
   {
     "id": "2026-08-04-377300",
@@ -803,7 +218,7 @@
     "country": "한국",
     "importance": "높음",
     "source": "Investing.com",
-    "marketCap": 5586656162500
+    "marketCap": 5491967075000
   },
   {
     "id": "2026-08-04-005300",
@@ -816,7 +231,7 @@
     "country": "한국",
     "importance": "높음",
     "source": "Investing.com",
-    "marketCap": 923248958000
+    "marketCap": 933455730400
   },
   {
     "id": "2026-08-05-323410",
@@ -829,7 +244,7 @@
     "country": "한국",
     "importance": "높음",
     "source": "Investing.com",
-    "marketCap": 10878345963600
+    "marketCap": 10711353810650
   },
   {
     "id": "2026-08-05-011790",
@@ -842,7 +257,7 @@
     "country": "한국",
     "importance": "높음",
     "source": "Investing.com",
-    "marketCap": 4523364777600
+    "marketCap": 4235694649200
   },
   {
     "id": "2026-08-05-006280",
@@ -855,7 +270,7 @@
     "country": "한국",
     "importance": "높음",
     "source": "Investing.com",
-    "marketCap": 1428094943600
+    "marketCap": 1418745713200
   },
   {
     "id": "2026-08-05-194370",
@@ -868,7 +283,7 @@
     "country": "한국",
     "importance": "높음",
     "source": "Investing.com",
-    "marketCap": 349942101480
+    "marketCap": 349361766320
   },
   {
     "id": "2026-08-05-011760",
@@ -881,7 +296,7 @@
     "country": "한국",
     "importance": "높음",
     "source": "Investing.com",
-    "marketCap": 304266218000
+    "marketCap": 300297528200
   },
   {
     "id": "2026-08-06-011200",
@@ -894,7 +309,7 @@
     "country": "한국",
     "importance": "높음",
     "source": "Investing.com",
-    "marketCap": 18836462260900
+    "marketCap": 18822313691350
   },
   {
     "id": "2026-08-06-079550",
@@ -907,7 +322,7 @@
     "country": "한국",
     "importance": "높음",
     "source": "Investing.com",
-    "marketCap": 16544000000000
+    "marketCap": 16390000000000
   },
   {
     "id": "2026-08-06-032640",
@@ -920,7 +335,7 @@
     "country": "한국",
     "importance": "높음",
     "source": "Investing.com",
-    "marketCap": 6094782231520
+    "marketCap": 6132980727400
   },
   {
     "id": "2026-08-06-251270",
@@ -933,7 +348,7 @@
     "country": "한국",
     "importance": "높음",
     "source": "Investing.com",
-    "marketCap": 2929160913250
+    "marketCap": 2941451098900
   },
   {
     "id": "2026-08-06-028670",
@@ -946,7 +361,7 @@
     "country": "한국",
     "importance": "높음",
     "source": "Investing.com",
-    "marketCap": 2790452852640
+    "marketCap": 2758378681920
   },
   {
     "id": "2026-08-06-071320",
@@ -959,20 +374,7 @@
     "country": "한국",
     "importance": "높음",
     "source": "Investing.com",
-    "marketCap": 754934108800
-  },
-  {
-    "id": "2026-08-06-248070",
-    "title": "솔루엠 실적",
-    "company": "솔루엠",
-    "ticker": "248070",
-    "start": "2026-08-06",
-    "allDay": true,
-    "url": "https://kr.investing.com/equities/solum-co-earnings",
-    "country": "한국",
-    "importance": "높음",
-    "source": "Investing.com",
-    "marketCap": 712461916400
+    "marketCap": 746828988000
   },
   {
     "id": "2026-08-06-079160",
@@ -985,7 +387,20 @@
     "country": "한국",
     "importance": "높음",
     "source": "Investing.com",
-    "marketCap": 702897754950
+    "marketCap": 717800180850
+  },
+  {
+    "id": "2026-08-06-248070",
+    "title": "솔루엠 실적",
+    "company": "솔루엠",
+    "ticker": "248070",
+    "start": "2026-08-06",
+    "allDay": true,
+    "url": "https://kr.investing.com/equities/solum-co-earnings",
+    "country": "한국",
+    "importance": "높음",
+    "source": "Investing.com",
+    "marketCap": 697160720880
   },
   {
     "id": "2026-08-06-114090",
@@ -998,7 +413,7 @@
     "country": "한국",
     "importance": "높음",
     "source": "Investing.com",
-    "marketCap": 568453607300
+    "marketCap": 573402060900
   },
   {
     "id": "2026-08-06-100840",
@@ -1011,7 +426,7 @@
     "country": "한국",
     "importance": "높음",
     "source": "Investing.com",
-    "marketCap": 534598240550
+    "marketCap": 507713222650
   },
   {
     "id": "2026-08-06-004710",
@@ -1024,7 +439,7 @@
     "country": "한국",
     "importance": "높음",
     "source": "Investing.com",
-    "marketCap": 405888874830
+    "marketCap": 392074839050
   },
   {
     "id": "2026-08-07-012450",
@@ -1037,7 +452,7 @@
     "country": "한국",
     "importance": "높음",
     "source": "Investing.com",
-    "marketCap": 49036794351000
+    "marketCap": 48727413945000
   },
   {
     "id": "2026-08-07-015760",
@@ -1050,7 +465,7 @@
     "country": "한국",
     "importance": "높음",
     "source": "Investing.com",
-    "marketCap": 21923073229550
+    "marketCap": 21842827719925
   },
   {
     "id": "2026-08-07-272210",
@@ -1063,7 +478,7 @@
     "country": "한국",
     "importance": "높음",
     "source": "Investing.com",
-    "marketCap": 12506463551800
+    "marketCap": 12393111918400
   },
   {
     "id": "2026-08-07-005940",
@@ -1076,7 +491,7 @@
     "country": "한국",
     "importance": "높음",
     "source": "Investing.com",
-    "marketCap": 11519230476000
+    "marketCap": 11251556049875
   },
   {
     "id": "2026-08-07-047050",
@@ -1089,7 +504,7 @@
     "country": "한국",
     "importance": "높음",
     "source": "Investing.com",
-    "marketCap": 8936877630400
+    "marketCap": 8919285351600
   },
   {
     "id": "2026-08-07-039490",
@@ -1102,7 +517,7 @@
     "country": "한국",
     "importance": "높음",
     "source": "Investing.com",
-    "marketCap": 8760257544000
+    "marketCap": 8314376172000
   },
   {
     "id": "2026-08-07-023530",
@@ -1115,20 +530,7 @@
     "country": "한국",
     "importance": "높음",
     "source": "Investing.com",
-    "marketCap": 4149960358500
-  },
-  {
-    "id": "2026-08-07-066970",
-    "title": "엘앤에프 실적",
-    "company": "엘앤에프",
-    "ticker": "066970",
-    "start": "2026-08-07",
-    "allDay": true,
-    "url": "https://kr.investing.com/equities/lf-co-ltd-earnings",
-    "country": "한국",
-    "importance": "높음",
-    "source": "Investing.com",
-    "marketCap": 3818031227200
+    "marketCap": 3901019314500
   },
   {
     "id": "2026-08-07-082740",
@@ -1141,7 +543,20 @@
     "country": "한국",
     "importance": "높음",
     "source": "Investing.com",
-    "marketCap": 3792672603900
+    "marketCap": 3892809174300
+  },
+  {
+    "id": "2026-08-07-066970",
+    "title": "엘앤에프 실적",
+    "company": "엘앤에프",
+    "ticker": "066970",
+    "start": "2026-08-07",
+    "allDay": true,
+    "url": "https://kr.investing.com/equities/lf-co-ltd-earnings",
+    "country": "한국",
+    "importance": "높음",
+    "source": "Investing.com",
+    "marketCap": 3759041932800
   },
   {
     "id": "2026-08-07-022100",
@@ -1154,7 +569,7 @@
     "country": "한국",
     "importance": "높음",
     "source": "Investing.com",
-    "marketCap": 2946433048020
+    "marketCap": 2830886653980
   },
   {
     "id": "2026-08-07-014680",
@@ -1167,7 +582,7 @@
     "country": "한국",
     "importance": "높음",
     "source": "Investing.com",
-    "marketCap": 2747718300500
+    "marketCap": 2659615108500
   },
   {
     "id": "2026-08-07-161890",
@@ -1180,7 +595,7 @@
     "country": "한국",
     "importance": "높음",
     "source": "Investing.com",
-    "marketCap": 2502138162000
+    "marketCap": 2528103746700
   },
   {
     "id": "2026-08-07-006040",
@@ -1193,7 +608,7 @@
     "country": "한국",
     "importance": "높음",
     "source": "Investing.com",
-    "marketCap": 1458854067950
+    "marketCap": 1465475190800
   },
   {
     "id": "2026-08-07-003540",
@@ -1206,7 +621,7 @@
     "country": "한국",
     "importance": "높음",
     "source": "Investing.com",
-    "marketCap": 1263152339000
+    "marketCap": 1225019438200
   },
   {
     "id": "2026-08-07-280360",
@@ -1219,7 +634,7 @@
     "country": "한국",
     "importance": "높음",
     "source": "Investing.com",
-    "marketCap": 925980144400
+    "marketCap": 923218772200
   },
   {
     "id": "2026-08-07-137310",
@@ -1232,20 +647,7 @@
     "country": "한국",
     "importance": "높음",
     "source": "Investing.com",
-    "marketCap": 755889378520
-  },
-  {
-    "id": "2026-08-07-006650",
-    "title": "대한 유화 실적",
-    "company": "대한 유화",
-    "ticker": "006650",
-    "start": "2026-08-07",
-    "allDay": true,
-    "url": "https://kr.investing.com/equities/kpic-earnings",
-    "country": "한국",
-    "importance": "높음",
-    "source": "Investing.com",
-    "marketCap": 689000000000
+    "marketCap": 752870650970
   },
   {
     "id": "2026-08-07-285130",
@@ -1258,7 +660,20 @@
     "country": "한국",
     "importance": "높음",
     "source": "Investing.com",
-    "marketCap": 685896071900
+    "marketCap": 678111627200
+  },
+  {
+    "id": "2026-08-07-006650",
+    "title": "대한 유화 실적",
+    "company": "대한 유화",
+    "ticker": "006650",
+    "start": "2026-08-07",
+    "allDay": true,
+    "url": "https://kr.investing.com/equities/kpic-earnings",
+    "country": "한국",
+    "importance": "높음",
+    "source": "Investing.com",
+    "marketCap": 676000000000
   },
   {
     "id": "2026-08-07-298050",
@@ -1271,7 +686,7 @@
     "country": "한국",
     "importance": "높음",
     "source": "Investing.com",
-    "marketCap": 661240324800
+    "marketCap": 666168267600
   },
   {
     "id": "2026-08-07-014820",
@@ -1284,7 +699,7 @@
     "country": "한국",
     "importance": "높음",
     "source": "Investing.com",
-    "marketCap": 574027383600
+    "marketCap": 569678691300
   },
   {
     "id": "2026-08-07-336370",
@@ -1297,7 +712,7 @@
     "country": "한국",
     "importance": "높음",
     "source": "Investing.com",
-    "marketCap": 532949640960
+    "marketCap": 504862703360
   },
   {
     "id": "2026-08-07-002990",
@@ -1310,7 +725,7 @@
     "country": "한국",
     "importance": "높음",
     "source": "Investing.com",
-    "marketCap": 516423239640
+    "marketCap": 419919906980
   },
   {
     "id": "2026-08-07-009900",
@@ -1323,7 +738,7 @@
     "country": "한국",
     "importance": "높음",
     "source": "Investing.com",
-    "marketCap": 368865034990
+    "marketCap": 363093320360
   },
   {
     "id": "2026-08-07-145720",
@@ -1336,7 +751,7 @@
     "country": "한국",
     "importance": "높음",
     "source": "Investing.com",
-    "marketCap": 345818029100
+    "marketCap": 344524445450
   },
   {
     "id": "2026-08-07-097520",
@@ -1349,7 +764,7 @@
     "country": "한국",
     "importance": "높음",
     "source": "Investing.com",
-    "marketCap": 321753735000
+    "marketCap": 312356925000
   },
   {
     "id": "2026-08-07-018250",
@@ -1362,7 +777,7 @@
     "country": "한국",
     "importance": "높음",
     "source": "Investing.com",
-    "marketCap": 298696364850
+    "marketCap": 302393755750
   },
   {
     "id": "2026-08-07-033270",
@@ -1375,7 +790,7 @@
     "country": "한국",
     "importance": "높음",
     "source": "Investing.com",
-    "marketCap": 284325549250
+    "marketCap": 278915885750
   },
   {
     "id": "2026-08-07-058430",
@@ -1388,7 +803,7 @@
     "country": "한국",
     "importance": "높음",
     "source": "Investing.com",
-    "marketCap": 274800000000
+    "marketCap": 276000000000
   },
   {
     "id": "2026-08-07-003960",
@@ -1401,7 +816,7 @@
     "country": "한국",
     "importance": "높음",
     "source": "Investing.com",
-    "marketCap": 272184669900
+    "marketCap": 270809999850
   },
   {
     "id": "2026-08-07-286940",
@@ -1414,20 +829,7 @@
     "country": "한국",
     "importance": "높음",
     "source": "Investing.com",
-    "marketCap": 253265603580
-  },
-  {
-    "id": "2026-08-07-298000",
-    "title": "효성화학 실적",
-    "company": "효성화학",
-    "ticker": "298000",
-    "start": "2026-08-07",
-    "allDay": true,
-    "url": "https://kr.investing.com/equities/hyosung-chemical-earnings",
-    "country": "한국",
-    "importance": "높음",
-    "source": "Investing.com",
-    "marketCap": 232817195400
+    "marketCap": 257653120010
   },
   {
     "id": "2026-08-07-034120",
@@ -1440,7 +842,20 @@
     "country": "한국",
     "importance": "높음",
     "source": "Investing.com",
-    "marketCap": 223913442660
+    "marketCap": 221316269340
+  },
+  {
+    "id": "2026-08-07-298000",
+    "title": "효성화학 실적",
+    "company": "효성화학",
+    "ticker": "298000",
+    "start": "2026-08-07",
+    "allDay": true,
+    "url": "https://kr.investing.com/equities/hyosung-chemical-earnings",
+    "country": "한국",
+    "importance": "높음",
+    "source": "Investing.com",
+    "marketCap": 215374864800
   },
   {
     "id": "2026-08-07-001250",
@@ -1453,7 +868,7 @@
     "country": "한국",
     "importance": "높음",
     "source": "Investing.com",
-    "marketCap": 217889136960
+    "marketCap": 213349779940
   },
   {
     "id": "2026-08-07-037270",
@@ -1466,7 +881,7 @@
     "country": "한국",
     "importance": "높음",
     "source": "Investing.com",
-    "marketCap": 209769947450
+    "marketCap": 209133316350
   },
   {
     "id": "2026-08-07-000080",
@@ -1479,33 +894,7 @@
     "country": "한국",
     "importance": "높음",
     "source": "Investing.com",
-    "marketCap": 202886126000
-  },
-  {
-    "id": "2026-08-07-039570",
-    "title": "HDC랩스 실적",
-    "company": "HDC랩스",
-    "ticker": "039570",
-    "start": "2026-08-07",
-    "allDay": true,
-    "url": "https://kr.investing.com/equities/i-controls-earnings",
-    "country": "한국",
-    "importance": "높음",
-    "source": "Investing.com",
-    "marketCap": 197277767600
-  },
-  {
-    "id": "2026-08-07-317400",
-    "title": "자이에스앤디 실적",
-    "company": "자이에스앤디",
-    "ticker": "317400",
-    "start": "2026-08-07",
-    "allDay": true,
-    "url": "https://kr.investing.com/equities/xi-s-and-d-inc-earnings",
-    "country": "한국",
-    "importance": "높음",
-    "source": "Investing.com",
-    "marketCap": 185768270800
+    "marketCap": 202414297800
   },
   {
     "id": "2026-08-07-241590",
@@ -1518,7 +907,33 @@
     "country": "한국",
     "importance": "높음",
     "source": "Investing.com",
-    "marketCap": 183888452660
+    "marketCap": 199338718040
+  },
+  {
+    "id": "2026-08-07-039570",
+    "title": "HDC랩스 실적",
+    "company": "HDC랩스",
+    "ticker": "039570",
+    "start": "2026-08-07",
+    "allDay": true,
+    "url": "https://kr.investing.com/equities/i-controls-earnings",
+    "country": "한국",
+    "importance": "높음",
+    "source": "Investing.com",
+    "marketCap": 196239463560
+  },
+  {
+    "id": "2026-08-07-317400",
+    "title": "자이에스앤디 실적",
+    "company": "자이에스앤디",
+    "ticker": "317400",
+    "start": "2026-08-07",
+    "allDay": true,
+    "url": "https://kr.investing.com/equities/xi-s-and-d-inc-earnings",
+    "country": "한국",
+    "importance": "높음",
+    "source": "Investing.com",
+    "marketCap": 193136949600
   },
   {
     "id": "2026-08-07-016580",
@@ -1531,7 +946,7 @@
     "country": "한국",
     "importance": "높음",
     "source": "Investing.com",
-    "marketCap": 182466686700
+    "marketCap": 185070696500
   },
   {
     "id": "2026-08-07-339770",
@@ -1544,7 +959,7 @@
     "country": "한국",
     "importance": "높음",
     "source": "Investing.com",
-    "marketCap": 180124113400
+    "marketCap": 179874288000
   },
   {
     "id": "2026-08-07-004090",
@@ -1557,20 +972,7 @@
     "country": "한국",
     "importance": "높음",
     "source": "Investing.com",
-    "marketCap": 146490144800
-  },
-  {
-    "id": "2026-08-07-210980",
-    "title": "SK디앤디 실적",
-    "company": "SK디앤디",
-    "ticker": "210980",
-    "start": "2026-08-07",
-    "allDay": true,
-    "url": "https://kr.investing.com/equities/sk-d-d-co-ltd-earnings",
-    "country": "한국",
-    "importance": "높음",
-    "source": "Investing.com",
-    "marketCap": 137768626800
+    "marketCap": 144078262000
   },
   {
     "id": "2026-08-07-004150",
@@ -1583,7 +985,7 @@
     "country": "한국",
     "importance": "높음",
     "source": "Investing.com",
-    "marketCap": 129438986100
+    "marketCap": 125131191000
   },
   {
     "id": "2026-08-07-210540",
@@ -1596,20 +998,7 @@
     "country": "한국",
     "importance": "높음",
     "source": "Investing.com",
-    "marketCap": 121900456320
-  },
-  {
-    "id": "2026-08-07-004960",
-    "title": "한신공영 실적",
-    "company": "한신공영",
-    "ticker": "004960",
-    "start": "2026-08-07",
-    "allDay": true,
-    "url": "https://kr.investing.com/equities/hanshin-const-earnings",
-    "country": "한국",
-    "importance": "높음",
-    "source": "Investing.com",
-    "marketCap": 119641058680
+    "marketCap": 120023365960
   },
   {
     "id": "2026-08-07-037560",
@@ -1622,7 +1011,7 @@
     "country": "한국",
     "importance": "높음",
     "source": "Investing.com",
-    "marketCap": 118183915990
+    "marketCap": 119577959560
   },
   {
     "id": "2026-08-07-078000",
@@ -1635,7 +1024,20 @@
     "country": "한국",
     "importance": "높음",
     "source": "Investing.com",
-    "marketCap": 116609771740
+    "marketCap": 116240168660
+  },
+  {
+    "id": "2026-08-07-004960",
+    "title": "한신공영 실적",
+    "company": "한신공영",
+    "ticker": "004960",
+    "start": "2026-08-07",
+    "allDay": true,
+    "url": "https://kr.investing.com/equities/hanshin-const-earnings",
+    "country": "한국",
+    "importance": "높음",
+    "source": "Investing.com",
+    "marketCap": 116169848080
   },
   {
     "id": "2026-08-07-002390",
@@ -1648,7 +1050,20 @@
     "country": "한국",
     "importance": "높음",
     "source": "Investing.com",
-    "marketCap": 110796440650
+    "marketCap": 115476041870
+  },
+  {
+    "id": "2026-08-07-210980",
+    "title": "SK디앤디 실적",
+    "company": "SK디앤디",
+    "ticker": "210980",
+    "start": "2026-08-07",
+    "allDay": true,
+    "url": "https://kr.investing.com/equities/sk-d-d-co-ltd-earnings",
+    "country": "한국",
+    "importance": "높음",
+    "source": "Investing.com",
+    "marketCap": 106677598860
   },
   {
     "id": "2026-08-07-000990",
@@ -1674,7 +1089,7 @@
     "country": "한국",
     "importance": "높음",
     "source": "Investing.com",
-    "marketCap": 12314375000
+    "marketCap": 12256425000
   },
   {
     "id": "2026-08-10-002380",
@@ -1687,7 +1102,7 @@
     "country": "한국",
     "importance": "높음",
     "source": "Investing.com",
-    "marketCap": 3720723968000
+    "marketCap": 3596126976000
   },
   {
     "id": "2026-08-10-097950",
@@ -1700,7 +1115,7 @@
     "country": "한국",
     "importance": "높음",
     "source": "Investing.com",
-    "marketCap": 2762443131000
+    "marketCap": 2782013572800
   },
   {
     "id": "2026-08-10-020000",
@@ -1713,7 +1128,7 @@
     "country": "한국",
     "importance": "높음",
     "source": "Investing.com",
-    "marketCap": 468198469200
+    "marketCap": 459607671600
   },
   {
     "id": "2026-08-11-017670",
@@ -1726,7 +1141,7 @@
     "country": "한국",
     "importance": "높음",
     "source": "Investing.com",
-    "marketCap": 18450465552700
+    "marketCap": 19159272727600
   },
   {
     "id": "2026-08-11-326030",
@@ -1739,7 +1154,7 @@
     "country": "한국",
     "importance": "높음",
     "source": "Investing.com",
-    "marketCap": 6186746750000
+    "marketCap": 6155421450000
   },
   {
     "id": "2026-08-11-181710",
@@ -1752,7 +1167,7 @@
     "country": "한국",
     "importance": "높음",
     "source": "Investing.com",
-    "marketCap": 1256082880650
+    "marketCap": 1205315515200
   },
   {
     "id": "2026-08-11-499790",
@@ -1765,7 +1180,7 @@
     "country": "한국",
     "importance": "높음",
     "source": "Investing.com",
-    "marketCap": 805132144600
+    "marketCap": 808106770750
   },
   {
     "id": "2026-08-12-021240",
@@ -1778,7 +1193,7 @@
     "country": "한국",
     "importance": "높음",
     "source": "Investing.com",
-    "marketCap": 6786596153400
+    "marketCap": 6864440322000
   },
   {
     "id": "2026-08-12-004170",
@@ -1791,7 +1206,7 @@
     "country": "한국",
     "importance": "높음",
     "source": "Investing.com",
-    "marketCap": 5771005591000
+    "marketCap": 5563211609000
   },
   {
     "id": "2026-08-12-062040",
@@ -1804,7 +1219,7 @@
     "country": "한국",
     "importance": "높음",
     "source": "Investing.com",
-    "marketCap": 5504729830000
+    "marketCap": 5151116762500
   },
   {
     "id": "2026-08-12-036570",
@@ -1817,7 +1232,7 @@
     "country": "한국",
     "importance": "높음",
     "source": "Investing.com",
-    "marketCap": 4922809027000
+    "marketCap": 4804316906000
   },
   {
     "id": "2026-08-12-381970",
@@ -1830,3400 +1245,7 @@
     "country": "한국",
     "importance": "높음",
     "source": "Investing.com",
-    "marketCap": 369573819360
-  },
-  {
-    "id": "2026-08-13-180640",
-    "title": "한진칼 실적",
-    "company": "한진칼",
-    "ticker": "180640",
-    "start": "2026-08-13",
-    "allDay": true,
-    "url": "https://kr.investing.com/equities/hanjinkal-earnings",
-    "country": "한국",
-    "importance": "높음",
-    "source": "Investing.com",
-    "marketCap": 7637604717600
-  },
-  {
-    "id": "2026-08-13-483650",
-    "title": "달바글로벌 실적",
-    "company": "달바글로벌",
-    "ticker": "483650",
-    "start": "2026-08-13",
-    "allDay": true,
-    "url": "https://kr.investing.com/equities/d'alba-global-earnings",
-    "country": "한국",
-    "importance": "높음",
-    "source": "Investing.com",
-    "marketCap": 2471963670000
-  },
-  {
-    "id": "2026-08-13-462870",
-    "title": "시프트업 실적",
-    "company": "시프트업",
-    "ticker": "462870",
-    "start": "2026-08-13",
-    "allDay": true,
-    "url": "https://kr.investing.com/equities/shift-up-earnings",
-    "country": "한국",
-    "importance": "높음",
-    "source": "Investing.com",
-    "marketCap": 1903237236000
-  },
-  {
-    "id": "2026-08-13-439260",
-    "title": "대한조선 실적",
-    "company": "대한조선",
-    "ticker": "439260",
-    "start": "2026-08-13",
-    "allDay": true,
-    "url": "https://kr.investing.com/equities/daehan-shipbuilding-earnings",
-    "country": "한국",
-    "importance": "높음",
-    "source": "Investing.com",
-    "marketCap": 1738750524500
-  },
-  {
-    "id": "2026-08-13-460860",
-    "title": "동국제강 실적",
-    "company": "동국제강",
-    "ticker": "460860",
-    "start": "2026-08-13",
-    "allDay": true,
-    "url": "https://kr.investing.com/equities/dongkuk-steel-mill-earnings",
-    "country": "한국",
-    "importance": "높음",
-    "source": "Investing.com",
-    "marketCap": 421172064330
-  },
-  {
-    "id": "2026-08-13-484870",
-    "title": "엠앤씨솔루션 실적",
-    "company": "엠앤씨솔루션",
-    "ticker": "484870",
-    "start": "2026-08-13",
-    "allDay": true,
-    "url": "https://kr.investing.com/equities/mnc-solution-earnings",
-    "country": "한국",
-    "importance": "높음",
-    "source": "Investing.com",
-    "marketCap": 216489735000
-  },
-  {
-    "id": "2026-08-13-460850",
-    "title": "동국씨엠 실적",
-    "company": "동국씨엠",
-    "ticker": "460850",
-    "start": "2026-08-13",
-    "allDay": true,
-    "url": "https://kr.investing.com/equities/dongkuk-coated-metal-earnings",
-    "country": "한국",
-    "importance": "높음",
-    "source": "Investing.com",
-    "marketCap": 138580270560
-  },
-  {
-    "id": "2026-08-13-111380",
-    "title": "동인기연 실적",
-    "company": "동인기연",
-    "ticker": "111380",
-    "start": "2026-08-13",
-    "allDay": true,
-    "url": "https://kr.investing.com/equities/dong-in-entech-earnings",
-    "country": "한국",
-    "importance": "높음",
-    "source": "Investing.com",
-    "marketCap": 78132000000
-  },
-  {
-    "id": "2026-08-13-000370",
-    "title": "한화손해보험 실적",
-    "company": "한화손해보험",
-    "ticker": "000370",
-    "start": "2026-08-13",
-    "allDay": true,
-    "url": "https://kr.investing.com/equities/hanwha-general-earnings",
-    "country": "한국",
-    "importance": "높음",
-    "source": "Investing.com",
-    "marketCap": 12603030000
-  },
-  {
-    "id": "2026-08-17-082640",
-    "title": "동양생명 실적",
-    "company": "동양생명",
-    "ticker": "082640",
-    "start": "2026-08-17",
-    "allDay": true,
-    "url": "https://kr.investing.com/equities/tongyang-life-earnings",
-    "country": "한국",
-    "importance": "높음",
-    "source": "Investing.com",
-    "marketCap": 1217288131800
-  },
-  {
-    "id": "2026-08-18-010120",
-    "title": "LS일렉트릭 실적",
-    "company": "LS일렉트릭",
-    "ticker": "010120",
-    "start": "2026-08-18",
-    "allDay": true,
-    "url": "https://kr.investing.com/equities/ls-industrial-systems-earnings",
-    "country": "한국",
-    "importance": "높음",
-    "source": "Investing.com",
-    "marketCap": 30225000000000
-  },
-  {
-    "id": "2026-08-18-009540",
-    "title": "HD한국조선해양 실적",
-    "company": "HD한국조선해양",
-    "ticker": "009540",
-    "start": "2026-08-18",
-    "allDay": true,
-    "url": "https://kr.investing.com/equities/hyundai-heavy-industries-earnings",
-    "country": "한국",
-    "importance": "높음",
-    "source": "Investing.com",
-    "marketCap": 23708993860000
-  },
-  {
-    "id": "2026-08-18-010130",
-    "title": "고려아연 실적",
-    "company": "고려아연",
-    "ticker": "010130",
-    "start": "2026-08-18",
-    "allDay": true,
-    "url": "https://kr.investing.com/equities/korea-zinc-inc-earnings",
-    "country": "한국",
-    "importance": "높음",
-    "source": "Investing.com",
-    "marketCap": 21666141822000
-  },
-  {
-    "id": "2026-08-18-033780",
-    "title": "KT&G 실적",
-    "company": "KT&G",
-    "ticker": "033780",
-    "start": "2026-08-18",
-    "allDay": true,
-    "url": "https://kr.investing.com/equities/kt-g-corp-earnings",
-    "country": "한국",
-    "importance": "높음",
-    "source": "Investing.com",
-    "marketCap": 18135686663200
-  },
-  {
-    "id": "2026-08-18-024110",
-    "title": "기업은행 실적",
-    "company": "기업은행",
-    "ticker": "024110",
-    "start": "2026-08-18",
-    "allDay": true,
-    "url": "https://kr.investing.com/equities/industrial-bank-of-korea-earnings",
-    "country": "한국",
-    "importance": "높음",
-    "source": "Investing.com",
-    "marketCap": 17025042303150
-  },
-  {
-    "id": "2026-08-18-267250",
-    "title": "HD현대 실적",
-    "company": "HD현대",
-    "ticker": "267250",
-    "start": "2026-08-18",
-    "allDay": true,
-    "url": "https://kr.investing.com/equities/hyundai-robotics-co-ltd-earnings",
-    "country": "한국",
-    "importance": "높음",
-    "source": "Investing.com",
-    "marketCap": 15838113542500
-  },
-  {
-    "id": "2026-08-18-047810",
-    "title": "한국항공우주 실적",
-    "company": "한국항공우주",
-    "ticker": "047810",
-    "start": "2026-08-18",
-    "allDay": true,
-    "url": "https://kr.investing.com/equities/korea-aerospac-earnings",
-    "country": "한국",
-    "importance": "높음",
-    "source": "Investing.com",
-    "marketCap": 14397073303900
-  },
-  {
-    "id": "2026-08-18-086280",
-    "title": "현대글로비스 실적",
-    "company": "현대글로비스",
-    "ticker": "086280",
-    "start": "2026-08-18",
-    "allDay": true,
-    "url": "https://kr.investing.com/equities/hyundai-glovis-earnings",
-    "country": "한국",
-    "importance": "높음",
-    "source": "Investing.com",
-    "marketCap": 14325000000000
-  },
-  {
-    "id": "2026-08-18-030200",
-    "title": "KT 실적",
-    "company": "KT",
-    "ticker": "030200",
-    "start": "2026-08-18",
-    "allDay": true,
-    "url": "https://kr.investing.com/equities/kt-corporation-earnings",
-    "country": "한국",
-    "importance": "높음",
-    "source": "Investing.com",
-    "marketCap": 13382351473500
-  },
-  {
-    "id": "2026-08-18-443060",
-    "title": "HD현대마린솔루션 실적",
-    "company": "HD현대마린솔루션",
-    "ticker": "443060",
-    "start": "2026-08-18",
-    "allDay": true,
-    "url": "https://kr.investing.com/equities/hd-hyundai-marine-solution-earnings",
-    "country": "한국",
-    "importance": "높음",
-    "source": "Investing.com",
-    "marketCap": 9011525460000
-  },
-  {
-    "id": "2026-08-18-161390",
-    "title": "한국타이어앤테크놀로지 실적",
-    "company": "한국타이어앤테크놀로지",
-    "ticker": "161390",
-    "start": "2026-08-18",
-    "allDay": true,
-    "url": "https://kr.investing.com/equities/hankook-tire-earnings",
-    "country": "한국",
-    "importance": "높음",
-    "source": "Investing.com",
-    "marketCap": 8819904912800
-  },
-  {
-    "id": "2026-08-18-028050",
-    "title": "삼성E&A 실적",
-    "company": "삼성E&A",
-    "ticker": "028050",
-    "start": "2026-08-18",
-    "allDay": true,
-    "url": "https://kr.investing.com/equities/samsung-engineering-earnings",
-    "country": "한국",
-    "importance": "높음",
-    "source": "Investing.com",
-    "marketCap": 8339800000000
-  },
-  {
-    "id": "2026-08-18-078930",
-    "title": "GS 실적",
-    "company": "GS",
-    "ticker": "078930",
-    "start": "2026-08-18",
-    "allDay": true,
-    "url": "https://kr.investing.com/equities/gs-holdings-earnings",
-    "country": "한국",
-    "importance": "높음",
-    "source": "Investing.com",
-    "marketCap": 7617430590000
-  },
-  {
-    "id": "2026-08-18-007660",
-    "title": "이수페타시스 실적",
-    "company": "이수페타시스",
-    "ticker": "007660",
-    "start": "2026-08-18",
-    "allDay": true,
-    "url": "https://kr.investing.com/equities/isupetasys-earnings",
-    "country": "한국",
-    "importance": "높음",
-    "source": "Investing.com",
-    "marketCap": 7568490478900
-  },
-  {
-    "id": "2026-08-18-090430",
-    "title": "아모레퍼시픽 실적",
-    "company": "아모레퍼시픽",
-    "ticker": "090430",
-    "start": "2026-08-18",
-    "allDay": true,
-    "url": "https://kr.investing.com/equities/amorepacific-earnings",
-    "country": "한국",
-    "importance": "높음",
-    "source": "Investing.com",
-    "marketCap": 7030829631800
-  },
-  {
-    "id": "2026-08-18-047040",
-    "title": "대우건설 실적",
-    "company": "대우건설",
-    "ticker": "047040",
-    "start": "2026-08-18",
-    "allDay": true,
-    "url": "https://kr.investing.com/equities/daewoo-engineering---construction-earnings",
-    "country": "한국",
-    "importance": "높음",
-    "source": "Investing.com",
-    "marketCap": 6697794499400
-  },
-  {
-    "id": "2026-08-18-267270",
-    "title": "HD건설기계 실적",
-    "company": "HD건설기계",
-    "ticker": "267270",
-    "start": "2026-08-18",
-    "allDay": true,
-    "url": "https://kr.investing.com/equities/hyundai-construction-equipment-co-earnings",
-    "country": "한국",
-    "importance": "높음",
-    "source": "Investing.com",
-    "marketCap": 6249015368800
-  },
-  {
-    "id": "2026-08-18-001440",
-    "title": "대한전선 실적",
-    "company": "대한전선",
-    "ticker": "001440",
-    "start": "2026-08-18",
-    "allDay": true,
-    "url": "https://kr.investing.com/equities/taihan-electric-wire-co-ltd-earnings",
-    "country": "한국",
-    "importance": "높음",
-    "source": "Investing.com",
-    "marketCap": 5801380841600
-  },
-  {
-    "id": "2026-08-18-088350",
-    "title": "한화생명 실적",
-    "company": "한화생명",
-    "ticker": "088350",
-    "start": "2026-08-18",
-    "allDay": true,
-    "url": "https://kr.investing.com/equities/hanwha-life-earnings",
-    "country": "한국",
-    "importance": "높음",
-    "source": "Investing.com",
-    "marketCap": 3934440900000
-  },
-  {
-    "id": "2026-08-18-001040",
-    "title": "CJ 그룹 실적",
-    "company": "CJ 그룹",
-    "ticker": "001040",
-    "start": "2026-08-18",
-    "allDay": true,
-    "url": "https://kr.investing.com/equities/cj-corp-earnings",
-    "country": "한국",
-    "importance": "높음",
-    "source": "Investing.com",
-    "marketCap": 3871787634600
-  },
-  {
-    "id": "2026-08-18-052690",
-    "title": "한전기술 실적",
-    "company": "한전기술",
-    "ticker": "052690",
-    "start": "2026-08-18",
-    "allDay": true,
-    "url": "https://kr.investing.com/equities/kepco-engineering---construction-earnings",
-    "country": "한국",
-    "importance": "높음",
-    "source": "Investing.com",
-    "marketCap": 3665298000000
-  },
-  {
-    "id": "2026-08-18-004020",
-    "title": "현대제철 실적",
-    "company": "현대제철",
-    "ticker": "004020",
-    "start": "2026-08-18",
-    "allDay": true,
-    "url": "https://kr.investing.com/equities/hyundai-steel-earnings",
-    "country": "한국",
-    "importance": "높음",
-    "source": "Investing.com",
-    "marketCap": 3569674748750
-  },
-  {
-    "id": "2026-08-18-069960",
-    "title": "현대백화점 실적",
-    "company": "현대백화점",
-    "ticker": "069960",
-    "start": "2026-08-18",
-    "allDay": true,
-    "url": "https://kr.investing.com/equities/hyundai-department-earnings",
-    "country": "한국",
-    "importance": "높음",
-    "source": "Investing.com",
-    "marketCap": 3400786622400
-  },
-  {
-    "id": "2026-08-18-035250",
-    "title": "강원랜드 실적",
-    "company": "강원랜드",
-    "ticker": "035250",
-    "start": "2026-08-18",
-    "allDay": true,
-    "url": "https://kr.investing.com/equities/kangwon-land-earnings",
-    "country": "한국",
-    "importance": "높음",
-    "source": "Investing.com",
-    "marketCap": 3085022010000
-  },
-  {
-    "id": "2026-08-18-103590",
-    "title": "일진전기 실적",
-    "company": "일진전기",
-    "ticker": "103590",
-    "start": "2026-08-18",
-    "allDay": true,
-    "url": "https://kr.investing.com/equities/iljin-electric-co-earnings",
-    "country": "한국",
-    "importance": "높음",
-    "source": "Investing.com",
-    "marketCap": 3042327882000
-  },
-  {
-    "id": "2026-08-18-036460",
-    "title": "한국가스공사 실적",
-    "company": "한국가스공사",
-    "ticker": "036460",
-    "start": "2026-08-18",
-    "allDay": true,
-    "url": "https://kr.investing.com/equities/kogas-earnings",
-    "country": "한국",
-    "importance": "높음",
-    "source": "Investing.com",
-    "marketCap": 3014019450000
-  },
-  {
-    "id": "2026-08-18-017800",
-    "title": "현대엘리베이 실적",
-    "company": "현대엘리베이",
-    "ticker": "017800",
-    "start": "2026-08-18",
-    "allDay": true,
-    "url": "https://kr.investing.com/equities/hyundai-elevator-earnings",
-    "country": "한국",
-    "importance": "높음",
-    "source": "Investing.com",
-    "marketCap": 2716920757500
-  },
-  {
-    "id": "2026-08-18-005850",
-    "title": "에스엘 실적",
-    "company": "에스엘",
-    "ticker": "005850",
-    "start": "2026-08-18",
-    "allDay": true,
-    "url": "https://kr.investing.com/equities/sl-corp-earnings",
-    "country": "한국",
-    "importance": "높음",
-    "source": "Investing.com",
-    "marketCap": 2559313452000
-  },
-  {
-    "id": "2026-08-18-007340",
-    "title": "DN오토모티브 실적",
-    "company": "DN오토모티브",
-    "ticker": "007340",
-    "start": "2026-08-18",
-    "allDay": true,
-    "url": "https://kr.investing.com/equities/dongah-tire-earnings",
-    "country": "한국",
-    "importance": "높음",
-    "source": "Investing.com",
-    "marketCap": 2551073714000
-  },
-  {
-    "id": "2026-08-18-009970",
-    "title": "영원무역홀딩스 실적",
-    "company": "영원무역홀딩스",
-    "ticker": "009970",
-    "start": "2026-08-18",
-    "allDay": true,
-    "url": "https://kr.investing.com/equities/youngone-holdi-earnings",
-    "country": "한국",
-    "importance": "높음",
-    "source": "Investing.com",
-    "marketCap": 2487132864000
-  },
-  {
-    "id": "2026-08-18-006360",
-    "title": "GS건설 실적",
-    "company": "GS건설",
-    "ticker": "006360",
-    "start": "2026-08-18",
-    "allDay": true,
-    "url": "https://kr.investing.com/equities/gs-engineering---construction-earnings",
-    "country": "한국",
-    "importance": "높음",
-    "source": "Investing.com",
-    "marketCap": 2451909688500
-  },
-  {
-    "id": "2026-08-18-003690",
-    "title": "코리안리 실적",
-    "company": "코리안리",
-    "ticker": "003690",
-    "start": "2026-08-18",
-    "allDay": true,
-    "url": "https://kr.investing.com/equities/korean-reinsu-earnings",
-    "country": "한국",
-    "importance": "높음",
-    "source": "Investing.com",
-    "marketCap": 2438750227800
-  },
-  {
-    "id": "2026-08-18-000240",
-    "title": "한국앤컴퍼니 실적",
-    "company": "한국앤컴퍼니",
-    "ticker": "000240",
-    "start": "2026-08-18",
-    "allDay": true,
-    "url": "https://kr.investing.com/equities/hankook-tire-worldwide-earnings",
-    "country": "한국",
-    "importance": "높음",
-    "source": "Investing.com",
-    "marketCap": 2397114810000
-  },
-  {
-    "id": "2026-08-18-085620",
-    "title": "미래에셋생명 실적",
-    "company": "미래에셋생명",
-    "ticker": "085620",
-    "start": "2026-08-18",
-    "allDay": true,
-    "url": "https://kr.investing.com/equities/mirae-asset-life-insurance-co-ltd-earnings",
-    "country": "한국",
-    "importance": "높음",
-    "source": "Investing.com",
-    "marketCap": 2294004600000
-  },
-  {
-    "id": "2026-08-18-139480",
-    "title": "이마트 실적",
-    "company": "이마트",
-    "ticker": "139480",
-    "start": "2026-08-18",
-    "allDay": true,
-    "url": "https://kr.investing.com/equities/e-mart-earnings",
-    "country": "한국",
-    "importance": "높음",
-    "source": "Investing.com",
-    "marketCap": 2202146356200
-  },
-  {
-    "id": "2026-08-18-204320",
-    "title": "HL만도 실적",
-    "company": "HL만도",
-    "ticker": "204320",
-    "start": "2026-08-18",
-    "allDay": true,
-    "url": "https://kr.investing.com/equities/mando-corp-earnings",
-    "country": "한국",
-    "importance": "높음",
-    "source": "Investing.com",
-    "marketCap": 2169418944000
-  },
-  {
-    "id": "2026-08-18-030000",
-    "title": "제일기획 실적",
-    "company": "제일기획",
-    "ticker": "030000",
-    "start": "2026-08-18",
-    "allDay": true,
-    "url": "https://kr.investing.com/equities/cheil-worldwide-earnings",
-    "country": "한국",
-    "importance": "높음",
-    "source": "Investing.com",
-    "marketCap": 2146669258500
-  },
-  {
-    "id": "2026-08-18-007070",
-    "title": "GS리테일 실적",
-    "company": "GS리테일",
-    "ticker": "007070",
-    "start": "2026-08-18",
-    "allDay": true,
-    "url": "https://kr.investing.com/equities/gs-retail-earnings",
-    "country": "한국",
-    "importance": "높음",
-    "source": "Investing.com",
-    "marketCap": 2140349824000
-  },
-  {
-    "id": "2026-08-18-005440",
-    "title": "현대지에프홀딩스 실적",
-    "company": "현대지에프홀딩스",
-    "ticker": "005440",
-    "start": "2026-08-18",
-    "allDay": true,
-    "url": "https://kr.investing.com/equities/hd-greenfood-earnings",
-    "country": "한국",
-    "importance": "높음",
-    "source": "Investing.com",
-    "marketCap": 2137447966710
-  },
-  {
-    "id": "2026-08-18-282330",
-    "title": "BGF리테일 실적",
-    "company": "BGF리테일",
-    "ticker": "282330",
-    "start": "2026-08-18",
-    "allDay": true,
-    "url": "https://kr.investing.com/equities/bgf-retail-ks-earnings",
-    "country": "한국",
-    "importance": "높음",
-    "source": "Investing.com",
-    "marketCap": 2134562391000
-  },
-  {
-    "id": "2026-08-18-004370",
-    "title": "농심 실적",
-    "company": "농심",
-    "ticker": "004370",
-    "start": "2026-08-18",
-    "allDay": true,
-    "url": "https://kr.investing.com/equities/nongshim-earnings",
-    "country": "한국",
-    "importance": "높음",
-    "source": "Investing.com",
-    "marketCap": 2107635453000
-  },
-  {
-    "id": "2026-08-18-018670",
-    "title": "SK가스 실적",
-    "company": "SK가스",
-    "ticker": "018670",
-    "start": "2026-08-18",
-    "allDay": true,
-    "url": "https://kr.investing.com/equities/sk-gas-earnings",
-    "country": "한국",
-    "importance": "높음",
-    "source": "Investing.com",
-    "marketCap": 2096765766000
-  },
-  {
-    "id": "2026-08-18-281820",
-    "title": "케이씨텍 실적",
-    "company": "케이씨텍",
-    "ticker": "281820",
-    "start": "2026-08-18",
-    "allDay": true,
-    "url": "https://kr.investing.com/equities/kctech-earnings",
-    "country": "한국",
-    "importance": "높음",
-    "source": "Investing.com",
-    "marketCap": 2051141279600
-  },
-  {
-    "id": "2026-08-18-192820",
-    "title": "코스맥스 실적",
-    "company": "코스맥스",
-    "ticker": "192820",
-    "start": "2026-08-18",
-    "allDay": true,
-    "url": "https://kr.investing.com/equities/cosmax-inc-earnings",
-    "country": "한국",
-    "importance": "높음",
-    "source": "Investing.com",
-    "marketCap": 2042911620000
-  },
-  {
-    "id": "2026-08-18-051600",
-    "title": "한전KPS 실적",
-    "company": "한전KPS",
-    "ticker": "051600",
-    "start": "2026-08-18",
-    "allDay": true,
-    "url": "https://kr.investing.com/equities/kepco-plant-s--earnings",
-    "country": "한국",
-    "importance": "높음",
-    "source": "Investing.com",
-    "marketCap": 1991250000000
-  },
-  {
-    "id": "2026-08-18-071970",
-    "title": "HD현대마린엔진 실적",
-    "company": "HD현대마린엔진",
-    "ticker": "071970",
-    "start": "2026-08-18",
-    "allDay": true,
-    "url": "https://kr.investing.com/equities/stx-heavy-indu-earnings",
-    "country": "한국",
-    "importance": "높음",
-    "source": "Investing.com",
-    "marketCap": 1892819421000
-  },
-  {
-    "id": "2026-08-18-007810",
-    "title": "코리아써키트 실적",
-    "company": "코리아써키트",
-    "ticker": "007810",
-    "start": "2026-08-18",
-    "allDay": true,
-    "url": "https://kr.investing.com/equities/korea-circuit-earnings",
-    "country": "한국",
-    "importance": "높음",
-    "source": "Investing.com",
-    "marketCap": 1887432194000
-  },
-  {
-    "id": "2026-08-18-073240",
-    "title": "금호타이어 실적",
-    "company": "금호타이어",
-    "ticker": "073240",
-    "start": "2026-08-18",
-    "allDay": true,
-    "url": "https://kr.investing.com/equities/kumho-tire-earnings",
-    "country": "한국",
-    "importance": "높음",
-    "source": "Investing.com",
-    "marketCap": 1887300085590
-  },
-  {
-    "id": "2026-08-18-008770",
-    "title": "호텔신라 실적",
-    "company": "호텔신라",
-    "ticker": "008770",
-    "start": "2026-08-18",
-    "allDay": true,
-    "url": "https://kr.investing.com/equities/hotel-shilla-earnings",
-    "country": "한국",
-    "importance": "높음",
-    "source": "Investing.com",
-    "marketCap": 1860360935400
-  },
-  {
-    "id": "2026-08-18-020150",
-    "title": "롯데에너지머티리얼즈 실적",
-    "company": "롯데에너지머티리얼즈",
-    "ticker": "020150",
-    "start": "2026-08-18",
-    "allDay": true,
-    "url": "https://kr.investing.com/equities/iljin-materials-earnings",
-    "country": "한국",
-    "importance": "높음",
-    "source": "Investing.com",
-    "marketCap": 1759479556800
-  },
-  {
-    "id": "2026-08-18-103140",
-    "title": "풍산 실적",
-    "company": "풍산",
-    "ticker": "103140",
-    "start": "2026-08-18",
-    "allDay": true,
-    "url": "https://kr.investing.com/equities/poongsan-earnings",
-    "country": "한국",
-    "importance": "높음",
-    "source": "Investing.com",
-    "marketCap": 1757122230600
-  },
-  {
-    "id": "2026-08-18-112610",
-    "title": "씨에스윈드 실적",
-    "company": "씨에스윈드",
-    "ticker": "112610",
-    "start": "2026-08-18",
-    "allDay": true,
-    "url": "https://kr.investing.com/equities/cs-wind-corp-earnings",
-    "country": "한국",
-    "importance": "높음",
-    "source": "Investing.com",
-    "marketCap": 1710050391650
-  },
-  {
-    "id": "2026-08-18-001740",
-    "title": "SK네트웍스 실적",
-    "company": "SK네트웍스",
-    "ticker": "001740",
-    "start": "2026-08-18",
-    "allDay": true,
-    "url": "https://kr.investing.com/equities/sk-networks-co-ltd-earnings",
-    "country": "한국",
-    "importance": "높음",
-    "source": "Investing.com",
-    "marketCap": 1664929278700
-  },
-  {
-    "id": "2026-08-18-000120",
-    "title": "CJ대한통운 실적",
-    "company": "CJ대한통운",
-    "ticker": "000120",
-    "start": "2026-08-18",
-    "allDay": true,
-    "url": "https://kr.investing.com/equities/cj-korea-express-earnings",
-    "country": "한국",
-    "importance": "높음",
-    "source": "Investing.com",
-    "marketCap": 1635645064800
-  },
-  {
-    "id": "2026-08-18-120110",
-    "title": "코오롱인더 실적",
-    "company": "코오롱인더",
-    "ticker": "120110",
-    "start": "2026-08-18",
-    "allDay": true,
-    "url": "https://kr.investing.com/equities/kolon-industries-inc-earnings",
-    "country": "한국",
-    "importance": "높음",
-    "source": "Investing.com",
-    "marketCap": 1581150489600
-  },
-  {
-    "id": "2026-08-18-001800",
-    "title": "오리온홀딩스 실적",
-    "company": "오리온홀딩스",
-    "ticker": "001800",
-    "start": "2026-08-18",
-    "allDay": true,
-    "url": "https://kr.investing.com/equities/orion-earnings",
-    "country": "한국",
-    "importance": "높음",
-    "source": "Investing.com",
-    "marketCap": 1573096449800
-  },
-  {
-    "id": "2026-08-18-097230",
-    "title": "HJ중공업 실적",
-    "company": "HJ중공업",
-    "ticker": "097230",
-    "start": "2026-08-18",
-    "allDay": true,
-    "url": "https://kr.investing.com/equities/hanjin-heavy-ind.---const.-earnings",
-    "country": "한국",
-    "importance": "높음",
-    "source": "Investing.com",
-    "marketCap": 1422151668000
-  },
-  {
-    "id": "2026-08-18-001120",
-    "title": "LX인터내셔널 실적",
-    "company": "LX인터내셔널",
-    "ticker": "001120",
-    "start": "2026-08-18",
-    "allDay": true,
-    "url": "https://kr.investing.com/equities/lg-international-corp-earnings",
-    "country": "한국",
-    "importance": "높음",
-    "source": "Investing.com",
-    "marketCap": 1416678000000
-  },
-  {
-    "id": "2026-08-18-069620",
-    "title": "대웅제약 실적",
-    "company": "대웅제약",
-    "ticker": "069620",
-    "start": "2026-08-18",
-    "allDay": true,
-    "url": "https://kr.investing.com/equities/daewoong-pharma-earnings",
-    "country": "한국",
-    "importance": "높음",
-    "source": "Investing.com",
-    "marketCap": 1390389000000
-  },
-  {
-    "id": "2026-08-18-229640",
-    "title": "LS에코에너지 실적",
-    "company": "LS에코에너지",
-    "ticker": "229640",
-    "start": "2026-08-18",
-    "allDay": true,
-    "url": "https://kr.investing.com/equities/ls-cable-system-asia-ltd-earnings",
-    "country": "한국",
-    "importance": "높음",
-    "source": "Investing.com",
-    "marketCap": 1390369506600
-  },
-  {
-    "id": "2026-08-18-093370",
-    "title": "후성 실적",
-    "company": "후성",
-    "ticker": "093370",
-    "start": "2026-08-18",
-    "allDay": true,
-    "url": "https://kr.investing.com/equities/foosung-earnings",
-    "country": "한국",
-    "importance": "높음",
-    "source": "Investing.com",
-    "marketCap": 1349272051400
-  },
-  {
-    "id": "2026-08-18-005070",
-    "title": "코스모신소재 실적",
-    "company": "코스모신소재",
-    "ticker": "005070",
-    "start": "2026-08-18",
-    "allDay": true,
-    "url": "https://kr.investing.com/equities/cosmoam-t-earnings",
-    "country": "한국",
-    "importance": "높음",
-    "source": "Investing.com",
-    "marketCap": 1297028997550
-  },
-  {
-    "id": "2026-08-18-192080",
-    "title": "더블유게임즈 실적",
-    "company": "더블유게임즈",
-    "ticker": "192080",
-    "start": "2026-08-18",
-    "allDay": true,
-    "url": "https://kr.investing.com/equities/doubleu-games-co-ltd-earnings",
-    "country": "한국",
-    "importance": "높음",
-    "source": "Investing.com",
-    "marketCap": 1293698894800
-  },
-  {
-    "id": "2026-08-18-007310",
-    "title": "오뚜기 실적",
-    "company": "오뚜기",
-    "ticker": "007310",
-    "start": "2026-08-18",
-    "allDay": true,
-    "url": "https://kr.investing.com/equities/ottogi-earnings",
-    "country": "한국",
-    "importance": "높음",
-    "source": "Investing.com",
-    "marketCap": 1234411640000
-  },
-  {
-    "id": "2026-08-18-017960",
-    "title": "한국카본 실적",
-    "company": "한국카본",
-    "ticker": "017960",
-    "start": "2026-08-18",
-    "allDay": true,
-    "url": "https://kr.investing.com/equities/hankuk-carbon-earnings",
-    "country": "한국",
-    "importance": "높음",
-    "source": "Investing.com",
-    "marketCap": 1211813596700
-  },
-  {
-    "id": "2026-08-18-001430",
-    "title": "세아베스틸지주 실적",
-    "company": "세아베스틸지주",
-    "ticker": "001430",
-    "start": "2026-08-18",
-    "allDay": true,
-    "url": "https://kr.investing.com/equities/seah-bestee-earnings",
-    "country": "한국",
-    "importance": "높음",
-    "source": "Investing.com",
-    "marketCap": 1210346516250
-  },
-  {
-    "id": "2026-08-18-012630",
-    "title": "HDC 실적",
-    "company": "HDC",
-    "ticker": "012630",
-    "start": "2026-08-18",
-    "allDay": true,
-    "url": "https://kr.investing.com/equities/hyundai-development-co-earnings",
-    "country": "한국",
-    "importance": "높음",
-    "source": "Investing.com",
-    "marketCap": 1187665413480
-  },
-  {
-    "id": "2026-08-18-294870",
-    "title": "HDC현대산업개발 실적",
-    "company": "HDC현대산업개발",
-    "ticker": "294870",
-    "start": "2026-08-18",
-    "allDay": true,
-    "url": "https://kr.investing.com/equities/hyundai-develop-earnings",
-    "country": "한국",
-    "importance": "높음",
-    "source": "Investing.com",
-    "marketCap": 1145469395400
-  },
-  {
-    "id": "2026-08-18-195870",
-    "title": "해성디에스 실적",
-    "company": "해성디에스",
-    "ticker": "195870",
-    "start": "2026-08-18",
-    "allDay": true,
-    "url": "https://kr.investing.com/equities/haesung-ds-co-ltd-earnings",
-    "country": "한국",
-    "importance": "높음",
-    "source": "Investing.com",
-    "marketCap": 1054000000000
-  },
-  {
-    "id": "2026-08-18-057050",
-    "title": "현대홈쇼핑 실적",
-    "company": "현대홈쇼핑",
-    "ticker": "057050",
-    "start": "2026-08-18",
-    "allDay": true,
-    "url": "https://kr.investing.com/equities/hd-home-shoppi-earnings",
-    "country": "한국",
-    "importance": "높음",
-    "source": "Investing.com",
-    "marketCap": 1047600000000
-  },
-  {
-    "id": "2026-08-18-001820",
-    "title": "삼화콘덴서 실적",
-    "company": "삼화콘덴서",
-    "ticker": "001820",
-    "start": "2026-08-18",
-    "allDay": true,
-    "url": "https://kr.investing.com/equities/sam-hwa-capaci-earnings",
-    "country": "한국",
-    "importance": "높음",
-    "source": "Investing.com",
-    "marketCap": 1014552000000
-  },
-  {
-    "id": "2026-08-18-077970",
-    "title": "STX엔진 실적",
-    "company": "STX엔진",
-    "ticker": "077970",
-    "start": "2026-08-18",
-    "allDay": true,
-    "url": "https://kr.investing.com/equities/stx-engine-earnings",
-    "country": "한국",
-    "importance": "높음",
-    "source": "Investing.com",
-    "marketCap": 1013738590750
-  },
-  {
-    "id": "2026-08-18-003090",
-    "title": "대웅 실적",
-    "company": "대웅",
-    "ticker": "003090",
-    "start": "2026-08-18",
-    "allDay": true,
-    "url": "https://kr.investing.com/equities/daewoong-earnings",
-    "country": "한국",
-    "importance": "높음",
-    "source": "Investing.com",
-    "marketCap": 970971066000
-  },
-  {
-    "id": "2026-08-18-034230",
-    "title": "파라다이스 실적",
-    "company": "파라다이스",
-    "ticker": "034230",
-    "start": "2026-08-18",
-    "allDay": true,
-    "url": "https://kr.investing.com/equities/paradise-co-ltd-earnings",
-    "country": "한국",
-    "importance": "높음",
-    "source": "Investing.com",
-    "marketCap": 961492985160
-  },
-  {
-    "id": "2026-08-18-185750",
-    "title": "종근당 실적",
-    "company": "종근당",
-    "ticker": "185750",
-    "start": "2026-08-18",
-    "allDay": true,
-    "url": "https://kr.investing.com/equities/chongkundang-(ks)-earnings",
-    "country": "한국",
-    "importance": "높음",
-    "source": "Investing.com",
-    "marketCap": 942729874000
-  },
-  {
-    "id": "2026-08-18-009450",
-    "title": "경동나비엔 실적",
-    "company": "경동나비엔",
-    "ticker": "009450",
-    "start": "2026-08-18",
-    "allDay": true,
-    "url": "https://kr.investing.com/equities/kyng-dng-navie-earnings",
-    "country": "한국",
-    "importance": "높음",
-    "source": "Investing.com",
-    "marketCap": 926562451200
-  },
-  {
-    "id": "2026-08-18-192400",
-    "title": "쿠쿠홀딩스 실적",
-    "company": "쿠쿠홀딩스",
-    "ticker": "192400",
-    "start": "2026-08-18",
-    "allDay": true,
-    "url": "https://kr.investing.com/equities/cuckoo-electr-earnings",
-    "country": "한국",
-    "importance": "높음",
-    "source": "Investing.com",
-    "marketCap": 908613826750
-  },
-  {
-    "id": "2026-08-18-009240",
-    "title": "한샘 실적",
-    "company": "한샘",
-    "ticker": "009240",
-    "start": "2026-08-18",
-    "allDay": true,
-    "url": "https://kr.investing.com/equities/hanssem-earnings",
-    "country": "한국",
-    "importance": "높음",
-    "source": "Investing.com",
-    "marketCap": 831924354800
-  },
-  {
-    "id": "2026-08-18-100090",
-    "title": "SK오션플랜트 실적",
-    "company": "SK오션플랜트",
-    "ticker": "100090",
-    "start": "2026-08-18",
-    "allDay": true,
-    "url": "https://kr.investing.com/equities/samkang-mt-co-ltd-earnings",
-    "country": "한국",
-    "importance": "높음",
-    "source": "Investing.com",
-    "marketCap": 827835209250
-  },
-  {
-    "id": "2026-08-18-456040",
-    "title": "OCI 실적",
-    "company": "OCI",
-    "ticker": "456040",
-    "start": "2026-08-18",
-    "allDay": true,
-    "url": "https://kr.investing.com/equities/oci-earnings",
-    "country": "한국",
-    "importance": "높음",
-    "source": "Investing.com",
-    "marketCap": 809305548000
-  },
-  {
-    "id": "2026-08-18-004490",
-    "title": "세방전지 실적",
-    "company": "세방전지",
-    "ticker": "004490",
-    "start": "2026-08-18",
-    "allDay": true,
-    "url": "https://kr.investing.com/equities/global---yuasa-battery-earnings",
-    "country": "한국",
-    "importance": "높음",
-    "source": "Investing.com",
-    "marketCap": 749826000000
-  },
-  {
-    "id": "2026-08-18-214320",
-    "title": "이노션 실적",
-    "company": "이노션",
-    "ticker": "214320",
-    "start": "2026-08-18",
-    "allDay": true,
-    "url": "https://kr.investing.com/equities/innocean-worldwide-inc-earnings",
-    "country": "한국",
-    "importance": "높음",
-    "source": "Investing.com",
-    "marketCap": 739600000000
-  },
-  {
-    "id": "2026-08-18-000670",
-    "title": "영풍 실적",
-    "company": "영풍",
-    "ticker": "000670",
-    "start": "2026-08-18",
-    "allDay": true,
-    "url": "https://kr.investing.com/equities/youngpoong-earnings",
-    "country": "한국",
-    "importance": "높음",
-    "source": "Investing.com",
-    "marketCap": 678433668550
-  },
-  {
-    "id": "2026-08-18-002960",
-    "title": "한국쉘석유 실적",
-    "company": "한국쉘석유",
-    "ticker": "002960",
-    "start": "2026-08-18",
-    "allDay": true,
-    "url": "https://kr.investing.com/equities/hankook-shell-oil-earnings",
-    "country": "한국",
-    "importance": "높음",
-    "source": "Investing.com",
-    "marketCap": 657800000000
-  },
-  {
-    "id": "2026-08-18-002350",
-    "title": "넥센타이어 실적",
-    "company": "넥센타이어",
-    "ticker": "002350",
-    "start": "2026-08-18",
-    "allDay": true,
-    "url": "https://kr.investing.com/equities/nexen-tire-earnings",
-    "country": "한국",
-    "importance": "높음",
-    "source": "Investing.com",
-    "marketCap": 647538024510
-  },
-  {
-    "id": "2026-08-18-090460",
-    "title": "비에이치 실적",
-    "company": "비에이치",
-    "ticker": "090460",
-    "start": "2026-08-18",
-    "allDay": true,
-    "url": "https://kr.investing.com/equities/bh-co-ltd-earnings",
-    "country": "한국",
-    "importance": "높음",
-    "source": "Investing.com",
-    "marketCap": 644227491180
-  },
-  {
-    "id": "2026-08-18-075580",
-    "title": "세진중공업 실적",
-    "company": "세진중공업",
-    "ticker": "075580",
-    "start": "2026-08-18",
-    "allDay": true,
-    "url": "https://kr.investing.com/equities/sejin-heavy-industries-co-ltd-earnings",
-    "country": "한국",
-    "importance": "높음",
-    "source": "Investing.com",
-    "marketCap": 644104336480
-  },
-  {
-    "id": "2026-08-18-069260",
-    "title": "TKG휴켐스 실적",
-    "company": "TKG휴켐스",
-    "ticker": "069260",
-    "start": "2026-08-18",
-    "allDay": true,
-    "url": "https://kr.investing.com/equities/huchems-earnings",
-    "country": "한국",
-    "importance": "높음",
-    "source": "Investing.com",
-    "marketCap": 631982970480
-  },
-  {
-    "id": "2026-08-18-005880",
-    "title": "대한해운 실적",
-    "company": "대한해운",
-    "ticker": "005880",
-    "start": "2026-08-18",
-    "allDay": true,
-    "url": "https://kr.investing.com/equities/korea-line-earnings",
-    "country": "한국",
-    "importance": "높음",
-    "source": "Investing.com",
-    "marketCap": 610315219940
-  },
-  {
-    "id": "2026-08-18-001680",
-    "title": "대상 실적",
-    "company": "대상",
-    "ticker": "001680",
-    "start": "2026-08-18",
-    "allDay": true,
-    "url": "https://kr.investing.com/equities/daesang-earnings",
-    "country": "한국",
-    "importance": "높음",
-    "source": "Investing.com",
-    "marketCap": 600103793000
-  },
-  {
-    "id": "2026-08-18-383800",
-    "title": "LX홀딩스 실적",
-    "company": "LX홀딩스",
-    "ticker": "383800",
-    "start": "2026-08-18",
-    "allDay": true,
-    "url": "https://kr.investing.com/equities/lx-holdings-earnings",
-    "country": "한국",
-    "importance": "높음",
-    "source": "Investing.com",
-    "marketCap": 582784471600
-  },
-  {
-    "id": "2026-08-18-007700",
-    "title": "F&F홀딩스 실적",
-    "company": "F&F홀딩스",
-    "ticker": "007700",
-    "start": "2026-08-18",
-    "allDay": true,
-    "url": "https://kr.investing.com/equities/f-f-earnings",
-    "country": "한국",
-    "importance": "높음",
-    "source": "Investing.com",
-    "marketCap": 580066062610
-  },
-  {
-    "id": "2026-08-18-010780",
-    "title": "아이에스동서 실적",
-    "company": "아이에스동서",
-    "ticker": "010780",
-    "start": "2026-08-18",
-    "allDay": true,
-    "url": "https://kr.investing.com/equities/is-dongseo-earnings",
-    "country": "한국",
-    "importance": "높음",
-    "source": "Investing.com",
-    "marketCap": 578986199680
-  },
-  {
-    "id": "2026-08-18-001060",
-    "title": "JW중외제약 실적",
-    "company": "JW중외제약",
-    "ticker": "001060",
-    "start": "2026-08-18",
-    "allDay": true,
-    "url": "https://kr.investing.com/equities/jw-pharmac-earnings",
-    "country": "한국",
-    "importance": "높음",
-    "source": "Investing.com",
-    "marketCap": 565848099000
-  },
-  {
-    "id": "2026-08-18-033240",
-    "title": "자화전자 실적",
-    "company": "자화전자",
-    "ticker": "033240",
-    "start": "2026-08-18",
-    "allDay": true,
-    "url": "https://kr.investing.com/equities/jahwa-electron-earnings",
-    "country": "한국",
-    "importance": "높음",
-    "source": "Investing.com",
-    "marketCap": 558502226700
-  },
-  {
-    "id": "2026-08-18-000640",
-    "title": "동아쏘시오홀딩스 실적",
-    "company": "동아쏘시오홀딩스",
-    "ticker": "000640",
-    "start": "2026-08-18",
-    "allDay": true,
-    "url": "https://kr.investing.com/equities/donga-socio-holdings-earnings",
-    "country": "한국",
-    "importance": "높음",
-    "source": "Investing.com",
-    "marketCap": 545334687000
-  },
-  {
-    "id": "2026-08-18-006110",
-    "title": "삼아알미늄 실적",
-    "company": "삼아알미늄",
-    "ticker": "006110",
-    "start": "2026-08-18",
-    "allDay": true,
-    "url": "https://kr.investing.com/equities/sam-a-aluminiu-earnings",
-    "country": "한국",
-    "importance": "높음",
-    "source": "Investing.com",
-    "marketCap": 526296234000
-  },
-  {
-    "id": "2026-08-18-002020",
-    "title": "코오롱 실적",
-    "company": "코오롱",
-    "ticker": "002020",
-    "start": "2026-08-18",
-    "allDay": true,
-    "url": "https://kr.investing.com/equities/kolon-corp-earnings",
-    "country": "한국",
-    "importance": "높음",
-    "source": "Investing.com",
-    "marketCap": 510498744000
-  },
-  {
-    "id": "2026-08-18-001530",
-    "title": "DI동일 실적",
-    "company": "DI동일",
-    "ticker": "001530",
-    "start": "2026-08-18",
-    "allDay": true,
-    "url": "https://kr.investing.com/equities/dong-il-earnings",
-    "country": "한국",
-    "importance": "높음",
-    "source": "Investing.com",
-    "marketCap": 488888655600
-  },
-  {
-    "id": "2026-08-18-005810",
-    "title": "풍산홀딩스 실적",
-    "company": "풍산홀딩스",
-    "ticker": "005810",
-    "start": "2026-08-18",
-    "allDay": true,
-    "url": "https://kr.investing.com/equities/poongsan-holdi-earnings",
-    "country": "한국",
-    "importance": "높음",
-    "source": "Investing.com",
-    "marketCap": 488746198800
-  },
-  {
-    "id": "2026-08-18-009410",
-    "title": "태영건설 실적",
-    "company": "태영건설",
-    "ticker": "009410",
-    "start": "2026-08-18",
-    "allDay": true,
-    "url": "https://kr.investing.com/equities/taeyoung-const-earnings",
-    "country": "한국",
-    "importance": "높음",
-    "source": "Investing.com",
-    "marketCap": 479715205736
-  },
-  {
-    "id": "2026-08-18-284740",
-    "title": "쿠쿠홈시스 실적",
-    "company": "쿠쿠홈시스",
-    "ticker": "284740",
-    "start": "2026-08-18",
-    "allDay": true,
-    "url": "https://kr.investing.com/equities/cuckoo-homesys-earnings",
-    "country": "한국",
-    "importance": "높음",
-    "source": "Investing.com",
-    "marketCap": 473427663000
-  },
-  {
-    "id": "2026-08-18-039130",
-    "title": "하나투어 실적",
-    "company": "하나투어",
-    "ticker": "039130",
-    "start": "2026-08-18",
-    "allDay": true,
-    "url": "https://kr.investing.com/equities/hana-tour-earnings",
-    "country": "한국",
-    "importance": "높음",
-    "source": "Investing.com",
-    "marketCap": 470893932800
-  },
-  {
-    "id": "2026-08-18-005250",
-    "title": "녹십자홀딩스 실적",
-    "company": "녹십자홀딩스",
-    "ticker": "005250",
-    "start": "2026-08-18",
-    "allDay": true,
-    "url": "https://kr.investing.com/equities/green-cross-earnings",
-    "country": "한국",
-    "importance": "높음",
-    "source": "Investing.com",
-    "marketCap": 457584483300
-  },
-  {
-    "id": "2026-08-18-249420",
-    "title": "일동제약 실적",
-    "company": "일동제약",
-    "ticker": "249420",
-    "start": "2026-08-18",
-    "allDay": true,
-    "url": "https://kr.investing.com/equities/il-dong-pharmaceutical-co-ltd-earnings",
-    "country": "한국",
-    "importance": "높음",
-    "source": "Investing.com",
-    "marketCap": 454641681240
-  },
-  {
-    "id": "2026-08-18-161000",
-    "title": "애경케미칼 실적",
-    "company": "애경케미칼",
-    "ticker": "161000",
-    "start": "2026-08-18",
-    "allDay": true,
-    "url": "https://kr.investing.com/equities/ak-petrochemic-earnings",
-    "country": "한국",
-    "importance": "높음",
-    "source": "Investing.com",
-    "marketCap": 446108661530
-  },
-  {
-    "id": "2026-08-18-034310",
-    "title": "NICE 실적",
-    "company": "NICE",
-    "ticker": "034310",
-    "start": "2026-08-18",
-    "allDay": true,
-    "url": "https://kr.investing.com/equities/nice-earnings",
-    "country": "한국",
-    "importance": "높음",
-    "source": "Investing.com",
-    "marketCap": 424545163350
-  },
-  {
-    "id": "2026-08-18-003030",
-    "title": "세아제강지주 실적",
-    "company": "세아제강지주",
-    "ticker": "003030",
-    "start": "2026-08-18",
-    "allDay": true,
-    "url": "https://kr.investing.com/equities/seah-steel-corp-earnings",
-    "country": "한국",
-    "importance": "높음",
-    "source": "Investing.com",
-    "marketCap": 417893191300
-  },
-  {
-    "id": "2026-08-18-031430",
-    "title": "신세계인터내셔날 실적",
-    "company": "신세계인터내셔날",
-    "ticker": "031430",
-    "start": "2026-08-18",
-    "allDay": true,
-    "url": "https://kr.investing.com/equities/shinsegae-inte-earnings",
-    "country": "한국",
-    "importance": "높음",
-    "source": "Investing.com",
-    "marketCap": 416683260000
-  },
-  {
-    "id": "2026-08-18-004690",
-    "title": "삼천리 실적",
-    "company": "삼천리",
-    "ticker": "004690",
-    "start": "2026-08-18",
-    "allDay": true,
-    "url": "https://kr.investing.com/equities/samchully-earnings",
-    "country": "한국",
-    "importance": "높음",
-    "source": "Investing.com",
-    "marketCap": 412727222600
-  },
-  {
-    "id": "2026-08-18-417310",
-    "title": "코람코더원리츠 실적",
-    "company": "코람코더원리츠",
-    "ticker": "417310",
-    "start": "2026-08-18",
-    "allDay": true,
-    "url": "https://kr.investing.com/equities/koramco-the-one-reit-earnings",
-    "country": "한국",
-    "importance": "높음",
-    "source": "Investing.com",
-    "marketCap": 407232000000
-  },
-  {
-    "id": "2026-08-18-403550",
-    "title": "쏘카 실적",
-    "company": "쏘카",
-    "ticker": "403550",
-    "start": "2026-08-18",
-    "allDay": true,
-    "url": "https://kr.investing.com/equities/socar-earnings",
-    "country": "한국",
-    "importance": "높음",
-    "source": "Investing.com",
-    "marketCap": 383572813620
-  },
-  {
-    "id": "2026-08-18-105630",
-    "title": "한세실업 실적",
-    "company": "한세실업",
-    "ticker": "105630",
-    "start": "2026-08-18",
-    "allDay": true,
-    "url": "https://kr.investing.com/equities/hansae-co-earnings",
-    "country": "한국",
-    "importance": "높음",
-    "source": "Investing.com",
-    "marketCap": 370000000000
-  },
-  {
-    "id": "2026-08-18-271940",
-    "title": "일진하이솔루스 실적",
-    "company": "일진하이솔루스",
-    "ticker": "271940",
-    "start": "2026-08-18",
-    "allDay": true,
-    "url": "https://kr.investing.com/equities/iljin-hysolus-earnings",
-    "country": "한국",
-    "importance": "높음",
-    "source": "Investing.com",
-    "marketCap": 368578878500
-  },
-  {
-    "id": "2026-08-18-344820",
-    "title": "케이씨씨글라스 실적",
-    "company": "케이씨씨글라스",
-    "ticker": "344820",
-    "start": "2026-08-18",
-    "allDay": true,
-    "url": "https://kr.investing.com/equities/kcc-glass-corp-earnings",
-    "country": "한국",
-    "importance": "높음",
-    "source": "Investing.com",
-    "marketCap": 368120301600
-  },
-  {
-    "id": "2026-08-18-005950",
-    "title": "이수화학 실적",
-    "company": "이수화학",
-    "ticker": "005950",
-    "start": "2026-08-18",
-    "allDay": true,
-    "url": "https://kr.investing.com/equities/isu-chemical-co-ltd-earnings",
-    "country": "한국",
-    "importance": "높음",
-    "source": "Investing.com",
-    "marketCap": 363385415580
-  },
-  {
-    "id": "2026-08-18-306200",
-    "title": "세아제강 실적",
-    "company": "세아제강",
-    "ticker": "306200",
-    "start": "2026-08-18",
-    "allDay": true,
-    "url": "https://kr.investing.com/equities/seah-steel-earnings",
-    "country": "한국",
-    "importance": "높음",
-    "source": "Investing.com",
-    "marketCap": 352268460000
-  },
-  {
-    "id": "2026-08-18-170900",
-    "title": "동아에스티 실적",
-    "company": "동아에스티",
-    "ticker": "170900",
-    "start": "2026-08-18",
-    "allDay": true,
-    "url": "https://kr.investing.com/equities/dong-a-st-earnings",
-    "country": "한국",
-    "importance": "높음",
-    "source": "Investing.com",
-    "marketCap": 348255920200
-  },
-  {
-    "id": "2026-08-18-017810",
-    "title": "풀무원홀딩스 실적",
-    "company": "풀무원홀딩스",
-    "ticker": "017810",
-    "start": "2026-08-18",
-    "allDay": true,
-    "url": "https://kr.investing.com/equities/pulmuone-holdi-earnings",
-    "country": "한국",
-    "importance": "높음",
-    "source": "Investing.com",
-    "marketCap": 340035234640
-  },
-  {
-    "id": "2026-08-18-060980",
-    "title": "HL홀딩스 실적",
-    "company": "HL홀딩스",
-    "ticker": "060980",
-    "start": "2026-08-18",
-    "allDay": true,
-    "url": "https://kr.investing.com/equities/mando-earnings",
-    "country": "한국",
-    "importance": "높음",
-    "source": "Investing.com",
-    "marketCap": 339548877800
-  },
-  {
-    "id": "2026-08-18-011930",
-    "title": "신성이엔지 실적",
-    "company": "신성이엔지",
-    "ticker": "011930",
-    "start": "2026-08-18",
-    "allDay": true,
-    "url": "https://kr.investing.com/equities/shinsung-se-earnings",
-    "country": "한국",
-    "importance": "높음",
-    "source": "Investing.com",
-    "marketCap": 339519363040
-  },
-  {
-    "id": "2026-08-18-104700",
-    "title": "한국철강 실적",
-    "company": "한국철강",
-    "ticker": "104700",
-    "start": "2026-08-18",
-    "allDay": true,
-    "url": "https://kr.investing.com/equities/kisco-earnings",
-    "country": "한국",
-    "importance": "높음",
-    "source": "Investing.com",
-    "marketCap": 334975500000
-  },
-  {
-    "id": "2026-08-18-005610",
-    "title": "SPC삼립 실적",
-    "company": "SPC삼립",
-    "ticker": "005610",
-    "start": "2026-08-18",
-    "allDay": true,
-    "url": "https://kr.investing.com/equities/samlip-foods-earnings",
-    "country": "한국",
-    "importance": "높음",
-    "source": "Investing.com",
-    "marketCap": 323587837500
-  },
-  {
-    "id": "2026-08-18-016800",
-    "title": "퍼시스 실적",
-    "company": "퍼시스",
-    "ticker": "016800",
-    "start": "2026-08-18",
-    "allDay": true,
-    "url": "https://kr.investing.com/equities/fursys-earnings",
-    "country": "한국",
-    "importance": "높음",
-    "source": "Investing.com",
-    "marketCap": 312800000000
-  },
-  {
-    "id": "2026-08-18-009290",
-    "title": "광동제약 실적",
-    "company": "광동제약",
-    "ticker": "009290",
-    "start": "2026-08-18",
-    "allDay": true,
-    "url": "https://kr.investing.com/equities/kwangdong-phar-earnings",
-    "country": "한국",
-    "importance": "높음",
-    "source": "Investing.com",
-    "marketCap": 306268819200
-  },
-  {
-    "id": "2026-08-18-200880",
-    "title": "서연이화 실적",
-    "company": "서연이화",
-    "ticker": "200880",
-    "start": "2026-08-18",
-    "allDay": true,
-    "url": "https://kr.investing.com/equities/hanilewha-earnings",
-    "country": "한국",
-    "importance": "높음",
-    "source": "Investing.com",
-    "marketCap": 298393944480
-  },
-  {
-    "id": "2026-08-18-192650",
-    "title": "드림텍 실적",
-    "company": "드림텍",
-    "ticker": "192650",
-    "start": "2026-08-18",
-    "allDay": true,
-    "url": "https://kr.investing.com/equities/dreamtech-co-ltd-earnings",
-    "country": "한국",
-    "importance": "높음",
-    "source": "Investing.com",
-    "marketCap": 296161296355
-  },
-  {
-    "id": "2026-08-18-010690",
-    "title": "화신 실적",
-    "company": "화신",
-    "ticker": "010690",
-    "start": "2026-08-18",
-    "allDay": true,
-    "url": "https://kr.investing.com/equities/hwashin-earnings",
-    "country": "한국",
-    "importance": "높음",
-    "source": "Investing.com",
-    "marketCap": 294728260400
-  },
-  {
-    "id": "2026-08-18-105840",
-    "title": "우진 실적",
-    "company": "우진",
-    "ticker": "105840",
-    "start": "2026-08-18",
-    "allDay": true,
-    "url": "https://kr.investing.com/equities/woojin-earnings",
-    "country": "한국",
-    "importance": "높음",
-    "source": "Investing.com",
-    "marketCap": 289634587800
-  },
-  {
-    "id": "2026-08-18-108670",
-    "title": "LX하우시스 실적",
-    "company": "LX하우시스",
-    "ticker": "108670",
-    "start": "2026-08-18",
-    "allDay": true,
-    "url": "https://kr.investing.com/equities/lg-hausys-ltd-earnings",
-    "country": "한국",
-    "importance": "높음",
-    "source": "Investing.com",
-    "marketCap": 288310590500
-  },
-  {
-    "id": "2026-08-18-123890",
-    "title": "한국자산신탁 실적",
-    "company": "한국자산신탁",
-    "ticker": "123890",
-    "start": "2026-08-18",
-    "allDay": true,
-    "url": "https://kr.investing.com/equities/korea-asset-in-trust-co-ltd-earnings",
-    "country": "한국",
-    "importance": "높음",
-    "source": "Investing.com",
-    "marketCap": 269222637200
-  },
-  {
-    "id": "2026-08-18-272450",
-    "title": "진에어 실적",
-    "company": "진에어",
-    "ticker": "272450",
-    "start": "2026-08-18",
-    "allDay": true,
-    "url": "https://kr.investing.com/equities/jin-air-earnings",
-    "country": "한국",
-    "importance": "높음",
-    "source": "Investing.com",
-    "marketCap": 268830000000
-  },
-  {
-    "id": "2026-08-18-002900",
-    "title": "TYM 실적",
-    "company": "TYM",
-    "ticker": "002900",
-    "start": "2026-08-18",
-    "allDay": true,
-    "url": "https://kr.investing.com/equities/tongyang-mools-earnings",
-    "country": "한국",
-    "importance": "높음",
-    "source": "Investing.com",
-    "marketCap": 264960000000
-  },
-  {
-    "id": "2026-08-18-001230",
-    "title": "동국홀딩스 실적",
-    "company": "동국홀딩스",
-    "ticker": "001230",
-    "start": "2026-08-18",
-    "allDay": true,
-    "url": "https://kr.investing.com/equities/dongkuk-steel-mill-co-ltd-earnings",
-    "country": "한국",
-    "importance": "높음",
-    "source": "Investing.com",
-    "marketCap": 264674130930
-  },
-  {
-    "id": "2026-08-18-244920",
-    "title": "에이플러스에셋 실적",
-    "company": "에이플러스에셋",
-    "ticker": "244920",
-    "start": "2026-08-18",
-    "allDay": true,
-    "url": "https://kr.investing.com/equities/a-plus-asset-advisor-earnings",
-    "country": "한국",
-    "importance": "높음",
-    "source": "Investing.com",
-    "marketCap": 262023161870
-  },
-  {
-    "id": "2026-08-18-091810",
-    "title": "Trinity Airways 실적",
-    "company": "Trinity Airways",
-    "ticker": "091810",
-    "start": "2026-08-18",
-    "allDay": true,
-    "url": "https://kr.investing.com/equities/tway-air-co-ltd-earnings",
-    "country": "한국",
-    "importance": "높음",
-    "source": "Investing.com",
-    "marketCap": 260170775550
-  },
-  {
-    "id": "2026-08-18-008490",
-    "title": "서흥캅셀 실적",
-    "company": "서흥캅셀",
-    "ticker": "008490",
-    "start": "2026-08-18",
-    "allDay": true,
-    "url": "https://kr.investing.com/equities/suheung-capsul-earnings",
-    "country": "한국",
-    "importance": "높음",
-    "source": "Investing.com",
-    "marketCap": 246422106900
-  },
-  {
-    "id": "2026-08-18-005500",
-    "title": "삼진제약 실적",
-    "company": "삼진제약",
-    "ticker": "005500",
-    "start": "2026-08-18",
-    "allDay": true,
-    "url": "https://kr.investing.com/equities/samjin-pharm-earnings",
-    "country": "한국",
-    "importance": "높음",
-    "source": "Investing.com",
-    "marketCap": 245887200000
-  },
-  {
-    "id": "2026-08-18-298690",
-    "title": "에어부산 실적",
-    "company": "에어부산",
-    "ticker": "298690",
-    "start": "2026-08-18",
-    "allDay": true,
-    "url": "https://kr.investing.com/equities/air-busan-earnings",
-    "country": "한국",
-    "importance": "높음",
-    "source": "Investing.com",
-    "marketCap": 240299436200
-  },
-  {
-    "id": "2026-08-18-044450",
-    "title": "KSS해운 실적",
-    "company": "KSS해운",
-    "ticker": "044450",
-    "start": "2026-08-18",
-    "allDay": true,
-    "url": "https://kr.investing.com/equities/kss-line-earnings",
-    "country": "한국",
-    "importance": "높음",
-    "source": "Investing.com",
-    "marketCap": 223933036000
-  },
-  {
-    "id": "2026-08-18-025000",
-    "title": "KPX케미칼 실적",
-    "company": "KPX케미칼",
-    "ticker": "025000",
-    "start": "2026-08-18",
-    "allDay": true,
-    "url": "https://kr.investing.com/equities/kpx-chemical-earnings",
-    "country": "한국",
-    "importance": "높음",
-    "source": "Investing.com",
-    "marketCap": 221124804500
-  },
-  {
-    "id": "2026-08-18-000320",
-    "title": "노루홀딩스 실적",
-    "company": "노루홀딩스",
-    "ticker": "000320",
-    "start": "2026-08-18",
-    "allDay": true,
-    "url": "https://kr.investing.com/equities/norooholdings-earnings",
-    "country": "한국",
-    "importance": "높음",
-    "source": "Investing.com",
-    "marketCap": 215848292240
-  },
-  {
-    "id": "2026-08-18-004980",
-    "title": "성신양회 실적",
-    "company": "성신양회",
-    "ticker": "004980",
-    "start": "2026-08-18",
-    "allDay": true,
-    "url": "https://kr.investing.com/equities/sungshin-cemen-earnings",
-    "country": "한국",
-    "importance": "높음",
-    "source": "Investing.com",
-    "marketCap": 212554352910
-  },
-  {
-    "id": "2026-08-18-009680",
-    "title": "모토닉 실적",
-    "company": "모토닉",
-    "ticker": "009680",
-    "start": "2026-08-18",
-    "allDay": true,
-    "url": "https://kr.investing.com/equities/motonic-earnings",
-    "country": "한국",
-    "importance": "높음",
-    "source": "Investing.com",
-    "marketCap": 212332328380
-  },
-  {
-    "id": "2026-08-18-003720",
-    "title": "삼영 실적",
-    "company": "삼영",
-    "ticker": "003720",
-    "start": "2026-08-18",
-    "allDay": true,
-    "url": "https://kr.investing.com/equities/sam-young-chem-earnings",
-    "country": "한국",
-    "importance": "높음",
-    "source": "Investing.com",
-    "marketCap": 205700000000
-  },
-  {
-    "id": "2026-08-18-001630",
-    "title": "종근당홀딩스 실적",
-    "company": "종근당홀딩스",
-    "ticker": "001630",
-    "start": "2026-08-18",
-    "allDay": true,
-    "url": "https://kr.investing.com/equities/chongkundang-earnings",
-    "country": "한국",
-    "importance": "높음",
-    "source": "Investing.com",
-    "marketCap": 196887537300
-  },
-  {
-    "id": "2026-08-18-000490",
-    "title": "대동 실적",
-    "company": "대동",
-    "ticker": "000490",
-    "start": "2026-08-18",
-    "allDay": true,
-    "url": "https://kr.investing.com/equities/daedong-ind-earnings",
-    "country": "한국",
-    "importance": "높음",
-    "source": "Investing.com",
-    "marketCap": 196310950650
-  },
-  {
-    "id": "2026-08-18-035150",
-    "title": "백산 실적",
-    "company": "백산",
-    "ticker": "035150",
-    "start": "2026-08-18",
-    "allDay": true,
-    "url": "https://kr.investing.com/equities/baiksan-earnings",
-    "country": "한국",
-    "importance": "높음",
-    "source": "Investing.com",
-    "marketCap": 196129103680
-  },
-  {
-    "id": "2026-08-18-013890",
-    "title": "지누스 실적",
-    "company": "지누스",
-    "ticker": "013890",
-    "start": "2026-08-18",
-    "allDay": true,
-    "url": "https://kr.investing.com/equities/zinus-inc-earnings",
-    "country": "한국",
-    "importance": "높음",
-    "source": "Investing.com",
-    "marketCap": 193824186920
-  },
-  {
-    "id": "2026-08-18-053210",
-    "title": "스카이라이프 실적",
-    "company": "스카이라이프",
-    "ticker": "053210",
-    "start": "2026-08-18",
-    "allDay": true,
-    "url": "https://kr.investing.com/equities/kt-skylife-earnings",
-    "country": "한국",
-    "importance": "높음",
-    "source": "Investing.com",
-    "marketCap": 192943197300
-  },
-  {
-    "id": "2026-08-18-035510",
-    "title": "신세계I&C 실적",
-    "company": "신세계I&C",
-    "ticker": "035510",
-    "start": "2026-08-18",
-    "allDay": true,
-    "url": "https://kr.investing.com/equities/shinsegae-i-c-earnings",
-    "country": "한국",
-    "importance": "높음",
-    "source": "Investing.com",
-    "marketCap": 177277812000
-  },
-  {
-    "id": "2026-08-18-234080",
-    "title": "JW생명과학 실적",
-    "company": "JW생명과학",
-    "ticker": "234080",
-    "start": "2026-08-18",
-    "allDay": true,
-    "url": "https://kr.investing.com/equities/jw-life-science-corp-earnings",
-    "country": "한국",
-    "importance": "높음",
-    "source": "Investing.com",
-    "marketCap": 177188659260
-  },
-  {
-    "id": "2026-08-18-053690",
-    "title": "한미글로벌 실적",
-    "company": "한미글로벌",
-    "ticker": "053690",
-    "start": "2026-08-18",
-    "allDay": true,
-    "url": "https://kr.investing.com/equities/hanmiglobal-earnings",
-    "country": "한국",
-    "importance": "높음",
-    "source": "Investing.com",
-    "marketCap": 176745281500
-  },
-  {
-    "id": "2026-08-18-003220",
-    "title": "대원제약 실적",
-    "company": "대원제약",
-    "ticker": "003220",
-    "start": "2026-08-18",
-    "allDay": true,
-    "url": "https://kr.investing.com/equities/daewon-pharm-earnings",
-    "country": "한국",
-    "importance": "높음",
-    "source": "Investing.com",
-    "marketCap": 174935147400
-  },
-  {
-    "id": "2026-08-18-033530",
-    "title": "세종공업 실적",
-    "company": "세종공업",
-    "ticker": "033530",
-    "start": "2026-08-18",
-    "allDay": true,
-    "url": "https://kr.investing.com/equities/sejong-industrial-earnings",
-    "country": "한국",
-    "importance": "높음",
-    "source": "Investing.com",
-    "marketCap": 171655329370
-  },
-  {
-    "id": "2026-08-18-013580",
-    "title": "계룡건설 실적",
-    "company": "계룡건설",
-    "ticker": "013580",
-    "start": "2026-08-18",
-    "allDay": true,
-    "url": "https://kr.investing.com/equities/kyeryong-const-earnings",
-    "country": "한국",
-    "importance": "높음",
-    "source": "Investing.com",
-    "marketCap": 170491014630
-  },
-  {
-    "id": "2026-08-18-005960",
-    "title": "동부건설 실적",
-    "company": "동부건설",
-    "ticker": "005960",
-    "start": "2026-08-18",
-    "allDay": true,
-    "url": "https://kr.investing.com/equities/dongbu-earnings",
-    "country": "한국",
-    "importance": "높음",
-    "source": "Investing.com",
-    "marketCap": 155578375140
-  },
-  {
-    "id": "2026-08-18-031440",
-    "title": "신세계푸드 실적",
-    "company": "신세계푸드",
-    "ticker": "031440",
-    "start": "2026-08-18",
-    "allDay": true,
-    "url": "https://kr.investing.com/equities/shinsegae-food-earnings",
-    "country": "한국",
-    "importance": "높음",
-    "source": "Investing.com",
-    "marketCap": 154899200000
-  },
-  {
-    "id": "2026-08-18-293480",
-    "title": "하나제약 실적",
-    "company": "하나제약",
-    "ticker": "293480",
-    "start": "2026-08-18",
-    "allDay": true,
-    "url": "https://kr.investing.com/equities/hana-pharm-earnings",
-    "country": "한국",
-    "importance": "높음",
-    "source": "Investing.com",
-    "marketCap": 151425499920
-  },
-  {
-    "id": "2026-08-18-000020",
-    "title": "동화약품 실적",
-    "company": "동화약품",
-    "ticker": "000020",
-    "start": "2026-08-18",
-    "allDay": true,
-    "url": "https://kr.investing.com/equities/dongwha-pharm-earnings",
-    "country": "한국",
-    "importance": "높음",
-    "source": "Investing.com",
-    "marketCap": 151388567400
-  },
-  {
-    "id": "2026-08-18-071840",
-    "title": "롯데하이마트 실적",
-    "company": "롯데하이마트",
-    "ticker": "071840",
-    "start": "2026-08-18",
-    "allDay": true,
-    "url": "https://kr.investing.com/equities/lotte-himart-earnings",
-    "country": "한국",
-    "importance": "높음",
-    "source": "Investing.com",
-    "marketCap": 145659583040
-  },
-  {
-    "id": "2026-08-18-020120",
-    "title": "키다리스튜디오 실적",
-    "company": "키다리스튜디오",
-    "ticker": "020120",
-    "start": "2026-08-18",
-    "allDay": true,
-    "url": "https://kr.investing.com/equities/daouincube-earnings",
-    "country": "한국",
-    "importance": "높음",
-    "source": "Investing.com",
-    "marketCap": 130649775150
-  },
-  {
-    "id": "2026-08-18-214420",
-    "title": "토니모리 실적",
-    "company": "토니모리",
-    "ticker": "214420",
-    "start": "2026-08-18",
-    "allDay": true,
-    "url": "https://kr.investing.com/equities/tonymoly-co-ltd-earnings",
-    "country": "한국",
-    "importance": "높음",
-    "source": "Investing.com",
-    "marketCap": 129174270630
-  },
-  {
-    "id": "2026-08-18-272550",
-    "title": "삼양패키징 실적",
-    "company": "삼양패키징",
-    "ticker": "272550",
-    "start": "2026-08-18",
-    "allDay": true,
-    "url": "https://kr.investing.com/equities/samyang-packaging-earnings",
-    "country": "한국",
-    "importance": "높음",
-    "source": "Investing.com",
-    "marketCap": 128382819120
-  },
-  {
-    "id": "2026-08-18-077500",
-    "title": "유니퀘스트 실적",
-    "company": "유니퀘스트",
-    "ticker": "077500",
-    "start": "2026-08-18",
-    "allDay": true,
-    "url": "https://kr.investing.com/equities/uniquest-earnings",
-    "country": "한국",
-    "importance": "높음",
-    "source": "Investing.com",
-    "marketCap": 124632588540
-  },
-  {
-    "id": "2026-08-18-092220",
-    "title": "KEC 실적",
-    "company": "KEC",
-    "ticker": "092220",
-    "start": "2026-08-18",
-    "allDay": true,
-    "url": "https://kr.investing.com/equities/kec-holdings-co-ltd-earnings",
-    "country": "한국",
-    "importance": "높음",
-    "source": "Investing.com",
-    "marketCap": 116643384340
-  },
-  {
-    "id": "2026-08-18-079430",
-    "title": "현대리바트 실적",
-    "company": "현대리바트",
-    "ticker": "079430",
-    "start": "2026-08-18",
-    "allDay": true,
-    "url": "https://kr.investing.com/equities/livart-furnitu-earnings",
-    "country": "한국",
-    "importance": "높음",
-    "source": "Investing.com",
-    "marketCap": 115254377460
-  },
-  {
-    "id": "2026-08-18-002460",
-    "title": "HS화성 실적",
-    "company": "HS화성",
-    "ticker": "002460",
-    "start": "2026-08-18",
-    "allDay": true,
-    "url": "https://kr.investing.com/equities/hwa-sung-ind-earnings",
-    "country": "한국",
-    "importance": "높음",
-    "source": "Investing.com",
-    "marketCap": 109721500000
-  },
-  {
-    "id": "2026-08-18-009580",
-    "title": "무림P&P 실적",
-    "company": "무림P&P",
-    "ticker": "009580",
-    "start": "2026-08-18",
-    "allDay": true,
-    "url": "https://kr.investing.com/equities/moorim-p-p-co-ltd-earnings",
-    "country": "한국",
-    "importance": "높음",
-    "source": "Investing.com",
-    "marketCap": 101785104768
-  },
-  {
-    "id": "2026-08-18-070960",
-    "title": "용평리조트 실적",
-    "company": "용평리조트",
-    "ticker": "070960",
-    "start": "2026-08-18",
-    "allDay": true,
-    "url": "https://kr.investing.com/equities/yong-pyong-resort-corp-earnings",
-    "country": "한국",
-    "importance": "높음",
-    "source": "Investing.com",
-    "marketCap": 100598665970
-  },
-  {
-    "id": "2026-08-18-007210",
-    "title": "벽산 실적",
-    "company": "벽산",
-    "ticker": "007210",
-    "start": "2026-08-18",
-    "allDay": true,
-    "url": "https://kr.investing.com/equities/byucksan-earnings",
-    "country": "한국",
-    "importance": "높음",
-    "source": "Investing.com",
-    "marketCap": 97647840000
-  },
-  {
-    "id": "2026-08-18-007980",
-    "title": "TP 실적",
-    "company": "TP",
-    "ticker": "007980",
-    "start": "2026-08-18",
-    "allDay": true,
-    "url": "https://kr.investing.com/equities/pan-pacific-earnings",
-    "country": "한국",
-    "importance": "높음",
-    "source": "Investing.com",
-    "marketCap": 80663442000
-  },
-  {
-    "id": "2026-08-18-017370",
-    "title": "우신시스템 실적",
-    "company": "우신시스템",
-    "ticker": "017370",
-    "start": "2026-08-18",
-    "allDay": true,
-    "url": "https://kr.investing.com/equities/wooshin-system-earnings",
-    "country": "한국",
-    "importance": "높음",
-    "source": "Investing.com",
-    "marketCap": 77743159230
-  },
-  {
-    "id": "2026-08-18-363280",
-    "title": "티와이홀딩스 실적",
-    "company": "티와이홀딩스",
-    "ticker": "363280",
-    "start": "2026-08-18",
-    "allDay": true,
-    "url": "https://kr.investing.com/equities/ty-holdings-co-earnings",
-    "country": "한국",
-    "importance": "높음",
-    "source": "Investing.com",
-    "marketCap": 77663947431
-  },
-  {
-    "id": "2026-08-18-063160",
-    "title": "종근당바이오 실적",
-    "company": "종근당바이오",
-    "ticker": "063160",
-    "start": "2026-08-18",
-    "allDay": true,
-    "url": "https://kr.investing.com/equities/ckd-bio-earnings",
-    "country": "한국",
-    "importance": "높음",
-    "source": "Investing.com",
-    "marketCap": 73566750420
-  },
-  {
-    "id": "2026-08-18-004440",
-    "title": "삼일씨엔에스 실적",
-    "company": "삼일씨엔에스",
-    "ticker": "004440",
-    "start": "2026-08-18",
-    "allDay": true,
-    "url": "https://kr.investing.com/equities/daelim-c-s-co-ltd-earnings",
-    "country": "한국",
-    "importance": "높음",
-    "source": "Investing.com",
-    "marketCap": 67861277510
-  },
-  {
-    "id": "2026-08-18-005870",
-    "title": "휴니드 실적",
-    "company": "휴니드",
-    "ticker": "005870",
-    "start": "2026-08-18",
-    "allDay": true,
-    "url": "https://kr.investing.com/equities/huneed-tech-earnings",
-    "country": "한국",
-    "importance": "높음",
-    "source": "Investing.com",
-    "marketCap": 63310327275
-  },
-  {
-    "id": "2026-08-18-055490",
-    "title": "테이팩스 실적",
-    "company": "테이팩스",
-    "ticker": "055490",
-    "start": "2026-08-18",
-    "allDay": true,
-    "url": "https://kr.investing.com/equities/tapex-inc-earnings",
-    "country": "한국",
-    "importance": "높음",
-    "source": "Investing.com",
-    "marketCap": 62800848000
-  },
-  {
-    "id": "2026-08-18-111110",
-    "title": "호전실업 실적",
-    "company": "호전실업",
-    "ticker": "111110",
-    "start": "2026-08-18",
-    "allDay": true,
-    "url": "https://kr.investing.com/equities/hojeon-ltd-earnings",
-    "country": "한국",
-    "importance": "높음",
-    "source": "Investing.com",
-    "marketCap": 61467480000
-  },
-  {
-    "id": "2026-08-18-134790",
-    "title": "시디즈 실적",
-    "company": "시디즈",
-    "ticker": "134790",
-    "start": "2026-08-18",
-    "allDay": true,
-    "url": "https://kr.investing.com/equities/teems-earnings",
-    "country": "한국",
-    "importance": "높음",
-    "source": "Investing.com",
-    "marketCap": 38140000000
-  },
-  {
-    "id": "2026-08-18-000100",
-    "title": "유한양행 실적",
-    "company": "유한양행",
-    "ticker": "000100",
-    "start": "2026-08-18",
-    "allDay": true,
-    "url": "https://kr.investing.com/equities/yuhan-earnings",
-    "country": "한국",
-    "importance": "높음",
-    "source": "Investing.com",
-    "marketCap": 24515922200
-  },
-  {
-    "id": "2026-08-18-069640",
-    "title": "한세엠케이 실적",
-    "company": "한세엠케이",
-    "ticker": "069640",
-    "start": "2026-08-18",
-    "allDay": true,
-    "url": "https://kr.investing.com/equities/mk-trend-earnings",
-    "country": "한국",
-    "importance": "높음",
-    "source": "Investing.com",
-    "marketCap": 21417507956
-  },
-  {
-    "id": "2026-08-18-012510",
-    "title": "더존비즈온 실적",
-    "company": "더존비즈온",
-    "ticker": "012510",
-    "start": "2026-08-18",
-    "allDay": true,
-    "url": "https://kr.investing.com/equities/duzonbizon-earnings",
-    "country": "한국",
-    "importance": "높음",
-    "source": "Investing.com",
-    "marketCap": 0
-  },
-  {
-    "id": "2026-08-19-402340",
-    "title": "SK스퀘어 실적",
-    "company": "SK스퀘어",
-    "ticker": "402340",
-    "start": "2026-08-19",
-    "allDay": true,
-    "url": "https://kr.investing.com/equities/sk-square-earnings",
-    "country": "한국",
-    "importance": "높음",
-    "source": "Investing.com",
-    "marketCap": 188436575208000
-  },
-  {
-    "id": "2026-08-19-032830",
-    "title": "삼성생명 실적",
-    "company": "삼성생명",
-    "ticker": "032830",
-    "start": "2026-08-19",
-    "allDay": true,
-    "url": "https://kr.investing.com/equities/samsung-life-earnings",
-    "country": "한국",
-    "importance": "높음",
-    "source": "Investing.com",
-    "marketCap": 68200000000000
-  },
-  {
-    "id": "2026-08-19-028260",
-    "title": "삼성물산 실적",
-    "company": "삼성물산",
-    "ticker": "028260",
-    "start": "2026-08-19",
-    "allDay": true,
-    "url": "https://kr.investing.com/equities/cheil-industries-inc-earnings",
-    "country": "한국",
-    "importance": "높음",
-    "source": "Investing.com",
-    "marketCap": 59677669808000
-  },
-  {
-    "id": "2026-08-19-034020",
-    "title": "두산에너빌리티 실적",
-    "company": "두산에너빌리티",
-    "ticker": "034020",
-    "start": "2026-08-19",
-    "allDay": true,
-    "url": "https://kr.investing.com/equities/doosan-heavy-ind.---const.-earnings",
-    "country": "한국",
-    "importance": "높음",
-    "source": "Investing.com",
-    "marketCap": 47017188116400
-  },
-  {
-    "id": "2026-08-19-034730",
-    "title": "SK그룹 실적",
-    "company": "SK그룹",
-    "ticker": "034730",
-    "start": "2026-08-19",
-    "allDay": true,
-    "url": "https://kr.investing.com/equities/sk-c-c-earnings",
-    "country": "한국",
-    "importance": "높음",
-    "source": "Investing.com",
-    "marketCap": 45314189375000
-  },
-  {
-    "id": "2026-08-19-000810",
-    "title": "삼성화재 실적",
-    "company": "삼성화재",
-    "ticker": "000810",
-    "start": "2026-08-19",
-    "allDay": true,
-    "url": "https://kr.investing.com/equities/samsung-fire---marine-insurance-earnings",
-    "country": "한국",
-    "importance": "높음",
-    "source": "Investing.com",
-    "marketCap": 30181691748000
-  },
-  {
-    "id": "2026-08-19-042700",
-    "title": "한미반도체 실적",
-    "company": "한미반도체",
-    "ticker": "042700",
-    "start": "2026-08-19",
-    "allDay": true,
-    "url": "https://kr.investing.com/equities/hanmi-semicon-earnings",
-    "country": "한국",
-    "importance": "높음",
-    "source": "Investing.com",
-    "marketCap": 25686637900000
-  },
-  {
-    "id": "2026-08-19-006800",
-    "title": "미래에셋증권 실적",
-    "company": "미래에셋증권",
-    "ticker": "006800",
-    "start": "2026-08-19",
-    "allDay": true,
-    "url": "https://kr.investing.com/equities/daewoo-securities-earnings",
-    "country": "한국",
-    "importance": "높음",
-    "source": "Investing.com",
-    "marketCap": 23529787304000
-  },
-  {
-    "id": "2026-08-19-138040",
-    "title": "메리츠금융지주 실적",
-    "company": "메리츠금융지주",
-    "ticker": "138040",
-    "start": "2026-08-19",
-    "allDay": true,
-    "url": "https://kr.investing.com/equities/meritz-financi-earnings",
-    "country": "한국",
-    "importance": "높음",
-    "source": "Investing.com",
-    "marketCap": 19613100395600
-  },
-  {
-    "id": "2026-08-19-010140",
-    "title": "삼성중공업 실적",
-    "company": "삼성중공업",
-    "ticker": "010140",
-    "start": "2026-08-19",
-    "allDay": true,
-    "url": "https://kr.investing.com/equities/samsung-heavy-industries-earnings",
-    "country": "한국",
-    "importance": "높음",
-    "source": "Investing.com",
-    "marketCap": 19360000000000
-  },
-  {
-    "id": "2026-08-19-003550",
-    "title": "LG 실적",
-    "company": "LG",
-    "ticker": "003550",
-    "start": "2026-08-19",
-    "allDay": true,
-    "url": "https://kr.investing.com/equities/lg-corp-earnings",
-    "country": "한국",
-    "importance": "높음",
-    "source": "Investing.com",
-    "marketCap": 15368667206600
-  },
-  {
-    "id": "2026-08-19-278470",
-    "title": "에이피알 실적",
-    "company": "에이피알",
-    "ticker": "278470",
-    "start": "2026-08-19",
-    "allDay": true,
-    "url": "https://kr.investing.com/equities/apr-earnings",
-    "country": "한국",
-    "importance": "높음",
-    "source": "Investing.com",
-    "marketCap": 14310734748750
-  },
-  {
-    "id": "2026-08-19-071050",
-    "title": "한국금융지주 실적",
-    "company": "한국금융지주",
-    "ticker": "071050",
-    "start": "2026-08-19",
-    "allDay": true,
-    "url": "https://kr.investing.com/equities/korea-investment-holdings-co-earnings",
-    "country": "한국",
-    "importance": "높음",
-    "source": "Investing.com",
-    "marketCap": 13151334112000
-  },
-  {
-    "id": "2026-08-19-307950",
-    "title": "현대오토에버 실적",
-    "company": "현대오토에버",
-    "ticker": "307950",
-    "start": "2026-08-19",
-    "allDay": true,
-    "url": "https://kr.investing.com/equities/hyundai-autoever-corp-earnings",
-    "country": "한국",
-    "importance": "높음",
-    "source": "Investing.com",
-    "marketCap": 11696328323000
-  },
-  {
-    "id": "2026-08-19-005830",
-    "title": "DB손해보험 실적",
-    "company": "DB손해보험",
-    "ticker": "005830",
-    "start": "2026-08-19",
-    "allDay": true,
-    "url": "https://kr.investing.com/equities/dongbu-insurance-earnings",
-    "country": "한국",
-    "importance": "높음",
-    "source": "Investing.com",
-    "marketCap": 10781357445400
-  },
-  {
-    "id": "2026-08-19-016360",
-    "title": "삼성증권 실적",
-    "company": "삼성증권",
-    "ticker": "016360",
-    "start": "2026-08-19",
-    "allDay": true,
-    "url": "https://kr.investing.com/equities/samsung-securities-earnings",
-    "country": "한국",
-    "importance": "높음",
-    "source": "Investing.com",
-    "marketCap": 10019460000000
-  },
-  {
-    "id": "2026-08-19-006260",
-    "title": "LS 실적",
-    "company": "LS",
-    "ticker": "006260",
-    "start": "2026-08-19",
-    "allDay": true,
-    "url": "https://kr.investing.com/equities/ls-corp-earnings",
-    "country": "한국",
-    "importance": "높음",
-    "source": "Investing.com",
-    "marketCap": 9547200000000
-  },
-  {
-    "id": "2026-08-19-003230",
-    "title": "삼양식품 실적",
-    "company": "삼양식품",
-    "ticker": "003230",
-    "start": "2026-08-19",
-    "allDay": true,
-    "url": "https://kr.investing.com/equities/sam-yang-foods-earnings",
-    "country": "한국",
-    "importance": "높음",
-    "source": "Investing.com",
-    "marketCap": 8113057155000
-  },
-  {
-    "id": "2026-08-19-064400",
-    "title": "LG씨엔에스 실적",
-    "company": "LG씨엔에스",
-    "ticker": "064400",
-    "start": "2026-08-19",
-    "allDay": true,
-    "url": "https://kr.investing.com/equities/lg-cns-earnings",
-    "country": "한국",
-    "importance": "높음",
-    "source": "Investing.com",
-    "marketCap": 6675441817200
-  },
-  {
-    "id": "2026-08-19-128940",
-    "title": "한미약품 실적",
-    "company": "한미약품",
-    "ticker": "128940",
-    "start": "2026-08-19",
-    "allDay": true,
-    "url": "https://kr.investing.com/equities/hanmi-pharm-co-ltd-earnings",
-    "country": "한국",
-    "importance": "높음",
-    "source": "Investing.com",
-    "marketCap": 4970664508000
-  },
-  {
-    "id": "2026-08-19-454910",
-    "title": "두산로보틱스 실적",
-    "company": "두산로보틱스",
-    "ticker": "454910",
-    "start": "2026-08-19",
-    "allDay": true,
-    "url": "https://kr.investing.com/equities/doosan-robotics-earnings",
-    "country": "한국",
-    "importance": "높음",
-    "source": "Investing.com",
-    "marketCap": 4621664574000
-  },
-  {
-    "id": "2026-08-19-111770",
-    "title": "영원무역 실적",
-    "company": "영원무역",
-    "ticker": "111770",
-    "start": "2026-08-19",
-    "allDay": true,
-    "url": "https://kr.investing.com/equities/youngone-earnings",
-    "country": "한국",
-    "importance": "높음",
-    "source": "Investing.com",
-    "marketCap": 3775337073600
-  },
-  {
-    "id": "2026-08-19-001450",
-    "title": "현대해상 실적",
-    "company": "현대해상",
-    "ticker": "001450",
-    "start": "2026-08-19",
-    "allDay": true,
-    "url": "https://kr.investing.com/equities/hyundai-mar-fi-earnings",
-    "country": "한국",
-    "importance": "높음",
-    "source": "Investing.com",
-    "marketCap": 3175497312500
-  },
-  {
-    "id": "2026-08-19-139130",
-    "title": "iM금융지주 실적",
-    "company": "iM금융지주",
-    "ticker": "139130",
-    "start": "2026-08-19",
-    "allDay": true,
-    "url": "https://kr.investing.com/equities/dgb-financial-earnings",
-    "country": "한국",
-    "importance": "높음",
-    "source": "Investing.com",
-    "marketCap": 2901217634560
-  },
-  {
-    "id": "2026-08-19-004800",
-    "title": "효성 실적",
-    "company": "효성",
-    "ticker": "004800",
-    "start": "2026-08-19",
-    "allDay": true,
-    "url": "https://kr.investing.com/equities/hyosung-earnings",
-    "country": "한국",
-    "importance": "높음",
-    "source": "Investing.com",
-    "marketCap": 2501016805800
-  },
-  {
-    "id": "2026-08-19-081660",
-    "title": "미스토홀딩스 실적",
-    "company": "미스토홀딩스",
-    "ticker": "081660",
-    "start": "2026-08-19",
-    "allDay": true,
-    "url": "https://kr.investing.com/equities/fila-korea-earnings",
-    "country": "한국",
-    "importance": "높음",
-    "source": "Investing.com",
-    "marketCap": 2434260864000
-  },
-  {
-    "id": "2026-08-19-375500",
-    "title": "DL이앤씨 실적",
-    "company": "DL이앤씨",
-    "ticker": "375500",
-    "start": "2026-08-19",
-    "allDay": true,
-    "url": "https://kr.investing.com/equities/dl-e-c-co-earnings",
-    "country": "한국",
-    "importance": "높음",
-    "source": "Investing.com",
-    "marketCap": 2387396539100
-  },
-  {
-    "id": "2026-08-19-004990",
-    "title": "롯데지주 실적",
-    "company": "롯데지주",
-    "ticker": "004990",
-    "start": "2026-08-19",
-    "allDay": true,
-    "url": "https://kr.investing.com/equities/lotte-confectionery-earnings",
-    "country": "한국",
-    "importance": "높음",
-    "source": "Investing.com",
-    "marketCap": 2287283659200
-  },
-  {
-    "id": "2026-08-19-475150",
-    "title": "SK이터닉스 실적",
-    "company": "SK이터닉스",
-    "ticker": "475150",
-    "start": "2026-08-19",
-    "allDay": true,
-    "url": "https://kr.investing.com/equities/sk-eternix-earnings",
-    "country": "한국",
-    "importance": "높음",
-    "source": "Investing.com",
-    "marketCap": 1832804815200
-  },
-  {
-    "id": "2026-08-19-011210",
-    "title": "현대위아 실적",
-    "company": "현대위아",
-    "ticker": "011210",
-    "start": "2026-08-19",
-    "allDay": true,
-    "url": "https://kr.investing.com/equities/hyundai-wia-earnings",
-    "country": "한국",
-    "importance": "높음",
-    "source": "Investing.com",
-    "marketCap": 1612668421900
-  },
-  {
-    "id": "2026-08-19-020560",
-    "title": "아시아나항공 실적",
-    "company": "아시아나항공",
-    "ticker": "020560",
-    "start": "2026-08-19",
-    "allDay": true,
-    "url": "https://kr.investing.com/equities/asiana-airline-earnings",
-    "country": "한국",
-    "importance": "높음",
-    "source": "Investing.com",
-    "marketCap": 1468713769430
-  },
-  {
-    "id": "2026-08-19-089860",
-    "title": "롯데렌탈 실적",
-    "company": "롯데렌탈",
-    "ticker": "089860",
-    "start": "2026-08-19",
-    "allDay": true,
-    "url": "https://kr.investing.com/equities/lotte-rental-co-earnings",
-    "country": "한국",
-    "importance": "높음",
-    "source": "Investing.com",
-    "marketCap": 1243596539000
-  },
-  {
-    "id": "2026-08-19-300720",
-    "title": "한일시멘트 실적",
-    "company": "한일시멘트",
-    "ticker": "300720",
-    "start": "2026-08-19",
-    "allDay": true,
-    "url": "https://kr.investing.com/equities/hanilcmt-co-ltd-earnings",
-    "country": "한국",
-    "importance": "높음",
-    "source": "Investing.com",
-    "marketCap": 1025955665550
-  },
-  {
-    "id": "2026-08-19-000210",
-    "title": "DL 실적",
-    "company": "DL",
-    "ticker": "000210",
-    "start": "2026-08-19",
-    "allDay": true,
-    "url": "https://kr.investing.com/equities/daelim-ind-earnings",
-    "country": "한국",
-    "importance": "높음",
-    "source": "Investing.com",
-    "marketCap": 990165519000
-  },
-  {
-    "id": "2026-08-19-030190",
-    "title": "NICE평가정보 실적",
-    "company": "NICE평가정보",
-    "ticker": "030190",
-    "start": "2026-08-19",
-    "allDay": true,
-    "url": "https://kr.investing.com/equities/nice-information-service-co-ltd-earnings",
-    "country": "한국",
-    "importance": "높음",
-    "source": "Investing.com",
-    "marketCap": 802374997740
-  },
-  {
-    "id": "2026-08-19-005690",
-    "title": "파미셀 실적",
-    "company": "파미셀",
-    "ticker": "005690",
-    "start": "2026-08-19",
-    "allDay": true,
-    "url": "https://kr.investing.com/equities/pharmicell-earnings",
-    "country": "한국",
-    "importance": "높음",
-    "source": "Investing.com",
-    "marketCap": 712247646180
-  },
-  {
-    "id": "2026-08-19-025540",
-    "title": "한국단자 실적",
-    "company": "한국단자",
-    "ticker": "025540",
-    "start": "2026-08-19",
-    "allDay": true,
-    "url": "https://kr.investing.com/equities/korea-electric-terminal-earnings",
-    "country": "한국",
-    "importance": "높음",
-    "source": "Investing.com",
-    "marketCap": 648371500000
-  },
-  {
-    "id": "2026-08-19-093050",
-    "title": "LF 실적",
-    "company": "LF",
-    "ticker": "093050",
-    "start": "2026-08-19",
-    "allDay": true,
-    "url": "https://kr.investing.com/equities/lg-fashion-earnings",
-    "country": "한국",
-    "importance": "높음",
-    "source": "Investing.com",
-    "marketCap": 643280000000
-  },
-  {
-    "id": "2026-08-19-108320",
-    "title": "LX세미콘 실적",
-    "company": "LX세미콘",
-    "ticker": "108320",
-    "start": "2026-08-19",
-    "allDay": true,
-    "url": "https://kr.investing.com/equities/silicon-works-co-ltd-earnings",
-    "country": "한국",
-    "importance": "높음",
-    "source": "Investing.com",
-    "marketCap": 642439850000
-  },
-  {
-    "id": "2026-08-19-003160",
-    "title": "디아이 실적",
-    "company": "디아이",
-    "ticker": "003160",
-    "start": "2026-08-19",
-    "allDay": true,
-    "url": "https://kr.investing.com/equities/d-i-corp-earnings",
-    "country": "한국",
-    "importance": "높음",
-    "source": "Investing.com",
-    "marketCap": 625430000000
-  },
-  {
-    "id": "2026-08-19-005180",
-    "title": "빙그레 실적",
-    "company": "빙그레",
-    "ticker": "005180",
-    "start": "2026-08-19",
-    "allDay": true,
-    "url": "https://kr.investing.com/equities/binggrae-earnings",
-    "country": "한국",
-    "importance": "높음",
-    "source": "Investing.com",
-    "marketCap": 602487015000
-  },
-  {
-    "id": "2026-08-19-017940",
-    "title": "E1 실적",
-    "company": "E1",
-    "ticker": "017940",
-    "start": "2026-08-19",
-    "allDay": true,
-    "url": "https://kr.investing.com/equities/e1-earnings",
-    "country": "한국",
-    "importance": "높음",
-    "source": "Investing.com",
-    "marketCap": 587216000000
-  },
-  {
-    "id": "2026-08-19-178920",
-    "title": "PI첨단소재 실적",
-    "company": "PI첨단소재",
-    "ticker": "178920",
-    "start": "2026-08-19",
-    "allDay": true,
-    "url": "https://kr.investing.com/equities/skc-kolon-pi-inc-earnings",
-    "country": "한국",
-    "importance": "높음",
-    "source": "Investing.com",
-    "marketCap": 570293973240
-  },
-  {
-    "id": "2026-08-19-016380",
-    "title": "KG스틸 실적",
-    "company": "KG스틸",
-    "ticker": "016380",
-    "start": "2026-08-19",
-    "allDay": true,
-    "url": "https://kr.investing.com/equities/dongbu-steel-earnings",
-    "country": "한국",
-    "importance": "높음",
-    "source": "Investing.com",
-    "marketCap": 514045730580
-  },
-  {
-    "id": "2026-08-19-079900",
-    "title": "전진건설로봇 실적",
-    "company": "전진건설로봇",
-    "ticker": "079900",
-    "start": "2026-08-19",
-    "allDay": true,
-    "url": "https://kr.investing.com/equities/junjin-construction-robot-earnings",
-    "country": "한국",
-    "importance": "높음",
-    "source": "Investing.com",
-    "marketCap": 480094730500
-  },
-  {
-    "id": "2026-08-19-377740",
-    "title": "바이오노트 실적",
-    "company": "바이오노트",
-    "ticker": "377740",
-    "start": "2026-08-19",
-    "allDay": true,
-    "url": "https://kr.investing.com/equities/bionote-earnings",
-    "country": "한국",
-    "importance": "높음",
-    "source": "Investing.com",
-    "marketCap": 477845565120
-  },
-  {
-    "id": "2026-08-19-002240",
-    "title": "고려제강 실적",
-    "company": "고려제강",
-    "ticker": "002240",
-    "start": "2026-08-19",
-    "allDay": true,
-    "url": "https://kr.investing.com/equities/kis-wire-earnings",
-    "country": "한국",
-    "importance": "높음",
-    "source": "Investing.com",
-    "marketCap": 466560000000
-  },
-  {
-    "id": "2026-08-19-029460",
-    "title": "케이씨 실적",
-    "company": "케이씨",
-    "ticker": "029460",
-    "start": "2026-08-19",
-    "allDay": true,
-    "url": "https://kr.investing.com/equities/k-c-tech-earnings",
-    "country": "한국",
-    "importance": "높음",
-    "source": "Investing.com",
-    "marketCap": 346044799000
-  },
-  {
-    "id": "2026-08-19-089590",
-    "title": "제주항공 실적",
-    "company": "제주항공",
-    "ticker": "089590",
-    "start": "2026-08-19",
-    "allDay": true,
-    "url": "https://kr.investing.com/equities/jeju-air-co-ltd-earnings",
-    "country": "한국",
-    "importance": "높음",
-    "source": "Investing.com",
-    "marketCap": 341917776400
-  },
-  {
-    "id": "2026-08-19-183190",
-    "title": "아세아시멘트 실적",
-    "company": "아세아시멘트",
-    "ticker": "183190",
-    "start": "2026-08-19",
-    "allDay": true,
-    "url": "https://kr.investing.com/equities/asiacement-earnings",
-    "country": "한국",
-    "importance": "높음",
-    "source": "Investing.com",
-    "marketCap": 334597929600
-  },
-  {
-    "id": "2026-08-19-126720",
-    "title": "수산인더스트리 실적",
-    "company": "수산인더스트리",
-    "ticker": "126720",
-    "start": "2026-08-19",
-    "allDay": true,
-    "url": "https://kr.investing.com/equities/soosan-industries-earnings",
-    "country": "한국",
-    "importance": "높음",
-    "source": "Investing.com",
-    "marketCap": 304291800000
-  },
-  {
-    "id": "2026-08-19-005680",
-    "title": "삼영전자 실적",
-    "company": "삼영전자",
-    "ticker": "005680",
-    "start": "2026-08-19",
-    "allDay": true,
-    "url": "https://kr.investing.com/equities/samyoung-elec-earnings",
-    "country": "한국",
-    "importance": "높음",
-    "source": "Investing.com",
-    "marketCap": 300200000000
-  },
-  {
-    "id": "2026-08-19-034830",
-    "title": "한국토지신탁 실적",
-    "company": "한국토지신탁",
-    "ticker": "034830",
-    "start": "2026-08-19",
-    "allDay": true,
-    "url": "https://kr.investing.com/equities/korea-real-estate-investment-trus-earnings",
-    "country": "한국",
-    "importance": "높음",
-    "source": "Investing.com",
-    "marketCap": 282030469910
-  },
-  {
-    "id": "2026-08-19-001750",
-    "title": "한양증권 실적",
-    "company": "한양증권",
-    "ticker": "001750",
-    "start": "2026-08-19",
-    "allDay": true,
-    "url": "https://kr.investing.com/equities/hanyang-sec-earnings",
-    "country": "한국",
-    "importance": "높음",
-    "source": "Investing.com",
-    "marketCap": 257116386800
-  },
-  {
-    "id": "2026-08-19-084010",
-    "title": "대한제강 실적",
-    "company": "대한제강",
-    "ticker": "084010",
-    "start": "2026-08-19",
-    "allDay": true,
-    "url": "https://kr.investing.com/equities/daehan-steel-earnings",
-    "country": "한국",
-    "importance": "높음",
-    "source": "Investing.com",
-    "marketCap": 254349810400
-  },
-  {
-    "id": "2026-08-19-002710",
-    "title": "TCC스틸 실적",
-    "company": "TCC스틸",
-    "ticker": "002710",
-    "start": "2026-08-19",
-    "allDay": true,
-    "url": "https://kr.investing.com/equities/tcc-steel-earnings",
-    "country": "한국",
-    "importance": "높음",
-    "source": "Investing.com",
-    "marketCap": 243525245130
-  },
-  {
-    "id": "2026-08-19-003070",
-    "title": "코오롱글로벌 실적",
-    "company": "코오롱글로벌",
-    "ticker": "003070",
-    "start": "2026-08-19",
-    "allDay": true,
-    "url": "https://kr.investing.com/equities/kolon-globalco-earnings",
-    "country": "한국",
-    "importance": "높음",
-    "source": "Investing.com",
-    "marketCap": 232120745670
-  },
-  {
-    "id": "2026-08-19-000430",
-    "title": "대원강업 실적",
-    "company": "대원강업",
-    "ticker": "000430",
-    "start": "2026-08-19",
-    "allDay": true,
-    "url": "https://kr.investing.com/equities/daewonkangup-earnings",
-    "country": "한국",
-    "importance": "높음",
-    "source": "Investing.com",
-    "marketCap": 229400000000
-  },
-  {
-    "id": "2026-08-19-030210",
-    "title": "다올투자증권 실적",
-    "company": "다올투자증권",
-    "ticker": "030210",
-    "start": "2026-08-19",
-    "allDay": true,
-    "url": "https://kr.investing.com/equities/ktb-invest-sec-earnings",
-    "country": "한국",
-    "importance": "높음",
-    "source": "Investing.com",
-    "marketCap": 210143315700
-  },
-  {
-    "id": "2026-08-19-095570",
-    "title": "AJ네트웍스 실적",
-    "company": "AJ네트웍스",
-    "ticker": "095570",
-    "start": "2026-08-19",
-    "allDay": true,
-    "url": "https://kr.investing.com/equities/aj-networks-co-ltd-earnings",
-    "country": "한국",
-    "importance": "높음",
-    "source": "Investing.com",
-    "marketCap": 189835324005
-  },
-  {
-    "id": "2026-08-19-014790",
-    "title": "한라 실적",
-    "company": "한라",
-    "ticker": "014790",
-    "start": "2026-08-19",
-    "allDay": true,
-    "url": "https://kr.investing.com/equities/halla-eng-cons-earnings",
-    "country": "한국",
-    "importance": "높음",
-    "source": "Investing.com",
-    "marketCap": 92374986440
-  },
-  {
-    "id": "2026-08-19-019680",
-    "title": "대교 실적",
-    "company": "대교",
-    "ticker": "019680",
-    "start": "2026-08-19",
-    "allDay": true,
-    "url": "https://kr.investing.com/equities/daekyo-earnings",
-    "country": "한국",
-    "importance": "높음",
-    "source": "Investing.com",
-    "marketCap": 79281867600
-  },
-  {
-    "id": "2026-08-19-095720",
-    "title": "웅진씽크빅 실적",
-    "company": "웅진씽크빅",
-    "ticker": "095720",
-    "start": "2026-08-19",
-    "allDay": true,
-    "url": "https://kr.investing.com/equities/wngjin-thinkbi-earnings",
-    "country": "한국",
-    "importance": "높음",
-    "source": "Investing.com",
-    "marketCap": 70465585400
-  },
-  {
-    "id": "2026-08-19-020760",
-    "title": "일진디스플 실적",
-    "company": "일진디스플",
-    "ticker": "020760",
-    "start": "2026-08-19",
-    "allDay": true,
-    "url": "https://kr.investing.com/equities/iljin-display-earnings",
-    "country": "한국",
-    "importance": "높음",
-    "source": "Investing.com",
-    "marketCap": 50984432422
-  },
-  {
-    "id": "2026-08-19-372910",
-    "title": "한컴라이프케어 실적",
-    "company": "한컴라이프케어",
-    "ticker": "372910",
-    "start": "2026-08-19",
-    "allDay": true,
-    "url": "https://kr.investing.com/equities/hancom-lifecare-earnings",
-    "country": "한국",
-    "importance": "높음",
-    "source": "Investing.com",
-    "marketCap": 48070443222
-  },
-  {
-    "id": "2026-08-19-036420",
-    "title": "콘텐트리중앙 실적",
-    "company": "콘텐트리중앙",
-    "ticker": "036420",
-    "start": "2026-08-19",
-    "allDay": true,
-    "url": "https://kr.investing.com/equities/jcontentree-corp-earnings",
-    "country": "한국",
-    "importance": "높음",
-    "source": "Investing.com",
-    "marketCap": 33612727460
-  },
-  {
-    "id": "2026-08-19-001340",
-    "title": "PKC 실적",
-    "company": "PKC",
-    "ticker": "001340",
-    "start": "2026-08-19",
-    "allDay": true,
-    "url": "https://kr.investing.com/equities/paik-kwang-ind-earnings",
-    "country": "한국",
-    "importance": "높음",
-    "source": "Investing.com",
-    "marketCap": 13298020000
-  },
-  {
-    "id": "2026-08-26-267260",
-    "title": "HD현대일렉트릭 실적",
-    "company": "HD현대일렉트릭",
-    "ticker": "267260",
-    "start": "2026-08-26",
-    "allDay": true,
-    "url": "https://kr.investing.com/equities/hyundai-electric-energy-systems-earnings",
-    "country": "한국",
-    "importance": "높음",
-    "source": "Investing.com",
-    "marketCap": 29847027780000
+    "marketCap": 367132776960
   },
   {
     "id": "2026-09-02-415640",
@@ -5236,7 +1258,7 @@
     "country": "한국",
     "importance": "높음",
     "source": "Investing.com",
-    "marketCap": 1307560997160
+    "marketCap": 1355353760880
   },
   {
     "id": "2026-09-09-395400",
@@ -5249,32 +1271,6 @@
     "country": "한국",
     "importance": "높음",
     "source": "Investing.com",
-    "marketCap": 1709780081600
-  },
-  {
-    "id": "2026-10-09-195870",
-    "title": "해성디에스 실적",
-    "company": "해성디에스",
-    "ticker": "195870",
-    "start": "2026-10-09",
-    "allDay": true,
-    "url": "https://kr.investing.com/equities/haesung-ds-co-ltd-earnings",
-    "country": "한국",
-    "importance": "높음",
-    "source": "Investing.com",
-    "marketCap": 1054000000000
-  },
-  {
-    "id": "2026-10-13-002320",
-    "title": "한진 실적",
-    "company": "한진",
-    "ticker": "002320",
-    "start": "2026-10-13",
-    "allDay": true,
-    "url": "https://kr.investing.com/equities/hanjin-trans-earnings",
-    "country": "한국",
-    "importance": "높음",
-    "source": "Investing.com",
-    "marketCap": 236814080160
+    "marketCap": 1673657967200
   }
 ]
