@@ -1,21 +1,21 @@
 <!doctype html>
 <html lang="ko">
 <head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <meta name="color-scheme" content="dark" />
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="color-scheme" content="dark">
   <title>한국 기업 실적 캘린더</title>
   <script src="https://cdn.jsdelivr.net/npm/fullcalendar@6.1.17/index.global.min.js"></script>
   <style>
     :root {
-      --bg: #0f151b;
-      --panel: #171f28;
-      --line: #2c3743;
-      --text: #f5f7fa;
-      --muted: #97a3af;
-      --event: #293c4e;
+      --bg: #10151b;
+      --panel: #171e26;
+      --line: #2a3440;
+      --text: #f3f6f8;
+      --muted: #96a0aa;
+      --event: #2c4358;
       --warning-bg: #352d1f;
-      --warning-line: #715c34;
+      --warning-line: #6e5b36;
     }
 
     * { box-sizing: border-box; }
@@ -28,9 +28,9 @@
     }
 
     .wrap {
-      max-width: 1500px;
+      max-width: 1180px;
       margin: 0 auto;
-      padding: 16px;
+      padding: 18px;
     }
 
     .top {
@@ -38,13 +38,10 @@
       justify-content: space-between;
       align-items: flex-end;
       gap: 14px;
-      margin-bottom: 12px;
+      margin-bottom: 14px;
     }
 
-    h1 {
-      margin: 0 0 5px;
-      font-size: 22px;
-    }
+    h1 { margin: 0 0 4px; font-size: 22px; }
 
     #status {
       color: var(--muted);
@@ -74,8 +71,8 @@
     }
 
     #calendar {
-      min-height: 720px;
-      padding: 10px;
+      min-height: 680px;
+      padding: 12px;
       border: 1px solid var(--line);
       border-radius: 12px;
       background: var(--panel);
@@ -84,37 +81,37 @@
     .fc {
       --fc-border-color: var(--line);
       --fc-page-bg-color: var(--panel);
-      --fc-neutral-bg-color: #1d2731;
-      --fc-list-event-hover-bg-color: #263442;
+      --fc-neutral-bg-color: #1d2630;
+      --fc-list-event-hover-bg-color: #25313d;
       --fc-today-bg-color: rgba(160, 140, 50, .17);
-      --fc-small-font-size: .78em;
     }
 
-    .fc .fc-toolbar-title {
-      font-size: 18px;
-    }
+    .fc .fc-toolbar-title { font-size: 18px; }
 
     .fc .fc-button-primary {
-      border-color: #3b4957;
-      background: #293642;
+      border-color: #394653;
+      background: #28333f;
     }
 
     .fc .fc-button-primary:not(:disabled).fc-button-active,
     .fc .fc-button-primary:not(:disabled):active {
-      border-color: #536372;
-      background: #3a4a59;
+      border-color: #4b5966;
+      background: #3a4856;
     }
 
     .fc .fc-daygrid-day-number,
     .fc .fc-col-header-cell-cushion,
-    .fc .fc-multimonth-title,
     .fc .fc-list-day-text,
     .fc .fc-list-day-side-text {
       color: var(--text);
       text-decoration: none;
     }
 
-    .fc .fc-daygrid-event {
+    .fc .fc-daygrid-day.fc-day-other .fc-daygrid-day-number {
+      color: #67727d;
+    }
+
+    .fc .fc-event {
       padding: 2px 4px;
       border: 0;
       border-radius: 4px;
@@ -122,22 +119,16 @@
       cursor: pointer;
     }
 
-    .fc .fc-event-title {
-      font-weight: 700;
-    }
+    .fc .fc-event-title { font-weight: 700; }
 
-    .fc .fc-multimonth {
-      border: 0;
-    }
-
-    @media (max-width: 850px) {
+    @media (max-width: 680px) {
       .wrap { padding: 8px; }
       .top { align-items: flex-start; }
       h1 { font-size: 18px; }
-      #calendar { min-height: 660px; padding: 4px; }
+      #calendar { min-height: 620px; padding: 4px; }
       .fc .fc-toolbar { gap: 4px; }
-      .fc .fc-toolbar-title { font-size: 14px; }
-      .fc .fc-button { padding: .34em .46em; font-size: .82em; }
+      .fc .fc-toolbar-title { font-size: 15px; }
+      .fc .fc-button { padding: .35em .5em; font-size: .85em; }
     }
   </style>
 </head>
@@ -146,40 +137,33 @@
     <div class="top">
       <div>
         <h1>한국 기업 실적 캘린더</h1>
-        <div id="status">v5.1 데이터를 불러오는 중입니다.</div>
+        <div id="status">한국 상장사 실적 일정을 불러오는 중입니다.</div>
       </div>
       <a class="ics" href="./earnings.ics">ICS</a>
     </div>
 
     <div id="notice"></div>
-    <div id="calendar"></div>
+    <div id="calendar" aria-label="한국 기업 실적 발표 월간 캘린더"></div>
   </main>
 
   <script>
-    const EXPECTED_VERSION = "v5.1-strict-rolling-3month";
-
-    function nextDay(isoDate) {
-      const value = new Date(isoDate + "T00:00:00+09:00");
-      value.setDate(value.getDate() + 1);
-      return value.toISOString().slice(0, 10);
-    }
+    const EXPECTED_VERSION = "v6-tradingview-korea-next-earnings";
 
     function monthSummary(eventsByMonth) {
       return Object.entries(eventsByMonth || {})
-        .map(([month, count]) => `${month} ${count}건`)
+        .map(([month, count]) => `${month} ${Number(count).toLocaleString("ko-KR")}건`)
         .join(" · ");
     }
 
     async function loadCalendar() {
       const cacheKey = Date.now();
-
       const [eventsResponse, statusResponse] = await Promise.all([
-        fetch("./data/events.json?v=" + cacheKey),
-        fetch("./data/status.json?v=" + cacheKey)
+        fetch("./data/events.json?v=" + cacheKey, { cache: "no-store" }),
+        fetch("./data/status.json?v=" + cacheKey, { cache: "no-store" })
       ]);
 
       if (!eventsResponse.ok || !statusResponse.ok) {
-        throw new Error("GitHub Pages 데이터 파일을 불러오지 못했습니다.");
+        throw new Error("GitHub Pages의 실적 데이터 파일을 불러오지 못했습니다.");
       }
 
       const rawEvents = await eventsResponse.json();
@@ -187,113 +171,76 @@
 
       if (status.version !== EXPECTED_VERSION) {
         throw new Error(
-          `이전 코드가 실행 중입니다. 현재 ${status.version || "버전 없음"}, ` +
+          `새 수집 파일을 한 번 실행해 주세요. 현재 ${status.version || "버전 없음"}, ` +
           `필요 버전 ${EXPECTED_VERSION}`
         );
       }
 
       const events = rawEvents
-        .map((event) => ({
+        .map(event => ({
           ...event,
           marketCap: Number(event.marketCap || 0),
-          title:
-            event.title ||
-            ((event.company || event.ticker || "기업") + " 실적"),
+          title: event.title || `${event.company || event.ticker || "기업"} 실적`,
           allDay: true
         }))
         .sort((a, b) => {
           const dateResult = String(a.start).localeCompare(String(b.start));
           if (dateResult !== 0) return dateResult;
-
           const capResult = b.marketCap - a.marketCap;
-          if (capResult !== 0) return capResult;
-
-          return a.title.localeCompare(b.title, "ko");
+          return capResult || a.title.localeCompare(b.title, "ko");
         });
 
-      const rangeFrom = status.range.from;
-      const rangeTo = status.range.to;
-      const updatedAt = new Date(status.updated_at).toLocaleString("ko-KR");
+      const rangeFrom = status.range?.from;
+      const rangeTo = status.range?.to;
+      const updatedAt = status.updated_at
+        ? new Date(status.updated_at).toLocaleString("ko-KR")
+        : "";
       const months = monthSummary(status.events_by_month);
 
       document.getElementById("status").textContent =
-        `${status.version} · Investing.com · 한국 · 중요도 높음 · ` +
-        `${rangeFrom} ~ ${rangeTo} · ${events.length}건 · 시가총액순 · ` +
-        `${months || "등록 일정 없음"} · ${updatedAt} 갱신`;
+        `TradingView · 한국 상장사 · ${rangeFrom || "오늘"} ~ ${rangeTo || "미래 3개월"} · ` +
+        `${events.length.toLocaleString("ko-KR")}건 · 시가총액순` +
+        (months ? ` · ${months}` : "") +
+        (updatedAt ? ` · ${updatedAt} 갱신` : "");
 
       const notice = document.getElementById("notice");
-
       if (!status.ok) {
         notice.style.display = "block";
         notice.textContent =
-          `${status.failed_window_count}개 날짜 구간의 수집 검증이 실패했습니다. ` +
-          `Actions 로그와 docs/data/status.json을 확인하세요.`;
-      } else if (events.length === 0) {
+          "원본 서버가 일시적으로 응답하지 않아 직전 정상 일정을 표시하고 있습니다.";
+      } else if (!events.length) {
         notice.style.display = "block";
-        notice.textContent =
-          "조회 기간 안에 Investing.com에 등록된 한국·중요도 높음 실적 일정이 없습니다.";
-      } else if (status.last_event_date < rangeTo) {
-        notice.style.display = "block";
-        notice.textContent =
-          `조회 범위는 ${rangeTo}까지 정상입니다. 다만 Investing.com에 현재 등록된 ` +
-          `마지막 대상 일정은 ${status.last_event_date}입니다. 이후 날짜가 비어 있는 것은 ` +
-          `아직 발표 일정이 등록되지 않았기 때문일 수 있습니다.`;
+        notice.textContent = "조회 기간에 등록된 한국 기업 실적 일정이 없습니다.";
       }
 
-      const mobile = window.innerWidth < 850;
-
+      const mobile = window.innerWidth < 680;
       const calendar = new FullCalendar.Calendar(
         document.getElementById("calendar"),
         {
           locale: "ko",
-          initialDate: rangeFrom,
-          initialView: mobile
-            ? "multiMonthThreeMonth"
-            : "multiMonthThreeMonth",
-
-          views: {
-            multiMonthThreeMonth: {
-              type: "multiMonth",
-              duration: { months: 3 },
-              buttonText: "3개월"
-            },
-            listThreeMonth: {
-              type: "list",
-              duration: { months: 3 },
-              buttonText: "3개월 목록"
-            }
-          },
-
-          multiMonthMaxColumns: mobile ? 1 : 3,
+          initialDate: rangeFrom || undefined,
+          initialView: mobile ? "listMonth" : "dayGridMonth",
           height: "auto",
 
-          validRange: {
-            start: rangeFrom,
-            end: nextDay(rangeTo)
-          },
-
+          // 오늘 이전 날짜를 금지하는 validRange를 제거했습니다.
+          // 따라서 현재 달의 1일부터 말일까지 정상적인 월 달력이 표시됩니다.
           headerToolbar: {
             left: "prev,next today",
             center: "title",
-            right: "multiMonthThreeMonth,dayGridMonth,listThreeMonth"
+            right: mobile ? "listMonth" : "dayGridMonth,listMonth"
           },
 
-          buttonText: {
-            today: "오늘",
-            month: "월"
-          },
-
+          buttonText: { today: "오늘", month: "월", list: "목록" },
           events,
-          displayEventTime: false,
           eventDisplay: "block",
+          displayEventTime: false,
           dayMaxEvents: 4,
-
-          // 같은 날짜에서는 시가총액 내림차순으로 고정합니다.
           eventOrder: "-marketCap,title",
           eventOrderStrict: true,
 
           eventDidMount(info) {
-            info.el.title = info.event.title;
+            const session = info.event.extendedProps.releaseSession || "미정";
+            info.el.title = `${info.event.title} · 발표시점 ${session}`;
           },
 
           eventClick(info) {
@@ -308,10 +255,9 @@
       calendar.render();
     }
 
-    loadCalendar().catch((error) => {
+    loadCalendar().catch(error => {
       console.error(error);
       document.getElementById("status").textContent = "캘린더 로드 실패";
-
       const notice = document.getElementById("notice");
       notice.style.display = "block";
       notice.textContent = error.message;
@@ -319,3 +265,4 @@
   </script>
 </body>
 </html>
+

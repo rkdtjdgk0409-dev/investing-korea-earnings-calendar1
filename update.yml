@@ -1,22 +1,22 @@
-name: 한국 기업 실적 캘린더 갱신 v5.1
+name: 한국 기업 실적 캘린더 갱신 v6
 
 on:
   workflow_dispatch:
   schedule:
-    # UTC 22:17 = 한국시간 다음 날 07:17
+    # 매일 한국시간 오전 07:17 실행(UTC 22:17)
     - cron: "17 22 * * *"
 
 permissions:
   contents: write
 
 concurrency:
-  group: korea-earnings-calendar-v5
+  group: korea-earnings-calendar-v6
   cancel-in-progress: true
 
 jobs:
   update:
     runs-on: ubuntu-latest
-    timeout-minutes: 15
+    timeout-minutes: 10
 
     steps:
       - name: 저장소 파일 불러오기
@@ -26,39 +26,26 @@ jobs:
         uses: actions/setup-python@v5
         with:
           python-version: "3.12"
-          cache: pip
 
-      - name: Python 패키지 설치
-        run: |
-          python -m pip install --upgrade pip
-          pip install -r requirements.txt
-
-      - name: 서울 오늘부터 미래 3개월 실적 갱신
+      - name: 한국 상장사 실적 일정 갱신
         run: python update_calendar.py
 
-      - name: 범위·시가총액순 검증
+      - name: 출력 데이터 검증
         run: python validate_output.py
 
       - name: 결과 GitHub에 저장
         shell: bash
         run: |
           set -e
-
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-
-          git add docs/data/events.json
-          git add docs/data/status.json
-          git add docs/earnings.ics
-
-          if [ -f docs/data/market_caps.json ]; then
-            git add docs/data/market_caps.json
-          fi
+          git add docs/data/events.json docs/data/status.json docs/earnings.ics
 
           if git diff --cached --quiet; then
             echo "변경 사항이 없습니다."
             exit 0
           fi
 
-          git commit -m "자동 갱신: 미래 3개월 한국 실적"
+          git commit -m "자동 갱신: 한국 기업 실적 캘린더 v6"
           git push
+
