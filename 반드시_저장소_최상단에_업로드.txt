@@ -1,0 +1,20 @@
+현재 오류 수정 방법
+
+1. 이 압축파일 안의 다음 3개 파일을 GitHub 저장소의 최상단에 업로드합니다.
+   - update_calendar.py
+   - validate_output.py
+   - requirements.txt
+
+2. 최상단은 README.md와 docs 폴더가 보이는 첫 화면입니다.
+   다른 폴더 안에 넣지 마세요.
+
+3. 같은 이름의 기존 파일을 교체한 뒤 Commit changes를 누릅니다.
+
+4. Actions에서 "한국 기업 실적 캘린더 갱신 v6"을 다시 실행합니다.
+
+확인 사항
+- update_calendar.py 안에 VERSION = "v6-tradingview-korea-next-earnings"가 보여야 합니다.
+- update_calendar.py 안에 FinanceDataReader라는 문구가 없어야 합니다.
+- requirements.txt에는 "Python 표준 라이브러리만 사용합니다."라고 표시되어야 합니다.
+
+이 파일들은 Investing.com 차단과 FinanceDataReader 설치 오류를 함께 제거한 수정본입니다.
