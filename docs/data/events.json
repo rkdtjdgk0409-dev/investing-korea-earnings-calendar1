@@ -1,57 +1,5 @@
 [
   {
-    "id": "2026-07-20-000270",
-    "title": "기아 실적",
-    "company": "기아",
-    "ticker": "000270",
-    "start": "2026-07-20",
-    "allDay": true,
-    "url": "https://kr.tradingview.com/symbols/KRX-000270/",
-    "country": "한국",
-    "source": "TradingView Korea Scanner",
-    "marketCap": 57268674279785,
-    "releaseSession": "장후"
-  },
-  {
-    "id": "2026-07-20-086790",
-    "title": "하나금융지주 실적",
-    "company": "하나금융지주",
-    "ticker": "086790",
-    "start": "2026-07-20",
-    "allDay": true,
-    "url": "https://kr.tradingview.com/symbols/KRX-086790/",
-    "country": "한국",
-    "source": "TradingView Korea Scanner",
-    "marketCap": 35763881835938,
-    "releaseSession": "장전"
-  },
-  {
-    "id": "2026-07-20-005490",
-    "title": "포스코홀딩스 실적",
-    "company": "포스코홀딩스",
-    "ticker": "005490",
-    "start": "2026-07-20",
-    "allDay": true,
-    "url": "https://kr.tradingview.com/symbols/KRX-005490/",
-    "country": "한국",
-    "source": "TradingView Korea Scanner",
-    "marketCap": 23028993087769,
-    "releaseSession": "장전"
-  },
-  {
-    "id": "2026-07-20-003670",
-    "title": "포스코퓨처엠 실적",
-    "company": "포스코퓨처엠",
-    "ticker": "003670",
-    "start": "2026-07-20",
-    "allDay": true,
-    "url": "https://kr.tradingview.com/symbols/KRX-003670/",
-    "country": "한국",
-    "source": "TradingView Korea Scanner",
-    "marketCap": 13128457626343,
-    "releaseSession": "장후"
-  },
-  {
     "id": "2026-07-22-000660",
     "title": "에스케이하이닉스 실적",
     "company": "에스케이하이닉스",
