@@ -3690,5 +3690,57 @@
     "source": "TradingView Korea Scanner",
     "marketCap": 1503393993759,
     "releaseSession": "미정"
+  },
+  {
+    "id": "2026-10-27-207940",
+    "title": "삼성바이오로직스 실적",
+    "company": "삼성바이오로직스",
+    "ticker": "207940",
+    "start": "2026-10-27",
+    "allDay": true,
+    "url": "https://kr.tradingview.com/symbols/KRX-207940/",
+    "country": "한국",
+    "source": "TradingView Korea Scanner",
+    "marketCap": 70269663276672,
+    "releaseSession": "장전"
+  },
+  {
+    "id": "2026-10-27-105560",
+    "title": "KB금융지주 실적",
+    "company": "KB금융지주",
+    "ticker": "105560",
+    "start": "2026-10-27",
+    "allDay": true,
+    "url": "https://kr.tradingview.com/symbols/KRX-105560/",
+    "country": "한국",
+    "source": "TradingView Korea Scanner",
+    "marketCap": 57860257369995,
+    "releaseSession": "장후"
+  },
+  {
+    "id": "2026-10-27-055550",
+    "title": "신한금융지주회사 실적",
+    "company": "신한금융지주회사",
+    "ticker": "055550",
+    "start": "2026-10-27",
+    "allDay": true,
+    "url": "https://kr.tradingview.com/symbols/KRX-055550/",
+    "country": "한국",
+    "source": "TradingView Korea Scanner",
+    "marketCap": 48348720703125,
+    "releaseSession": "미정"
+  },
+  {
+    "id": "2026-10-27-271560",
+    "title": "오리온 실적",
+    "company": "오리온",
+    "ticker": "271560",
+    "start": "2026-10-27",
+    "allDay": true,
+    "url": "https://kr.tradingview.com/symbols/KRX-271560/",
+    "country": "한국",
+    "source": "TradingView Korea Scanner",
+    "marketCap": 5157548732758,
+    "releaseSession": "미정"
   }
 ]
