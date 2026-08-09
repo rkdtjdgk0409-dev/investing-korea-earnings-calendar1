@@ -3118,5 +3118,70 @@
     "source": "TradingView Korea Scanner",
     "marketCap": 4810564016533,
     "releaseSession": "미정"
+  },
+  {
+    "id": "2026-11-10-247540",
+    "title": "에코프로비엠 실적",
+    "company": "에코프로비엠",
+    "ticker": "247540",
+    "start": "2026-11-10",
+    "allDay": true,
+    "url": "https://kr.tradingview.com/symbols/KRX-247540/",
+    "country": "한국",
+    "source": "TradingView Korea Scanner",
+    "marketCap": 10460166755676,
+    "releaseSession": "미정"
+  },
+  {
+    "id": "2026-11-10-377300",
+    "title": "카카오페이 실적",
+    "company": "카카오페이",
+    "ticker": "377300",
+    "start": "2026-11-10",
+    "allDay": true,
+    "url": "https://kr.tradingview.com/symbols/KRX-377300/",
+    "country": "한국",
+    "source": "TradingView Korea Scanner",
+    "marketCap": 5681345306396,
+    "releaseSession": "미정"
+  },
+  {
+    "id": "2026-11-10-066970",
+    "title": "엘앤에프 실적",
+    "company": "엘앤에프",
+    "ticker": "066970",
+    "start": "2026-11-10",
+    "allDay": true,
+    "url": "https://kr.tradingview.com/symbols/KRX-066970/",
+    "country": "한국",
+    "source": "TradingView Korea Scanner",
+    "marketCap": 3512807316589,
+    "releaseSession": "미정"
+  },
+  {
+    "id": "2026-11-10-089860",
+    "title": "롯데렌탈 실적",
+    "company": "롯데렌탈",
+    "ticker": "089860",
+    "start": "2026-11-10",
+    "allDay": true,
+    "url": "https://kr.tradingview.com/symbols/KRX-089860/",
+    "country": "한국",
+    "source": "TradingView Korea Scanner",
+    "marketCap": 1466899243164,
+    "releaseSession": "미정"
+  },
+  {
+    "id": "2026-11-10-376300",
+    "title": "디어유 실적",
+    "company": "디어유",
+    "ticker": "376300",
+    "start": "2026-11-10",
+    "allDay": true,
+    "url": "https://kr.tradingview.com/symbols/KRX-376300/",
+    "country": "한국",
+    "source": "TradingView Korea Scanner",
+    "marketCap": 466697084274,
+    "releaseSession": "미정"
   }
 ]
