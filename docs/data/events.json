@@ -1,226 +1,5 @@
 [
   {
-    "id": "2026-08-12-015760",
-    "title": "한국전력공사 실적",
-    "company": "한국전력공사",
-    "ticker": "015760",
-    "start": "2026-08-12",
-    "allDay": true,
-    "url": "https://kr.tradingview.com/symbols/KRX-015760/",
-    "country": "한국",
-    "source": "TradingView Korea Scanner",
-    "marketCap": 22918116595459,
-    "releaseSession": "미정"
-  },
-  {
-    "id": "2026-08-12-138040",
-    "title": "메리츠금융지주회사 실적",
-    "company": "메리츠금융지주회사",
-    "ticker": "138040",
-    "start": "2026-08-12",
-    "allDay": true,
-    "url": "https://kr.tradingview.com/symbols/KRX-138040/",
-    "country": "한국",
-    "source": "TradingView Korea Scanner",
-    "marketCap": 19937258003235,
-    "releaseSession": "미정"
-  },
-  {
-    "id": "2026-08-12-006800",
-    "title": "미래에셋증권 실적",
-    "company": "미래에셋증권",
-    "ticker": "006800",
-    "start": "2026-08-12",
-    "allDay": true,
-    "url": "https://kr.tradingview.com/symbols/KRX-006800/",
-    "country": "한국",
-    "source": "TradingView Korea Scanner",
-    "marketCap": 17349133976592,
-    "releaseSession": "미정"
-  },
-  {
-    "id": "2026-08-12-006805",
-    "title": "미래에셋증권1우선주 실적",
-    "company": "미래에셋증권1우선주",
-    "ticker": "006805",
-    "start": "2026-08-12",
-    "allDay": true,
-    "url": "https://kr.tradingview.com/symbols/KRX-006805/",
-    "country": "한국",
-    "source": "TradingView Korea Scanner",
-    "marketCap": 17349133976592,
-    "releaseSession": "미정"
-  },
-  {
-    "id": "2026-08-12-088350",
-    "title": "한화생명보험 실적",
-    "company": "한화생명보험",
-    "ticker": "088350",
-    "start": "2026-08-12",
-    "allDay": true,
-    "url": "https://kr.tradingview.com/symbols/KRX-088350/",
-    "country": "한국",
-    "source": "TradingView Korea Scanner",
-    "marketCap": 3463909093018,
-    "releaseSession": "미정"
-  },
-  {
-    "id": "2026-08-12-214150",
-    "title": "클래시스 실적",
-    "company": "클래시스",
-    "ticker": "214150",
-    "start": "2026-08-12",
-    "allDay": true,
-    "url": "https://kr.tradingview.com/symbols/KRX-214150/",
-    "country": "한국",
-    "source": "TradingView Korea Scanner",
-    "marketCap": 3032706165314,
-    "releaseSession": "미정"
-  },
-  {
-    "id": "2026-08-12-161890",
-    "title": "한국콜마 실적",
-    "company": "한국콜마",
-    "ticker": "161890",
-    "start": "2026-08-12",
-    "allDay": true,
-    "url": "https://kr.tradingview.com/symbols/KRX-161890/",
-    "country": "한국",
-    "source": "TradingView Korea Scanner",
-    "marketCap": 2499777531052,
-    "releaseSession": "미정"
-  },
-  {
-    "id": "2026-08-12-035900",
-    "title": "제이와이피엔터테인먼트 실적",
-    "company": "제이와이피엔터테인먼트",
-    "ticker": "035900",
-    "start": "2026-08-12",
-    "allDay": true,
-    "url": "https://kr.tradingview.com/symbols/KRX-035900/",
-    "country": "한국",
-    "source": "TradingView Korea Scanner",
-    "marketCap": 1568850412560,
-    "releaseSession": "미정"
-  },
-  {
-    "id": "2026-08-12-192080",
-    "title": "더블유게임즈 실적",
-    "company": "더블유게임즈",
-    "ticker": "192080",
-    "start": "2026-08-12",
-    "allDay": true,
-    "url": "https://kr.tradingview.com/symbols/KRX-192080/",
-    "country": "한국",
-    "source": "TradingView Korea Scanner",
-    "marketCap": 1208663369751,
-    "releaseSession": "미정"
-  },
-  {
-    "id": "2026-08-12-000370",
-    "title": "한화손해보험 실적",
-    "company": "한화손해보험",
-    "ticker": "000370",
-    "start": "2026-08-12",
-    "allDay": true,
-    "url": "https://kr.tradingview.com/symbols/KRX-000370/",
-    "country": "한국",
-    "source": "TradingView Korea Scanner",
-    "marketCap": 703221146851,
-    "releaseSession": "미정"
-  },
-  {
-    "id": "2026-08-12-056190",
-    "title": "에스에프에이 실적",
-    "company": "에스에프에이",
-    "ticker": "056190",
-    "start": "2026-08-12",
-    "allDay": true,
-    "url": "https://kr.tradingview.com/symbols/KRX-056190/",
-    "country": "한국",
-    "source": "TradingView Korea Scanner",
-    "marketCap": 638340003204,
-    "releaseSession": "미정"
-  },
-  {
-    "id": "2026-08-12-225570",
-    "title": "넥슨게임즈 실적",
-    "company": "넥슨게임즈",
-    "ticker": "225570",
-    "start": "2026-08-12",
-    "allDay": true,
-    "url": "https://kr.tradingview.com/symbols/KRX-225570/",
-    "country": "한국",
-    "source": "TradingView Korea Scanner",
-    "marketCap": 576007409592,
-    "releaseSession": "미정"
-  },
-  {
-    "id": "2026-08-12-381970",
-    "title": "케이카 실적",
-    "company": "케이카",
-    "ticker": "381970",
-    "start": "2026-08-12",
-    "allDay": true,
-    "url": "https://kr.tradingview.com/symbols/KRX-381970/",
-    "country": "한국",
-    "source": "TradingView Korea Scanner",
-    "marketCap": 383243645477,
-    "releaseSession": "미정"
-  },
-  {
-    "id": "2026-08-12-095660",
-    "title": "네오위즈 실적",
-    "company": "네오위즈",
-    "ticker": "095660",
-    "start": "2026-08-12",
-    "allDay": true,
-    "url": "https://kr.tradingview.com/symbols/KRX-095660/",
-    "country": "한국",
-    "source": "TradingView Korea Scanner",
-    "marketCap": 378175736694,
-    "releaseSession": "미정"
-  },
-  {
-    "id": "2026-08-12-078340",
-    "title": "컴투스 실적",
-    "company": "컴투스",
-    "ticker": "078340",
-    "start": "2026-08-12",
-    "allDay": true,
-    "url": "https://kr.tradingview.com/symbols/KRX-078340/",
-    "country": "한국",
-    "source": "TradingView Korea Scanner",
-    "marketCap": 354508312130,
-    "releaseSession": "미정"
-  },
-  {
-    "id": "2026-08-12-348210",
-    "title": "넥스틴 실적",
-    "company": "넥스틴",
-    "ticker": "348210",
-    "start": "2026-08-12",
-    "allDay": true,
-    "url": "https://kr.tradingview.com/symbols/KRX-348210/",
-    "country": "한국",
-    "source": "TradingView Korea Scanner",
-    "marketCap": 352680567360,
-    "releaseSession": "미정"
-  },
-  {
-    "id": "2026-08-12-048530",
-    "title": "인트론바이오테크놀로지 실적",
-    "company": "인트론바이오테크놀로지",
-    "ticker": "048530",
-    "start": "2026-08-12",
-    "allDay": true,
-    "url": "https://kr.tradingview.com/symbols/KRX-048530/",
-    "country": "한국",
-    "source": "TradingView Korea Scanner",
-    "marketCap": 76983766794,
-    "releaseSession": "미정"
-  },
-  {
     "id": "2026-08-13-032830",
     "title": "삼성생명보험 실적",
     "company": "삼성생명보험",
@@ -230,7 +9,7 @@
     "url": "https://kr.tradingview.com/symbols/KRX-032830/",
     "country": "한국",
     "source": "TradingView Korea Scanner",
-    "marketCap": 50370726722717,
+    "marketCap": 51986899772644,
     "releaseSession": "미정"
   },
   {
@@ -243,7 +22,7 @@
     "url": "https://kr.tradingview.com/symbols/KRX-000810/",
     "country": "한국",
     "source": "TradingView Korea Scanner",
-    "marketCap": 24367091317654,
+    "marketCap": 24796419620633,
     "releaseSession": "미정"
   },
   {
@@ -256,7 +35,7 @@
     "url": "https://kr.tradingview.com/symbols/KRX-000815/",
     "country": "한국",
     "source": "TradingView Korea Scanner",
-    "marketCap": 24367091317654,
+    "marketCap": 24796419620633,
     "releaseSession": "미정"
   },
   {
@@ -269,7 +48,7 @@
     "url": "https://kr.tradingview.com/symbols/KRX-003550/",
     "country": "한국",
     "source": "TradingView Korea Scanner",
-    "marketCap": 15739160077739,
+    "marketCap": 15840546453142,
     "releaseSession": "장후"
   },
   {
@@ -282,7 +61,7 @@
     "url": "https://kr.tradingview.com/symbols/KRX-003555/",
     "country": "한국",
     "source": "TradingView Korea Scanner",
-    "marketCap": 15739160077739,
+    "marketCap": 15840546453142,
     "releaseSession": "장후"
   },
   {
@@ -295,7 +74,7 @@
     "url": "https://kr.tradingview.com/symbols/KRX-005830/",
     "country": "한국",
     "source": "TradingView Korea Scanner",
-    "marketCap": 8884921397781,
+    "marketCap": 9005357793808,
     "releaseSession": "미정"
   },
   {
@@ -308,7 +87,7 @@
     "url": "https://kr.tradingview.com/symbols/KRX-180640/",
     "country": "한국",
     "source": "TradingView Korea Scanner",
-    "marketCap": 7755236479193,
+    "marketCap": 7834823161322,
     "releaseSession": "미정"
   },
   {
@@ -321,7 +100,7 @@
     "url": "https://kr.tradingview.com/symbols/KRX-483650/",
     "country": "한국",
     "source": "TradingView Korea Scanner",
-    "marketCap": 3017280376911,
+    "marketCap": 3073502992630,
     "releaseSession": "미정"
   },
   {
@@ -334,7 +113,7 @@
     "url": "https://kr.tradingview.com/symbols/KRX-139480/",
     "country": "한국",
     "source": "TradingView Korea Scanner",
-    "marketCap": 2191287272644,
+    "marketCap": 2159141249084,
     "releaseSession": "미정"
   },
   {
@@ -347,7 +126,7 @@
     "url": "https://kr.tradingview.com/symbols/KRX-058970/",
     "country": "한국",
     "source": "TradingView Korea Scanner",
-    "marketCap": 198917354212,
+    "marketCap": 200771773300,
     "releaseSession": "미정"
   },
   {
@@ -360,7 +139,7 @@
     "url": "https://kr.tradingview.com/symbols/KRX-092070/",
     "country": "한국",
     "source": "TradingView Korea Scanner",
-    "marketCap": 151935235748,
+    "marketCap": 155191792908,
     "releaseSession": "미정"
   },
   {
@@ -373,21 +152,8 @@
     "url": "https://kr.tradingview.com/symbols/KRX-459100/",
     "country": "한국",
     "source": "TradingView Korea Scanner",
-    "marketCap": 59789482841,
+    "marketCap": 60328126831,
     "releaseSession": "미정"
-  },
-  {
-    "id": "2026-08-18-030200",
-    "title": "케이티 실적",
-    "company": "케이티",
-    "ticker": "030200",
-    "start": "2026-08-18",
-    "allDay": true,
-    "url": "https://kr.tradingview.com/symbols/KRX-030200/",
-    "country": "한국",
-    "source": "TradingView Korea Scanner",
-    "marketCap": 12633381262207,
-    "releaseSession": "장전"
   },
   {
     "id": "2026-08-18-007660",
@@ -399,7 +165,7 @@
     "url": "https://kr.tradingview.com/symbols/KRX-007660/",
     "country": "한국",
     "source": "TradingView Korea Scanner",
-    "marketCap": 6827057258606,
+    "marketCap": 6445329325867,
     "releaseSession": "미정"
   },
   {
@@ -412,7 +178,7 @@
     "url": "https://kr.tradingview.com/symbols/KRX-058470/",
     "country": "한국",
     "source": "TradingView Korea Scanner",
-    "marketCap": 5365818875122,
+    "marketCap": 5426535354614,
     "releaseSession": "미정"
   },
   {
@@ -425,7 +191,7 @@
     "url": "https://kr.tradingview.com/symbols/KRX-001040/",
     "country": "한국",
     "source": "TradingView Korea Scanner",
-    "marketCap": 4682152270103,
+    "marketCap": 4383860451269,
     "releaseSession": "미정"
   },
   {
@@ -438,7 +204,7 @@
     "url": "https://kr.tradingview.com/symbols/KRX-001045/",
     "country": "한국",
     "source": "TradingView Korea Scanner",
-    "marketCap": 4682152270103,
+    "marketCap": 4383860451269,
     "releaseSession": "미정"
   },
   {
@@ -451,7 +217,7 @@
     "url": "https://kr.tradingview.com/symbols/KRX-141080/",
     "country": "한국",
     "source": "TradingView Korea Scanner",
-    "marketCap": 4418366501236,
+    "marketCap": 4307815212631,
     "releaseSession": "미정"
   },
   {
@@ -464,7 +230,7 @@
     "url": "https://kr.tradingview.com/symbols/KRX-108490/",
     "country": "한국",
     "source": "TradingView Korea Scanner",
-    "marketCap": 3582582386971,
+    "marketCap": 3531817049503,
     "releaseSession": "미정"
   },
   {
@@ -477,20 +243,7 @@
     "url": "https://kr.tradingview.com/symbols/KRX-214370/",
     "country": "한국",
     "source": "TradingView Korea Scanner",
-    "marketCap": 3420954933167,
-    "releaseSession": "미정"
-  },
-  {
-    "id": "2026-08-18-103590",
-    "title": "일진전기 실적",
-    "company": "일진전기",
-    "ticker": "103590",
-    "start": "2026-08-18",
-    "allDay": true,
-    "url": "https://kr.tradingview.com/symbols/KRX-103590/",
-    "country": "한국",
-    "source": "TradingView Korea Scanner",
-    "marketCap": 2984597038269,
+    "marketCap": 3225471794128,
     "releaseSession": "미정"
   },
   {
@@ -503,7 +256,7 @@
     "url": "https://kr.tradingview.com/symbols/KRX-084370/",
     "country": "한국",
     "source": "TradingView Korea Scanner",
-    "marketCap": 2739552359962,
+    "marketCap": 2857502217865,
     "releaseSession": "미정"
   },
   {
@@ -516,7 +269,7 @@
     "url": "https://kr.tradingview.com/symbols/KRX-004370/",
     "country": "한국",
     "source": "TradingView Korea Scanner",
-    "marketCap": 2295700878620,
+    "marketCap": 2287026945829,
     "releaseSession": "미정"
   },
   {
@@ -529,7 +282,7 @@
     "url": "https://kr.tradingview.com/symbols/KRX-140860/",
     "country": "한국",
     "source": "TradingView Korea Scanner",
-    "marketCap": 1874949735641,
+    "marketCap": 1972349721909,
     "releaseSession": "미정"
   },
   {
@@ -542,7 +295,7 @@
     "url": "https://kr.tradingview.com/symbols/KRX-078600/",
     "country": "한국",
     "source": "TradingView Korea Scanner",
-    "marketCap": 1498236856937,
+    "marketCap": 1435873698425,
     "releaseSession": "미정"
   },
   {
@@ -559,19 +312,6 @@
     "releaseSession": "미정"
   },
   {
-    "id": "2026-08-18-100090",
-    "title": "SK오션플랜트 실적",
-    "company": "SK오션플랜트",
-    "ticker": "100090",
-    "start": "2026-08-18",
-    "allDay": true,
-    "url": "https://kr.tradingview.com/symbols/KRX-100090/",
-    "country": "한국",
-    "source": "TradingView Korea Scanner",
-    "marketCap": 874693824768,
-    "releaseSession": "미정"
-  },
-  {
     "id": "2026-08-18-094170",
     "title": "동운아나텍 실적",
     "company": "동운아나텍",
@@ -581,7 +321,7 @@
     "url": "https://kr.tradingview.com/symbols/KRX-094170/",
     "country": "한국",
     "source": "TradingView Korea Scanner",
-    "marketCap": 671119577789,
+    "marketCap": 688301856136,
     "releaseSession": "미정"
   },
   {
@@ -594,7 +334,7 @@
     "url": "https://kr.tradingview.com/symbols/KRX-075580/",
     "country": "한국",
     "source": "TradingView Korea Scanner",
-    "marketCap": 634824563828,
+    "marketCap": 618926539345,
     "releaseSession": "미정"
   },
   {
@@ -607,7 +347,7 @@
     "url": "https://kr.tradingview.com/symbols/KRX-007700/",
     "country": "한국",
     "source": "TradingView Korea Scanner",
-    "marketCap": 565732048950,
+    "marketCap": 568076242523,
     "releaseSession": "미정"
   },
   {
@@ -620,7 +360,7 @@
     "url": "https://kr.tradingview.com/symbols/KRX-052710/",
     "country": "한국",
     "source": "TradingView Korea Scanner",
-    "marketCap": 241152069855,
+    "marketCap": 238774514236,
     "releaseSession": "미정"
   },
   {
@@ -633,20 +373,7 @@
     "url": "https://kr.tradingview.com/symbols/KRX-192440/",
     "country": "한국",
     "source": "TradingView Korea Scanner",
-    "marketCap": 173056175137,
-    "releaseSession": "미정"
-  },
-  {
-    "id": "2026-08-18-123860",
-    "title": "아나패스 실적",
-    "company": "아나패스",
-    "ticker": "123860",
-    "start": "2026-08-18",
-    "allDay": true,
-    "url": "https://kr.tradingview.com/symbols/KRX-123860/",
-    "country": "한국",
-    "source": "TradingView Korea Scanner",
-    "marketCap": 172031258755,
+    "marketCap": 176975565863,
     "releaseSession": "미정"
   },
   {
@@ -659,7 +386,20 @@
     "url": "https://kr.tradingview.com/symbols/KRX-084990/",
     "country": "한국",
     "source": "TradingView Korea Scanner",
-    "marketCap": 165078087902,
+    "marketCap": 168761838818,
+    "releaseSession": "미정"
+  },
+  {
+    "id": "2026-08-18-123860",
+    "title": "아나패스 실적",
+    "company": "아나패스",
+    "ticker": "123860",
+    "start": "2026-08-18",
+    "allDay": true,
+    "url": "https://kr.tradingview.com/symbols/KRX-123860/",
+    "country": "한국",
+    "source": "TradingView Korea Scanner",
+    "marketCap": 168030531807,
     "releaseSession": "미정"
   },
   {
@@ -685,20 +425,7 @@
     "url": "https://kr.tradingview.com/symbols/KRX-126700/",
     "country": "한국",
     "source": "TradingView Korea Scanner",
-    "marketCap": 137420595493,
-    "releaseSession": "미정"
-  },
-  {
-    "id": "2026-08-18-282880",
-    "title": "코윈테크 실적",
-    "company": "코윈테크",
-    "ticker": "282880",
-    "start": "2026-08-18",
-    "allDay": true,
-    "url": "https://kr.tradingview.com/symbols/KRX-282880/",
-    "country": "한국",
-    "source": "TradingView Korea Scanner",
-    "marketCap": 116093142996,
+    "marketCap": 140238165951,
     "releaseSession": "미정"
   },
   {
@@ -711,7 +438,20 @@
     "url": "https://kr.tradingview.com/symbols/KRX-217270/",
     "country": "한국",
     "source": "TradingView Korea Scanner",
-    "marketCap": 113215391235,
+    "marketCap": 117034164352,
+    "releaseSession": "미정"
+  },
+  {
+    "id": "2026-08-18-282880",
+    "title": "코윈테크 실적",
+    "company": "코윈테크",
+    "ticker": "282880",
+    "start": "2026-08-18",
+    "allDay": true,
+    "url": "https://kr.tradingview.com/symbols/KRX-282880/",
+    "country": "한국",
+    "source": "TradingView Korea Scanner",
+    "marketCap": 115176316595,
     "releaseSession": "미정"
   },
   {
@@ -724,7 +464,7 @@
     "url": "https://kr.tradingview.com/symbols/KRX-042510/",
     "country": "한국",
     "source": "TradingView Korea Scanner",
-    "marketCap": 89399132109,
+    "marketCap": 90362715569,
     "releaseSession": "미정"
   },
   {
@@ -737,7 +477,7 @@
     "url": "https://kr.tradingview.com/symbols/KRX-352700/",
     "country": "한국",
     "source": "TradingView Korea Scanner",
-    "marketCap": 34211015320,
+    "marketCap": 35261782219,
     "releaseSession": "미정"
   },
   {
@@ -750,7 +490,7 @@
     "url": "https://kr.tradingview.com/symbols/KRX-402340/",
     "country": "한국",
     "source": "TradingView Korea Scanner",
-    "marketCap": 124960924591064,
+    "marketCap": 124434218902588,
     "releaseSession": "미정"
   },
   {
@@ -763,7 +503,7 @@
     "url": "https://kr.tradingview.com/symbols/KRX-034730/",
     "country": "한국",
     "source": "TradingView Korea Scanner",
-    "marketCap": 27969787628174,
+    "marketCap": 28569529663086,
     "releaseSession": "미정"
   },
   {
@@ -776,7 +516,7 @@
     "url": "https://kr.tradingview.com/symbols/KRX-003230/",
     "country": "한국",
     "source": "TradingView Korea Scanner",
-    "marketCap": 9606068832397,
+    "marketCap": 9352492481232,
     "releaseSession": "미정"
   },
   {
@@ -789,7 +529,7 @@
     "url": "https://kr.tradingview.com/symbols/KRX-006260/",
     "country": "한국",
     "source": "TradingView Korea Scanner",
-    "marketCap": 9152517471313,
+    "marketCap": 8944505710602,
     "releaseSession": "미정"
   },
   {
@@ -802,7 +542,7 @@
     "url": "https://kr.tradingview.com/symbols/KRX-001450/",
     "country": "한국",
     "source": "TradingView Korea Scanner",
-    "marketCap": 3044772697449,
+    "marketCap": 3271274081039,
     "releaseSession": "미정"
   },
   {
@@ -815,20 +555,7 @@
     "url": "https://kr.tradingview.com/symbols/KRX-403870/",
     "country": "한국",
     "source": "TradingView Korea Scanner",
-    "marketCap": 2935690918732,
-    "releaseSession": "미정"
-  },
-  {
-    "id": "2026-08-19-357780",
-    "title": "솔브레인 실적",
-    "company": "솔브레인",
-    "ticker": "357780",
-    "start": "2026-08-19",
-    "allDay": true,
-    "url": "https://kr.tradingview.com/symbols/KRX-357780/",
-    "country": "한국",
-    "source": "TradingView Korea Scanner",
-    "marketCap": 2400988544226,
+    "marketCap": 3050893945312,
     "releaseSession": "미정"
   },
   {
@@ -841,7 +568,20 @@
     "url": "https://kr.tradingview.com/symbols/KRX-178320/",
     "country": "한국",
     "source": "TradingView Korea Scanner",
-    "marketCap": 2383720129204,
+    "marketCap": 2437823256302,
+    "releaseSession": "미정"
+  },
+  {
+    "id": "2026-08-19-357780",
+    "title": "솔브레인 실적",
+    "company": "솔브레인",
+    "ticker": "357780",
+    "start": "2026-08-19",
+    "allDay": true,
+    "url": "https://kr.tradingview.com/symbols/KRX-357780/",
+    "country": "한국",
+    "source": "TradingView Korea Scanner",
+    "marketCap": 2404817872047,
     "releaseSession": "미정"
   },
   {
@@ -854,7 +594,7 @@
     "url": "https://kr.tradingview.com/symbols/KRX-081660/",
     "country": "한국",
     "source": "TradingView Korea Scanner",
-    "marketCap": 2378514379883,
+    "marketCap": 2320113357162,
     "releaseSession": "미정"
   },
   {
@@ -867,7 +607,7 @@
     "url": "https://kr.tradingview.com/symbols/KRX-039200/",
     "country": "한국",
     "source": "TradingView Korea Scanner",
-    "marketCap": 1453810646057,
+    "marketCap": 1430855741119,
     "releaseSession": "미정"
   },
   {
@@ -880,7 +620,7 @@
     "url": "https://kr.tradingview.com/symbols/KRX-030190/",
     "country": "한국",
     "source": "TradingView Korea Scanner",
-    "marketCap": 893141899872,
+    "marketCap": 905901069870,
     "releaseSession": "미정"
   },
   {
@@ -893,7 +633,7 @@
     "url": "https://kr.tradingview.com/symbols/KRX-204270/",
     "country": "한국",
     "source": "TradingView Korea Scanner",
-    "marketCap": 879534226723,
+    "marketCap": 876109693718,
     "releaseSession": "미정"
   },
   {
@@ -906,7 +646,7 @@
     "url": "https://kr.tradingview.com/symbols/KRX-232140/",
     "country": "한국",
     "source": "TradingView Korea Scanner",
-    "marketCap": 820281627197,
+    "marketCap": 845162968140,
     "releaseSession": "미정"
   },
   {
@@ -919,20 +659,7 @@
     "url": "https://kr.tradingview.com/symbols/KRX-032500/",
     "country": "한국",
     "source": "TradingView Korea Scanner",
-    "marketCap": 755231429672,
-    "releaseSession": "미정"
-  },
-  {
-    "id": "2026-08-19-005690",
-    "title": "파미셀 실적",
-    "company": "파미셀",
-    "ticker": "005690",
-    "start": "2026-08-19",
-    "allDay": true,
-    "url": "https://kr.tradingview.com/symbols/KRX-005690/",
-    "country": "한국",
-    "source": "TradingView Korea Scanner",
-    "marketCap": 701895427322,
+    "marketCap": 725697239685,
     "releaseSession": "미정"
   },
   {
@@ -945,7 +672,7 @@
     "url": "https://kr.tradingview.com/symbols/KRX-365340/",
     "country": "한국",
     "source": "TradingView Korea Scanner",
-    "marketCap": 465806192923,
+    "marketCap": 460637746954,
     "releaseSession": "미정"
   },
   {
@@ -958,7 +685,7 @@
     "url": "https://kr.tradingview.com/symbols/KRX-138080/",
     "country": "한국",
     "source": "TradingView Korea Scanner",
-    "marketCap": 328882163620,
+    "marketCap": 299897944164,
     "releaseSession": "미정"
   },
   {
@@ -971,7 +698,7 @@
     "url": "https://kr.tradingview.com/symbols/KRX-053030/",
     "country": "한국",
     "source": "TradingView Korea Scanner",
-    "marketCap": 239812995186,
+    "marketCap": 243953192978,
     "releaseSession": "미정"
   },
   {
@@ -984,7 +711,7 @@
     "url": "https://kr.tradingview.com/symbols/KRX-095570/",
     "country": "한국",
     "source": "TradingView Korea Scanner",
-    "marketCap": 204064783630,
+    "marketCap": 201827231178,
     "releaseSession": "미정"
   },
   {
@@ -997,7 +724,7 @@
     "url": "https://kr.tradingview.com/symbols/KRX-361390/",
     "country": "한국",
     "source": "TradingView Korea Scanner",
-    "marketCap": 137867148972,
+    "marketCap": 134362051964,
     "releaseSession": "미정"
   },
   {
@@ -1010,7 +737,7 @@
     "url": "https://kr.tradingview.com/symbols/KRX-053580/",
     "country": "한국",
     "source": "TradingView Korea Scanner",
-    "marketCap": 86553215122,
+    "marketCap": 87037428913,
     "releaseSession": "미정"
   },
   {
@@ -1023,7 +750,7 @@
     "url": "https://kr.tradingview.com/symbols/KRX-217500/",
     "country": "한국",
     "source": "TradingView Korea Scanner",
-    "marketCap": 49458424377,
+    "marketCap": 48936282654,
     "releaseSession": "미정"
   },
   {
@@ -1036,20 +763,7 @@
     "url": "https://kr.tradingview.com/symbols/KRX-036420/",
     "country": "한국",
     "source": "TradingView Korea Scanner",
-    "marketCap": 31732669239,
-    "releaseSession": "미정"
-  },
-  {
-    "id": "2026-08-19-058110",
-    "title": "멕아이씨에스 실적",
-    "company": "멕아이씨에스",
-    "ticker": "058110",
-    "start": "2026-08-19",
-    "allDay": true,
-    "url": "https://kr.tradingview.com/symbols/KRX-058110/",
-    "country": "한국",
-    "source": "TradingView Korea Scanner",
-    "marketCap": 24641072674,
+    "marketCap": 30949382401,
     "releaseSession": "미정"
   },
   {
@@ -1062,7 +776,7 @@
     "url": "https://kr.tradingview.com/symbols/KRX-294570/",
     "country": "한국",
     "source": "TradingView Korea Scanner",
-    "marketCap": 207641987133,
+    "marketCap": 206648484802,
     "releaseSession": "미정"
   },
   {
@@ -1075,7 +789,7 @@
     "url": "https://kr.tradingview.com/symbols/KRX-490470/",
     "country": "한국",
     "source": "TradingView Korea Scanner",
-    "marketCap": 592042659760,
+    "marketCap": 601229528618,
     "releaseSession": "미정"
   },
   {
@@ -1088,7 +802,7 @@
     "url": "https://kr.tradingview.com/symbols/KRX-195870/",
     "country": "한국",
     "source": "TradingView Korea Scanner",
-    "marketCap": 957100000000,
+    "marketCap": 958800000000,
     "releaseSession": "미정"
   },
   {
@@ -1101,7 +815,7 @@
     "url": "https://kr.tradingview.com/symbols/KRX-005380/",
     "country": "한국",
     "source": "TradingView Korea Scanner",
-    "marketCap": 93934546922207,
+    "marketCap": 92858372262383,
     "releaseSession": "장후"
   },
   {
@@ -1114,7 +828,7 @@
     "url": "https://kr.tradingview.com/symbols/KRX-005385/",
     "country": "한국",
     "source": "TradingView Korea Scanner",
-    "marketCap": 93934546922207,
+    "marketCap": 92858372262383,
     "releaseSession": "장후"
   },
   {
@@ -1127,7 +841,7 @@
     "url": "https://kr.tradingview.com/symbols/KRX-005387/",
     "country": "한국",
     "source": "TradingView Korea Scanner",
-    "marketCap": 93934546922207,
+    "marketCap": 92858372262383,
     "releaseSession": "장후"
   },
   {
@@ -1140,7 +854,7 @@
     "url": "https://kr.tradingview.com/symbols/KRX-005389/",
     "country": "한국",
     "source": "TradingView Korea Scanner",
-    "marketCap": 93934546922207,
+    "marketCap": 92858372262383,
     "releaseSession": "장후"
   },
   {
@@ -1153,7 +867,7 @@
     "url": "https://kr.tradingview.com/symbols/KRX-028260/",
     "country": "한국",
     "source": "TradingView Korea Scanner",
-    "marketCap": 52170491288960,
+    "marketCap": 53490611366034,
     "releaseSession": "미정"
   },
   {
@@ -1166,7 +880,7 @@
     "url": "https://kr.tradingview.com/symbols/KRX-086790/",
     "country": "한국",
     "source": "TradingView Korea Scanner",
-    "marketCap": 34090717773438,
+    "marketCap": 33384851684570,
     "releaseSession": "미정"
   },
   {
@@ -1179,7 +893,7 @@
     "url": "https://kr.tradingview.com/symbols/KRX-066570/",
     "country": "한국",
     "source": "TradingView Korea Scanner",
-    "marketCap": 32112322705078,
+    "marketCap": 30746653443909,
     "releaseSession": "장전"
   },
   {
@@ -1192,7 +906,7 @@
     "url": "https://kr.tradingview.com/symbols/KRX-066575/",
     "country": "한국",
     "source": "TradingView Korea Scanner",
-    "marketCap": 32112322705078,
+    "marketCap": 30746653443909,
     "releaseSession": "장전"
   },
   {
@@ -1205,7 +919,7 @@
     "url": "https://kr.tradingview.com/symbols/KRX-267260/",
     "country": "한국",
     "source": "TradingView Korea Scanner",
-    "marketCap": 27498424697876,
+    "marketCap": 26598607135773,
     "releaseSession": "미정"
   },
   {
@@ -1218,7 +932,7 @@
     "url": "https://kr.tradingview.com/symbols/KRX-316140/",
     "country": "한국",
     "source": "TradingView Korea Scanner",
-    "marketCap": 24279992816162,
+    "marketCap": 24607608911133,
     "releaseSession": "미정"
   },
   {
@@ -1231,7 +945,7 @@
     "url": "https://kr.tradingview.com/symbols/KRX-010140/",
     "country": "한국",
     "source": "TradingView Korea Scanner",
-    "marketCap": 19258502407837,
+    "marketCap": 18617975720215,
     "releaseSession": "미정"
   },
   {
@@ -1244,7 +958,7 @@
     "url": "https://kr.tradingview.com/symbols/KRX-018260/",
     "country": "한국",
     "source": "TradingView Korea Scanner",
-    "marketCap": 17210417098999,
+    "marketCap": 18331994842529,
     "releaseSession": "장전"
   },
   {
@@ -1257,7 +971,7 @@
     "url": "https://kr.tradingview.com/symbols/KRX-010950/",
     "country": "한국",
     "source": "TradingView Korea Scanner",
-    "marketCap": 15969854905415,
+    "marketCap": 16201161033726,
     "releaseSession": "미정"
   },
   {
@@ -1270,7 +984,7 @@
     "url": "https://kr.tradingview.com/symbols/KRX-010955/",
     "country": "한국",
     "source": "TradingView Korea Scanner",
-    "marketCap": 15969854905415,
+    "marketCap": 16201161033726,
     "releaseSession": "미정"
   },
   {
@@ -1283,7 +997,7 @@
     "url": "https://kr.tradingview.com/symbols/KRX-005940/",
     "country": "한국",
     "source": "TradingView Korea Scanner",
-    "marketCap": 10848152958870,
+    "marketCap": 10886787299919,
     "releaseSession": "미정"
   },
   {
@@ -1296,7 +1010,7 @@
     "url": "https://kr.tradingview.com/symbols/KRX-005945/",
     "country": "한국",
     "source": "TradingView Korea Scanner",
-    "marketCap": 10848152958870,
+    "marketCap": 10886787299919,
     "releaseSession": "미정"
   },
   {
@@ -1309,7 +1023,7 @@
     "url": "https://kr.tradingview.com/symbols/KRX-009830/",
     "country": "한국",
     "source": "TradingView Korea Scanner",
-    "marketCap": 7524941397133,
+    "marketCap": 7759253365488,
     "releaseSession": "미정"
   },
   {
@@ -1322,7 +1036,7 @@
     "url": "https://kr.tradingview.com/symbols/KRX-009835/",
     "country": "한국",
     "source": "TradingView Korea Scanner",
-    "marketCap": 7524941397133,
+    "marketCap": 7759253365488,
     "releaseSession": "미정"
   },
   {
@@ -1335,7 +1049,7 @@
     "url": "https://kr.tradingview.com/symbols/KRX-029780/",
     "country": "한국",
     "source": "TradingView Korea Scanner",
-    "marketCap": 5084764538574,
+    "marketCap": 5042080261230,
     "releaseSession": "미정"
   },
   {
@@ -1348,7 +1062,7 @@
     "url": "https://kr.tradingview.com/symbols/KRX-051900/",
     "country": "한국",
     "source": "TradingView Korea Scanner",
-    "marketCap": 4726545567513,
+    "marketCap": 4701327381611,
     "releaseSession": "미정"
   },
   {
@@ -1361,7 +1075,7 @@
     "url": "https://kr.tradingview.com/symbols/KRX-051905/",
     "country": "한국",
     "source": "TradingView Korea Scanner",
-    "marketCap": 4726545567513,
+    "marketCap": 4701327381611,
     "releaseSession": "미정"
   },
   {
@@ -1374,7 +1088,7 @@
     "url": "https://kr.tradingview.com/symbols/KRX-302440/",
     "country": "한국",
     "source": "TradingView Korea Scanner",
-    "marketCap": 2922506793976,
+    "marketCap": 2942120933533,
     "releaseSession": "미정"
   },
   {
@@ -1400,7 +1114,7 @@
     "url": "https://kr.tradingview.com/symbols/KRX-336370/",
     "country": "한국",
     "source": "TradingView Korea Scanner",
-    "marketCap": 575629005814,
+    "marketCap": 568359556427,
     "releaseSession": "미정"
   },
   {
@@ -1413,7 +1127,7 @@
     "url": "https://kr.tradingview.com/symbols/KRX-000270/",
     "country": "한국",
     "source": "TradingView Korea Scanner",
-    "marketCap": 51836375183105,
+    "marketCap": 51377307653809,
     "releaseSession": "미정"
   },
   {
@@ -1426,7 +1140,7 @@
     "url": "https://kr.tradingview.com/symbols/KRX-012330/",
     "country": "한국",
     "source": "TradingView Korea Scanner",
-    "marketCap": 44367535705566,
+    "marketCap": 43532898895264,
     "releaseSession": "미정"
   },
   {
@@ -1439,7 +1153,7 @@
     "url": "https://kr.tradingview.com/symbols/KRX-298040/",
     "country": "한국",
     "source": "TradingView Korea Scanner",
-    "marketCap": 27320647727966,
+    "marketCap": 26361538417816,
     "releaseSession": "미정"
   },
   {
@@ -1452,7 +1166,7 @@
     "url": "https://kr.tradingview.com/symbols/KRX-307950/",
     "country": "한국",
     "source": "TradingView Korea Scanner",
-    "marketCap": 11833074026108,
+    "marketCap": 11860497140884,
     "releaseSession": "미정"
   },
   {
@@ -1465,7 +1179,7 @@
     "url": "https://kr.tradingview.com/symbols/KRX-028050/",
     "country": "한국",
     "source": "TradingView Korea Scanner",
-    "marketCap": 9564800000000,
+    "marketCap": 9594200000000,
     "releaseSession": "미정"
   },
   {
@@ -1478,7 +1192,7 @@
     "url": "https://kr.tradingview.com/symbols/KRX-204320/",
     "country": "한국",
     "source": "TradingView Korea Scanner",
-    "marketCap": 2523381598663,
+    "marketCap": 2537452499771,
     "releaseSession": "미정"
   },
   {
@@ -1491,7 +1205,7 @@
     "url": "https://kr.tradingview.com/symbols/KRX-011210/",
     "country": "한국",
     "source": "TradingView Korea Scanner",
-    "marketCap": 1721200190735,
+    "marketCap": 1723856363869,
     "releaseSession": "미정"
   },
   {
@@ -1504,7 +1218,7 @@
     "url": "https://kr.tradingview.com/symbols/KRX-005490/",
     "country": "한국",
     "source": "TradingView Korea Scanner",
-    "marketCap": 24840262207031,
+    "marketCap": 24137933364868,
     "releaseSession": "장전"
   },
   {
@@ -1517,7 +1231,7 @@
     "url": "https://kr.tradingview.com/symbols/KRX-000660/",
     "country": "한국",
     "source": "TradingView Korea Scanner",
-    "marketCap": 1034988979492188,
+    "marketCap": 1038633306884766,
     "releaseSession": "장전"
   },
   {
@@ -1530,7 +1244,7 @@
     "url": "https://kr.tradingview.com/symbols/KRX-207940/",
     "country": "한국",
     "source": "TradingView Korea Scanner",
-    "marketCap": 72630501766205,
+    "marketCap": 74482139797211,
     "releaseSession": "장전"
   },
   {
@@ -1543,7 +1257,7 @@
     "url": "https://kr.tradingview.com/symbols/KRX-105560/",
     "country": "한국",
     "source": "TradingView Korea Scanner",
-    "marketCap": 57927732888794,
+    "marketCap": 56207107159424,
     "releaseSession": "장후"
   },
   {
@@ -1556,7 +1270,7 @@
     "url": "https://kr.tradingview.com/symbols/KRX-055550/",
     "country": "한국",
     "source": "TradingView Korea Scanner",
-    "marketCap": 48721221752930,
+    "marketCap": 47851199935913,
     "releaseSession": "미정"
   },
   {
@@ -1569,7 +1283,7 @@
     "url": "https://kr.tradingview.com/symbols/KRX-271560/",
     "country": "한국",
     "source": "TradingView Korea Scanner",
-    "marketCap": 5434198856354,
+    "marketCap": 5374916687012,
     "releaseSession": "미정"
   },
   {
@@ -1582,7 +1296,7 @@
     "url": "https://kr.tradingview.com/symbols/KRX-009150/",
     "country": "한국",
     "source": "TradingView Korea Scanner",
-    "marketCap": 93877318720698,
+    "marketCap": 92985019501805,
     "releaseSession": "미정"
   },
   {
@@ -1595,7 +1309,7 @@
     "url": "https://kr.tradingview.com/symbols/KRX-009155/",
     "country": "한국",
     "source": "TradingView Korea Scanner",
-    "marketCap": 93877318720698,
+    "marketCap": 92985019501805,
     "releaseSession": "미정"
   },
   {
@@ -1608,7 +1322,7 @@
     "url": "https://kr.tradingview.com/symbols/KRX-373220/",
     "country": "한국",
     "source": "TradingView Korea Scanner",
-    "marketCap": 85995000000000,
+    "marketCap": 82953000000000,
     "releaseSession": "장전"
   },
   {
@@ -1621,7 +1335,7 @@
     "url": "https://kr.tradingview.com/symbols/KRX-010120/",
     "country": "한국",
     "source": "TradingView Korea Scanner",
-    "marketCap": 31002377723694,
+    "marketCap": 30184569198608,
     "releaseSession": "미정"
   },
   {
@@ -1634,7 +1348,7 @@
     "url": "https://kr.tradingview.com/symbols/KRX-011070/",
     "country": "한국",
     "source": "TradingView Korea Scanner",
-    "marketCap": 13133801336288,
+    "marketCap": 12991814294815,
     "releaseSession": "미정"
   },
   {
@@ -1647,7 +1361,7 @@
     "url": "https://kr.tradingview.com/symbols/KRX-000720/",
     "country": "한국",
     "source": "TradingView Korea Scanner",
-    "marketCap": 12370053502440,
+    "marketCap": 12559780182338,
     "releaseSession": "미정"
   },
   {
@@ -1660,7 +1374,7 @@
     "url": "https://kr.tradingview.com/symbols/KRX-000725/",
     "country": "한국",
     "source": "TradingView Korea Scanner",
-    "marketCap": 12370053502440,
+    "marketCap": 12559780182338,
     "releaseSession": "미정"
   },
   {
@@ -1673,7 +1387,7 @@
     "url": "https://kr.tradingview.com/symbols/KRX-443060/",
     "country": "한국",
     "source": "TradingView Korea Scanner",
-    "marketCap": 9131561878204,
+    "marketCap": 8930622863770,
     "releaseSession": "미정"
   },
   {
@@ -1686,7 +1400,7 @@
     "url": "https://kr.tradingview.com/symbols/KRX-175330/",
     "country": "한국",
     "source": "TradingView Korea Scanner",
-    "marketCap": 5272394764709,
+    "marketCap": 5290797538757,
     "releaseSession": "미정"
   },
   {
@@ -1712,7 +1426,7 @@
     "url": "https://kr.tradingview.com/symbols/KRX-004020/",
     "country": "한국",
     "source": "TradingView Korea Scanner",
-    "marketCap": 3801671614075,
+    "marketCap": 3775362467957,
     "releaseSession": "미정"
   },
   {
@@ -1725,7 +1439,7 @@
     "url": "https://kr.tradingview.com/symbols/KRX-005930/",
     "country": "한국",
     "source": "TradingView Korea Scanner",
-    "marketCap": 1459191487548828,
+    "marketCap": 1520326655407715,
     "releaseSession": "장전"
   },
   {
@@ -1738,7 +1452,7 @@
     "url": "https://kr.tradingview.com/symbols/KRX-005935/",
     "country": "한국",
     "source": "TradingView Korea Scanner",
-    "marketCap": 1459191487548828,
+    "marketCap": 1520326655407715,
     "releaseSession": "장전"
   },
   {
@@ -1751,7 +1465,7 @@
     "url": "https://kr.tradingview.com/symbols/KRX-033780/",
     "country": "한국",
     "source": "TradingView Korea Scanner",
-    "marketCap": 19277601553345,
+    "marketCap": 18675500912476,
     "releaseSession": "미정"
   },
   {
@@ -1764,7 +1478,7 @@
     "url": "https://kr.tradingview.com/symbols/KRX-086280/",
     "country": "한국",
     "source": "TradingView Korea Scanner",
-    "marketCap": 15225000000000,
+    "marketCap": 15112500000000,
     "releaseSession": "미정"
   },
   {
@@ -1777,7 +1491,7 @@
     "url": "https://kr.tradingview.com/symbols/KRX-352820/",
     "country": "한국",
     "source": "TradingView Korea Scanner",
-    "marketCap": 7906200845718,
+    "marketCap": 7751430192947,
     "releaseSession": "미정"
   },
   {
@@ -1790,20 +1504,7 @@
     "url": "https://kr.tradingview.com/symbols/KRX-039490/",
     "country": "한국",
     "source": "TradingView Korea Scanner",
-    "marketCap": 7539242448807,
-    "releaseSession": "미정"
-  },
-  {
-    "id": "2026-10-29-353200",
-    "title": "대덕전자 실적",
-    "company": "대덕전자",
-    "ticker": "353200",
-    "start": "2026-10-29",
-    "allDay": true,
-    "url": "https://kr.tradingview.com/symbols/KRX-353200/",
-    "country": "한국",
-    "source": "TradingView Korea Scanner",
-    "marketCap": 5366401303625,
+    "marketCap": 7602597427368,
     "releaseSession": "미정"
   },
   {
@@ -1816,7 +1517,20 @@
     "url": "https://kr.tradingview.com/symbols/KRX-128940/",
     "country": "한국",
     "source": "TradingView Korea Scanner",
-    "marketCap": 5167187175751,
+    "marketCap": 5236928352356,
+    "releaseSession": "미정"
+  },
+  {
+    "id": "2026-10-29-353200",
+    "title": "대덕전자 실적",
+    "company": "대덕전자",
+    "ticker": "353200",
+    "start": "2026-10-29",
+    "allDay": true,
+    "url": "https://kr.tradingview.com/symbols/KRX-353200/",
+    "country": "한국",
+    "source": "TradingView Korea Scanner",
+    "marketCap": 5222882662439,
     "releaseSession": "미정"
   },
   {
@@ -1829,7 +1543,7 @@
     "url": "https://kr.tradingview.com/symbols/KRX-138930/",
     "country": "한국",
     "source": "TradingView Korea Scanner",
-    "marketCap": 4580211352539,
+    "marketCap": 4564892919922,
     "releaseSession": "미정"
   },
   {
@@ -1842,7 +1556,7 @@
     "url": "https://kr.tradingview.com/symbols/KRX-067160/",
     "country": "한국",
     "source": "TradingView Korea Scanner",
-    "marketCap": 467838095284,
+    "marketCap": 478494999504,
     "releaseSession": "미정"
   },
   {
@@ -1868,7 +1582,7 @@
     "url": "https://kr.tradingview.com/symbols/KRX-096770/",
     "country": "한국",
     "source": "TradingView Korea Scanner",
-    "marketCap": 20738802564621,
+    "marketCap": 20673188625908,
     "releaseSession": "미정"
   },
   {
@@ -1881,7 +1595,7 @@
     "url": "https://kr.tradingview.com/symbols/KRX-096775/",
     "country": "한국",
     "source": "TradingView Korea Scanner",
-    "marketCap": 20738802564621,
+    "marketCap": 20673188625908,
     "releaseSession": "미정"
   },
   {
@@ -1894,7 +1608,7 @@
     "url": "https://kr.tradingview.com/symbols/KRX-024110/",
     "country": "한국",
     "source": "TradingView Korea Scanner",
-    "marketCap": 16147874542236,
+    "marketCap": 16068131951904,
     "releaseSession": "미정"
   },
   {
@@ -1907,7 +1621,7 @@
     "url": "https://kr.tradingview.com/symbols/KRX-011780/",
     "country": "한국",
     "source": "TradingView Korea Scanner",
-    "marketCap": 2860161964703,
+    "marketCap": 2911687085819,
     "releaseSession": "미정"
   },
   {
@@ -1920,7 +1634,7 @@
     "url": "https://kr.tradingview.com/symbols/KRX-011785/",
     "country": "한국",
     "source": "TradingView Korea Scanner",
-    "marketCap": 2860161964703,
+    "marketCap": 2911687085819,
     "releaseSession": "미정"
   },
   {
@@ -1933,7 +1647,7 @@
     "url": "https://kr.tradingview.com/symbols/KRX-030000/",
     "country": "한국",
     "source": "TradingView Korea Scanner",
-    "marketCap": 1921257406998,
+    "marketCap": 1929359704971,
     "releaseSession": "미정"
   },
   {
@@ -1946,7 +1660,7 @@
     "url": "https://kr.tradingview.com/symbols/KRX-361610/",
     "country": "한국",
     "source": "TradingView Korea Scanner",
-    "marketCap": 1263610721970,
+    "marketCap": 1244799688568,
     "releaseSession": "미정"
   },
   {
@@ -1959,7 +1673,7 @@
     "url": "https://kr.tradingview.com/symbols/KRX-006650/",
     "country": "한국",
     "source": "TradingView Korea Scanner",
-    "marketCap": 565730783272,
+    "marketCap": 555231412840,
     "releaseSession": "미정"
   },
   {
@@ -1972,7 +1686,7 @@
     "url": "https://kr.tradingview.com/symbols/KRX-051910/",
     "country": "한국",
     "source": "TradingView Korea Scanner",
-    "marketCap": 20613443299818,
+    "marketCap": 20315708397436,
     "releaseSession": "장후"
   },
   {
@@ -1985,7 +1699,7 @@
     "url": "https://kr.tradingview.com/symbols/KRX-051915/",
     "country": "한국",
     "source": "TradingView Korea Scanner",
-    "marketCap": 20613443299818,
+    "marketCap": 20315708397436,
     "releaseSession": "장후"
   },
   {
@@ -1998,7 +1712,7 @@
     "url": "https://kr.tradingview.com/symbols/KRX-139130/",
     "country": "한국",
     "source": "TradingView Korea Scanner",
-    "marketCap": 2711180765686,
+    "marketCap": 2678213309937,
     "releaseSession": "미정"
   },
   {
@@ -2011,20 +1725,7 @@
     "url": "https://kr.tradingview.com/symbols/KRX-042660/",
     "country": "한국",
     "source": "TradingView Korea Scanner",
-    "marketCap": 28923894384766,
-    "releaseSession": "미정"
-  },
-  {
-    "id": "2026-11-03-047810",
-    "title": "한국항공우주산업 실적",
-    "company": "한국항공우주산업",
-    "ticker": "047810",
-    "start": "2026-11-03",
-    "allDay": true,
-    "url": "https://kr.tradingview.com/symbols/KRX-047810/",
-    "country": "한국",
-    "source": "TradingView Korea Scanner",
-    "marketCap": 15020913724518,
+    "marketCap": 27269349578857,
     "releaseSession": "미정"
   },
   {
@@ -2037,8 +1738,21 @@
     "url": "https://kr.tradingview.com/symbols/KRX-003670/",
     "country": "한국",
     "source": "TradingView Korea Scanner",
-    "marketCap": 14720594425201,
+    "marketCap": 13955657192230,
     "releaseSession": "장전"
+  },
+  {
+    "id": "2026-11-03-047810",
+    "title": "한국항공우주산업 실적",
+    "company": "한국항공우주산업",
+    "ticker": "047810",
+    "start": "2026-11-03",
+    "allDay": true,
+    "url": "https://kr.tradingview.com/symbols/KRX-047810/",
+    "country": "한국",
+    "source": "TradingView Korea Scanner",
+    "marketCap": 13207876766205,
+    "releaseSession": "미정"
   },
   {
     "id": "2026-11-03-000100",
@@ -2050,7 +1764,7 @@
     "url": "https://kr.tradingview.com/symbols/KRX-000100/",
     "country": "한국",
     "source": "TradingView Korea Scanner",
-    "marketCap": 6102290850139,
+    "marketCap": 6370457899547,
     "releaseSession": "미정"
   },
   {
@@ -2063,7 +1777,7 @@
     "url": "https://kr.tradingview.com/symbols/KRX-000105/",
     "country": "한국",
     "source": "TradingView Korea Scanner",
-    "marketCap": 6102290850139,
+    "marketCap": 6370457899547,
     "releaseSession": "미정"
   },
   {
@@ -2076,7 +1790,7 @@
     "url": "https://kr.tradingview.com/symbols/KRX-011790/",
     "country": "한국",
     "source": "TradingView Korea Scanner",
-    "marketCap": 4059695284653,
+    "marketCap": 4012653624344,
     "releaseSession": "미정"
   },
   {
@@ -2089,7 +1803,7 @@
     "url": "https://kr.tradingview.com/symbols/KRX-006280/",
     "country": "한국",
     "source": "TradingView Korea Scanner",
-    "marketCap": 1519093923950,
+    "marketCap": 1514528652954,
     "releaseSession": "미정"
   },
   {
@@ -2102,7 +1816,7 @@
     "url": "https://kr.tradingview.com/symbols/KRX-002350/",
     "country": "한국",
     "source": "TradingView Korea Scanner",
-    "marketCap": 649580655899,
+    "marketCap": 641692581558,
     "releaseSession": "미정"
   },
   {
@@ -2115,7 +1829,7 @@
     "url": "https://kr.tradingview.com/symbols/KRX-002355/",
     "country": "한국",
     "source": "TradingView Korea Scanner",
-    "marketCap": 649580655899,
+    "marketCap": 641692581558,
     "releaseSession": "미정"
   },
   {
@@ -2128,7 +1842,7 @@
     "url": "https://kr.tradingview.com/symbols/KRX-090460/",
     "country": "한국",
     "source": "TradingView Korea Scanner",
-    "marketCap": 482749548740,
+    "marketCap": 563985933151,
     "releaseSession": "미정"
   },
   {
@@ -2141,7 +1855,7 @@
     "url": "https://kr.tradingview.com/symbols/KRX-034020/",
     "country": "한국",
     "source": "TradingView Korea Scanner",
-    "marketCap": 51173170275879,
+    "marketCap": 49892239855957,
     "releaseSession": "미정"
   },
   {
@@ -2154,7 +1868,7 @@
     "url": "https://kr.tradingview.com/symbols/KRX-006400/",
     "country": "한국",
     "source": "TradingView Korea Scanner",
-    "marketCap": 37499444135010,
+    "marketCap": 35798413498342,
     "releaseSession": "미정"
   },
   {
@@ -2167,7 +1881,7 @@
     "url": "https://kr.tradingview.com/symbols/KRX-006405/",
     "country": "한국",
     "source": "TradingView Korea Scanner",
-    "marketCap": 37499444135010,
+    "marketCap": 35798413498342,
     "releaseSession": "미정"
   },
   {
@@ -2180,7 +1894,7 @@
     "url": "https://kr.tradingview.com/symbols/KRX-090430/",
     "country": "한국",
     "source": "TradingView Korea Scanner",
-    "marketCap": 8409489580250,
+    "marketCap": 8503452490139,
     "releaseSession": "미정"
   },
   {
@@ -2193,7 +1907,20 @@
     "url": "https://kr.tradingview.com/symbols/KRX-090435/",
     "country": "한국",
     "source": "TradingView Korea Scanner",
-    "marketCap": 8409489580250,
+    "marketCap": 8503452490139,
+    "releaseSession": "미정"
+  },
+  {
+    "id": "2026-11-04-161390",
+    "title": "한국타이어앤테크놀로지 실적",
+    "company": "한국타이어앤테크놀로지",
+    "ticker": "161390",
+    "start": "2026-11-04",
+    "allDay": true,
+    "url": "https://kr.tradingview.com/symbols/KRX-161390/",
+    "country": "한국",
+    "source": "TradingView Korea Scanner",
+    "marketCap": 7990263404846,
     "releaseSession": "미정"
   },
   {
@@ -2206,7 +1933,7 @@
     "url": "https://kr.tradingview.com/symbols/KRX-241560/",
     "country": "한국",
     "source": "TradingView Korea Scanner",
-    "marketCap": 6211826019287,
+    "marketCap": 6106540832520,
     "releaseSession": "미정"
   },
   {
@@ -2219,7 +1946,7 @@
     "url": "https://kr.tradingview.com/symbols/KRX-001440/",
     "country": "한국",
     "source": "TradingView Korea Scanner",
-    "marketCap": 5368452816772,
+    "marketCap": 5256997048950,
     "releaseSession": "미정"
   },
   {
@@ -2232,7 +1959,7 @@
     "url": "https://kr.tradingview.com/symbols/KRX-006360/",
     "country": "한국",
     "source": "TradingView Korea Scanner",
-    "marketCap": 2962622636414,
+    "marketCap": 2949889301300,
     "releaseSession": "미정"
   },
   {
@@ -2245,7 +1972,7 @@
     "url": "https://kr.tradingview.com/symbols/KRX-336260/",
     "country": "한국",
     "source": "TradingView Korea Scanner",
-    "marketCap": 2267657011261,
+    "marketCap": 2410576770782,
     "releaseSession": "미정"
   },
   {
@@ -2258,7 +1985,7 @@
     "url": "https://kr.tradingview.com/symbols/KRX-002790/",
     "country": "한국",
     "source": "TradingView Korea Scanner",
-    "marketCap": 2062301810713,
+    "marketCap": 2104664069028,
     "releaseSession": "미정"
   },
   {
@@ -2271,7 +1998,7 @@
     "url": "https://kr.tradingview.com/symbols/KRX-002795/",
     "country": "한국",
     "source": "TradingView Korea Scanner",
-    "marketCap": 2062301810713,
+    "marketCap": 2104664069028,
     "releaseSession": "미정"
   },
   {
@@ -2284,7 +2011,7 @@
     "url": "https://kr.tradingview.com/symbols/KRX-195940/",
     "country": "한국",
     "source": "TradingView Korea Scanner",
-    "marketCap": 1204020376205,
+    "marketCap": 1196937903404,
     "releaseSession": "미정"
   },
   {
@@ -2297,7 +2024,7 @@
     "url": "https://kr.tradingview.com/symbols/KRX-068270/",
     "country": "한국",
     "source": "TradingView Korea Scanner",
-    "marketCap": 44487511322021,
+    "marketCap": 46590154891968,
     "releaseSession": "미정"
   },
   {
@@ -2310,7 +2037,7 @@
     "url": "https://kr.tradingview.com/symbols/KRX-035720/",
     "country": "한국",
     "source": "TradingView Korea Scanner",
-    "marketCap": 17423014558410,
+    "marketCap": 17929625601196,
     "releaseSession": "장전"
   },
   {
@@ -2323,7 +2050,7 @@
     "url": "https://kr.tradingview.com/symbols/KRX-278470/",
     "country": "한국",
     "source": "TradingView Korea Scanner",
-    "marketCap": 14488566421509,
+    "marketCap": 14432409187317,
     "releaseSession": "장후"
   },
   {
@@ -2336,7 +2063,7 @@
     "url": "https://kr.tradingview.com/symbols/KRX-071050/",
     "country": "한국",
     "source": "TradingView Korea Scanner",
-    "marketCap": 11078129686356,
+    "marketCap": 11315474531174,
     "releaseSession": "미정"
   },
   {
@@ -2349,7 +2076,7 @@
     "url": "https://kr.tradingview.com/symbols/KRX-071055/",
     "country": "한국",
     "source": "TradingView Korea Scanner",
-    "marketCap": 11078129686356,
+    "marketCap": 11315474531174,
     "releaseSession": "미정"
   },
   {
@@ -2362,8 +2089,34 @@
     "url": "https://kr.tradingview.com/symbols/KRX-259960/",
     "country": "한국",
     "source": "TradingView Korea Scanner",
-    "marketCap": 10495227714539,
+    "marketCap": 10581965133667,
     "releaseSession": "장후"
+  },
+  {
+    "id": "2026-11-05-078930",
+    "title": "GS 실적",
+    "company": "GS",
+    "ticker": "078930",
+    "start": "2026-11-05",
+    "allDay": true,
+    "url": "https://kr.tradingview.com/symbols/KRX-078930/",
+    "country": "한국",
+    "source": "TradingView Korea Scanner",
+    "marketCap": 9159536685479,
+    "releaseSession": "미정"
+  },
+  {
+    "id": "2026-11-05-078935",
+    "title": "GS1우선주 실적",
+    "company": "GS1우선주",
+    "ticker": "078935",
+    "start": "2026-11-05",
+    "allDay": true,
+    "url": "https://kr.tradingview.com/symbols/KRX-078935/",
+    "country": "한국",
+    "source": "TradingView Korea Scanner",
+    "marketCap": 9159536685479,
+    "releaseSession": "미정"
   },
   {
     "id": "2026-11-05-326030",
@@ -2375,7 +2128,20 @@
     "url": "https://kr.tradingview.com/symbols/KRX-326030/",
     "country": "한국",
     "source": "TradingView Korea Scanner",
-    "marketCap": 6946385069275,
+    "marketCap": 7087348915100,
+    "releaseSession": "미정"
+  },
+  {
+    "id": "2026-11-05-036570",
+    "title": "엔씨소프트 실적",
+    "company": "엔씨소프트",
+    "ticker": "036570",
+    "start": "2026-11-05",
+    "allDay": true,
+    "url": "https://kr.tradingview.com/symbols/KRX-036570/",
+    "country": "한국",
+    "source": "TradingView Korea Scanner",
+    "marketCap": 4955009363174,
     "releaseSession": "미정"
   },
   {
@@ -2388,7 +2154,7 @@
     "url": "https://kr.tradingview.com/symbols/KRX-454910/",
     "country": "한국",
     "source": "TradingView Korea Scanner",
-    "marketCap": 4842052267456,
+    "marketCap": 4803160281372,
     "releaseSession": "미정"
   },
   {
@@ -2401,7 +2167,7 @@
     "url": "https://kr.tradingview.com/symbols/KRX-052690/",
     "country": "한국",
     "source": "TradingView Korea Scanner",
-    "marketCap": 3838589433289,
+    "marketCap": 3789132879639,
     "releaseSession": "미정"
   },
   {
@@ -2414,7 +2180,7 @@
     "url": "https://kr.tradingview.com/symbols/KRX-251270/",
     "country": "한국",
     "source": "TradingView Korea Scanner",
-    "marketCap": 3136104581833,
+    "marketCap": 3159479274368,
     "releaseSession": "미정"
   },
   {
@@ -2427,7 +2193,7 @@
     "url": "https://kr.tradingview.com/symbols/KRX-028670/",
     "country": "한국",
     "source": "TradingView Korea Scanner",
-    "marketCap": 3116540296021,
+    "marketCap": 3089811820068,
     "releaseSession": "미정"
   },
   {
@@ -2440,7 +2206,7 @@
     "url": "https://kr.tradingview.com/symbols/KRX-023530/",
     "country": "한국",
     "source": "TradingView Korea Scanner",
-    "marketCap": 3007996237183,
+    "marketCap": 2793139363098,
     "releaseSession": "미정"
   },
   {
@@ -2453,7 +2219,7 @@
     "url": "https://kr.tradingview.com/symbols/KRX-011170/",
     "country": "한국",
     "source": "TradingView Korea Scanner",
-    "marketCap": 2466778192520,
+    "marketCap": 2449911333084,
     "releaseSession": "미정"
   },
   {
@@ -2466,7 +2232,46 @@
     "url": "https://kr.tradingview.com/symbols/KRX-007070/",
     "country": "한국",
     "source": "TradingView Korea Scanner",
-    "marketCap": 2373262969971,
+    "marketCap": 2302232212067,
+    "releaseSession": "미정"
+  },
+  {
+    "id": "2026-11-05-003540",
+    "title": "대신증권 실적",
+    "company": "대신증권",
+    "ticker": "003540",
+    "start": "2026-11-05",
+    "allDay": true,
+    "url": "https://kr.tradingview.com/symbols/KRX-003540/",
+    "country": "한국",
+    "source": "TradingView Korea Scanner",
+    "marketCap": 1471647607517,
+    "releaseSession": "미정"
+  },
+  {
+    "id": "2026-11-05-003545",
+    "title": "대신증권1우선주 실적",
+    "company": "대신증권1우선주",
+    "ticker": "003545",
+    "start": "2026-11-05",
+    "allDay": true,
+    "url": "https://kr.tradingview.com/symbols/KRX-003545/",
+    "country": "한국",
+    "source": "TradingView Korea Scanner",
+    "marketCap": 1471647607517,
+    "releaseSession": "미정"
+  },
+  {
+    "id": "2026-11-05-003547",
+    "title": "대신증권2우선주(신형) 실적",
+    "company": "대신증권2우선주(신형)",
+    "ticker": "003547",
+    "start": "2026-11-05",
+    "allDay": true,
+    "url": "https://kr.tradingview.com/symbols/KRX-003547/",
+    "country": "한국",
+    "source": "TradingView Korea Scanner",
+    "marketCap": 1471647607517,
     "releaseSession": "미정"
   },
   {
@@ -2479,7 +2284,20 @@
     "url": "https://kr.tradingview.com/symbols/KRX-032350/",
     "country": "한국",
     "source": "TradingView Korea Scanner",
-    "marketCap": 1055565141602,
+    "marketCap": 1060348669434,
+    "releaseSession": "미정"
+  },
+  {
+    "id": "2026-11-05-035760",
+    "title": "씨제이이엔엠 실적",
+    "company": "씨제이이엔엠",
+    "ticker": "035760",
+    "start": "2026-11-05",
+    "allDay": true,
+    "url": "https://kr.tradingview.com/symbols/KRX-035760/",
+    "country": "한국",
+    "source": "TradingView Korea Scanner",
+    "marketCap": 771708425903,
     "releaseSession": "미정"
   },
   {
@@ -2496,19 +2314,6 @@
     "releaseSession": "미정"
   },
   {
-    "id": "2026-11-05-035760",
-    "title": "씨제이이엔엠 실적",
-    "company": "씨제이이엔엠",
-    "ticker": "035760",
-    "start": "2026-11-05",
-    "allDay": true,
-    "url": "https://kr.tradingview.com/symbols/KRX-035760/",
-    "country": "한국",
-    "source": "TradingView Korea Scanner",
-    "marketCap": 763410485840,
-    "releaseSession": "미정"
-  },
-  {
     "id": "2026-11-05-046890",
     "title": "서울반도체 실적",
     "company": "서울반도체",
@@ -2518,7 +2323,7 @@
     "url": "https://kr.tradingview.com/symbols/KRX-046890/",
     "country": "한국",
     "source": "TradingView Korea Scanner",
-    "marketCap": 543516117859,
+    "marketCap": 553100945663,
     "releaseSession": "미정"
   },
   {
@@ -2531,7 +2336,7 @@
     "url": "https://kr.tradingview.com/symbols/KRX-104830/",
     "country": "한국",
     "source": "TradingView Korea Scanner",
-    "marketCap": 448214392948,
+    "marketCap": 458931192780,
     "releaseSession": "미정"
   },
   {
@@ -2544,7 +2349,7 @@
     "url": "https://kr.tradingview.com/symbols/KRX-042000/",
     "country": "한국",
     "source": "TradingView Korea Scanner",
-    "marketCap": 439643880615,
+    "marketCap": 444464537201,
     "releaseSession": "미정"
   },
   {
@@ -2557,7 +2362,7 @@
     "url": "https://kr.tradingview.com/symbols/KRX-092190/",
     "country": "한국",
     "source": "TradingView Korea Scanner",
-    "marketCap": 321570759087,
+    "marketCap": 314334286308,
     "releaseSession": "미정"
   },
   {
@@ -2570,7 +2375,7 @@
     "url": "https://kr.tradingview.com/symbols/KRX-069080/",
     "country": "한국",
     "source": "TradingView Korea Scanner",
-    "marketCap": 303918453407,
+    "marketCap": 306461704063,
     "releaseSession": "미정"
   },
   {
@@ -2583,7 +2388,7 @@
     "url": "https://kr.tradingview.com/symbols/KRX-234340/",
     "country": "한국",
     "source": "TradingView Korea Scanner",
-    "marketCap": 281224106312,
+    "marketCap": 276480567169,
     "releaseSession": "미정"
   },
   {
@@ -2596,7 +2401,7 @@
     "url": "https://kr.tradingview.com/symbols/KRX-214180/",
     "country": "한국",
     "source": "TradingView Korea Scanner",
-    "marketCap": 197759048710,
+    "marketCap": 202566594572,
     "releaseSession": "미정"
   },
   {
@@ -2609,7 +2414,7 @@
     "url": "https://kr.tradingview.com/symbols/KRX-042700/",
     "country": "한국",
     "source": "TradingView Korea Scanner",
-    "marketCap": 19492290847778,
+    "marketCap": 20203688323975,
     "releaseSession": "미정"
   },
   {
@@ -2622,7 +2427,7 @@
     "url": "https://kr.tradingview.com/symbols/KRX-079550/",
     "country": "한국",
     "source": "TradingView Korea Scanner",
-    "marketCap": 17936757627487,
+    "marketCap": 16563712997437,
     "releaseSession": "미정"
   },
   {
@@ -2635,7 +2440,20 @@
     "url": "https://kr.tradingview.com/symbols/KRX-222800/",
     "country": "한국",
     "source": "TradingView Korea Scanner",
-    "marketCap": 4341111641692,
+    "marketCap": 4266200310516,
+    "releaseSession": "미정"
+  },
+  {
+    "id": "2026-11-06-000120",
+    "title": "씨제이대한통운 실적",
+    "company": "씨제이대한통운",
+    "ticker": "000120",
+    "start": "2026-11-06",
+    "allDay": true,
+    "url": "https://kr.tradingview.com/symbols/KRX-000120/",
+    "country": "한국",
+    "source": "TradingView Korea Scanner",
+    "marketCap": 1543731608963,
     "releaseSession": "미정"
   },
   {
@@ -2648,7 +2466,7 @@
     "url": "https://kr.tradingview.com/symbols/KRX-097520/",
     "country": "한국",
     "source": "TradingView Korea Scanner",
-    "marketCap": 317233622646,
+    "marketCap": 329859836483,
     "releaseSession": "미정"
   },
   {
@@ -2661,7 +2479,7 @@
     "url": "https://kr.tradingview.com/symbols/KRX-035600/",
     "country": "한국",
     "source": "TradingView Korea Scanner",
-    "marketCap": 269645286597,
+    "marketCap": 275767538910,
     "releaseSession": "미정"
   },
   {
@@ -2674,7 +2492,7 @@
     "url": "https://kr.tradingview.com/symbols/KRX-089600/",
     "country": "한국",
     "source": "TradingView Korea Scanner",
-    "marketCap": 128211951427,
+    "marketCap": 130020938396,
     "releaseSession": "미정"
   },
   {
@@ -2687,7 +2505,7 @@
     "url": "https://kr.tradingview.com/symbols/KRX-062040/",
     "country": "한국",
     "source": "TradingView Korea Scanner",
-    "marketCap": 5620989613724,
+    "marketCap": 5648513501930,
     "releaseSession": "미정"
   },
   {
@@ -2700,7 +2518,7 @@
     "url": "https://kr.tradingview.com/symbols/KRX-247540/",
     "country": "한국",
     "source": "TradingView Korea Scanner",
-    "marketCap": 11222683584595,
+    "marketCap": 10733890745544,
     "releaseSession": "미정"
   },
   {
@@ -2713,7 +2531,7 @@
     "url": "https://kr.tradingview.com/symbols/KRX-377300/",
     "country": "한국",
     "source": "TradingView Korea Scanner",
-    "marketCap": 5978939584351,
+    "marketCap": 6073628672791,
     "releaseSession": "미정"
   },
   {
@@ -2726,7 +2544,7 @@
     "url": "https://kr.tradingview.com/symbols/KRX-066970/",
     "country": "한국",
     "source": "TradingView Korea Scanner",
-    "marketCap": 3933409523010,
+    "marketCap": 3836047901154,
     "releaseSession": "미정"
   },
   {
@@ -2739,7 +2557,7 @@
     "url": "https://kr.tradingview.com/symbols/KRX-089860/",
     "country": "한국",
     "source": "TradingView Korea Scanner",
-    "marketCap": 1554041772461,
+    "marketCap": 1633922424316,
     "releaseSession": "미정"
   },
   {
@@ -2752,7 +2570,7 @@
     "url": "https://kr.tradingview.com/symbols/KRX-376300/",
     "country": "한국",
     "source": "TradingView Korea Scanner",
-    "marketCap": 480702744484,
+    "marketCap": 478328903770,
     "releaseSession": "미정"
   },
   {
@@ -2765,7 +2583,7 @@
     "url": "https://kr.tradingview.com/symbols/KRX-012450/",
     "country": "한국",
     "source": "TradingView Korea Scanner",
-    "marketCap": 59269003417969,
+    "marketCap": 56490768882751,
     "releaseSession": "미정"
   },
   {
@@ -2778,7 +2596,7 @@
     "url": "https://kr.tradingview.com/symbols/KRX-035420/",
     "country": "한국",
     "source": "TradingView Korea Scanner",
-    "marketCap": 31635411987305,
+    "marketCap": 32016491149902,
     "releaseSession": "미정"
   },
   {
@@ -2791,7 +2609,7 @@
     "url": "https://kr.tradingview.com/symbols/KRX-017670/",
     "country": "한국",
     "source": "TradingView Korea Scanner",
-    "marketCap": 17941678237915,
+    "marketCap": 18152756805420,
     "releaseSession": "장전"
   },
   {
@@ -2804,7 +2622,7 @@
     "url": "https://kr.tradingview.com/symbols/KRX-323410/",
     "country": "한국",
     "source": "TradingView Korea Scanner",
-    "marketCap": 10556426509094,
+    "marketCap": 10580255914307,
     "releaseSession": "장전"
   },
   {
@@ -2817,7 +2635,7 @@
     "url": "https://kr.tradingview.com/symbols/KRX-021240/",
     "country": "한국",
     "source": "TradingView Korea Scanner",
-    "marketCap": 6611638535309,
+    "marketCap": 6843010827637,
     "releaseSession": "장후"
   },
   {
@@ -2830,7 +2648,20 @@
     "url": "https://kr.tradingview.com/symbols/KRX-018880/",
     "country": "한국",
     "source": "TradingView Korea Scanner",
-    "marketCap": 3863383145142,
+    "marketCap": 3883905764771,
+    "releaseSession": "장후"
+  },
+  {
+    "id": "2026-11-11-263750",
+    "title": "펄어비스 실적",
+    "company": "펄어비스",
+    "ticker": "263750",
+    "start": "2026-11-11",
+    "allDay": true,
+    "url": "https://kr.tradingview.com/symbols/KRX-263750/",
+    "country": "한국",
+    "source": "TradingView Korea Scanner",
+    "marketCap": 2214570650482,
     "releaseSession": "장후"
   },
   {
@@ -2856,7 +2687,20 @@
     "url": "https://kr.tradingview.com/symbols/KRX-293490/",
     "country": "한국",
     "source": "TradingView Korea Scanner",
-    "marketCap": 885250918884,
+    "marketCap": 923371771851,
+    "releaseSession": "미정"
+  },
+  {
+    "id": "2026-11-11-005690",
+    "title": "파미셀 실적",
+    "company": "파미셀",
+    "ticker": "005690",
+    "start": "2026-11-11",
+    "allDay": true,
+    "url": "https://kr.tradingview.com/symbols/KRX-005690/",
+    "country": "한국",
+    "source": "TradingView Korea Scanner",
+    "marketCap": 695296410484,
     "releaseSession": "미정"
   },
   {
@@ -2869,7 +2713,33 @@
     "url": "https://kr.tradingview.com/symbols/KRX-108320/",
     "country": "한국",
     "source": "TradingView Korea Scanner",
-    "marketCap": 638373751163,
+    "marketCap": 644066255951,
+    "releaseSession": "미정"
+  },
+  {
+    "id": "2026-11-11-078340",
+    "title": "컴투스 실적",
+    "company": "컴투스",
+    "ticker": "078340",
+    "start": "2026-11-11",
+    "allDay": true,
+    "url": "https://kr.tradingview.com/symbols/KRX-078340/",
+    "country": "한국",
+    "source": "TradingView Korea Scanner",
+    "marketCap": 365822407198,
+    "releaseSession": "미정"
+  },
+  {
+    "id": "2026-11-11-043150",
+    "title": "바텍 실적",
+    "company": "바텍",
+    "ticker": "043150",
+    "start": "2026-11-11",
+    "allDay": true,
+    "url": "https://kr.tradingview.com/symbols/KRX-043150/",
+    "country": "한국",
+    "source": "TradingView Korea Scanner",
+    "marketCap": 329021763229,
     "releaseSession": "미정"
   },
   {
@@ -2882,7 +2752,7 @@
     "url": "https://kr.tradingview.com/symbols/KRX-196170/",
     "country": "한국",
     "source": "TradingView Korea Scanner",
-    "marketCap": 24234212677002,
+    "marketCap": 22806622562408,
     "releaseSession": "미정"
   },
   {
@@ -2895,7 +2765,7 @@
     "url": "https://kr.tradingview.com/symbols/KRX-064400/",
     "country": "한국",
     "source": "TradingView Korea Scanner",
-    "marketCap": 7130805786133,
+    "marketCap": 7324577682495,
     "releaseSession": "미정"
   },
   {
@@ -2908,7 +2778,7 @@
     "url": "https://kr.tradingview.com/symbols/KRX-082740/",
     "country": "한국",
     "source": "TradingView Korea Scanner",
-    "marketCap": 3875115844345,
+    "marketCap": 3729121167755,
     "releaseSession": "미정"
   },
   {
@@ -2921,7 +2791,7 @@
     "url": "https://kr.tradingview.com/symbols/KRX-440110/",
     "country": "한국",
     "source": "TradingView Korea Scanner",
-    "marketCap": 3076817043304,
+    "marketCap": 3106883659363,
     "releaseSession": "미정"
   },
   {
@@ -2934,7 +2804,20 @@
     "url": "https://kr.tradingview.com/symbols/KRX-035250/",
     "country": "한국",
     "source": "TradingView Korea Scanner",
-    "marketCap": 2925923007202,
+    "marketCap": 2907886495514,
+    "releaseSession": "미정"
+  },
+  {
+    "id": "2026-11-12-462870",
+    "title": "시프트업 실적",
+    "company": "시프트업",
+    "ticker": "462870",
+    "start": "2026-11-12",
+    "allDay": true,
+    "url": "https://kr.tradingview.com/symbols/KRX-462870/",
+    "country": "한국",
+    "source": "TradingView Korea Scanner",
+    "marketCap": 1944429302788,
     "releaseSession": "미정"
   },
   {
@@ -2947,7 +2830,7 @@
     "url": "https://kr.tradingview.com/symbols/KRX-069620/",
     "country": "한국",
     "source": "TradingView Korea Scanner",
-    "marketCap": 1490061894417,
+    "marketCap": 1496965656090,
     "releaseSession": "미정"
   },
   {
@@ -2960,7 +2843,7 @@
     "url": "https://kr.tradingview.com/symbols/KRX-020000/",
     "country": "한국",
     "source": "TradingView Korea Scanner",
-    "marketCap": 308403868275,
+    "marketCap": 304640550785,
     "releaseSession": "미정"
   },
   {
@@ -2973,7 +2856,20 @@
     "url": "https://kr.tradingview.com/symbols/KRX-091700/",
     "country": "한국",
     "source": "TradingView Korea Scanner",
-    "marketCap": 287966515045,
+    "marketCap": 291430029831,
+    "releaseSession": "미정"
+  },
+  {
+    "id": "2026-11-12-058110",
+    "title": "멕아이씨에스 실적",
+    "company": "멕아이씨에스",
+    "ticker": "058110",
+    "start": "2026-11-12",
+    "allDay": true,
+    "url": "https://kr.tradingview.com/symbols/KRX-058110/",
+    "country": "한국",
+    "source": "TradingView Korea Scanner",
+    "marketCap": 25880875072,
     "releaseSession": "미정"
   }
 ]
