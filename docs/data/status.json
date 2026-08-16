@@ -2,22 +2,22 @@
   "version": "v6-tradingview-korea-next-earnings",
   "ok": true,
   "used_cache": false,
-  "updated_at": "2026-08-16T07:39:23+09:00",
+  "updated_at": "2026-08-17T07:38:07+09:00",
   "timezone": "Asia/Seoul",
   "source": "TradingView Korea Scanner",
   "source_url": "https://scanner.tradingview.com/korea/scan",
   "range": {
-    "from": "2026-08-16",
-    "to": "2026-11-16"
+    "from": "2026-08-17",
+    "to": "2026-11-17"
   },
-  "event_count": 236,
-  "api_total_count": 239,
+  "event_count": 243,
+  "api_total_count": 246,
   "first_event_date": "2026-08-17",
-  "last_event_date": "2026-11-16",
+  "last_event_date": "2026-11-17",
   "events_by_month": {
     "2026-08": 8,
     "2026-10": 68,
-    "2026-11": 160
+    "2026-11": 167
   },
   "message": "한국 상장사 다음 실적 예정일 갱신 완료",
   "error": null
