@@ -1,31 +1,5 @@
 [
   {
-    "id": "2026-08-18-080160",
-    "title": "모두투어네트워크 실적",
-    "company": "모두투어네트워크",
-    "ticker": "080160",
-    "start": "2026-08-18",
-    "allDay": true,
-    "url": "https://kr.tradingview.com/symbols/KRX-080160/",
-    "country": "한국",
-    "source": "TradingView Korea Scanner",
-    "marketCap": 159273052216,
-    "releaseSession": "미정"
-  },
-  {
-    "id": "2026-08-18-084990",
-    "title": "헬릭스미스 실적",
-    "company": "헬릭스미스",
-    "ticker": "084990",
-    "start": "2026-08-18",
-    "allDay": true,
-    "url": "https://kr.tradingview.com/symbols/KRX-084990/",
-    "country": "한국",
-    "source": "TradingView Korea Scanner",
-    "marketCap": 150112849808,
-    "releaseSession": "미정"
-  },
-  {
     "id": "2026-10-09-195870",
     "title": "해성디에스 실적",
     "company": "해성디에스",
@@ -1833,6 +1807,19 @@
     "releaseSession": "미정"
   },
   {
+    "id": "2026-11-06-094170",
+    "title": "동운아나텍 실적",
+    "company": "동운아나텍",
+    "ticker": "094170",
+    "start": "2026-11-06",
+    "allDay": true,
+    "url": "https://kr.tradingview.com/symbols/KRX-094170/",
+    "country": "한국",
+    "source": "TradingView Korea Scanner",
+    "marketCap": 667076688766,
+    "releaseSession": "미정"
+  },
+  {
     "id": "2026-11-06-097520",
     "title": "엠씨넥스 실적",
     "company": "엠씨넥스",
@@ -2483,6 +2470,45 @@
     "releaseSession": "미정"
   },
   {
+    "id": "2026-11-12-126700",
+    "title": "하이비젼시스템 실적",
+    "company": "하이비젼시스템",
+    "ticker": "126700",
+    "start": "2026-11-12",
+    "allDay": true,
+    "url": "https://kr.tradingview.com/symbols/KRX-126700/",
+    "country": "한국",
+    "source": "TradingView Korea Scanner",
+    "marketCap": 143439950562,
+    "releaseSession": "미정"
+  },
+  {
+    "id": "2026-11-12-282880",
+    "title": "코윈테크 실적",
+    "company": "코윈테크",
+    "ticker": "282880",
+    "start": "2026-11-12",
+    "allDay": true,
+    "url": "https://kr.tradingview.com/symbols/KRX-282880/",
+    "country": "한국",
+    "source": "TradingView Korea Scanner",
+    "marketCap": 124229977303,
+    "releaseSession": "미정"
+  },
+  {
+    "id": "2026-11-12-053580",
+    "title": "웹케시 실적",
+    "company": "웹케시",
+    "ticker": "053580",
+    "start": "2026-11-12",
+    "allDay": true,
+    "url": "https://kr.tradingview.com/symbols/KRX-053580/",
+    "country": "한국",
+    "source": "TradingView Korea Scanner",
+    "marketCap": 88247963390,
+    "releaseSession": "미정"
+  },
+  {
     "id": "2026-11-12-048530",
     "title": "인트론바이오테크놀로지 실적",
     "company": "인트론바이오테크놀로지",
@@ -2974,6 +3000,19 @@
     "country": "한국",
     "source": "TradingView Korea Scanner",
     "marketCap": 283128775549,
+    "releaseSession": "미정"
+  },
+  {
+    "id": "2026-11-16-052710",
+    "title": "아모텍 실적",
+    "company": "아모텍",
+    "ticker": "052710",
+    "start": "2026-11-16",
+    "allDay": true,
+    "url": "https://kr.tradingview.com/symbols/KRX-052710/",
+    "country": "한국",
+    "source": "TradingView Korea Scanner",
+    "marketCap": 250696354675,
     "releaseSession": "미정"
   },
   {
@@ -3718,6 +3757,19 @@
     "releaseSession": "미정"
   },
   {
+    "id": "2026-11-18-294570",
+    "title": "쿠콘 실적",
+    "company": "쿠콘",
+    "ticker": "294570",
+    "start": "2026-11-18",
+    "allDay": true,
+    "url": "https://kr.tradingview.com/symbols/KRX-294570/",
+    "country": "한국",
+    "source": "TradingView Korea Scanner",
+    "marketCap": 206151733637,
+    "releaseSession": "미정"
+  },
+  {
     "id": "2026-11-18-095570",
     "title": "AJ네트웍스 실적",
     "company": "AJ네트웍스",
@@ -3793,6 +3845,19 @@
     "country": "한국",
     "source": "TradingView Korea Scanner",
     "marketCap": 150122383089,
+    "releaseSession": "미정"
+  },
+  {
+    "id": "2026-11-18-084990",
+    "title": "헬릭스미스 실적",
+    "company": "헬릭스미스",
+    "ticker": "084990",
+    "start": "2026-11-18",
+    "allDay": true,
+    "url": "https://kr.tradingview.com/symbols/KRX-084990/",
+    "country": "한국",
+    "source": "TradingView Korea Scanner",
+    "marketCap": 150112849808,
     "releaseSession": "미정"
   },
   {
