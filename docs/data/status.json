@@ -2,13 +2,13 @@
   "version": "v6-tradingview-korea-next-earnings",
   "ok": true,
   "used_cache": false,
-  "updated_at": "2026-08-28T15:08:29+09:00",
+  "updated_at": "2026-08-29T12:43:19+09:00",
   "timezone": "Asia/Seoul",
   "source": "TradingView Korea Scanner",
   "source_url": "https://scanner.tradingview.com/korea/scan",
   "range": {
-    "from": "2026-08-28",
-    "to": "2026-11-28"
+    "from": "2026-08-29",
+    "to": "2026-11-29"
   },
   "event_count": 303,
   "api_total_count": 306,
