@@ -3926,6 +3926,19 @@
     "releaseSession": "미정"
   },
   {
+    "id": "2026-11-18-217270",
+    "title": "넵튠 실적",
+    "company": "넵튠",
+    "ticker": "217270",
+    "start": "2026-11-18",
+    "allDay": true,
+    "url": "https://kr.tradingview.com/symbols/KRX-217270/",
+    "country": "한국",
+    "source": "TradingView Korea Scanner",
+    "marketCap": 107824182129,
+    "releaseSession": "미정"
+  },
+  {
     "id": "2026-11-18-042510",
     "title": "라온시큐어 실적",
     "company": "라온시큐어",
