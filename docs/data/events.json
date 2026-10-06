@@ -52,58 +52,6 @@
     "releaseSession": "미정"
   },
   {
-    "id": "2026-10-22-005380",
-    "title": "현대자동차 실적",
-    "company": "현대자동차",
-    "ticker": "005380",
-    "start": "2026-10-22",
-    "allDay": true,
-    "url": "https://kr.tradingview.com/symbols/KRX-005380/",
-    "country": "한국",
-    "source": "TradingView Korea Scanner",
-    "marketCap": 79430940713120,
-    "releaseSession": "장후"
-  },
-  {
-    "id": "2026-10-22-005385",
-    "title": "현대자동차1우선주 실적",
-    "company": "현대자동차1우선주",
-    "ticker": "005385",
-    "start": "2026-10-22",
-    "allDay": true,
-    "url": "https://kr.tradingview.com/symbols/KRX-005385/",
-    "country": "한국",
-    "source": "TradingView Korea Scanner",
-    "marketCap": 79430940713120,
-    "releaseSession": "장후"
-  },
-  {
-    "id": "2026-10-22-005387",
-    "title": "현대자동차2우선주(신형) 실적",
-    "company": "현대자동차2우선주(신형)",
-    "ticker": "005387",
-    "start": "2026-10-22",
-    "allDay": true,
-    "url": "https://kr.tradingview.com/symbols/KRX-005387/",
-    "country": "한국",
-    "source": "TradingView Korea Scanner",
-    "marketCap": 79430940713120,
-    "releaseSession": "장후"
-  },
-  {
-    "id": "2026-10-22-005389",
-    "title": "현대자동차3우선주(신형) 실적",
-    "company": "현대자동차3우선주(신형)",
-    "ticker": "005389",
-    "start": "2026-10-22",
-    "allDay": true,
-    "url": "https://kr.tradingview.com/symbols/KRX-005389/",
-    "country": "한국",
-    "source": "TradingView Korea Scanner",
-    "marketCap": 79430940713120,
-    "releaseSession": "장후"
-  },
-  {
     "id": "2026-10-22-028260",
     "title": "삼성물산 실적",
     "company": "삼성물산",
@@ -297,6 +245,19 @@
     "source": "TradingView Korea Scanner",
     "marketCap": 4476513586426,
     "releaseSession": "미정"
+  },
+  {
+    "id": "2026-10-22-034220",
+    "title": "LG디스플레이 실적",
+    "company": "LG디스플레이",
+    "ticker": "034220",
+    "start": "2026-10-22",
+    "allDay": true,
+    "url": "https://kr.tradingview.com/symbols/KRX-034220/",
+    "country": "한국",
+    "source": "TradingView Korea Scanner",
+    "marketCap": 4285000000000,
+    "releaseSession": "장전"
   },
   {
     "id": "2026-10-22-051900",
@@ -663,6 +624,19 @@
     "releaseSession": "미정"
   },
   {
+    "id": "2026-10-27-011070",
+    "title": "LG이노텍 실적",
+    "company": "LG이노텍",
+    "ticker": "011070",
+    "start": "2026-10-27",
+    "allDay": true,
+    "url": "https://kr.tradingview.com/symbols/KRX-011070/",
+    "country": "한국",
+    "source": "TradingView Korea Scanner",
+    "marketCap": 13583426967621,
+    "releaseSession": "미정"
+  },
+  {
     "id": "2026-10-27-047050",
     "title": "포스코인터내셔널 실적",
     "company": "포스코인터내셔널",
@@ -738,19 +712,6 @@
     "country": "한국",
     "source": "TradingView Korea Scanner",
     "marketCap": 31151070182800,
-    "releaseSession": "미정"
-  },
-  {
-    "id": "2026-10-28-011070",
-    "title": "LG이노텍 실적",
-    "company": "LG이노텍",
-    "ticker": "011070",
-    "start": "2026-10-28",
-    "allDay": true,
-    "url": "https://kr.tradingview.com/symbols/KRX-011070/",
-    "country": "한국",
-    "source": "TradingView Korea Scanner",
-    "marketCap": 13583426967621,
     "releaseSession": "미정"
   },
   {
@@ -830,19 +791,6 @@
     "source": "TradingView Korea Scanner",
     "marketCap": 4381291872025,
     "releaseSession": "미정"
-  },
-  {
-    "id": "2026-10-28-034220",
-    "title": "LG디스플레이 실적",
-    "company": "LG디스플레이",
-    "ticker": "034220",
-    "start": "2026-10-28",
-    "allDay": true,
-    "url": "https://kr.tradingview.com/symbols/KRX-034220/",
-    "country": "한국",
-    "source": "TradingView Korea Scanner",
-    "marketCap": 4285000000000,
-    "releaseSession": "장전"
   },
   {
     "id": "2026-10-28-004020",
@@ -1599,6 +1547,19 @@
     "releaseSession": "미정"
   },
   {
+    "id": "2026-11-04-323410",
+    "title": "카카오뱅크 실적",
+    "company": "카카오뱅크",
+    "ticker": "323410",
+    "start": "2026-11-04",
+    "allDay": true,
+    "url": "https://kr.tradingview.com/symbols/KRX-323410/",
+    "country": "한국",
+    "source": "TradingView Korea Scanner",
+    "marketCap": 9388785653687,
+    "releaseSession": "장전"
+  },
+  {
     "id": "2026-11-04-090430",
     "title": "아모레퍼시픽 실적",
     "company": "아모레퍼시픽",
@@ -2194,19 +2155,6 @@
     "country": "한국",
     "source": "TradingView Korea Scanner",
     "marketCap": 1444862396812,
-    "releaseSession": "미정"
-  },
-  {
-    "id": "2026-11-05-032350",
-    "title": "롯데관광개발 실적",
-    "company": "롯데관광개발",
-    "ticker": "032350",
-    "start": "2026-11-05",
-    "allDay": true,
-    "url": "https://kr.tradingview.com/symbols/KRX-032350/",
-    "country": "한국",
-    "source": "TradingView Korea Scanner",
-    "marketCap": 867413046875,
     "releaseSession": "미정"
   },
   {
@@ -3247,19 +3195,6 @@
     "country": "한국",
     "source": "TradingView Korea Scanner",
     "marketCap": 18659345367432,
-    "releaseSession": "장전"
-  },
-  {
-    "id": "2026-11-11-323410",
-    "title": "카카오뱅크 실적",
-    "company": "카카오뱅크",
-    "ticker": "323410",
-    "start": "2026-11-11",
-    "allDay": true,
-    "url": "https://kr.tradingview.com/symbols/KRX-323410/",
-    "country": "한국",
-    "source": "TradingView Korea Scanner",
-    "marketCap": 9388785653687,
     "releaseSession": "장전"
   },
   {
@@ -9279,19 +9214,6 @@
     "country": "한국",
     "source": "TradingView Korea Scanner",
     "marketCap": 824917861557,
-    "releaseSession": "미정"
-  },
-  {
-    "id": "2026-11-18-034230",
-    "title": "파라다이스 실적",
-    "company": "파라다이스",
-    "ticker": "034230",
-    "start": "2026-11-18",
-    "allDay": true,
-    "url": "https://kr.tradingview.com/symbols/KRX-034230/",
-    "country": "한국",
-    "source": "TradingView Korea Scanner",
-    "marketCap": 813744744644,
     "releaseSession": "미정"
   },
   {
