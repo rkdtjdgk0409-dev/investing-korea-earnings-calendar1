@@ -2158,6 +2158,19 @@
     "releaseSession": "미정"
   },
   {
+    "id": "2026-11-05-032350",
+    "title": "롯데관광개발 실적",
+    "company": "롯데관광개발",
+    "ticker": "032350",
+    "start": "2026-11-05",
+    "allDay": true,
+    "url": "https://kr.tradingview.com/symbols/KRX-032350/",
+    "country": "한국",
+    "source": "TradingView Korea Scanner",
+    "marketCap": 867413046875,
+    "releaseSession": "미정"
+  },
+  {
     "id": "2026-11-05-003570",
     "title": "SNT다이내믹스 실적",
     "company": "SNT다이내믹스",
@@ -3871,6 +3884,32 @@
     "country": "한국",
     "source": "TradingView Korea Scanner",
     "marketCap": 1217164395905,
+    "releaseSession": "미정"
+  },
+  {
+    "id": "2026-11-12-006120",
+    "title": "에스케이디스커버리 실적",
+    "company": "에스케이디스커버리",
+    "ticker": "006120",
+    "start": "2026-11-12",
+    "allDay": true,
+    "url": "https://kr.tradingview.com/symbols/KRX-006120/",
+    "country": "한국",
+    "source": "TradingView Korea Scanner",
+    "marketCap": 1187765419006,
+    "releaseSession": "미정"
+  },
+  {
+    "id": "2026-11-12-006125",
+    "title": "에스케이디스커버리1우선주 실적",
+    "company": "에스케이디스커버리1우선주",
+    "ticker": "006125",
+    "start": "2026-11-12",
+    "allDay": true,
+    "url": "https://kr.tradingview.com/symbols/KRX-006125/",
+    "country": "한국",
+    "source": "TradingView Korea Scanner",
+    "marketCap": 1187765419006,
     "releaseSession": "미정"
   },
   {
@@ -11268,6 +11307,19 @@
     "country": "한국",
     "source": "TradingView Korea Scanner",
     "marketCap": 125986933041,
+    "releaseSession": "미정"
+  },
+  {
+    "id": "2026-11-18-056090",
+    "title": "시지메드텍 실적",
+    "company": "시지메드텍",
+    "ticker": "056090",
+    "start": "2026-11-18",
+    "allDay": true,
+    "url": "https://kr.tradingview.com/symbols/KRX-056090/",
+    "country": "한국",
+    "source": "TradingView Korea Scanner",
+    "marketCap": 122878258591,
     "releaseSession": "미정"
   },
   {
