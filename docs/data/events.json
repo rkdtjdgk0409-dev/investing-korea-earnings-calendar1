@@ -1,18 +1,5 @@
 [
   {
-    "id": "2026-10-12-195870",
-    "title": "해성디에스 실적",
-    "company": "해성디에스",
-    "ticker": "195870",
-    "start": "2026-10-12",
-    "allDay": true,
-    "url": "https://kr.tradingview.com/symbols/KRX-195870/",
-    "country": "한국",
-    "source": "TradingView Korea Scanner",
-    "marketCap": 1122000000000,
-    "releaseSession": "미정"
-  },
-  {
     "id": "2026-10-13-002320",
     "title": "한진 실적",
     "company": "한진",
@@ -4300,6 +4287,19 @@
     "country": "한국",
     "source": "TradingView Korea Scanner",
     "marketCap": 476306036186,
+    "releaseSession": "미정"
+  },
+  {
+    "id": "2026-11-12-200470",
+    "title": "에이팩트 실적",
+    "company": "에이팩트",
+    "ticker": "200470",
+    "start": "2026-11-12",
+    "allDay": true,
+    "url": "https://kr.tradingview.com/symbols/KRX-200470/",
+    "country": "한국",
+    "source": "TradingView Korea Scanner",
+    "marketCap": 472844674568,
     "releaseSession": "미정"
   },
   {
