@@ -1,44 +1,5 @@
 [
   {
-    "id": "2026-10-19-064350",
-    "title": "현대로템 실적",
-    "company": "현대로템",
-    "ticker": "064350",
-    "start": "2026-10-19",
-    "allDay": true,
-    "url": "https://kr.tradingview.com/symbols/KRX-064350/",
-    "country": "한국",
-    "source": "TradingView Korea Scanner",
-    "marketCap": 10575888466644,
-    "releaseSession": "미정"
-  },
-  {
-    "id": "2026-10-19-195870",
-    "title": "해성디에스 실적",
-    "company": "해성디에스",
-    "ticker": "195870",
-    "start": "2026-10-19",
-    "allDay": true,
-    "url": "https://kr.tradingview.com/symbols/KRX-195870/",
-    "country": "한국",
-    "source": "TradingView Korea Scanner",
-    "marketCap": 865300000000,
-    "releaseSession": "미정"
-  },
-  {
-    "id": "2026-10-19-114810",
-    "title": "한솔아이원스 실적",
-    "company": "한솔아이원스",
-    "ticker": "114810",
-    "start": "2026-10-19",
-    "allDay": true,
-    "url": "https://kr.tradingview.com/symbols/KRX-114810/",
-    "country": "한국",
-    "source": "TradingView Korea Scanner",
-    "marketCap": 350487711887,
-    "releaseSession": "미정"
-  },
-  {
     "id": "2026-10-21-207940",
     "title": "삼성바이오로직스 실적",
     "company": "삼성바이오로직스",
@@ -582,6 +543,19 @@
     "country": "한국",
     "source": "TradingView Korea Scanner",
     "marketCap": 5040385036469,
+    "releaseSession": "미정"
+  },
+  {
+    "id": "2026-10-27-095340",
+    "title": "아이에스시 실적",
+    "company": "아이에스시",
+    "ticker": "095340",
+    "start": "2026-10-27",
+    "allDay": true,
+    "url": "https://kr.tradingview.com/symbols/KRX-095340/",
+    "country": "한국",
+    "source": "TradingView Korea Scanner",
+    "marketCap": 3290641983032,
     "releaseSession": "미정"
   },
   {
@@ -1586,6 +1560,19 @@
     "releaseSession": "미정"
   },
   {
+    "id": "2026-11-04-000880",
+    "title": "한화 실적",
+    "company": "한화",
+    "ticker": "000880",
+    "start": "2026-11-04",
+    "allDay": true,
+    "url": "https://kr.tradingview.com/symbols/KRX-000880/",
+    "country": "한국",
+    "source": "TradingView Korea Scanner",
+    "marketCap": 5123107559967,
+    "releaseSession": "미정"
+  },
+  {
     "id": "2026-11-04-241560",
     "title": "두산밥캣 실적",
     "company": "두산밥캣",
@@ -1976,19 +1963,6 @@
     "releaseSession": "미정"
   },
   {
-    "id": "2026-11-05-000880",
-    "title": "한화 실적",
-    "company": "한화",
-    "ticker": "000880",
-    "start": "2026-11-05",
-    "allDay": true,
-    "url": "https://kr.tradingview.com/symbols/KRX-000880/",
-    "country": "한국",
-    "source": "TradingView Korea Scanner",
-    "marketCap": 5123107559967,
-    "releaseSession": "미정"
-  },
-  {
     "id": "2026-11-05-018880",
     "title": "한온시스템 실적",
     "company": "한온시스템",
@@ -2051,19 +2025,6 @@
     "country": "한국",
     "source": "TradingView Korea Scanner",
     "marketCap": 2734269581604,
-    "releaseSession": "미정"
-  },
-  {
-    "id": "2026-11-05-011170",
-    "title": "롯데케미칼 실적",
-    "company": "롯데케미칼",
-    "ticker": "011170",
-    "start": "2026-11-05",
-    "allDay": true,
-    "url": "https://kr.tradingview.com/symbols/KRX-011170/",
-    "country": "한국",
-    "source": "TradingView Korea Scanner",
-    "marketCap": 2302326313019,
     "releaseSession": "미정"
   },
   {
@@ -2532,6 +2493,19 @@
     "country": "한국",
     "source": "TradingView Korea Scanner",
     "marketCap": 2400967111588,
+    "releaseSession": "미정"
+  },
+  {
+    "id": "2026-11-06-011170",
+    "title": "롯데케미칼 실적",
+    "company": "롯데케미칼",
+    "ticker": "011170",
+    "start": "2026-11-06",
+    "allDay": true,
+    "url": "https://kr.tradingview.com/symbols/KRX-011170/",
+    "country": "한국",
+    "source": "TradingView Korea Scanner",
+    "marketCap": 2302326313019,
     "releaseSession": "미정"
   },
   {
@@ -5352,7 +5326,7 @@
     "url": "https://kr.tradingview.com/symbols/KRX-357230/",
     "country": "한국",
     "source": "TradingView Korea Scanner",
-    "marketCap": 86267750931,
+    "marketCap": 85868556976,
     "releaseSession": "미정"
   },
   {
@@ -6835,19 +6809,6 @@
     "country": "한국",
     "source": "TradingView Korea Scanner",
     "marketCap": 3352643155575,
-    "releaseSession": "미정"
-  },
-  {
-    "id": "2026-11-16-095340",
-    "title": "아이에스시 실적",
-    "company": "아이에스시",
-    "ticker": "095340",
-    "start": "2026-11-16",
-    "allDay": true,
-    "url": "https://kr.tradingview.com/symbols/KRX-095340/",
-    "country": "한국",
-    "source": "TradingView Korea Scanner",
-    "marketCap": 3290641983032,
     "releaseSession": "미정"
   },
   {
@@ -9148,7 +9109,7 @@
     "url": "https://kr.tradingview.com/symbols/KRX-161580/",
     "country": "한국",
     "source": "TradingView Korea Scanner",
-    "marketCap": 786487335968,
+    "marketCap": 786587994671,
     "releaseSession": "미정"
   },
   {
