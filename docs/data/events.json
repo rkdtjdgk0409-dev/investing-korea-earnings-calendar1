@@ -6903,6 +6903,19 @@
     "releaseSession": "미정"
   },
   {
+    "id": "2026-11-17-205100",
+    "title": "엑셈 실적",
+    "company": "엑셈",
+    "ticker": "205100",
+    "start": "2026-11-17",
+    "allDay": true,
+    "url": "https://kr.tradingview.com/symbols/KRX-205100/",
+    "country": "한국",
+    "source": "TradingView Korea Scanner",
+    "marketCap": 93204337921,
+    "releaseSession": "미정"
+  },
+  {
     "id": "2026-11-17-226400",
     "title": "주식회사 오스테오닉 실적",
     "company": "주식회사 오스테오닉",
