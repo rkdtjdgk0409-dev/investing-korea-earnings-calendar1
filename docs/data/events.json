@@ -8981,5 +8981,31 @@
     "source": "TradingView Korea Scanner",
     "marketCap": 243961089134,
     "releaseSession": "미정"
+  },
+  {
+    "id": "2027-02-08-010130",
+    "title": "고려아연 실적",
+    "company": "고려아연",
+    "ticker": "010130",
+    "start": "2027-02-08",
+    "allDay": true,
+    "url": "https://kr.tradingview.com/symbols/KRX-010130/",
+    "country": "한국",
+    "source": "TradingView Korea Scanner",
+    "marketCap": 18170370019913,
+    "releaseSession": "미정"
+  },
+  {
+    "id": "2027-02-08-003850",
+    "title": "보령 실적",
+    "company": "보령",
+    "ticker": "003850",
+    "start": "2027-02-08",
+    "allDay": true,
+    "url": "https://kr.tradingview.com/symbols/KRX-003850/",
+    "country": "한국",
+    "source": "TradingView Korea Scanner",
+    "marketCap": 706256910095,
+    "releaseSession": "미정"
   }
 ]
