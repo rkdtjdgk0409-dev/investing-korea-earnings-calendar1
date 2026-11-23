@@ -3313,5 +3313,31 @@
     "source": "TradingView Korea Scanner",
     "marketCap": 191072932625,
     "releaseSession": "미정"
+  },
+  {
+    "id": "2027-02-23-032830",
+    "title": "삼성생명보험 실적",
+    "company": "삼성생명보험",
+    "ticker": "032830",
+    "start": "2027-02-23",
+    "allDay": true,
+    "url": "https://kr.tradingview.com/symbols/KRX-032830/",
+    "country": "한국",
+    "source": "TradingView Korea Scanner",
+    "marketCap": 42918373214722,
+    "releaseSession": "미정"
+  },
+  {
+    "id": "2027-02-23-084370",
+    "title": "유진테크 실적",
+    "company": "유진테크",
+    "ticker": "084370",
+    "start": "2027-02-23",
+    "allDay": true,
+    "url": "https://kr.tradingview.com/symbols/KRX-084370/",
+    "country": "한국",
+    "source": "TradingView Korea Scanner",
+    "marketCap": 1580083002090,
+    "releaseSession": "미정"
   }
 ]
