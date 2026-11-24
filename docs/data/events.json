@@ -1,10 +1,10 @@
 [
   {
-    "id": "2026-11-23-172670",
+    "id": "2026-11-24-172670",
     "title": "에이엘티 실적",
     "company": "에이엘티",
     "ticker": "172670",
-    "start": "2026-11-23",
+    "start": "2026-11-24",
     "allDay": true,
     "url": "https://kr.tradingview.com/symbols/KRX-172670/",
     "country": "한국",
@@ -13,11 +13,11 @@
     "releaseSession": "미정"
   },
   {
-    "id": "2026-11-23-900340",
+    "id": "2026-11-24-900340",
     "title": "윙입푸드홀딩스 실적",
     "company": "윙입푸드홀딩스",
     "ticker": "900340",
-    "start": "2026-11-23",
+    "start": "2026-11-24",
     "allDay": true,
     "url": "https://kr.tradingview.com/symbols/KRX-900340/",
     "country": "한국",
@@ -26,11 +26,11 @@
     "releaseSession": "미정"
   },
   {
-    "id": "2026-11-23-321260",
+    "id": "2026-11-24-321260",
     "title": "프로이천 실적",
     "company": "프로이천",
     "ticker": "321260",
-    "start": "2026-11-23",
+    "start": "2026-11-24",
     "allDay": true,
     "url": "https://kr.tradingview.com/symbols/KRX-321260/",
     "country": "한국",
@@ -39,11 +39,11 @@
     "releaseSession": "미정"
   },
   {
-    "id": "2026-11-23-271830",
+    "id": "2026-11-24-271830",
     "title": "팸텍 실적",
     "company": "팸텍",
     "ticker": "271830",
-    "start": "2026-11-23",
+    "start": "2026-11-24",
     "allDay": true,
     "url": "https://kr.tradingview.com/symbols/KRX-271830/",
     "country": "한국",
@@ -3338,6 +3338,97 @@
     "country": "한국",
     "source": "TradingView Korea Scanner",
     "marketCap": 1580083002090,
+    "releaseSession": "미정"
+  },
+  {
+    "id": "2027-02-24-000810",
+    "title": "삼성화재해상보험 실적",
+    "company": "삼성화재해상보험",
+    "ticker": "000810",
+    "start": "2027-02-24",
+    "allDay": true,
+    "url": "https://kr.tradingview.com/symbols/KRX-000810/",
+    "country": "한국",
+    "source": "TradingView Korea Scanner",
+    "marketCap": 19853478805661,
+    "releaseSession": "미정"
+  },
+  {
+    "id": "2027-02-24-000815",
+    "title": "삼성화재해상보험1우선주 실적",
+    "company": "삼성화재해상보험1우선주",
+    "ticker": "000815",
+    "start": "2027-02-24",
+    "allDay": true,
+    "url": "https://kr.tradingview.com/symbols/KRX-000815/",
+    "country": "한국",
+    "source": "TradingView Korea Scanner",
+    "marketCap": 19853478805661,
+    "releaseSession": "미정"
+  },
+  {
+    "id": "2027-02-24-267260",
+    "title": "에이치디현대일렉트릭 실적",
+    "company": "에이치디현대일렉트릭",
+    "ticker": "267260",
+    "start": "2027-02-24",
+    "allDay": true,
+    "url": "https://kr.tradingview.com/symbols/KRX-267260/",
+    "country": "한국",
+    "source": "TradingView Korea Scanner",
+    "marketCap": 13911179510117,
+    "releaseSession": "미정"
+  },
+  {
+    "id": "2027-02-24-005830",
+    "title": "DB손해보험 실적",
+    "company": "DB손해보험",
+    "ticker": "005830",
+    "start": "2027-02-24",
+    "allDay": true,
+    "url": "https://kr.tradingview.com/symbols/KRX-005830/",
+    "country": "한국",
+    "source": "TradingView Korea Scanner",
+    "marketCap": 8999883412170,
+    "releaseSession": "미정"
+  },
+  {
+    "id": "2027-02-24-088350",
+    "title": "한화생명보험 실적",
+    "company": "한화생명보험",
+    "ticker": "088350",
+    "start": "2027-02-24",
+    "allDay": true,
+    "url": "https://kr.tradingview.com/symbols/KRX-088350/",
+    "country": "한국",
+    "source": "TradingView Korea Scanner",
+    "marketCap": 2629865905762,
+    "releaseSession": "미정"
+  },
+  {
+    "id": "2027-02-24-085620",
+    "title": "미래에셋생명보험 실적",
+    "company": "미래에셋생명보험",
+    "ticker": "085620",
+    "start": "2027-02-24",
+    "allDay": true,
+    "url": "https://kr.tradingview.com/symbols/KRX-085620/",
+    "country": "한국",
+    "source": "TradingView Korea Scanner",
+    "marketCap": 2049824302673,
+    "releaseSession": "미정"
+  },
+  {
+    "id": "2027-02-24-403550",
+    "title": "쏘카 실적",
+    "company": "쏘카",
+    "ticker": "403550",
+    "start": "2027-02-24",
+    "allDay": true,
+    "url": "https://kr.tradingview.com/symbols/KRX-403550/",
+    "country": "한국",
+    "source": "TradingView Korea Scanner",
+    "marketCap": 370138175926,
     "releaseSession": "미정"
   }
 ]
